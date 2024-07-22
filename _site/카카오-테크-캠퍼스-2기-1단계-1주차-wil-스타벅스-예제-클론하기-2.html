@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-21T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)","dateModified":"2024-04-21T00:00:00+09:00","datePublished":"2024-04-21T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-04-21 00:00:00 +0900">2024-04-21</time>
+  </p>
+  
+  <h1>[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="헤더와-드롭메뉴---검색">헤더와 드롭메뉴 - 검색</h1>
+
+<h2 id="input이-blur될-경우-스타일링-하기">Input이 blur될 경우 스타일링 하기</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">box-sizing: border-box;</code> 를 통해 <strong>테두리</strong>를 기준으로 크기를 정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">width: 36px;</code>로 설정해서 <strong>blur</strong>되었을 때 input의 크기를 최소화한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">transition</code>의 <code class="language-plaintext highlighter-rouge">width</code>값만 변경되었을 경우 0.4초로 default easing function인 <code class="language-plaintext highlighter-rouge">ease</code>로 애니메이션 처리를한다.</li>
+</ul>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbac7e477-56af-457b-b5a5-82c85450ddfe%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.23.03.png?id=ebf5fce6-e02e-466c-a37c-603012eb8983&amp;table=block" alt="스크린샷 2024-04-16 오후 3.23.03.png" /></p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition - CSS: Cascading Style Sheets</a></p>
+
+<h2 id="input이-focus될-경우-스타일링-하기">Input이 focus될 경우 스타일링 하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nc">.sub-menu</span> <span class="nc">.search</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">34px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.sub-menu</span> <span class="nc">.search</span> <span class="nt">input</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">36px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">34px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">4px</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#777</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">width</span> <span class="m">0.4s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.sub-menu</span> <span class="nc">.search</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">190px</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="m">#669900</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.sub-menu</span> <span class="nc">.search</span> <span class="nc">.material-symbols-outlined</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">width: 190px;</code> 로 설정하여 <strong>focus</strong>될 때 너비가 넓어지도록 한다.</li>
+  <li>border-color가 변경되도록 한다.</li>
+</ul>
+
+<h2 id="자바스크립트로-search-icon-클릭-시-이벤트-적용하기">자바스크립트로 Search Icon 클릭 시 이벤트 적용하기</h2>
+
+<p>input 영역을 focus하면 애니메이션이 적용되지만 Search Icon을 클릭하면 동작되지 않는 것을 확인할 수 있다.</p>
+
+<p>이를 위해 자바스크립트를 통해 Search Icon을 클릭하면 Input에 focus되도록 구현해야한다.</p>
+
+<p>추가로 focus될 경우 Search Icon은 보이지 않아야 되기 때문에 focus되거나 blur될때 투명도를 주는 <code class="language-plaintext highlighter-rouge">.focus</code> 클래스를 추가하고 삭제되도록 구현해야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="p">=</span><span class="s">"./js/main.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>외부 자바스크립트를 <code class="language-plaintext highlighter-rouge">defer</code>속성을 통해 html구조가 모두 해석된 이후 js를 불러오도록 한다.</li>
+  <li>기본적으로 <code class="language-plaintext highlighter-rouge">script</code>태그를 만나면 DOM 생성을 멈추고 <code class="language-plaintext highlighter-rouge">script</code>를 실행하기 때문에 가져오는 시간이 오래 걸릴 수 있다.
+때문에 DOM 생성과 동시에 script를 병렬적으로 내려받을 수 있도록 <code class="language-plaintext highlighter-rouge">defer</code> 혹은 <code class="language-plaintext highlighter-rouge">async</code> 속성을 사용해야한다.</li>
+</ul>
+
+<h3 id="script의-async-defer-속성의-차이">script의 async, defer 속성의 차이</h3>
+
+<h3 id="async">async</h3>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff345a7bd-7460-40e5-8a0c-f736b4be5d99%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.28.01.png?id=52b15cff-192f-4399-a9a0-ed37d39b20d5&amp;table=block" alt="스크린샷 2023-05-01 오후 3.28.01.png" /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F630b3ac6-feeb-4776-bee0-1dead9dfca49%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.28.07.png?id=9bdd08de-3dc5-4c25-b58f-c90cd05675fe&amp;table=block" alt="스크린샷 2023-05-01 오후 3.28.07.png" /></p>
+
+<ul>
+  <li>HTML을 parsing하는 동시에 js를 fetching하는 병렬적 구조이다.
+하지만 다수의 js파일을 다운받고 다운이 완료된 js를 무작위로 실행하므로 순서에 의존적인 페이지라면 유의해야한다.</li>
+</ul>
+
+<h3 id="defer">defer</h3>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd069bf4a-53a2-4d87-8e52-7cb44561be91%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.33.01.png?id=195bf836-5db0-4e4d-a43f-3536ceca7f7b&amp;table=block" alt="스크린샷 2023-05-01 오후 3.33.01.png" /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3c98217e-86f0-4379-a135-f023e7bd48cf%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.33.07.png?id=1348b421-6e04-4353-ab0b-d0eb5c75a34f&amp;table=block" alt="스크린샷 2023-05-01 오후 3.33.07.png" /></p>
+
+<ul>
+  <li>parsing중에 js파일을 모두 다운로드 받아 놓고 parsing이 끝나는 순서대로 js를 실행하므로 원하는 순서대로 스크립트를 실행할 수 있다.</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">searchEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.search</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">searchInputEl</span> <span class="o">=</span> <span class="nx">searchEl</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">searchEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">searchInputEl</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.search</code> 요소 내부에 <code class="language-plaintext highlighter-rouge">input</code> 태그를 <code class="language-plaintext highlighter-rouge">serchInputEl</code>로 할당하고 search 요소를 클릭하면 input이 focus되도록 한다.</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">searchInputEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">focus</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">searchEl</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">focused</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">searchInputEl</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">placeholder</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">통합검색</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">input</code>요소가 focus되면 검색 아이콘을 삭제하는 스타일링이 정의된 <code class="language-plaintext highlighter-rouge">.focused</code> 클래스가 추가되도록한다.
+추가로 <code class="language-plaintext highlighter-rouge">placeholder</code> 를 “통합검색” 으로 설정한다.</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">searchInputEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">blur</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">searchEl</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">focused</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">searchInputEl</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">placeholder</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li>search클래스 요소 내부에있는 <code class="language-plaintext highlighter-rouge">input</code>요소가 blur되면 <code class="language-plaintext highlighter-rouge">.focused</code> 클래스가 삭제하도록한다.
+추가로 <code class="language-plaintext highlighter-rouge">placeholder</code>는 빈값으로 설정한다.</li>
+</ul>
+
+<p>즉, 자바스크립트는 DOM요소를 선택하고 특정 이벤트에 원하는 스타일링에 해당하는 클래스를 추가하거나 삭제하면서 요소를 동적으로 처리할 수 있도록 해준다.</p>
+
+<h2 id="결과">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F584f66c4-4bd6-4875-aeb5-a47ac733fe82%2FApr-16-2024_16-46-33.gif?id=50f0c7fd-6920-48f3-a69a-320f178d7b26&amp;table=block" alt="Apr-16-2024 16-46-33.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="헤더와-드롭메뉴---메인-메뉴">헤더와 드롭메뉴 - 메인 메뉴</h1>
+
+<h2 id="특정-부분만-border-rardius-설정하기">특정 부분만 border-rardius 설정하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nc">.main-menu</span> <span class="nc">.item</span><span class="nd">:hover</span> <span class="nc">.item__name</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#2c2a29</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#669900</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">6px</span> <span class="m">6px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>좌상단을 시작으로 우측 순으로 <code class="language-plaintext highlighter-rouge">border-radius</code>를 설정할 수 있다.</li>
+  <li>좌상단 우상단만 <code class="language-plaintext highlighter-rouge">border-radius</code>를 각각 6px씩 설정한다.</li>
+</ul>
+
+<h2 id="레이어-최상단으로-끌어올리기">레이어 최상단으로 끌어올리기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nc">.main-menu</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>메인 메뉴를 <code class="language-plaintext highlighter-rouge">header</code>에 우측하단에 배치하고 <code class="language-plaintext highlighter-rouge">z-index: 1</code>로 설정하여 레이어를 끌어올려 다른 요소들을 보다 최상단에 위치할 수 있도록 설정한다.</li>
+</ul>
+
+<h2 id="inner-클래스-분리하기">inner 클래스 분리하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* COMMON */</span>
+<span class="nc">.inner</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">1100px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* HEADER */</span>
+<span class="nt">header</span> <span class="o">&gt;</span> <span class="nc">.inner</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.inner</code> 클래스는 여러 요소에서 사용되므로 공통 스타일로 정의하여 분리한다.</li>
+  <li>각 요소들의 <code class="language-plaintext highlighter-rouge">height</code> 값은 다른 요소에 따라 다르게 설정되고 자식 요소로 사용하기 때문에 <code class="language-plaintext highlighter-rouge">&gt;</code>를 통해 <code class="language-plaintext highlighter-rouge">.inner</code>를 선택자로 가지게 한다.</li>
+</ul>
+
+<h2 id="css-이미지-불러오기">CSS 이미지 불러오기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nc">.main-menu</span> <span class="nc">.item</span> <span class="nc">.item__contents</span> <span class="nc">.contents__texture</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">26px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("../images/main_menu_pattern.jpg")</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.main-menu</span> <span class="nc">.item</span> <span class="nc">.item__contents</span> <span class="nc">.contents__texture</span> <span class="nt">h4</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#999</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.main-menu</span> <span class="nc">.item</span> <span class="nc">.item__contents</span> <span class="nc">.contents__texture</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#669900</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">4px</span> <span class="m">0</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>texture 요소에 패턴을 부여하기 위해 images 폴더에 있는 main_menu_patter.jpg를 <code class="language-plaintext highlighter-rouge">background-image</code> 속성의 <code class="language-plaintext highlighter-rouge">url</code> 로 가져와 이미지를 적용할 수 있다.</li>
+</ul>
+
+<h2 id="결과-1">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F10e8a677-e65d-4df4-85b3-6e0c4dc5e692%2FApr-21-2024_16-11-14.gif?id=ef867ecd-17e0-4411-9882-f231d309e3d4&amp;table=block" alt="Apr-21-2024 16-11-14.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="bem-방법론block-element-modifier">BEM 방법론(Block Element Modifier)</h1>
+
+<ul>
+  <li>HTML 클래스 속성의 작명법이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">요소__일부분</code>: Underscore(_) 기호로 요소의 일부분을 표시할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">요소—-상태</code>: Dash(-) 기호로 요소의 상태를 표시할 수 있다.</li>
+</ul>
+
+<h2 id="예시">예시</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F69896266-843e-440b-8eeb-15fd030b1a9b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.23.41.png?id=da161e41-e001-4954-8bfd-42305ce859e5&amp;table=block" alt="스크린샷 2024-04-21 오후 4.23.41.png" /></p>
+
+<p>위는 요소 일부분에 대한 예시이다.</p>
+
+<p>클래스 명을 <code class="language-plaintext highlighter-rouge">.name</code>처럼 단순하게 작명할 경우 중복될 가능성이 있다.</p>
+
+<p>이를 Underscore를 사용하여 요소의 일부분을 나타낼 수 있다면, 해당 name이 container와 item요소 중 어떤 요소의 일부분인지를 클래스만 보고 빠르게 파악할 수 있게 된다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fce9c0caf-ea54-4890-bfd6-d0da79ad09aa%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.23.50.png?id=9ae48a70-efa6-43d1-9aed-f1e887c7e039&amp;table=block" alt="스크린샷 2024-04-21 오후 4.23.50.png" /></p>
+
+<p>위는 요소 상태에 관한 예시이다.</p>
+
+<p>위와 같이 버튼의 세가지 상태가 버튼에 종속되어져 있다는 것을 사용자가 파악하기 어렵다.</p>
+
+<p>이처럼, <code class="language-plaintext highlighter-rouge">primary</code> <code class="language-plaintext highlighter-rouge">success</code> <code class="language-plaintext highlighter-rouge">error</code>가 <strong>버튼</strong>에 종속되어져 있다는 것을 dash를 사용해서 나타낼 수 있다.</p>
+
+<p>위와 같이 BEM방법론을 사용하게 되면 HTML의 구조를 확인하지 않고 <strong>클래스</strong>만 봐도 어떤 구조로 이루어져 있는지를 빠르게 파악할 수 있게 된다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="헤더와-드롭메뉴---전역-배지gsap">헤더와 드롭메뉴 - 전역 배지(GSAP)</h1>
+
+<h2 id="배지-스타일링-및-위치-설정하기">배지 스타일링 및 위치 설정하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="nc">.badges</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">132px</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nc">.badges</span> <span class="nc">.badge</span> <span class="p">{</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">4px</span> <span class="m">4px</span> <span class="m">10px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.15</span><span class="p">);</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">border-radius</code>를 통해 배지들의 모서리를 둥글게 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">border-radius</code>를 설정해도 안에 있는 이미지들은 외부 영역을 침범하기 때문에 <code class="language-plaintext highlighter-rouge">overflow: hidden</code>으로 침범을 막아준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">box-shadow</code>를 통해 x축과 y축으로 4px로 위치시키고 blur를 10px로 부여한다. 색은 rgba로 검정색으로 설정하고 투명도는 0.15로 설정하였다.</li>
+  <li>badge를 header를 기준으로 위치시킬 것이기 때문에 header의 <code class="language-plaintext highlighter-rouge">position</code>을 <code class="language-plaintext highlighter-rouge">relative</code>로 설정하고 badges의 <code class="language-plaintext highlighter-rouge">position</code>을 <code class="language-plaintext highlighter-rouge">absolute</code>로 설정한다.</li>
+</ul>
+
+<h2 id="브라우저-상단에-고정시키기">브라우저 상단에 고정시키기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f6f5f0</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#c8c8c8</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>페이지 스크롤시 header를 브라우저 상단에 고정시키려면 <code class="language-plaintext highlighter-rouge">position: fixed</code>로 설정한다.</p>
+
+<p>하지만 fixed로 설정하면 다음과 같이 width값이 최소한으로 잡혀진다.</p>
+
+<p>그 이유는, position을 fixed나 absolute로 설정하게 되면 자동으로 <code class="language-plaintext highlighter-rouge">width: auto</code>로 설정되기 때문에, 가로 넓이를 최소한으로 잡으려고 한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F454705ff-e37a-4d75-92f7-4bc0e3daed62%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.46.24.png?id=f52101df-ab75-4bf2-a7bb-82bd0838c02d&amp;table=block" alt="스크린샷 2024-04-21 오후 4.46.24.png" /></p>
+
+<p>이러한 문제를 해결하려면 <code class="language-plaintext highlighter-rouge">width: 100%</code>로 하여 부모 요소(<code class="language-plaintext highlighter-rouge">body</code>)의 width값으로 설정해야한다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">header</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="err">**</span><span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span><span class="err">**</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f6f5f0</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#c8c8c8</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>부모의 너비 만큼 header의 너비가 잡힌 것을 확인할 수 있다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff2ad9df9-a764-4f8d-8d62-940a47af2dc2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.47.36.png?id=b2a0c1e2-8aaf-4339-bf80-aa21100847dc&amp;table=block" alt="스크린샷 2024-04-21 오후 4.47.36.png" /></p>
+
+<h2 id="스크롤-시-배지-숨기기">스크롤 시 배지 숨기기</h2>
+
+<p>스크롤값이 특정값을 넘어가게 될 경우 배지가 숨겨지도록 javasript를 통해 구현해야할 필요가 있다.</p>
+
+<h3 id="lodashjs">lodash.js</h3>
+
+<p><code class="language-plaintext highlighter-rouge">window</code>에 scroll 이벤트를 주고 로직을 작성하면, 스크롤 할때 마다 함수가 연속적으로 호출된다.</p>
+
+<p>그러나, 위처럼 구현하게 되면 사이트에 들어가는 컨텐츠가 많아 질수록 버벅이는 현상으로 이어질 수 있다.</p>
+
+<p>이러한 방식을 해결해줄 수 있는 외부 라이브러리가 <strong>loadash.js</strong>이다.</p>
+
+<p><a href="https://cdnjs.com/libraries/lodash.js">lodash.js - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers</a></p>
+
+<p>위 링크를 통해 lodash.js 라이브러리 사이트의 CDN 페이지로 이동한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb76bb28b-2fd8-42fe-b848-4d6b14428e4c%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.52.15.png?id=1dec5339-1399-442a-8059-22103734e613&amp;table=block" alt="스크린샷 2024-04-21 오후 4.52.15.png" /></p>
+
+<p>가장 많이 사용하는 첫번째 CDN을 복사해서 <code class="language-plaintext highlighter-rouge">head</code>태그 내부에 추가하고 다음과 같이 작성한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">badgeEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">header .badges</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">scroll</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">_</span><span class="p">.</span><span class="nx">throttle</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">badgeEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">badgeEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">},</span> <span class="mi">300</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">window</code>객체에 접근하여 <code class="language-plaintext highlighter-rouge">addEventListener()</code>를 통해 scroll 이벤트를 부여한다.</li>
+  <li>lodash 라이브러리에서 제공하는 <code class="language-plaintext highlighter-rouge">_.throttle()</code>의 첫번째 인자로 함수를 전달한다.</li>
+  <li>두번째 인자로는 해당 함수가 몇초에 한번 함수를 호출할 것인지를 ms단위로 입력한다.</li>
+  <li>위 코드는 0.3초 단위로 부하를 주어서 함수가 연속적으로 호출되는 것을 방지하도록 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">window</code>객체의 <code class="language-plaintext highlighter-rouge">scrollY</code>를 통해 브라우저 상단을 기점으로 스크롤한 위치가 몇 px인지 확인할 수 있다. 이를 통해 500px를 넘으면 배지를 숨기게하고 그렇지 않을 경우 보이게 끔 작성한다.</li>
+</ul>
+
+<h3 id="gsap">GSAP</h3>
+
+<p>배지를 숨기고 보여지는 애니메이션 과정에서 이질감이 있다.</p>
+
+<p>자연스러운 애니메이션 효과를 주기위해 <strong>GSAP</strong> 라이브러리를 사용할 수 있다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F7ee355af-419f-4a14-b752-b788057684f7%2FApr-21-2024_18-19-40.gif?id=01c65de5-9856-43b2-96c2-bc0189c9111c&amp;table=block" alt="Apr-21-2024 18-19-40.gif" /></p>
+
+<p><a href="https://cdnjs.com/libraries/gsap">gsap - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers</a></p>
+
+<p>위 링크를 통해 GSAP 라이브러리 사이트의 CDN 페이지로 이동한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb7a43086-59d9-41a5-9388-993caa5494a0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.15.00.png?id=4e8fbce9-2db8-4495-a25b-a181551e2906&amp;table=block" alt="스크린샷 2024-04-21 오후 6.15.00.png" /></p>
+
+<p>가장 많이 사용하는 첫번째 CDN을 복사해서 <code class="language-plaintext highlighter-rouge">head</code>태그 내부에 추가하고 다음과 같이 작성한다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">window</span><span class="nc">.addEventListener</span><span class="o">(</span>
+  <span class="s1">"scroll"</span><span class="o">,</span>
+  <span class="nt">_</span><span class="nc">.throttle</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="err">if</span> <span class="err">(window.scrollY</span> <span class="err">&gt;</span> <span class="err">500)</span> <span class="err">{</span>
+      <span class="err">gsap.to(badgeEl,</span> <span class="err">0.6,</span> <span class="err">{</span>
+        <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+      <span class="p">}</span><span class="o">);</span>
+    <span class="err">}</span> <span class="nt">else</span> <span class="p">{</span>
+      <span class="err">gsap.to(badgeEl,</span> <span class="err">0.6,</span> <span class="err">{</span>
+        <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">,</span>
+      <span class="p">}</span><span class="o">);</span>
+    <span class="err">}</span>
+  <span class="err">}</span><span class="o">,</span> <span class="err">300</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>gsap 객체의 <code class="language-plaintext highlighter-rouge">to()</code> 메소드를 통해 <strong>요소</strong>와, <strong>지속시간</strong>, <strong>옵션</strong>을 인자로 넘긴다.</li>
+  <li>옵션에 <code class="language-plaintext highlighter-rouge">opacity</code> 속성을 넣어 숨길경우 0으로 보일 경우 1로 설정한다.</li>
+</ul>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3439a321-9709-4bcc-acbd-df419f0002dd%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.11.30.png?id=3f50ee63-28d2-4b7f-a9d0-1b65056335bd&amp;table=block" alt="스크린샷 2024-04-21 오후 6.11.30.png" /></p>
+
+<p>하지만 <code class="language-plaintext highlighter-rouge">opacity</code>값으로만 애니메이션을 처리하면, 요소는 그대로 남고 보이지 않는 형태가 되기 때문에 사용자가 해당 영역을 클릭하면 배지를 클릭하게되는 문제가 발생한다.</p>
+
+<p>때문에 <code class="language-plaintext highlighter-rouge">opacity</code> 뿐만 아니라 <code class="language-plaintext highlighter-rouge">display</code>를 <code class="language-plaintext highlighter-rouge">none</code> 과 <code class="language-plaintext highlighter-rouge">block</code>으로 옵션을 주어 요소를 완전히 제거할 수 있도록 설정해야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">scroll</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">_</span><span class="p">.</span><span class="nx">throttle</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">badgeEl</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="na">display</span><span class="p">:</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">});</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">badgeEl</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">display</span><span class="p">:</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">},</span> <span class="mi">300</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="결과-2">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F9a1025bf-f4e3-44f4-a54a-0c360057b7a2%2FApr-21-2024_18-25-29.gif?id=3c718c48-9c73-4535-a3d2-500f11547eec&amp;table=block" alt="Apr-21-2024 18-25-29.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="소감">소감</h1>
+
+<p>이번 주차는 loadash와 gsap 같은 오픈소스를 처음 접해보았는데, 처음에는 매우 생소하게 느껴졌다.</p>
+
+<p>lodash를 사용하여 스크롤할 때 특정 주기를 설정하여 함수가 연속적으로 트리거되지 않도록 하는 방법을 배웠다.</p>
+
+<p>뿐만 아니라 lodash에서 제공하는 객체와 배열 등의 데이터 구조는 일부 메서드에서 기존의 ES6보다 뛰어난 성능과 함수의 확장성을 제공한다는 것을 알게 되었다.</p>
+
+<p>또한, gsap에서 제공하는 <strong><code class="language-plaintext highlighter-rouge">gsap.to()</code></strong>, <strong><code class="language-plaintext highlighter-rouge">gsap.from()</code></strong>, <strong><code class="language-plaintext highlighter-rouge">gsap.fromTo()</code></strong>를 사용하여 애니메이션을 보다 간단하게 설정할 수 있다는 점도 배울 수 있었다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

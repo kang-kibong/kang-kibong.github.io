@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T01:42:08+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T01:50:01+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -1350,7 +1350,441 @@
 
 &lt;p&gt;이번 글에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;craco&lt;/code&gt;를 활용하여 CRA + TypeScript 프로젝트에서 절대 경로를 설정하는 방법을 다루었습니다.&lt;/p&gt;
 
-&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)" /><published>2024-04-15T00:00:00+09:00</published><updated>2024-04-15T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(1)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 2주차 WIL - 스타벅스 예제 클론하기(2)" /><published>2024-04-21T00:00:00+09:00</published><updated>2024-04-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(2)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-2.html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;헤더와-드롭메뉴---검색&quot;&gt;헤더와 드롭메뉴 - 검색&lt;/h1&gt;
+
+&lt;h2 id=&quot;input이-blur될-경우-스타일링-하기&quot;&gt;Input이 blur될 경우 스타일링 하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;box-sizing: border-box;&lt;/code&gt; 를 통해 &lt;strong&gt;테두리&lt;/strong&gt;를 기준으로 크기를 정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: 36px;&lt;/code&gt;로 설정해서 &lt;strong&gt;blur&lt;/strong&gt;되었을 때 input의 크기를 최소화한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transition&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width&lt;/code&gt;값만 변경되었을 경우 0.4초로 default easing function인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ease&lt;/code&gt;로 애니메이션 처리를한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbac7e477-56af-457b-b5a5-82c85450ddfe%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.23.03.png?id=ebf5fce6-e02e-466c-a37c-603012eb8983&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-16 오후 3.23.03.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/transition&quot;&gt;transition - CSS: Cascading Style Sheets&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;input이-focus될-경우-스타일링-하기&quot;&gt;Input이 focus될 경우 스타일링 하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.search&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;34px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.search&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;36px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;34px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ccc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;outline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.4s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.search&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:focus&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;190px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#669900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.search&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.material-symbols-outlined&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;24px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: 190px;&lt;/code&gt; 로 설정하여 &lt;strong&gt;focus&lt;/strong&gt;될 때 너비가 넓어지도록 한다.&lt;/li&gt;
+  &lt;li&gt;border-color가 변경되도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;자바스크립트로-search-icon-클릭-시-이벤트-적용하기&quot;&gt;자바스크립트로 Search Icon 클릭 시 이벤트 적용하기&lt;/h2&gt;
+
+&lt;p&gt;input 영역을 focus하면 애니메이션이 적용되지만 Search Icon을 클릭하면 동작되지 않는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이를 위해 자바스크립트를 통해 Search Icon을 클릭하면 Input에 focus되도록 구현해야한다.&lt;/p&gt;
+
+&lt;p&gt;추가로 focus될 경우 Search Icon은 보이지 않아야 되기 때문에 focus되거나 blur될때 투명도를 주는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.focus&lt;/code&gt; 클래스를 추가하고 삭제되도록 구현해야한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./js/main.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;외부 자바스크립트를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;defer&lt;/code&gt;속성을 통해 html구조가 모두 해석된 이후 js를 불러오도록 한다.&lt;/li&gt;
+  &lt;li&gt;기본적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script&lt;/code&gt;태그를 만나면 DOM 생성을 멈추고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script&lt;/code&gt;를 실행하기 때문에 가져오는 시간이 오래 걸릴 수 있다.
+때문에 DOM 생성과 동시에 script를 병렬적으로 내려받을 수 있도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;defer&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;async&lt;/code&gt; 속성을 사용해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;script의-async-defer-속성의-차이&quot;&gt;script의 async, defer 속성의 차이&lt;/h3&gt;
+
+&lt;h3 id=&quot;async&quot;&gt;async&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff345a7bd-7460-40e5-8a0c-f736b4be5d99%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.28.01.png?id=52b15cff-192f-4399-a9a0-ed37d39b20d5&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-05-01 오후 3.28.01.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F630b3ac6-feeb-4776-bee0-1dead9dfca49%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.28.07.png?id=9bdd08de-3dc5-4c25-b58f-c90cd05675fe&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-05-01 오후 3.28.07.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML을 parsing하는 동시에 js를 fetching하는 병렬적 구조이다.
+하지만 다수의 js파일을 다운받고 다운이 완료된 js를 무작위로 실행하므로 순서에 의존적인 페이지라면 유의해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;defer&quot;&gt;defer&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd069bf4a-53a2-4d87-8e52-7cb44561be91%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.33.01.png?id=195bf836-5db0-4e4d-a43f-3536ceca7f7b&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-05-01 오후 3.33.01.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3c98217e-86f0-4379-a135-f023e7bd48cf%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.33.07.png?id=1348b421-6e04-4353-ab0b-d0eb5c75a34f&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-05-01 오후 3.33.07.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;parsing중에 js파일을 모두 다운로드 받아 놓고 parsing이 끝나는 순서대로 js를 실행하므로 원하는 순서대로 스크립트를 실행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.search&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;searchEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.search&lt;/code&gt; 요소 내부에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; 태그를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serchInputEl&lt;/code&gt;로 할당하고 search 요소를 클릭하면 input이 focus되도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;searchEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;focused&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;통합검색&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;요소가 focus되면 검색 아이콘을 삭제하는 스타일링이 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.focused&lt;/code&gt; 클래스가 추가되도록한다.
+추가로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;placeholder&lt;/code&gt; 를 “통합검색” 으로 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;blur&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;searchEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;classList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;focused&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;searchInputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;search클래스 요소 내부에있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;요소가 blur되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.focused&lt;/code&gt; 클래스가 삭제하도록한다.
+추가로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;placeholder&lt;/code&gt;는 빈값으로 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;즉, 자바스크립트는 DOM요소를 선택하고 특정 이벤트에 원하는 스타일링에 해당하는 클래스를 추가하거나 삭제하면서 요소를 동적으로 처리할 수 있도록 해준다.&lt;/p&gt;
+
+&lt;h2 id=&quot;결과&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F584f66c4-4bd6-4875-aeb5-a47ac733fe82%2FApr-16-2024_16-46-33.gif?id=50f0c7fd-6920-48f3-a69a-320f178d7b26&amp;amp;table=block&quot; alt=&quot;Apr-16-2024 16-46-33.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;헤더와-드롭메뉴---메인-메뉴&quot;&gt;헤더와 드롭메뉴 - 메인 메뉴&lt;/h1&gt;
+
+&lt;h2 id=&quot;특정-부분만-border-rardius-설정하기&quot;&gt;특정 부분만 border-rardius 설정하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.main-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item__name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#2c2a29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#669900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;좌상단을 시작으로 우측 순으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border-radius&lt;/code&gt;를 설정할 수 있다.&lt;/li&gt;
+  &lt;li&gt;좌상단 우상단만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border-radius&lt;/code&gt;를 각각 6px씩 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;레이어-최상단으로-끌어올리기&quot;&gt;레이어 최상단으로 끌어올리기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.main-menu&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;메인 메뉴를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;header&lt;/code&gt;에 우측하단에 배치하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-index: 1&lt;/code&gt;로 설정하여 레이어를 끌어올려 다른 요소들을 보다 최상단에 위치할 수 있도록 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;inner-클래스-분리하기&quot;&gt;inner 클래스 분리하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* COMMON */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* HEADER */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;120px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.inner&lt;/code&gt; 클래스는 여러 요소에서 사용되므로 공통 스타일로 정의하여 분리한다.&lt;/li&gt;
+  &lt;li&gt;각 요소들의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;height&lt;/code&gt; 값은 다른 요소에 따라 다르게 설정되고 자식 요소로 사용하기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.inner&lt;/code&gt;를 선택자로 가지게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;css-이미지-불러오기&quot;&gt;CSS 이미지 불러오기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.main-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item__contents&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.contents__texture&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;26px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&quot;../images/main_menu_pattern.jpg&quot;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.main-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item__contents&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.contents__texture&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;h4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.main-menu&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.item__contents&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.contents__texture&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#669900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;texture 요소에 패턴을 부여하기 위해 images 폴더에 있는 main_menu_patter.jpg를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-image&lt;/code&gt; 속성의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;url&lt;/code&gt; 로 가져와 이미지를 적용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;결과-1&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F10e8a677-e65d-4df4-85b3-6e0c4dc5e692%2FApr-21-2024_16-11-14.gif?id=ef867ecd-17e0-4411-9882-f231d309e3d4&amp;amp;table=block&quot; alt=&quot;Apr-21-2024 16-11-14.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;bem-방법론block-element-modifier&quot;&gt;BEM 방법론(Block Element Modifier)&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML 클래스 속성의 작명법이다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;요소__일부분&lt;/code&gt;: Underscore(_) 기호로 요소의 일부분을 표시할 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;요소—-상태&lt;/code&gt;: Dash(-) 기호로 요소의 상태를 표시할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;예시&quot;&gt;예시&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F69896266-843e-440b-8eeb-15fd030b1a9b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.23.41.png?id=da161e41-e001-4954-8bfd-42305ce859e5&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 4.23.41.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위는 요소 일부분에 대한 예시이다.&lt;/p&gt;
+
+&lt;p&gt;클래스 명을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.name&lt;/code&gt;처럼 단순하게 작명할 경우 중복될 가능성이 있다.&lt;/p&gt;
+
+&lt;p&gt;이를 Underscore를 사용하여 요소의 일부분을 나타낼 수 있다면, 해당 name이 container와 item요소 중 어떤 요소의 일부분인지를 클래스만 보고 빠르게 파악할 수 있게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fce9c0caf-ea54-4890-bfd6-d0da79ad09aa%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.23.50.png?id=9ae48a70-efa6-43d1-9aed-f1e887c7e039&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 4.23.50.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위는 요소 상태에 관한 예시이다.&lt;/p&gt;
+
+&lt;p&gt;위와 같이 버튼의 세가지 상태가 버튼에 종속되어져 있다는 것을 사용자가 파악하기 어렵다.&lt;/p&gt;
+
+&lt;p&gt;이처럼, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;primary&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;error&lt;/code&gt;가 &lt;strong&gt;버튼&lt;/strong&gt;에 종속되어져 있다는 것을 dash를 사용해서 나타낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;위와 같이 BEM방법론을 사용하게 되면 HTML의 구조를 확인하지 않고 &lt;strong&gt;클래스&lt;/strong&gt;만 봐도 어떤 구조로 이루어져 있는지를 빠르게 파악할 수 있게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;헤더와-드롭메뉴---전역-배지gsap&quot;&gt;헤더와 드롭메뉴 - 전역 배지(GSAP)&lt;/h1&gt;
+
+&lt;h2 id=&quot;배지-스타일링-및-위치-설정하기&quot;&gt;배지 스타일링 및 위치 설정하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.badges&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;132px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.badges&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.badge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;box-shadow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;pointer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border-radius&lt;/code&gt;를 통해 배지들의 모서리를 둥글게 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border-radius&lt;/code&gt;를 설정해도 안에 있는 이미지들은 외부 영역을 침범하기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow: hidden&lt;/code&gt;으로 침범을 막아준다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt;를 통해 x축과 y축으로 4px로 위치시키고 blur를 10px로 부여한다. 색은 rgba로 검정색으로 설정하고 투명도는 0.15로 설정하였다.&lt;/li&gt;
+  &lt;li&gt;badge를 header를 기준으로 위치시킬 것이기 때문에 header의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;relative&lt;/code&gt;로 설정하고 badges의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;absolute&lt;/code&gt;로 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;브라우저-상단에-고정시키기&quot;&gt;브라우저 상단에 고정시키기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f6f5f0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c8c8c8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;페이지 스크롤시 header를 브라우저 상단에 고정시키려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: fixed&lt;/code&gt;로 설정한다.&lt;/p&gt;
+
+&lt;p&gt;하지만 fixed로 설정하면 다음과 같이 width값이 최소한으로 잡혀진다.&lt;/p&gt;
+
+&lt;p&gt;그 이유는, position을 fixed나 absolute로 설정하게 되면 자동으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: auto&lt;/code&gt;로 설정되기 때문에, 가로 넓이를 최소한으로 잡으려고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F454705ff-e37a-4d75-92f7-4bc0e3daed62%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.46.24.png?id=f52101df-ab75-4bf2-a7bb-82bd0838c02d&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 4.46.24.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이러한 문제를 해결하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: 100%&lt;/code&gt;로 하여 부모 요소(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt;)의 width값으로 설정해야한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;**&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f6f5f0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c8c8c8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;부모의 너비 만큼 header의 너비가 잡힌 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff2ad9df9-a764-4f8d-8d62-940a47af2dc2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.47.36.png?id=b2a0c1e2-8aaf-4339-bf80-aa21100847dc&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 4.47.36.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;스크롤-시-배지-숨기기&quot;&gt;스크롤 시 배지 숨기기&lt;/h2&gt;
+
+&lt;p&gt;스크롤값이 특정값을 넘어가게 될 경우 배지가 숨겨지도록 javasript를 통해 구현해야할 필요가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;lodashjs&quot;&gt;lodash.js&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window&lt;/code&gt;에 scroll 이벤트를 주고 로직을 작성하면, 스크롤 할때 마다 함수가 연속적으로 호출된다.&lt;/p&gt;
+
+&lt;p&gt;그러나, 위처럼 구현하게 되면 사이트에 들어가는 컨텐츠가 많아 질수록 버벅이는 현상으로 이어질 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이러한 방식을 해결해줄 수 있는 외부 라이브러리가 &lt;strong&gt;loadash.js&lt;/strong&gt;이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdnjs.com/libraries/lodash.js&quot;&gt;lodash.js - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;위 링크를 통해 lodash.js 라이브러리 사이트의 CDN 페이지로 이동한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb76bb28b-2fd8-42fe-b848-4d6b14428e4c%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.52.15.png?id=1dec5339-1399-442a-8059-22103734e613&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 4.52.15.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;가장 많이 사용하는 첫번째 CDN을 복사해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt;태그 내부에 추가하고 다음과 같이 작성한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;header .badges&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;throttle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window&lt;/code&gt;객체에 접근하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addEventListener()&lt;/code&gt;를 통해 scroll 이벤트를 부여한다.&lt;/li&gt;
+  &lt;li&gt;lodash 라이브러리에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_.throttle()&lt;/code&gt;의 첫번째 인자로 함수를 전달한다.&lt;/li&gt;
+  &lt;li&gt;두번째 인자로는 해당 함수가 몇초에 한번 함수를 호출할 것인지를 ms단위로 입력한다.&lt;/li&gt;
+  &lt;li&gt;위 코드는 0.3초 단위로 부하를 주어서 함수가 연속적으로 호출되는 것을 방지하도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window&lt;/code&gt;객체의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrollY&lt;/code&gt;를 통해 브라우저 상단을 기점으로 스크롤한 위치가 몇 px인지 확인할 수 있다. 이를 통해 500px를 넘으면 배지를 숨기게하고 그렇지 않을 경우 보이게 끔 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gsap&quot;&gt;GSAP&lt;/h3&gt;
+
+&lt;p&gt;배지를 숨기고 보여지는 애니메이션 과정에서 이질감이 있다.&lt;/p&gt;
+
+&lt;p&gt;자연스러운 애니메이션 효과를 주기위해 &lt;strong&gt;GSAP&lt;/strong&gt; 라이브러리를 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F7ee355af-419f-4a14-b752-b788057684f7%2FApr-21-2024_18-19-40.gif?id=01c65de5-9856-43b2-96c2-bc0189c9111c&amp;amp;table=block&quot; alt=&quot;Apr-21-2024 18-19-40.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdnjs.com/libraries/gsap&quot;&gt;gsap - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;위 링크를 통해 GSAP 라이브러리 사이트의 CDN 페이지로 이동한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb7a43086-59d9-41a5-9388-993caa5494a0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.15.00.png?id=4e8fbce9-2db8-4495-a25b-a181551e2906&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 6.15.00.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;가장 많이 사용하는 첫번째 CDN을 복사해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt;태그 내부에 추가하고 다음과 같이 작성한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.addEventListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;&quot;scroll&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.throttle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(window.scrollY&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;500)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;gsap.to(badgeEl,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0.6,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;gsap.to(badgeEl,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0.6,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gsap 객체의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to()&lt;/code&gt; 메소드를 통해 &lt;strong&gt;요소&lt;/strong&gt;와, &lt;strong&gt;지속시간&lt;/strong&gt;, &lt;strong&gt;옵션&lt;/strong&gt;을 인자로 넘긴다.&lt;/li&gt;
+  &lt;li&gt;옵션에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opacity&lt;/code&gt; 속성을 넣어 숨길경우 0으로 보일 경우 1로 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3439a321-9709-4bcc-acbd-df419f0002dd%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.11.30.png?id=3f50ee63-28d2-4b7f-a9d0-1b65056335bd&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-21 오후 6.11.30.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;하지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opacity&lt;/code&gt;값으로만 애니메이션을 처리하면, 요소는 그대로 남고 보이지 않는 형태가 되기 때문에 사용자가 해당 영역을 클릭하면 배지를 클릭하게되는 문제가 발생한다.&lt;/p&gt;
+
+&lt;p&gt;때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opacity&lt;/code&gt; 뿐만 아니라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt; 과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;block&lt;/code&gt;으로 옵션을 주어 요소를 완전히 제거할 수 있도록 설정해야한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;throttle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;결과-2&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F9a1025bf-f4e3-44f4-a54a-0c360057b7a2%2FApr-21-2024_18-25-29.gif?id=3c718c48-9c73-4535-a3d2-500f11547eec&amp;amp;table=block&quot; alt=&quot;Apr-21-2024 18-25-29.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;소감&quot;&gt;소감&lt;/h1&gt;
+
+&lt;p&gt;이번 주차는 loadash와 gsap 같은 오픈소스를 처음 접해보았는데, 처음에는 매우 생소하게 느껴졌다.&lt;/p&gt;
+
+&lt;p&gt;lodash를 사용하여 스크롤할 때 특정 주기를 설정하여 함수가 연속적으로 트리거되지 않도록 하는 방법을 배웠다.&lt;/p&gt;
+
+&lt;p&gt;뿐만 아니라 lodash에서 제공하는 객체와 배열 등의 데이터 구조는 일부 메서드에서 기존의 ES6보다 뛰어난 성능과 함수의 확장성을 제공한다는 것을 알게 되었다.&lt;/p&gt;
+
+&lt;p&gt;또한, gsap에서 제공하는 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsap.to()&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsap.from()&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsap.fromTo()&lt;/code&gt;&lt;/strong&gt;를 사용하여 애니메이션을 보다 간단하게 설정할 수 있다는 점도 배울 수 있었다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)" /><published>2024-04-15T00:00:00+09:00</published><updated>2024-04-15T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(1)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -3230,761 +3664,4 @@
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;11-구현-코드-보러가기&quot;&gt;11. &lt;a href=&quot;https://github.com/llbllhllk/javascript-christmas-6-llbllhllk&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry><entry><title type="html">[우아한테크코스 6기] 프리코스 3주차 - 로또 회고록</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-3%EC%A3%BC%EC%B0%A8-%EB%A1%9C%EB%98%90-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 프리코스 3주차 - 로또 회고록" /><published>2023-11-10T00:00:00+09:00</published><updated>2023-11-10T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%20%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4%203%EC%A3%BC%EC%B0%A8%20-%20%EB%A1%9C%EB%98%90%20%ED%9A%8C%EA%B3%A0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-3%EC%A3%BC%EC%B0%A8-%EB%A1%9C%EB%98%90-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html">&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1주제&quot;&gt;1.주제&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://app.super.so/_next/image?url=https%3A%2F%2Fassets.super.so%2F103836b2-5162-4915-b9b3-3e82eeac52e9%2Fimages%2F98ec9b63-e86a-4a9a-8200-3215a697e3bd%2Fdart.png&amp;amp;w=384&amp;amp;q=90&quot; alt=&quot;dart.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3주차 미션은 로또 문제였다.&lt;/p&gt;
-
-&lt;p&gt;구매 금액에 따른 로또 번호를 생성하고, 당첨 번호와 보너스 번호를 사용해 당첨 결과와 수익률을 출력하는 것이 목표였다.&lt;/p&gt;
-
-&lt;p&gt;또한, 이번 미션의 주요 학습 목표는 클래스(객체) 분리와 도메인 로직에 대한 단위 테스트 작성이었다.&lt;/p&gt;
-
-&lt;p&gt;Jest를 활용한 테스트 코드 작성에 아직 익숙하지 않지만, 이번 미션을 통해 단위 테스트의 중요성과 장점을 체계적으로 이해하고자 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2-공들인-부분&quot;&gt;2. 공들인 부분&lt;/h1&gt;
-
-&lt;h2 id=&quot;기능-목록-작성하기&quot;&gt;기능 목록 작성하기&lt;/h2&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 기능 목록&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 입력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 구입 금액 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 당첨 번호를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 보너스 번호를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 출력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1,000원 단위로 로또 수량 및 번호를 오름차순으로 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 당첨 내역을 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 총 수익률을 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 핵심기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1개의 로또마다 1~45까지의 숫자를 랜덤으로 6개를 랜덤으로 오름차순으로 뽑는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 당첨 통계를 계산하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 총 수익률을 계산하는 기능
-
-&lt;span class=&quot;gh&quot;&gt;# 예외 상황&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 구입 금액 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1,000으로 나누어 떨어지지 않는 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 값을 입력하지 않은 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 당첨 번호 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 쉼표 구분을 잘못 기입했을 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 당첨번호가 6개가 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1~45의 값이 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 값을 입력하지 않은 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 보너스 번호 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1~45의 값이 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 값을 입력하지 않은 경우
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이번 미션에도 구현 전에 기능 목록을 세부적으로 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;하지만, 클래스와 함수의 설계 및 구현 등과 같은 세부 사항은 과도하게 작성하지 않았다.&lt;/p&gt;
-
-&lt;p&gt;기능 목록은 구현 과정에서 언제든지 수정될 수 있음을 인지하고 있기 때문에, 이를 통해 개발의 효율성을 높이는 데 초점을 맞추었다.&lt;/p&gt;
-
-&lt;p&gt;구현 과정을 통해 수정된 최종 기능 목록은 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 기능 목록&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 입력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 구입 금액 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 당첨 번호를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 보너스 번호를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 출력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 로또 수량 및 번호를 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 당첨 내역을 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 총 수익률을 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 핵심기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 1~45까지의 숫자를 랜덤으로 6개를 랜덤으로 오름차순으로 뽑는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 로또 번호를 생성하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 당첨 통계를 계산하는 기능
-&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; [x] 일치하는 당첨번호의 개수를 계산하는 기능
-&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; [x] 당첨번호 5개와 보너스 넘버가 일치하는 여부를 계산하는 기능
-&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; [x] 메시지 결과를 스왑하는 기능
-&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; [x] 당첨 통계 결과 메시지를 추가하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 총 수익률을 계산하는 기능
-&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; [x] 당첨금을 배열에 추가하여 반환하는 기능
-
-&lt;span class=&quot;gh&quot;&gt;# 예외 상황&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 구입 금액 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 1,000으로 나누어 떨어지지 않는 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 값을 입력하지 않은 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 음수 값을 입력했을 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 당첨 번호 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 쉼표 구분을 잘못 기입했을 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 당첨 번호가 6개가 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 1~45의 값이 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 보너스 번호 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 1~45의 값이 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 숫자가 아닌 값을 입력한 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 값을 입력하지 않은 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 로또 클래스
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 로또 번호가 6개가 아닌 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [x] 중복된 숫자가 있을 경우
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;큰 차이점으로는 핵심 기능을 추가하고, 그에 필요한 세부 기능들을 보강하였다.&lt;/p&gt;
-
-&lt;p&gt;또한, 테스트 과정에서 발견된 예외 상황들도 목록에 추가하였다.&lt;/p&gt;
-
-&lt;p&gt;이는 자연스럽게 우테코에서 강조하고 있는 ‘죽은 문서’가 아닌 ‘살아있는 문서’로 완성되어졌다.&lt;/p&gt;
-
-&lt;p&gt;기능 목록을 작성하는 것이 개발의 효율성을 극대화시키며, 타인이 내 코드를 쉽게 이해하고 설명할 수 있게 도와준다는 점을 항상 느낀다.&lt;/p&gt;
-
-&lt;p&gt;이러한 장점을 경험한 이후, 다른 개발을 시작할 때도 먼저 키보드에 손이 먼저 올라가는 것이 아닌 노트를 펼치고 목록부터 작성하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;이는 매우 긍정적인 발전이라고 생각한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;플로우-리스트-작성하기&quot;&gt;플로우 리스트 작성하기&lt;/h2&gt;
-
-&lt;p&gt;이전에는 프로그램의 순서를 플로우 차트로 그렸다.&lt;/p&gt;
-
-&lt;p&gt;하지만, 이 과정이 생각보다 많은 시간을 차지했다.&lt;/p&gt;
-
-&lt;p&gt;그래서 플로우 차트를 대체할 다른 효율적인 방법을 찾았고, 그것이 바로 플로우 리스트 작성이었다.&lt;/p&gt;
-
-&lt;p&gt;작성한 플로우 리스트는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 구매 금액을 입력받는다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 입력받은 구매금액을 통해 로또 번호를 생성한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 생성한 로또 번호를 출력한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 당첨 번호를 입력받는다
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 보너스 번호를 입력받는다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 입력받은 당첨 번호와 보너스 번호를 통해 당첨금 결과를 생성한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 생성한 당첨금 결과를 출력한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 입력받은 구매 금액과 당첨금 결과를 통해 총 수익률을 생성한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 총 수익률을 출력한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전에는 유효성 검사를 추가하였지만, 이미 view에서 유효성 검사를 진행하므로 세부적인 기능들은 생략하였다.&lt;/p&gt;
-
-&lt;p&gt;프로그램의 순서를 파악하기 위해 입력과 출력, 중간에 필요한 핵심 기능들을 기반으로 플로우를 리스트화하였다.&lt;/p&gt;
-
-&lt;p&gt;이런 방식은 프로그램의 순서를 쉽게 파악하고, 각 플로우 별로 함수를 구성하면서 controller를 작성하는 데 큰 도움이 되었다.&lt;/p&gt;
-
-&lt;h2 id=&quot;피드백-반영하기&quot;&gt;피드백 반영하기&lt;/h2&gt;
-
-&lt;h3 id=&quot;airbnb-자바스크립트-스타일-가이드-준수하기&quot;&gt;Airbnb 자바스크립트 스타일 가이드 준수하기&lt;/h3&gt;
-
-&lt;aside&gt;
-**Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like for-in or for-of**
-
-&lt;/aside&gt;
-
-&lt;p&gt;Airbnb의 자바스크립트 스타일 가이드에 따르면, for문의 사용을 지양하고 고차함수를 활용하도록 권장하고 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/airbnb/javascript#iterators-and-generators&quot;&gt;GitHub - airbnb/javascript: JavaScript Style Guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// bad&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// best (use the functional force)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전 미션에서는 출력 함수에서 for문을 사용했었는데, 이번 미션에서는 이를 고차함수로 대체하려 노력하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;예를 들어, 로또 번호를 랜덤으로 생성하는 함수를 특정 횟수만큼 반복 호출하는 코드에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Array.from()&lt;/code&gt;과 같은 고차함수를 사용하여 반복 로직을 개선하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// before&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()));&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기존에는 카운트 변수 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;를 0으로 초기화하고, 1씩 증가시키며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;count&lt;/code&gt; 값이 될 때까지 반복문을 사용했을 것이다.&lt;/p&gt;
-
-&lt;p&gt;하지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Array.from()&lt;/code&gt;과 같은 고차함수를 활용하면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length&lt;/code&gt; 속성의 값만큼 콜백함수 내부 로직을 순회하게 함으로써 이를 개선할 수 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;클래스객체-분리하기&quot;&gt;클래스(객체) 분리하기&lt;/h3&gt;
-
-&lt;p&gt;MVC 패턴을 통해 클래스와 객체들을 역할에 따라 분리했다.&lt;/p&gt;
-
-&lt;p&gt;상수들을 관리하는 constants, 프로그램 실행 로직을 관리하는 controller, 각 도메인 로직과 클래스를 관리하는 domain, I/O를 관리하는 view, 유틸 함수들을 관리하는 utils로 크게 분리했다.&lt;/p&gt;
-
-&lt;p&gt;특히, 클래스 내부 로직을 숨기고 외부 인터페이스를 통해서만 상호작용하도록 캡슐화에 신경을 썼다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb165d3aa-2f01-4dc6-bdf8-bc83117c601a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-08_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.11.46.png?id=f35918fa-a75e-447e-8a42-91846685b26a&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-08 오후 9.11.46.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Constants&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;매직넘버를 제거하기 위한 여러 상수들과 에러 메시지, 입력 메시지들을 정의해 놓았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;View&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;입/출력과 관련된 객체들을 구성하였다. 사용자와의 인터페이스를 처리하고 입력을 받아서 Controller 영역으로 전달하는 역할을 담당하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Controller&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;로또 게임의 실행 로직을 작성하였다. 입력을 받아 도메인 영역의 클래스들을 활용하여 게임을 진행하고 결과를 반환하는 역할을 수행하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Domain&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;로또 번호 생성 및 당첨 결과들과 총 수익률과 관련한 여러 도메인 클래스들을 생성하였다. 각자의 역할에 맞게 핵심 로직들을 구현하여 역할을 수행하도록 하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utils&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;유효성 검사와 관련된 객체를 구성하였다. 사용자의 입력에 해당하는 구매 금액과 당첨 번호, 보너스 번호의 유효성 검사 함수들을 정의하고 입력에 따른 유효성 검사를 진행하는 함수를 정의하여 InputView에서 호출하여 유효성 검사를 시행하도록 수행하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;lotto&quot;&gt;Lotto&lt;/h3&gt;
-
-&lt;p&gt;이번 미션에서는 기본으로 제공된 Lotto 클래스에 다른 필드를 추가하지 않는 요구사항이 있었다.&lt;/p&gt;
-
-&lt;p&gt;따라서, 이 클래스에서는 번호들을 받아 유효성 검사를 하고, 외부로 로또 번호를 반환하는 역할을 수행하는 클래스를 설계했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Validator&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../utils/Validator.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lotto&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Validator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validateLotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;lottos&quot;&gt;Lottos&lt;/h3&gt;
-
-&lt;p&gt;Lottos 클래스는 구매 금액에 따라 로또 번호를 생성하는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;내부적으로 6개의 랜덤 숫자를 생성하여 Lotto 클래스의 인스턴스를 만들고, 인자로 받은 로또 번호 생성 횟수만큼 순회하여 lottos에 추가한다.&lt;/p&gt;
-
-&lt;p&gt;이후 외부에서는 lottos를 반환 받도록 함수를 작성했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@woowacourse/mission-utils&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/constants.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lotto&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./Lotto.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lottos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;getLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateRandomNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickUniqueNumbersInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateLotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randomNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateRandomNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;randomNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;winningstatistics&quot;&gt;WinningStatistics&lt;/h3&gt;
-
-&lt;p&gt;WinningStatistics 클래스는 당첨 통계를 계산하고 메시지 결과를 생성하는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;내부적으로 매치된 당첨 번호의 개수를 구하고 보너스 번호를 체크한 통계를 생성한다.&lt;/p&gt;
-
-&lt;p&gt;그리고 이 통계를 기반으로 상수화된 메시지들을 순회하여 메시지 통계 결과를 생성한다.&lt;/p&gt;
-
-&lt;p&gt;최종적으로 외부에서는 당첨 통계 또는 메시지 결과를 반환 받도록 메소드를 작성했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/constants.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MESSAGE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/message.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WinningStatistics&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateWinningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateWinningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;getWinningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;getWinningStaticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateWinningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getMatchingNumbersCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findFiveMatchWithBonus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateWinningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningstatistic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningstatistic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;개`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;swapWinningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;swapWinningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threeMatchValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;threeMatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;threeMatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fourMatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;winningStatisticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fourMatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;threeMatchValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getMatchingNumbersCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lotto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findFiveMatchWithBonus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matchWithBonusCounts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMatchCounts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;newMatchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fiveMatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;matchWithBonusCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;matchWithBonusCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;newMatchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fiveMatchWithBonus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMatchCounts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WinningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;rateofreturn&quot;&gt;RateOfReturn&lt;/h3&gt;
-
-&lt;p&gt;RateOfReturn 클래스는 총 수익률을 계산하는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;내부적으로 당첨 통계를 통해 당첨 금액을 반환하는 함수를 작성했다.&lt;/p&gt;
-
-&lt;p&gt;이 당첨 금액을 기반으로 구매 금액으로 총 수익률을 문자열로 반환하는 기능을 수행하도록 작성했다.&lt;/p&gt;
-
-&lt;p&gt;최종적으로 외부에서는 총 수익률을 반환 받도록 메소드를 작성했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/constants.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RateOfReturn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;genarateReturns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateRateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;getRateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generateRateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;zero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0%&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finalValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;currentReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;currentReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finalValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;percentage&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toFixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;genarateReturns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;하드-코딩하지-않기상수화-시키기&quot;&gt;하드 코딩하지 않기(상수화 시키기)&lt;/h3&gt;
-
-&lt;p&gt;문자열이나 숫자 등의 값을 하드 코딩하지 않고, 상수로 만들어 constants 폴더에 관리했다.&lt;/p&gt;
-
-&lt;p&gt;특히, 각 상수의 역할을 잘 드러내는 변수명을 사용하고, Airbnb 자바스크립트 스타일 가이드를 따랐다.&lt;/p&gt;
-
-&lt;p&gt;다음은 숫자 야구 미션 때 작성한 코드이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;freeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;INPUT_USER_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;숫자를 입력해주세요 : &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;INPUT_RESTART_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.\n`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OutputString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;freeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;OUTPUT_GAME_START&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;숫자 야구 게임을 시작합니다.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;OUTPUT_GAME_END&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3개의 숫자를 모두 맞히셨습니다! 게임 종료&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;객체의 키를 대문자의 스네이크 케이스로 작성했던 예전과 달리, 이번에는 Airbnb에서 제안하는 대로 키를 무의미하게 대문자로 쓸 필요가 없다고 판단했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/airbnb/javascript#naming--uppercase&quot;&gt;GitHub - airbnb/javascript: JavaScript Style Guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// bad - unnecessarily uppercases key while adding no semantic value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MAPPING&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// good&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MAPPING&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;따라서, 이번 미션에서는 상수들을 의미에 맞게 묶은 객체를 생성하고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object.freeze()&lt;/code&gt;를 사용하여 값이 변경되지 않도록 관리했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;freeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;zero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;percentage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;freeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;prize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;jest를-통한-단위-테스트에-친숙해지기&quot;&gt;Jest를 통한 단위 테스트에 친숙해지기&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F6e56da09-6428-4af6-b4f0-5a3348b4c152%2Fjest.png?id=d57ae878-b89a-40c6-a3fe-caf379e434ce&amp;amp;table=block&quot; alt=&quot;jest.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이번 미션에서는 ‘도메인 로직’과 ‘단위 테스트’에 대한 정확한 이해가 부족했다.&lt;/p&gt;
-
-&lt;p&gt;따라서 이 두 가지 개념에 대해 자세히 알아보고, 어떻게 테스트를 작성해야 하는지 찾아보았다.&lt;/p&gt;
-
-&lt;h3 id=&quot;도메인-로직이란&quot;&gt;도메인 로직이란?&lt;/h3&gt;
-
-&lt;p&gt;‘도메인’은 ‘소프트웨어로 해결하고자 하는 문제’를 의미하며, 이를 해결하기 위한 코드 로직을 ‘도메인 로직’이라고 부른다.&lt;/p&gt;
-
-&lt;p&gt;이 외에 다른 외부 로직들은 ‘애플리케이션 서비스 로직’이라고 부른다.&lt;/p&gt;
-
-&lt;p&gt;따라서, 이번 미션에서 요구하는 핵심 기능이 무엇인지 찾아 도메인 로직을 구성하는 것이 중요하다고 판단하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;단위-테스트란&quot;&gt;단위 테스트란?&lt;/h3&gt;
-
-&lt;p&gt;단위 테스트(Unit test)’는 프로그래밍에서 소스 코드의 특정 모듈(메서드)이 의도된 대로 정확히 작동하는지 검증하는 절차이다.&lt;/p&gt;
-
-&lt;p&gt;즉, 작성한 모든 메서드들에 대한 테스트 케이스를 작성하는 것을 의미한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;테스트-케이스-작성&quot;&gt;테스트 케이스 작성&lt;/h3&gt;
-
-&lt;p&gt;즉, 이번 미션에서는 해결하고자 하는 궁극적인 문제에 해당하는 도메인을 찾고, 해당 로직(메서드)에 대한 테스트 케이스를 작성해야 한다는 결론을 내렸다.&lt;/p&gt;
-
-&lt;p&gt;먼저, 이번 미션에서의 도메인은 무엇인지 생각해보았다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;구매 금액 만큼의 로또 번호 생성&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;당첨 통계 계산&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;총 수익률 계산&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이 세 가지를 해당 미션에서의 도메인이라 판단하고, 각각에 대한 메서드 구현과 테스트 케이스를 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;먼저, 로또 번호를 랜덤으로 생성하는 시나리오를 구상하기 위해 mockRandoms 메서드를 생성했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickUniqueNumbersInRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickUniqueNumbersInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockReturnValueOnce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;구매-금액-만큼의-로또-번호-생성&quot;&gt;구매 금액 만큼의 로또 번호 생성&lt;/h3&gt;
-
-&lt;p&gt;구매 금액에 따른 로또 번호를 생성하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lottos&lt;/code&gt; 클래스를 테스트하기 위해, 구매 금액에 따른 생성 횟수를 2라고 가정했다.&lt;/p&gt;
-
-&lt;p&gt;그 다음에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockRandoms&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;random&lt;/code&gt; 값을 전달하여 로또 번호 시나리오를 설정하였고, 이를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lottos&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;count&lt;/code&gt;로 전달하여 2개의 로또 번호가 생성되도록 했다.&lt;/p&gt;
-
-&lt;p&gt;생성된 로또 번호는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getLottos()&lt;/code&gt; 메서드를 호출하여 받아온 값을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;recievedValue&lt;/code&gt;에 할당했다.&lt;/p&gt;
-
-&lt;p&gt;마지막으로, 생성된 로또 번호가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expectedValue&lt;/code&gt;라고 가정하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;recievedValue&lt;/code&gt;와 함께 테스트를 진행했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;구매금액 만큼 로또 번호를 생성한다.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;recievedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;recievedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toStrictEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;당첨-통계-계산&quot;&gt;당첨 통계 계산&lt;/h3&gt;
-
-&lt;p&gt;로또 번호, 당첨 번호, 보너스 번호를 통해 당첨 통계를 계산하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WinningStatistics&lt;/code&gt; 클래스를 테스트하기 위해, 먼저 구매 금액만큼의 로또 번호를 생성했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockRandoms&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;random&lt;/code&gt; 값을 전달하여 로또 번호 시나리오를 설정하고, 당첨 번호와 보너스 번호를 임의로 할당하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WinningStatistics&lt;/code&gt; 클래스에 인자로 전달했다.&lt;/p&gt;
-
-&lt;p&gt;당첨 통계의 메시지가 담긴 배열을 가져오기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getWinningStaticsString()&lt;/code&gt;를 호출하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;winningStatistics&lt;/code&gt; 변수에 할당했다.&lt;/p&gt;
-
-&lt;p&gt;최종적으로, 생성된 당첨 통계인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;winningStatistics&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expectedValue&lt;/code&gt;와 함께 테스트를 진행했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;당첨 통계를 계산하는 기능&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3개 일치 (5,000원) - 0개&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4개 일치 (50,000원) - 0개&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5개 일치 (1,500,000원) - 0개&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5개 일치, 보너스 볼 일치 (30,000,000원) - 1개&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6개 일치 (2,000,000,000원) - 0개&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getLottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WinningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;lottos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;winningNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;bonusNumber&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getWinningStaticsString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toStrictEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;총-수익률-계산&quot;&gt;총 수익률 계산&lt;/h3&gt;
-
-&lt;p&gt;당첨 통계와 구매 금액을 통해 총 수익률을 계산하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RateOfReturn&lt;/code&gt; 클래스를 테스트하기 위해, 구매 금액과 당첨 통계를 가정했다.&lt;/p&gt;
-
-&lt;p&gt;이후 구매 금액과 당첨 통계를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RateOfReturn&lt;/code&gt;에 인자로 전달하여 총 수익률을 반환받아 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rateOfReturn&lt;/code&gt;에 할당했다.&lt;/p&gt;
-
-&lt;p&gt;마지막으로, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rateOfReturn&lt;/code&gt;를 기대값인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expectedValue&lt;/code&gt;와 함께 테스트를 진행했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;총 수익률을 계산하는 기능&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;62.5%&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;winningStatistics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getRateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rateOfReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;테스트 케이스 작성을 위해 matcher 관련 메서드를 찾아보는 과정이 있었지만, mocking을 이용한 테스트 코드 작성에는 이전에 진행했던 미션에서 보다 익숙해진 것 같다.&lt;/p&gt;
-
-&lt;p&gt;하지만, 테스트 코드를 먼저 작성하지 않고 도메인 로직을 먼저 구현하다 보니, 이후에 발생하는 버그를 다시 수정해야 하는 문제가 있었다.&lt;/p&gt;
-
-&lt;p&gt;이로 인해 시간이 꽤 걸렸는데, 이를 통해 ‘테스트 코드를 먼저 작성하고 개발하는 TDD(Test-Driven Development) 방법론’에 대해 고민하게 되었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;tdd란&quot;&gt;TDD란?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fd470dd54-61f2-46d3-b4f8-4006ce8f551f%2FTDD-%25E1%2584%2580%25E1%2585%25A2%25E1%2584%2587%25E1%2585%25A1%25E1%2586%25AF%25E1%2584%258C%25E1%2585%25AE%25E1%2584%2580%25E1%2585%25B5.webp?id=686d8ce3-4407-433a-9830-864e2d54487d&amp;amp;table=block&quot; alt=&quot;TDD-개발주기.webp&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TDD는 ‘테스트 주도 개발’이라고 하며, 작은 단위의 테스트 케이스를 작성하고, 이를 통과하는 코드를 추가하는 단계를 반복하여 구현한다.&lt;/p&gt;
-
-&lt;p&gt;중요한 점은 실패하는 테스트 코드를 작성할 때까지 실제 코드를 작성하지 않는 것과, 실패하는 테스트를 통과할 정도의 최소한의 실제 코드를 작성해야 한다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;TDD를 통해 실제 코드에 대한 기대치를 명확하게 정의함으로써 불필요한 설계를 피하고, 정확한 요구 사항에 집중할 수 있다는 것을 깨달았다.&lt;/p&gt;
-
-&lt;p&gt;따라서, 다음 미션에서는 TDD 방법론을 적용해보려고 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-시행착오&quot;&gt;3. 시행착오&lt;/h1&gt;
-
-&lt;h2 id=&quot;에러-핸들링&quot;&gt;에러 핸들링&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ApplicationTest&lt;/code&gt;에서 계속 실패가 발생하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runException(&apos;1000j&apos;)&lt;/code&gt; 부분을 살펴보기로 했다.&lt;/p&gt;
-
-&lt;p&gt;이 부분에서 왜 실패하는지 이해가 가지 않아, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runException()&lt;/code&gt; 메서드를 상세히 살펴보기로 했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;runException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// given&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logSpy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLogSpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RANDOM_NUMBERS_TO_END&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;INPUT_NUMBERS_TO_END&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1,2,3,4,5,6&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RANDOM_NUMBERS_TO_END&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mockQuestions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;INPUT_NUMBERS_TO_END&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// when&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// then&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logSpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toHaveBeenCalledWith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringContaining&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[ERROR]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전 미션에서는 throw에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[ERROR]&lt;/code&gt;가 포함되어 있는지 확인했었는데, 이번에는 throw를 확인하는 것이 아니라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Console.print()&lt;/code&gt;를 spy로 감지하여 출력에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[ERROR]&lt;/code&gt;가 포함되어 있는지 확인하고 있었다.&lt;/p&gt;
-
-&lt;p&gt;출력에서 왜 에러 문구를 확인하는지 이해하지 못해, 요구사항을 다시 살펴보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fd9dcb3a3-0e07-47c1-a401-ee2f5c345d84%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-08_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_3.10.27.png?id=5378e535-52b5-464c-86d0-64d393323e14&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-08 오전 3.10.27.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;요구사항을 다시 보니, throw문으로 예외를 발생시키고 해당 예외의 메시지를 출력하며, 사용자로부터 다시 입력을 받도록 되어 있었다.&lt;/p&gt;
-
-&lt;p&gt;그래서 입력 부분에서 try 문을 사용해 입력에 대한 유효성 검사를 통해 에러를 throw하고, 동시에 catch 문을 통해 error의 메시지를 출력하도록 수정해야 했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;remainderNotZero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amountDivisor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONSTANTS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;zero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remainderNotZero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;invalidNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;invalidNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이미 유효성 검사를 담당하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Validator&lt;/code&gt; 객체에서 에러를 throw하고 있었기 때문에, 어떻게 하면 그 에러 객체에서 메시지를 가져올 수 있을지 고민했다.&lt;/p&gt;
-
-&lt;p&gt;이에 대한 의문을 해결하기 위해, 에러 핸들링에 관한 내용을 더 자세히 찾아보기로 했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc282b9ed-98a1-4ae6-b541-e5000e4fcc9a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.28.19.png?id=a50b3f15-96be-49c2-a34f-49c67dd0aeeb&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-09 오후 8.28.19.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error&lt;/code&gt; 객체에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message&lt;/code&gt;라는 속성이 있다는 것을 확인했다.&lt;/p&gt;
-
-&lt;p&gt;이를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Error.message&lt;/code&gt;를 구조 분해하여 상수로 정의해놓은 에러 메시지를 콘솔에 출력하도록 수정했다.&lt;/p&gt;
-
-&lt;p&gt;또한, 무한 반복문을 사용하여 사용자가 올바른 입력을 할 때까지 입력을 계속 받도록 로직을 수정했다.&lt;/p&gt;
-
-&lt;p&gt;수정한 코드는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;readPurchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readLineAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;Validator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validatePurchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;purchaseAmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4-회고&quot;&gt;4. 회고&lt;/h1&gt;
-
-&lt;p&gt;이번 미션에서는 클래스와 함수를 어떻게 분리할 수 있는지에 대해 많은 시간을 투자했다. 특히, 클래스를 분리하고 리팩토링하면서, 자연스럽게 클래스의 안정성을 고려하게 되어 캡슐화를 진행하는 과정이 신기했다.&lt;/p&gt;
-
-&lt;p&gt;이번 미션을 통해 다음과 같은 것들을 배웠다.&lt;/p&gt;
-
-&lt;p&gt;단위 테스트의 중요성을 알게 되었다. 도메인 로직에 따른 테스트를 진행하면서, 오류가 적은 안전한 유닛을 작성할 수 있음을 깨달았다. 아쉽게도, 도메인 로직에 해당하는 기능을 먼저 개발하고 테스트 코드를 작성하게 되면서, 여러 버그를 수정하는 데 시간이 오래 걸렸다. 그러나 이를 통해 TDD(Test-Driven Development)라는 방법론을 알게 되었고, 다음 미션에서는 이 방법론이 효율적인 테스트 코드 작성에 큰 도움이 될 것이라 생각한다.&lt;/p&gt;
-
-&lt;p&gt;다만, 제출 후에는 몇 가지 후회와 아쉬움도 있었다.&lt;/p&gt;
-
-&lt;p&gt;특히, 클래스에서 정적 메소드와 프로퍼티를 더 고려했으면 하는 생각이 들었다. 대부분의 클래스들이 복제가 필요하지 않는 데이터를 다루고 있었기 때문에, 인스턴스를 생성하지 않고 클래스에서 메소드를 호출할 수 있는 방법이 있었다.&lt;/p&gt;
-
-&lt;p&gt;또한, 유효성 검사를 수행하는 기능들을 Validator라는 하나의 클래스로 관리한 점이 아쉬웠다. 각 목적에 맞는 유효성 검사들을 다수의 클래스로 분리하여 관리하는 것이 더 좋지 않았을까 하는 의문이 들었다.&lt;/p&gt;
-
-&lt;p&gt;벌써 다음 미션이 4주차라는 사실이 믿기지 않는다. 3주 동안 이렇게 깊이 있는 내용들을 빠르게 학습할 수 있었다는 것이 놀라웠다. 우테코에서 추구하는 교육 방식이 나에게 매우 적합하다는 것을 느꼈다. 이를 매주 느끼면서 이번 우아한테크코스 6기에 꼭 들어가고 싶다는 마음은 더욱 굳건해졌다. 배운 내용들을 모두 정리하고, 다시 한 번 미션을 수정하면서 복습하는 시간을 갖어야겠다. 다음 4주차 미션에서는 모든 것을 쏟아붓어야겠다. 앞으로 남은 한 주도 의미 있는 시간이 되도록 노력할 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;5-다음-목표&quot;&gt;5. 다음 목표&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TDD 방법론 적용하기&lt;/li&gt;
-  &lt;li&gt;정적 메소드와 프로퍼티 고려하기&lt;/li&gt;
-  &lt;li&gt;테스트코드 분리하기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;6-구현-코드-보러가기&quot;&gt;6. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-lotto-6/pull/202&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
+&lt;h1 id=&quot;11-구현-코드-보러가기&quot;&gt;11. &lt;a href=&quot;https://github.com/llbllhllk/javascript-christmas-6-llbllhllk&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
