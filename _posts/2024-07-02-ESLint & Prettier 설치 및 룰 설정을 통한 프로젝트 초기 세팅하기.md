@@ -110,7 +110,7 @@ cache 파일은 `node_modules` 내부에 저장되므로 따로 `.gitignore`로 
 <br />
 # ESLint
 
-!https://prod-files-secure.s3.us-west-2.amazonaws.com/13897cab-0dd6-431f-b847-04477372a586/271249c3-7046-4e4d-b024-442f1fadecfc/eslint.png
+![eslint](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F271249c3-7046-4e4d-b024-442f1fadecfc%2Feslint.png?id=7040c36e-f5d6-4b67-aa22-337eaedad422&table=block)
 
 - **ES**: ECMA Script로서 JavaScript를 표준화하기 위해 만들어진 규격
 - **Lint**: 소스 코드를 분석하여 오류, 버그, 코딩 스타일 등을 에러로 표시
@@ -432,6 +432,7 @@ ESLint가 `@components/Button.tsx` 모듈의 경로를 찾지 못할 때는 **al
   "tsx": "never"
 }]
 ```
+
 <br />
 
 ![스크린샷 2024-06-27 오후 3.23.14.png](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffdab6972-ecb1-4a71-b82f-6bf7c2954623%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.23.14.png?id=366f1244-be63-41c1-b8b7-28be1a45b31d&table=block)

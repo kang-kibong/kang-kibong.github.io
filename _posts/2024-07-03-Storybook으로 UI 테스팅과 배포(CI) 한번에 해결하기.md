@@ -4,14 +4,14 @@ title: "Storybook으로 UI 테스팅과 배포(CI) 한번에 해결하기"
 category: frontend
 ---
 
-
-
 <br />
 <br />
 <br />
 # Storybook 소개
 
-![strobook](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc0c9b078-f570-4e92-9f4a-0ec76b4d6de7%2F%25E1%2584%2583%25E1%2585%25A1%25E1%2584%258B%25E1%2585%25AE%25E1%2586%25AB%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2583%25E1%2585%25B3.png?id=9a9c29c2-ad1d-40cf-aeb1-86e254e949da&table=block)
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc0c9b078-f570-4e92-9f4a-0ec76b4d6de7%2F%25E1%2584%2583%25E1%2585%25A1%25E1%2584%258B%25E1%2585%25AE%25E1%2586%25AB%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2583%25E1%2585%25B3.png?id=9a9c29c2-ad1d-40cf-aeb1-86e254e949da&table=block" alt="storybook" width="300">
+
+<br />
 
 Storybook은 **UI 테스팅 툴**로, 내부 개발자를 위한 문서화 도구와 외부 공개용 디자인 시스템의 기본 플랫폼으로 활용된다.
 
