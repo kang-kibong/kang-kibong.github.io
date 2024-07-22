@@ -7,26 +7,26 @@
   <title>CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기" />
-<meta name="author" content="Riccardo Graziosi" />
+<meta name="author" content="byeonghyeon kang" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="tsconfig.json 설정을 통한 절대 경로 설정하기" />
 <meta property="og:description" content="tsconfig.json 설정을 통한 절대 경로 설정하기" />
-<link rel="canonical" href="http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
-<meta property="og:url" content="http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
-<meta property="og:site_name" content="no style, please!" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="byeonghyeon kang" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-01T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html","@type":"BlogPosting","description":"tsconfig.json 설정을 통한 절대 경로 설정하기","author":{"@type":"Person","name":"Riccardo Graziosi"},"headline":"CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기","dateModified":"2024-07-01T00:00:00+09:00","datePublished":"2024-07-01T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html"},"@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/byeonghyeon-kang/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"tsconfig.json 설정을 통한 절대 경로 설정하기","headline":"CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기","dateModified":"2024-07-01T00:00:00+09:00","datePublished":"2024-07-01T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/no-style-please/feed.xml" title="no style, please!" /><link rel="shortcut icon" type="image/x-icon" href="/no-style-please/logo.png" />
-  <link rel="stylesheet" href="/no-style-please/assets/css/main.css" />
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="byeonghyeon kang" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
 </head><body a="auto">
     <main class="page-content" aria-label="Content">
       <div class="w">
-        <a href="/no-style-please/">..</a><article>
+        <a href="/byeonghyeon-kang/">..</a><article>
   <p class="post-meta">
     <time datetime="2024-07-01 00:00:00 +0900">2024-07-01</time>
   </p>
@@ -42,15 +42,15 @@
 
 <p>먼저, <code class="language-plaintext highlighter-rouge">tsconfig.json</code> 파일의 <code class="language-plaintext highlighter-rouge">compilerOptions</code>에 <code class="language-plaintext highlighter-rouge">baseUrl</code>을 <code class="language-plaintext highlighter-rouge">"."</code>으로 설정하고 <code class="language-plaintext highlighter-rouge">paths</code>를 통해 경로를 설정해줍니다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"src/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src/*"</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">baseUrl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">paths</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">src/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">src/*</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>이 설정은 <code class="language-plaintext highlighter-rouge">src</code>를 루트로 했을 때는 동작하지만, <code class="language-plaintext highlighter-rouge">src</code>를 제외한 다른 경로로 aliasing을 시도하면 작동하지 않는 문제를 겪을 수 있습니다. 이는 내부 webpack 설정 때문에 절대 경로를 인식하지 못하기 때문입니다.</p>
 
@@ -79,12 +79,12 @@
 
 <p>마지막으로 <code class="language-plaintext highlighter-rouge">package.json</code> 파일에서 <code class="language-plaintext highlighter-rouge">scripts</code> 부분의 <code class="language-plaintext highlighter-rouge">react-scripts</code>를 <code class="language-plaintext highlighter-rouge">craco</code>로 변경해줍니다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco start"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco build"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco test"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">craco start</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">build</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">craco build</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">craco test</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p><br />
 <br />
@@ -95,27 +95,27 @@
 
 <p>이 문제를 해결하려면 <strong>jsconfig.json</strong> 또는 <strong>tsconfig.json</strong>의 <code class="language-plaintext highlighter-rouge">compilerOptions</code> 내부에 <code class="language-plaintext highlighter-rouge">baseUrl</code>과 <code class="language-plaintext highlighter-rouge">paths</code>를 추가해주면 됩니다. 필자는 해당 <code class="language-plaintext highlighter-rouge">paths</code>와 <code class="language-plaintext highlighter-rouge">baseUrl</code>을 다른 파일로 분리하고 싶어 <code class="language-plaintext highlighter-rouge">tsconfig.paths.json</code> 파일을 따로 만들어서 다음과 같이 paths를 분리해주었습니다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/*"</span><span class="p">],</span><span class="w">
-      </span><span class="nl">"@components/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/components/*"</span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">baseUrl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">paths</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">@/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@components/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/components/*</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>이후 <code class="language-plaintext highlighter-rouge">extends</code>를 통해 해당 <code class="language-plaintext highlighter-rouge">tsconfig.paths.json</code> 파일을 추가해주었습니다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">],</span><span class="w">
-  </span><span class="nl">"extends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./tsconfig.paths.json"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">include</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./tsconfig.paths.json</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">components</code> 폴더에 임의의 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트를 생성하고 <code class="language-plaintext highlighter-rouge">App</code>에서 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트를 절대경로로 import 해본 결과, 정상적으로 절대경로로 자동완성해주는 것을 확인할 수 있었습니다.</p>
 

@@ -13,7 +13,7 @@ category: frontend
 
 먼저, `tsconfig.json` 파일의 `compilerOptions`에 `baseUrl`을 `"."`으로 설정하고 `paths`를 통해 경로를 설정해줍니다.
 
-```json
+```typescript
 {
   "compilerOptions": {
     "baseUrl": ".",
@@ -52,7 +52,7 @@ module.exports = {
 
 마지막으로 `package.json` 파일에서 `scripts` 부분의 `react-scripts`를 `craco`로 변경해줍니다.
 
-```json
+```typescript
 "scripts": {
   "start": "craco start",
   "build": "craco build",
@@ -69,7 +69,7 @@ module.exports = {
 
 이 문제를 해결하려면 **jsconfig.json** 또는 **tsconfig.json**의 `compilerOptions` 내부에 `baseUrl`과 `paths`를 추가해주면 됩니다. 필자는 해당 `paths`와 `baseUrl`을 다른 파일로 분리하고 싶어 `tsconfig.paths.json` 파일을 따로 만들어서 다음과 같이 paths를 분리해주었습니다.
 
-```json
+```typescript
 {
   "compilerOptions": {
     "baseUrl": ".",
@@ -83,7 +83,7 @@ module.exports = {
 
 이후 `extends`를 통해 해당 `tsconfig.paths.json` 파일을 추가해주었습니다.
 
-```json
+```typescript
 {
   "compilerOptions": {
     ...

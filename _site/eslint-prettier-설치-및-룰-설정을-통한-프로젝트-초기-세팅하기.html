@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ESLint & Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ESLint &amp; Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prettier" />
+<meta property="og:description" content="Prettier" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/eslint-prettier-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%A3%B0-%EC%84%A4%EC%A0%95%EC%9D%84-%ED%86%B5%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/eslint-prettier-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%A3%B0-%EC%84%A4%EC%A0%95%EC%9D%84-%ED%86%B5%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="byeonghyeon kang" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-02T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ESLint &amp; Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/byeonghyeon-kang/eslint-prettier-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%A3%B0-%EC%84%A4%EC%A0%95%EC%9D%84-%ED%86%B5%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"Prettier","headline":"ESLint &amp; Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기","dateModified":"2024-07-02T00:00:00+09:00","datePublished":"2024-07-02T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/eslint-prettier-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%A3%B0-%EC%84%A4%EC%A0%95%EC%9D%84-%ED%86%B5%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="byeonghyeon kang" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-02 00:00:00 +0900">2024-07-02</time>
+  </p>
+  
+  <h1>ESLint & Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+<h1 id="prettier">Prettier</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3ee51dc3-7337-4ff7-be1f-78f1cda77386%2Fimage.jpg?id=4c55162c-a04f-4c31-b83f-9559a5a579f2&amp;table=block" alt="prettier" /></p>
+
+<p>Prettier는 코드 정리 규칙을 세부적으로 설정해놓으면, 정해진 <strong>규칙</strong>에 맞게 자동으로 정렬해서 가독성을 높이고 <strong>코드 스타일</strong>을 통일할 수 있는 플러그인이다.</p>
+
+<h2 id="prettier-설치하기">Prettier 설치하기</h2>
+
+<p><code class="language-plaintext highlighter-rouge">npm install -D prettier</code> 를 통해 prettier를 개발자 모드로 설치한다.</p>
+
+<h2 id="prettier-옵션들-톺아보기">Prettier 옵션들 톺아보기</h2>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">arrowParens</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">always</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 화살표 함수의 매개변수가 하나일 때 괄호를 사용할지 여부</span>
+  <span class="dl">"</span><span class="s2">bracketSpacing</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 객체 리터럴에서 중괄호 내부에 공백 삽입 여부</span>
+  <span class="dl">"</span><span class="s2">endOfLine</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">auto</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// EoF 방식, OS별로 처리 방식이 다름</span>
+  <span class="dl">"</span><span class="s2">htmlWhitespaceSensitivity</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">css</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// HTML 공백 감도 설정</span>
+  <span class="dl">"</span><span class="s2">jsxBracketSameLine</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// JSX의 마지막 `&gt;`를 다음 줄로 내릴지 여부</span>
+  <span class="dl">"</span><span class="s2">jsxSingleQuote</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// JSX에 single quote 사용 여부</span>
+  <span class="dl">"</span><span class="s2">printWidth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="c1">// 한 줄에 출력되는 코드의 최대 길이</span>
+  <span class="dl">"</span><span class="s2">proseWrap</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">preserve</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// markdown 텍스트의 줄바꿈 방식 (v1.8.2)</span>
+  <span class="dl">"</span><span class="s2">quoteProps</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">as-needed</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 객체 속성에 쿼테이션 적용 방식</span>
+  <span class="dl">"</span><span class="s2">semi</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 세미콜론 사용 여부</span>
+  <span class="dl">"</span><span class="s2">singleQuote</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// single 쿼테이션 사용 여부</span>
+  <span class="dl">"</span><span class="s2">tabWidth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="c1">// 탭 간격</span>
+  <span class="dl">"</span><span class="s2">trailingComma</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">all</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// 여러 줄을 사용할 때, 후행 콤마 사용 방식</span>
+  <span class="dl">"</span><span class="s2">useTabs</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 탭 사용 여부</span>
+  <span class="dl">"</span><span class="s2">vueIndentScriptAndStyle</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// Vue 파일의 script와 style 태그의 들여쓰기 여부 (v1.19.0)</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span> <span class="c1">// 사용할 parser를 지정, 자동으로 지정됨</span>
+  <span class="dl">"</span><span class="s2">filepath</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span> <span class="c1">// parser를 유추할 수 있는 파일을 지정</span>
+  <span class="dl">"</span><span class="s2">rangeStart</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 포맷팅을 부분 적용할 파일의 시작 라인 지정</span>
+  <span class="dl">"</span><span class="s2">rangeEnd</span><span class="dl">"</span><span class="p">:</span> <span class="kc">Infinity</span><span class="p">,</span> <span class="c1">// 포맷팅 부분 적용할 파일의 끝 라인 지정,</span>
+  <span class="dl">"</span><span class="s2">requirePragma</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 파일 상단에 미리 정의된 주석을 작성하고 Pragma로 포맷팅 사용 여부 지정</span>
+  <span class="dl">"</span><span class="s2">insertPragma</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 미리 정의된 @format marker의 사용 여부 (v1.8.0)</span>
+  <span class="dl">"</span><span class="s2">overrides</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">files</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*.json</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">options</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">printWidth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">200</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span> <span class="c1">// 특정 파일별로 옵션을 다르게 지정함, ESLint 방식 사용</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>더 많은 옵션들은 아래의 Prettier 사이트의 playground 탭을 통해 직접 적용해보고 어떤 식으로 포맷팅되는지 확인할 수 있다.</p>
+
+<p>프로젝트 초기 팀원들과 코드 포맷팅 룰을 정할 때 시각적으로 확인할 수 있다는 점에서 유용하게 사용될 것 같다.</p>
+
+<p><a href="https://prettier.io/playground/">Prettier Playground</a></p>
+
+<h2 id="prettierrc-파일을-생성하고-옵션-적용하기">.prettierrc 파일을 생성하고 옵션 적용하기</h2>
+
+<p>코드 포맷팅 룰을 정했다면, root 폴더에 <code class="language-plaintext highlighter-rouge">.prettierrc</code> 파일을 생성하고 적용할 옵션들을 설정한다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">singleQuote</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">typescript</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">semi</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">useTabs</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">tabWidth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">printWidth</span><span class="dl">"</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">arrowParens</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">always</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">singleQuote</code>: quote를 single로 사용할지, double로 사용할지 결정</li>
+  <li><code class="language-plaintext highlighter-rouge">semi</code>: 명령문 마지막에 세미콜론 사용 여부</li>
+  <li><code class="language-plaintext highlighter-rouge">quoteProps</code>: 객체 안에 key의 따옴표를 필요한 경우에만 사용</li>
+  <li><code class="language-plaintext highlighter-rouge">useTabs</code>: 공백 대신 탭으로 줄을 들여 쓸지 여부</li>
+  <li><code class="language-plaintext highlighter-rouge">printWidth</code>: 라인의 최대 길이 설정 (120)</li>
+  <li><code class="language-plaintext highlighter-rouge">tabWidth</code>: 들여쓰기의 칸 수 (2칸)</li>
+  <li><code class="language-plaintext highlighter-rouge">arrowParens</code>: 화살표 함수에서 매개변수를 항상 괄호로 감싸도록 설정</li>
+</ul>
+
+<p>어떤 룰을 적용해야할지 아직 미숙했기에, 가장 많이 사용하는 옵션들을 구글링해서 적용해보았다.</p>
+
+<h2 id="명령-단축어-지정하기">명령 단축어 지정하기</h2>
+
+<p>작성한 .prettierrc의 옵션들을 자동으로 적용할 수 있도록 명령어를 단축어로 지정할 수 있다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+	<span class="p">...</span>
+  <span class="dl">"</span><span class="s2">format</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">prettier --write --cache src/**/*</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">format</code>이라는 단축어를 통해 <code class="language-plaintext highlighter-rouge">prettier --write --cache src/**/*</code> 명령어를 수행하도록 작성했다.</p>
+
+<p>즉, 커맨드창에 <code class="language-plaintext highlighter-rouge">npm run format</code>만 입력하면 src 폴더에 있는 모든 파일들을 포맷팅할 수 있다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--write</code>: Prettier가 파일을 읽고 포맷한 후, 포맷된 결과를 해당 파일에 덮어쓴다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--cache</code>: Prettier가 이전에 포맷한 파일의 정보를 캐시에 저장하여, 이후 실행 시 변경되지 않은 파일은 다시 포맷하지 않도록 한다.</li>
+</ul>
+
+<p>cache 파일은 <code class="language-plaintext highlighter-rouge">node_modules</code> 내부에 저장되므로 따로 <code class="language-plaintext highlighter-rouge">.gitignore</code>로 지정하지 않아도 된다.</p>
+
+<p><br />
+<br />
+<br /></p>
+<h1 id="eslint">ESLint</h1>
+
+<p>!https://prod-files-secure.s3.us-west-2.amazonaws.com/13897cab-0dd6-431f-b847-04477372a586/271249c3-7046-4e4d-b024-442f1fadecfc/eslint.png</p>
+
+<ul>
+  <li><strong>ES</strong>: ECMA Script로서 JavaScript를 표준화하기 위해 만들어진 규격</li>
+  <li><strong>Lint</strong>: 소스 코드를 분석하여 오류, 버그, 코딩 스타일 등을 에러로 표시</li>
+</ul>
+
+<p>즉, ESLint는 소스코드를 분석하여 <strong>문법적 오류, 버그, 코드 스타일을 검사하고 에러를 표시</strong>하며, <strong>코드 포맷팅</strong>도 가능하게 해주는 플러그인이다.</p>
+
+<h2 id="eslint-설치하기">ESLint 설치하기</h2>
+
+<p><code class="language-plaintext highlighter-rouge">npm init @eslint/config</code> 명령어를 입력하면 아래 절차대로 ESLint를 설치할 수 있다.</p>
+
+<p>그러나 <strong>CRA</strong>로 프로젝트를 구성했다면 기본적으로 ESLint가 설치되어 있으므로 아래의 절차대로 설치할 필요는 없다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F8069ee46-aa95-4985-a2d7-fd46c0fe4092%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.10.11.png?id=c53e80e0-664f-435a-a3a2-5ca08304a8d7&amp;table=block" alt="스크린샷 2024-06-25 오후 9.10.11.png" /></p>
+
+<p><strong>1. How would you like to use ESLint?</strong></p>
+
+<p><strong>❯ To check syntax, find problems, and enforce code style</strong></p>
+
+<p>코드 구문 검사, 문제 식별, 코드 스타일 강제 적용 에서 원하는 만큼 선택한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F92621560-e752-4cde-bc03-bab275a2fd36%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.11.00.png?id=71c5917b-fe65-4d3d-81f7-b3e071da1934&amp;table=block" alt="스크린샷 2024-06-25 오후 9.11.00.png" /></p>
+
+<p><strong>2. What type of modules does your project use?</strong></p>
+
+<p><strong>❯ JavaScript modules (import/export)</strong></p>
+
+<p>import/export 를 사용하면 JavaScript modules, require/exports 를 사용하면 CommonJS 를 선택한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F611550ed-81a1-49ad-a013-5fa75a676fd5%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.11.14.png?id=4d91578d-8362-4fb1-9344-9f78ec5e2abd&amp;table=block" alt="스크린샷 2024-06-25 오후 9.11.14.png" /></p>
+
+<p><strong>3. Which framework does your project use?</strong></p>
+
+<p><strong>❯ React</strong></p>
+
+<p>본인이 해당 프로젝트에서 사용하는 프레임워크를 선택한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F1f971842-5fbd-4ce4-a917-eefccd5cffe4%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.14.05.png?id=654194ae-b021-4bdf-8c9a-cfed6ba7b2be&amp;table=block" alt="스크린샷 2024-06-25 오후 9.14.05.png" /></p>
+
+<p><strong>4. The React plugin doesn’t officially support ESLint v9 yet. What would you like to do?</strong></p>
+
+<p><strong>❯ Install ESLint v8.x</strong></p>
+
+<p>리액트 플러그인은 아직 공식적으로 ESLint v9을 지원하지 않는다하여 8.x 버전을 설치하였다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F11a79582-a824-40a8-bea5-eff6f4c1615e%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.14.58.png?id=0ba5de08-4b7d-4107-a29c-015cb7c4821b&amp;table=block" alt="스크린샷 2024-06-25 오후 9.14.58.png" /></p>
+
+<p><strong>5. Does your project use TypeScript?</strong></p>
+
+<p><strong>❯ Yes</strong></p>
+
+<p>자바스크립트를 사용하면 No, 타입스크립트를 사용하면 Yes 를 선택한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff815790b-48aa-4813-925f-2ef2e508695f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.15.15.png?id=d2cd4ce8-7825-44fc-ac4d-dfb5ad5316f7&amp;table=block" alt="스크린샷 2024-06-25 오후 9.15.15.png" /></p>
+
+<p><strong>6. Where does your code run?</strong></p>
+
+<p><strong>❯ Browser</strong></p>
+
+<p>중복 선택 가능하며, 코드가 웹 브라우저 환경에서 실행되면 Browser, Node.js 환경에서 실행되면 Node 를 선택한다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F98e2eca0-2680-4785-b771-a1658f99d0a8%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.16.26.png?id=7f606696-6438-4f38-80a3-5383ca5d2ff8&amp;table=block" alt="스크린샷 2024-06-25 오후 9.16.26.png" /></p>
+
+<p><strong>7. The config that you’ve selected requires the following dependencies</strong></p>
+
+<p><strong>❯ Yes</strong></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdfb71288-3765-4012-9de0-827ecff60ccc%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.16.38.png?id=b2e31a7f-80f8-4fde-be3f-8dd788ef8faa&amp;table=block" alt="스크린샷 2024-06-25 오후 9.16.38.png" /></p>
+
+<p><strong>8. Which package manager do you want to use?</strong></p>
+
+<p><strong>❯ npm</strong></p>
+
+<p>본인이 선호하는 패키지 매니저를 선택한다.</p>
+
+<p>설치가 완료되면 <code class="language-plaintext highlighter-rouge">eslint.config.mjs</code> 파일이 root 폴더에 생성된다. 익숙한 JSON 형식으로 <code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일을 생성하여 다음과 같이 설정한다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// package.json</span>
+
+<span class="dl">"</span><span class="s2">devDependencies</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">@eslint/js</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">^9.5.0</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">eslint</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">^8.57.0</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">eslint-plugin-react</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">^7.34.3</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">globals</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">^15.6.0</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">typescript-eslint</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">^7.14.1</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// .eslintrc</span>
+
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">env</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">es2021</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">react-app</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@typescript-eslint/parser</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parserOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">ecmaFeatures</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ecmaVersion</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">latest</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">sourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rules</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">react/jsx-filename-extension</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span> <span class="p">}]</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">node</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="eslint-config-airbnb">eslint-config-airbnb</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F82b9653f-278b-4421-a020-099b0adf547b%2Fimage_(1).png?id=f0686f93-d9b6-4e67-9ed6-9c7d23c50109&amp;table=block" alt="https://prod-files-secure.s3.us-west-2.amazonaws.com/13897cab-0dd6-431f-b847-04477372a586/82b9653f-278b-4421-a020-099b0adf547b/image_(1).png" /></p>
+
+<p>현재 가장 많이 사용되는 스타일 가이드는 Airbnb에서 정의한 자바스크립트 스타일 가이드다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">npm i -D eslint-config-airbnb</code> 명령어를 통해 설치하고, <code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일에 <code class="language-plaintext highlighter-rouge">extends</code>에 <strong>“airbnb”</strong>를 추가해준다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">env</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">es2021</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">react-app</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">airbnb</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@typescript-eslint/parser</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parserOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">ecmaFeatures</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ecmaVersion</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">latest</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">sourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rules</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">react/jsx-filename-extension</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span> <span class="p">}]</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">node</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="eslint-config-prettier">eslint-config-prettier</h2>
+
+<p>ESLint와 Prettier의 기능이 겹치는 부분이 있어 <strong>충돌</strong>이 발생할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">eslint-config-prettier</code>를 설치하여 겹치는 기능을 비활성화해준다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">npm i -D eslint-config-prettier</code> 명령어로 설치하고 <code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일에 <code class="language-plaintext highlighter-rouge">extends</code>에 <strong>“prettier”</strong>를 추가한다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">env</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">es2021</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">react-app</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">airbnb</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">prettier</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@typescript-eslint/parser</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parserOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">ecmaFeatures</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ecmaVersion</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">latest</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">sourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rules</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">react/jsx-filename-extension</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span> <span class="p">}]</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">node</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="eslint-룰-적용해보기">ESLint 룰 적용해보기</h2>
+
+<p><code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일에 <code class="language-plaintext highlighter-rouge">rules</code> 부분에 원하는 에러 룰을 추가한다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">env</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">es2021</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">react-app</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">airbnb</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">prettier</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@typescript-eslint/parser</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parserOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">ecmaFeatures</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ecmaVersion</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">latest</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">sourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rules</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">react/jsx-filename-extension</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span> <span class="p">}],</span>
+    <span class="dl">"</span><span class="s2">no-var</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="o">**</span><span class="dl">"</span><span class="s2">no-multiple-empty-lines</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">no-console</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">allow</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">warn</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">info</span><span class="dl">"</span><span class="p">]</span> <span class="p">}],</span>
+    <span class="dl">"</span><span class="s2">eqeqeq</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">dot-notation</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">no-unused-vars</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="o">**</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">node</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">"no-var": "error"</code>: <code class="language-plaintext highlighter-rouge">var</code> 키워드로 변수를 선언하는 것을 금지하고 <code class="language-plaintext highlighter-rouge">let</code> 또는 <code class="language-plaintext highlighter-rouge">const</code>를 사용</li>
+  <li><code class="language-plaintext highlighter-rouge">"no-multiple-empty-lines": "error"</code>: 연속으로 여러 개의 빈 줄을 사용하는 것을 금지</li>
+  <li><code class="language-plaintext highlighter-rouge">"no-console": ["error", { "allow": ["warn", "error", "info"] }]</code>: <code class="language-plaintext highlighter-rouge">console</code> 객체의 사용을 제한</li>
+  <li><code class="language-plaintext highlighter-rouge">"eqeqeq": "error"</code>: <code class="language-plaintext highlighter-rouge">==</code>와 <code class="language-plaintext highlighter-rouge">!=</code> 연산자를 사용하는 것을 금지하고 <code class="language-plaintext highlighter-rouge">===</code>와 <code class="language-plaintext highlighter-rouge">!==</code>를 사용</li>
+  <li><code class="language-plaintext highlighter-rouge">"dot-notation": "error"</code>: 객체 속성 접근 시 점 표기법(<code class="language-plaintext highlighter-rouge">.</code>)을 사용</li>
+  <li><code class="language-plaintext highlighter-rouge">"no-unused-vars": "error"</code>: 선언한 변수를 사용하지 않는 것을 금지</li>
+</ul>
+
+<p>더 많은 룰은 <a href="https://eslint.org/docs/latest/rules/">ESLint 사이트</a>에서 확인할 수 있다.</p>
+
+<h2 id="명령-단축어-지정하기-1">명령 단축어 지정하기</h2>
+
+<p>설정한 ESLint를 자동으로 적용할 수 있도록 명령어를 단축어로 지정한다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">lint</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">eslint --cache src/**/*</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">lint</code>라는 단축어를 통해 <code class="language-plaintext highlighter-rouge">eslint --cache src/**/*</code> 명령어를 수행하도록 작성했다.</p>
+
+<p>커맨드창에 <code class="language-plaintext highlighter-rouge">npm run lint</code>만 입력하면 src 폴더에 있는 모든 파일들을 린팅할 수 있다.</p>
+
+<p>lint도 prettier와 마찬가지로 <code class="language-plaintext highlighter-rouge">--cache</code> 옵션을 주어 캐싱되도록 하여 변경된 부분만 적용해 속도를 높일 수 있다.</p>
+
+<p>ESLint는 root 폴더에 <code class="language-plaintext highlighter-rouge">.eslintcache</code> 파일을 생성하므로 <code class="language-plaintext highlighter-rouge">.gitignore</code> 해당 경로를 추가하여 GitHub에 push되지 않도록 한다.</p>
+
+<h2 id="eslint-절대-경로-이슈-발생">ESLint 절대 경로 이슈 발생</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F2bcd1db9-3b4d-4dbf-acf3-a5ebf3f6ba0d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-26_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.44.42.png?id=df3e0305-9786-4294-a467-47459a1716bc&amp;table=block" alt="절대경로 이슈" /></p>
+
+<p>ESLint가 <code class="language-plaintext highlighter-rouge">@components/Button.tsx</code> 모듈의 경로를 찾지 못할 때는 <strong>alias resolver</strong>가 제대로 설정되지 않아 생긴 문제였다.</p>
+
+<p>이를 해결하려면 <code class="language-plaintext highlighter-rouge">eslint-plugin-import</code>와 <code class="language-plaintext highlighter-rouge">eslint-import-resolver-alias</code> 플러그인을 설치한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">npm install eslint-plugin-import@latest --save-devnpm install eslint-import-resolver-alias --save-dev</code></p>
+
+<p>설치 후 <code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일에서 <strong>import/resolver/alias</strong> 부분에 각 절대 경로에 해당하는 alias를 지정해준다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">env</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">es2021</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+  <span class="dl">"</span><span class="s2">extends</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">react-app</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">plugin:import/typescript</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">airbnb</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">prettier</span><span class="dl">"</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">parser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@typescript-eslint/parser</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">parserOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">ecmaFeatures</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ecmaVersion</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">latest</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">sourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rules</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">no-var</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">no-multiple-empty-lines</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">no-console</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">allow</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">warn</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">info</span><span class="dl">"</span><span class="p">]</span> <span class="p">}],</span>
+    <span class="dl">"</span><span class="s2">eqeqeq</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">dot-notation</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">no-unused-vars</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">react/jsx-filename-extension</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span> <span class="p">}],</span>
+    <span class="dl">"</span><span class="s2">import/extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ignorePackages</span><span class="dl">"</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="o">**</span><span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">alias</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@components</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/components</span><span class="dl">"</span><span class="p">]</span>
+        <span class="p">],</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="o">**</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>절대 경로 문제로 발생한 ESLint 에러가 해결된다.</p>
+
+<h2 id="위처럼-했지만-다시-또-이슈-발생">위처럼 했지만 다시 또 이슈 발생…</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fd22afd11-4a57-4e86-b9f4-745492d03ab8%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-26_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.57.16.png?id=032d9ffd-9663-4e37-9c95-b02bb6b44379&amp;table=block" alt="이슈발생" /></p>
+
+<p>이유를 잘 모르겠지만, 구글링한 결과 <code class="language-plaintext highlighter-rouge">rules</code>에 <code class="language-plaintext highlighter-rouge">"import/no-unresolved": "off"</code>를 추가하면 해결된다고 하여 작성했다.</p>
+
+<p>파일 확장자를 무시하도록 ESLint 설정을 업데이트해보았다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.eslintrc</code> 파일에서 <code class="language-plaintext highlighter-rouge">import/extensions</code> 규칙을 수정하여 <code class="language-plaintext highlighter-rouge">.tsx</code> 확장자의 기재를 무시할 수 있도록 수정하여 해결하였다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">import/extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">ignorePackages</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">js</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">never</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">jsx</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">never</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">ts</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">never</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">tsx</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">never</span><span class="dl">"</span>
+<span class="p">}]</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffdab6972-ecb1-4a71-b82f-6bf7c2954623%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-06-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.23.14.png?id=366f1244-be63-41c1-b8b7-28be1a45b31d&amp;table=block" alt="스크린샷 2024-06-27 오후 3.23.14.png" /></p>
+
+<p><br />
+<br />
+<br /></p>
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 글에서는 Prettier와 ESLint를 활용해 CRA + TypeScript 프로젝트에서 코드 스타일을 통일하고, 가독성을 높이는 방법을 다뤘다.</p>
+
+<p>절대 경로 설정부터 Prettier와 ESLint의 설치 및 설정, 그리고 각종 이슈 해결 방법까지 자세히 살펴보았다.</p>
+
+<p>초기 프로젝트 세팅을 통해 코드 품질을 높이고, 팀 내의 코드 스타일을 통일할 수 있기를 기대할 수 있을 것 같다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
