@@ -1,7 +1,7 @@
 title: Hi, I’m Byeonghyeon Kang 👋🧑‍💻 # name of the site
 author: byeonghyeon kang # name of site's author
 email: byeonghyeon.dev@gmail.com # email of site's author
-url: https://riggraz.dev # root address of the site
+url: https://kang-kibong.github.io/ # root address of the site
 baseurl: "/byeonghyeon-kang" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
   byeonghyeon kang's dev blog
