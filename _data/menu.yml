@@ -10,6 +10,10 @@ entries:
       show_more_url: kakao.html
       category: kakao
 
+  - title: woowa cousre 6th pre-course
+    post_list:
+      category: woowa
+
   - title: frontend
     post_list:
       limit: 5
