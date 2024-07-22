@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T00:13:52+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">byeonghyeon kang</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T01:26:23+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -1350,7 +1350,137 @@
 
 &lt;p&gt;이번 글에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;craco&lt;/code&gt;를 활용하여 CRA + TypeScript 프로젝트에서 절대 경로를 설정하는 방법을 다루었습니다.&lt;/p&gt;
 
-&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[우아한테크코스 6기] 최종 코딩 테스트 - 온콜 리팩토링 회고록</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%A8%EC%BD%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 최종 코딩 테스트 - 온콜 리팩토링 회고록" /><published>2023-12-21T00:00:00+09:00</published><updated>2023-12-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%20%EC%B5%9C%EC%A2%85%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20-%20%EC%98%A8%EC%BD%9C%20%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%20%ED%9A%8C%EA%B3%A0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%A8%EC%BD%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기" /><published>2024-04-07T00:00:00+09:00</published><updated>2024-04-07T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%20%EC%B5%9C%EC%A2%85%20%ED%95%A9%EA%B2%A9%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;지원-동기&quot;&gt;지원 동기&lt;/h1&gt;
+
+&lt;p&gt;오랜 기간 동안 프론트엔드를 독학하면서 멘토의 중요성을 절실하게 느꼈다.&lt;/p&gt;
+
+&lt;p&gt;때문에 지난해 2학기부터 우아한테크코스(우테코) 6기를 준비했지만, 아쉽게도 최종 테스트에서 탈락하는 아픔을 겪었다.&lt;/p&gt;
+
+&lt;p&gt;이후 다른 부트 캠프의 지원을 위해 올해 겨울방학 동안 코딩 테스트 준비에 매진하고 있었다.&lt;/p&gt;
+
+&lt;p&gt;그러던 중, 작년에 참여했던 ‘충남대 멋쟁이사자차럼 11기 횔동’을 통해 알게 된 회장 형으로부터 카테캠 2기 모집 소식을 접하게 되었고, 학과 공지사항을 살펴보니 모집 글이 올라왔길래 곧바로 지원 준비에 나섰다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;카카오-테크-캠퍼스란&quot;&gt;카카오 테크 캠퍼스란?&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F267ee519-c9ba-4433-9e75-0f530aedc1ba%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.59.45.png?id=09df039d-1119-4b9a-96d7-03b08137faf5&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-07 오후 6.59.45.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;카카오 테크 캠퍼스는 카카오가 주최하는 지역 정보기술(IT) 인재 양성 프로그램이다.&lt;/p&gt;
+
+&lt;p&gt;IT 교육의 수도권 집중 문제를 해결하고자 시작되었고, 지역 학생들에게 교육의 기회를 넓히고자 ESG 사업에 지원을 받아 시작된 프로그램이다.&lt;/p&gt;
+
+&lt;p&gt;작년을 기점으로 부산대와 전남대에서 먼저 시작하였고, 올해는 경북대, 강원대, 충남대를 포함한 총 5개 대학을 통해 250명을 모집하였다.&lt;/p&gt;
+
+&lt;p&gt;카카오 및 IT 기업 현직 실무 개발자분들이 참여한 커리큘럼과 멘토링, 코드 리뷰, 특강 등을 통해 실무 기반 교육을 진행한다고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbd1b80cc-90e9-49e5-bf3c-8d048e8f225b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.56.30.png?id=47fce2a7-5e9a-4be9-b818-f1ffc91d74ef&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-07 오후 6.56.30.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;카카오 테크 캠퍼스는 총 3단계로 구성된 교육 과정으로 진행된다.&lt;/p&gt;
+
+&lt;p&gt;개발 기초 교육은 온라인으로 진행되기 때문에, 올해 안에 꼭 졸업해야 하는 나에게는 휴학을 다시 할 수 없는 상황이므로 온라인 과정은 오히려 큰 메리트로 다가왔다.&lt;/p&gt;
+
+&lt;p&gt;특히, 하나의 프로젝트를 기반으로 한 클론 미션을 통해 현직 개발자에게 직접 코드 리뷰를 받을 수 있다는 점이 가장 기대된다.&lt;/p&gt;
+
+&lt;p&gt;독학하면서 가장 크게 느낀 점은 내가 작성한 코드가 실무에서 바로 적용될 수 있는 코드인지 확신할 수 없다는 것인데, 이러한 한계를 극복할 수 있다는 점에서 꼭 카테캠에 합격하고 싶은 부분이었던 것 같다.&lt;/p&gt;
+
+&lt;p&gt;신규 서비스 개발 프로젝트에 있어서도, 혼자서 다양한 프로젝트를 경험해보긴 했지만 개인의 역량 차이가 커서 팀원을 교육하는 역할의 비중이 컸던 것이 오히려 성장을 가로막는 요소였었다.&lt;/p&gt;
+
+&lt;p&gt;하지만 1, 2단계 과정을 모두 거친 팀원들과 프로젝트를 진행하는 것은 서로에게 많은 것을 배울 수 있는 기회가 될 것 같고, 프로젝트의 완성도 역시 높아질 것으로 기대된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;지원서&quot;&gt;지원서&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;평소 만들고 싶었던 서비스를 기반으로 웹 개발에 대한 관심을 가지게 되면서 자연스럽게 프론트엔드 개발에 관심을 가지게 된 이유에 대해 기술하였다.
+여태까지 프론트엔드를 독학하면서 느꼈던 한계들을 타 교육 과정과 비교하여 카테캠의 차별점을 찾고 이를 통해 해소하고 싶다는 점을 어필하였다.&lt;/li&gt;
+  &lt;li&gt;다양한 팀 프로젝트 경험과 경진 대회에 참여하면서 겪었던 고충들을 통해서 얻은 목표를 기술하였고, 카테캠을 통해 어떻게 보완할 것인지 구체적으로 작성하였다.&lt;/li&gt;
+  &lt;li&gt;협업하면서 어려웠던 경험을 소개하고 겪은 문제에 대해 자세하게 언급하였다.
+직면한 문제를 해결하기 위해 제시했던 해결책에 대한 방식을 구체적으로 기술하였다.
+이를 통해 얻은 효과와 배운점들, 그리고 앞으로의 협업에 어떠한 영향을 끼칠 수 있었는지로 마무리하였다.&lt;/li&gt;
+  &lt;li&gt;핵심 역량 작성에 있어 기술적인 부분만을 강조하는 것을 피하려고 노력하였다.
+평소에 개발자로서 소프트 스킬 또한 매우 중요하다고 인식하고 있기 때문에, 이를 더 부각 시키고 싶었다. 여태까지 경험한 내용들을 가지고 기술하였다.&lt;/li&gt;
+  &lt;li&gt;증빙 자료는 노션으로 작성하여 하나의 페이지안에 작성하였고, 웹에 게시하여 링크를 첨부하였다.
+너무 많은 내용을 담으면 자세히 보지 않을 것 같아서 최대한 간단하고 핵심만을 담은 내용들을 링크로 첨부하여 작성하였다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff2bb9b78-40c4-461b-85e8-66d462391017%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.01.33.png?id=908c49d2-2ae1-4873-a66f-df581c74d18e&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-07 오후 8.01.33.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1차-합격&quot;&gt;1차 합격!&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F327d4644-2df5-4c30-a94f-7b4ec53b9f18%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.06.27.png?id=a2c1479d-2f18-4b2f-8d3d-57d94ab33e93&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-07 오후 8.06.27.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;지원서에 작성한 메일로 1차 합격 문자가 날라왔다!&lt;/p&gt;
+
+&lt;p&gt;1차에 합격이 되면 2차로 CS 지식 테스트와 코딩 테스트를 치룰 수 있게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;cs-공부&quot;&gt;CS 공부&lt;/h1&gt;
+
+&lt;p&gt;CS 과목중에서 가장 중요한 것이 무엇인지 빠르게 파악하는 것이 중요하다고 생각하였고, 이는 회사에서 자주 물어보는 CS 관련 질문들이라고 생각하였다.&lt;/p&gt;
+
+&lt;p&gt;때문에 여러 CS 면접 자료를 찾아 보다가 개발남노씨라는 분께서 작성한 &lt;a href=&quot;https://www.nossi.dev/cs&quot;&gt;CS 기술 면접 자료&lt;/a&gt;를 참고하여 공부하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CS 과목 중에서 가장 중요한 부분을 빠르게 파악하는 것이 중요하다고 생각했고, 이는 회사에서 자주 물어보는 CS 관련 질문들이라고 여겼다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;그래서 여러 CS 면접 자료를 검색하다가 개발남노씨가 작성한 CS 기술 면접 자료를 가지고 공부하기 시작했다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div style=&quot;display: flex; justify-content: space-between&quot;&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F8e97d9be-ad39-4665-80e3-f47edaddd8c6%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.13.14.png?id=fdf90e83-9f4f-4fdf-86b6-f7902cbfb4ad&amp;amp;table=block&quot; width=&quot;49%&quot; /&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F51c55f63-ed3f-486d-93a2-0a2ac3f055df%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.13.24.png?id=1ff40cfe-7fd1-4ed7-bcad-3a9b2034e6c3&amp;amp;table=block&quot; width=&quot;49%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: flex; justify-content: space-between&quot;&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F41966749-64e3-4b05-9151-d07bf52a4977%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.13.52.png?id=82146996-162c-4035-bb14-0229dcae8195&amp;amp;table=block&quot; width=&quot;49%&quot; /&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fd58b5d47-6107-4168-b5d0-6f1021d14a3b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.14.06.png?id=2c41c477-2f26-4c06-ab9b-b4fbb69fe1e2&amp;amp;table=block&quot; width=&quot;49%&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;코딩-테스트-준비&quot;&gt;코딩 테스트 준비&lt;/h1&gt;
+
+&lt;p&gt;올해 겨울방학부터 본격적으로 코딩 테스트를 준비해왔기 때문에, 평소 공부하던 방법을 그대로 유지하며 추가적으로 프로그래머스에서 카카오 문제들을 풀면서 준비하였다.&lt;/p&gt;
+
+&lt;p&gt;설명회에서 LV2~3 수준의 문제를 출제한다고 해서 프로그래머스의 레벨을 기준으로 문제를 선택해 풀기 시작했다. (시간상 많이는 풀지는 못했다…)&lt;/p&gt;
+
+&lt;div style=&quot;display: flex; justify-content: space-between;&quot;&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffed0eaec-aec8-4732-9393-cbdb1cb8b513%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.18.17.png?id=0c5f4c05-e4ae-40be-a8ae-724b42710445&amp;amp;table=block&quot; alt=&quot;Image 1&quot; style=&quot;width: 49%;&quot; /&gt;
+  &lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fccfa3d3d-16d3-4ce9-8772-b026b5a146b0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.17.42.png?id=ad97c68c-5349-4da8-8e18-16c3381b695c&amp;amp;table=block&quot; alt=&quot;Image 2&quot; style=&quot;width: 49%;&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;최종-합격&quot;&gt;최종 합격&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbbe0ba2a-03a6-4917-b0a1-2879bdbb270e%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.06.02.png?id=e9a3332e-76c2-45e8-86c8-fed92b6eed46&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-07 오후 8.06.02.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;합격 날짜는 4월 1일 월요일이었는데, 작년에는 대략 3시쯤에 발표했다 고해서 3시가 오기만을 기다렸다.&lt;/p&gt;
+
+&lt;p&gt;3시가 되어도 메일이 안 오길래 설마 불합격했나 했는데, 다행히 3시 30분쯤에 합격 메일이 왔다!&lt;/p&gt;
+
+&lt;p&gt;처음 경험해 보는 멘토 분들의 교육이라 너무 설레고 카테캠을 통해 추후의 얼마나 성장되어 있을지 궁금하다!&lt;/p&gt;
+
+&lt;p&gt;내년 카테캠 3기를 준비하시는 분들도 우연히 이 글을 볼 수 있을 거라 생각하는데, 별거 아니지만 많은 도움이 되었으면 좋겠다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao" /><summary type="html"></summary></entry><entry><title type="html">[우아한테크코스 6기] 최종 코딩 테스트 - 온콜 리팩토링 회고록</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%A8%EC%BD%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 최종 코딩 테스트 - 온콜 리팩토링 회고록" /><published>2023-12-21T00:00:00+09:00</published><updated>2023-12-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%20%EC%B5%9C%EC%A2%85%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20-%20%EC%98%A8%EC%BD%9C%20%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%20%ED%9A%8C%EA%B3%A0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%A8%EC%BD%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -4304,465 +4434,4 @@
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;7-구현-코드-보러가기&quot;&gt;7. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-racingcar-6/pull/108&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry><entry><title type="html">[우아한테크코스 6기] 프리코스 1주차 - 숫자 야구 회고록</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8-%EC%88%AB%EC%9E%90-%EC%95%BC%EA%B5%AC-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 프리코스 1주차 - 숫자 야구 회고록" /><published>2023-10-26T00:00:00+09:00</published><updated>2023-10-26T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%20%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4%201%EC%A3%BC%EC%B0%A8%20-%20%EC%88%AB%EC%9E%90%20%EC%95%BC%EA%B5%AC%20%ED%9A%8C%EA%B3%A0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8-%EC%88%AB%EC%9E%90-%EC%95%BC%EA%B5%AC-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html">&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1-주제&quot;&gt;1. 주제&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/1126f817-c737-4074-84b3-b41285bc8bcf/%E1%84%8B%E1%85%A3%E1%84%80%E1%85%AE/w=640,quality=90,fit=scale-down&quot; alt=&quot;야구.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;드디어 프리코스 1주차가 시작되었다.&lt;/p&gt;
-
-&lt;p&gt;1주차는 숫자 야구 미션을 받았다.&lt;/p&gt;
-
-&lt;p&gt;요구 사항이 많아서 약간 걱정이 되었지만 앞으로의 성장에 있어 큰 도움이 될 거라고 생각되어 즐거운 마음으로 구현을 시작하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2-시행착오&quot;&gt;2. 시행착오&lt;/h1&gt;
-
-&lt;h2 id=&quot;기능-목록-작성&quot;&gt;기능 목록 작성&lt;/h2&gt;
-
-&lt;p&gt;평소 코딩할 때 손부터 움직이는 버릇이 있다.&lt;/p&gt;
-
-&lt;p&gt;처음 부여된 요구사항을 본 순간 어떻게 기능 목록을 작성해야 할지 갈피를 잡지 못했다.&lt;/p&gt;
-
-&lt;p&gt;어떻게 하면 효율적으로 접근하여 상세하게 목록화할 수 있는지 고민해보았다.&lt;/p&gt;
-
-&lt;p&gt;그러나 고민할수록 정답이 없다는 것을 깨달았다.&lt;/p&gt;
-
-&lt;p&gt;따라서 일단 작성해보기로 결정하고 어떠한 기준으로 세분화하는 것이 좋을지 구상해보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F66171f22-1a3e-4b28-8b81-1f39f08d1e3e%2FJPEG_%25E1%2584%258B%25E1%2585%25B5%25E1%2584%2586%25E1%2585%25B5%25E1%2584%258C%25E1%2585%25B5-4EEE-8E91-B3-0.jpeg?id=ddd6bc87-7476-478f-a25a-dbfa08c8ea23&amp;amp;table=block&quot; alt=&quot;JPEG 이미지-4EEE-8E91-B3-0.jpeg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;기능 목록에서는 요구사항에서 주어진 프로그램의 입력과 출력, 그리고 핵심 기능으로 구성하였다.&lt;/p&gt;
-
-&lt;p&gt;예외 상황에서는 더 많은 경우의 수가 있더라도 일단 생각나는 대로 작성하였고 추후에 구현하면서 필요한 부분은 추가해나가자는 생각으로 접근했다.&lt;/p&gt;
-
-&lt;p&gt;이를 바탕으로 다음과 같이 README.md에 작성하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 기능 목록&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 입력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 사용자로부터 숫자를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 사용자로부터 재시작 여부를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 출력 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 게임시작 문구를 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 사용자로부터 입력한 숫자의 결과 문구를 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 3개의 숫자 모두 맞을 경우 결과 문구를 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 추가 기능
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 상대방(컴퓨터) 숫자를 랜덤으로 생성하는 기능
-
-&lt;span class=&quot;gh&quot;&gt;# 예외 상황&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 숫자 입력
-&lt;span class=&quot;p&quot;&gt;
-  -&lt;/span&gt; [ ] 숫자가 3글자 이상인 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 숫자가 아닌 다른 문자일 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 중복되는 숫자가 입력있을 경우
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 재시작 여부 입력
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; [ ] 1, 2가 아닌 다른 입력을 받을 경우
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기능 목록을 작성한 후에 느낀 장점들이 많았다.&lt;/p&gt;
-
-&lt;p&gt;그 중에서도 크게 두 가지를 느꼈다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;첫 번째는 기능 단위로 커밋이 가능해졌다.&lt;/p&gt;
-
-&lt;p&gt;기존에도 이미 알고 있었지만, 실제로 구현하게 되면 여러 기능을 동시에 처리하게 되고, 커밋하려고 보면 너무 많은 기능을 담당하게 되어 작성한 코드를 다시 지우는 경우가 많았다.&lt;/p&gt;
-
-&lt;p&gt;그러나 기능 목록을 작성하고 난 후, 해당 기능을 구현 완료한 후 README에 체크하는 과정은 자연스럽게 기능 단위로 커밋할 수 있도록 도움을 주었다.&lt;/p&gt;
-
-&lt;p&gt;두 번째는 구현 시간이 단축된 것이다.&lt;/p&gt;
-
-&lt;p&gt;기존에는 어떤 것부터 시작해야 할지 갈피를 잡지 못하였다.&lt;/p&gt;
-
-&lt;p&gt;이런 상황에서는 필요한 기능이 추가되었을 때 기존의 코드와 충돌하면서 수정해야 하는 문제가 발생하곤 했다.&lt;/p&gt;
-
-&lt;p&gt;하지만 기능 목록을 작성하면서 자연스럽게 프로그램의 흐름을 파악할 수 있게 되었고, 그 결과 코드를 순차적으로 작성할 수 있게 되었다.&lt;/p&gt;
-
-&lt;h2 id=&quot;배열과-문자열-처리&quot;&gt;배열과 문자열 처리&lt;/h2&gt;
-
-&lt;p&gt;배열과 문자열을 다양한 형태로 추출하고 판단하는 과정에서 자바스크립트의 기본 내장 함수에 대해 깊이 알게되었다.&lt;/p&gt;
-
-&lt;p&gt;내장 함수들의 역할과 어떤 상황에서 자주 사용되며, 어떻게 활용되는지에 대해 알게 되었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;사용자-입력에서-중복-요소-판단하기&quot;&gt;사용자 입력에서 중복 요소 판단하기&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputView&lt;/code&gt;에서는 사용자로부터 입력을 받는 부분과 입력에 대한 에러 처리와 관련한 함수들을 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;에러 처리를 할 때, 사용자의 입력 값 중에 중복이 있는지 확인하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set&lt;/code&gt; 객체를 활용하였다. Set은 배열의 값 중 중복되는 요소들을 제거한다.&lt;/p&gt;
-
-&lt;p&gt;이를 이용해서 기존의 사용자의 입력 배열의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set&lt;/code&gt;에 할당했을 때의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;size&lt;/code&gt; 값이 다르면 중복되는 값이 있다는 것을 의미하므로 이를 활용하여 에러 처리를하였다.&lt;/p&gt;
-
-&lt;p&gt;중요한 점은 배열의 길이를 구하기 위해선 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length&lt;/code&gt;를, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set&lt;/code&gt;의 길이를 구하기 위해선 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;size&lt;/code&gt;를 사용한다는 것이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;validateUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;userNumberArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;userNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userNumberArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ErrorString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_USER_DUPLICATED_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;사용자의 입력 값의 각 문자를 배열에 할당하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;split&lt;/code&gt; 함수를 사용하였다.&lt;/p&gt;
-
-&lt;p&gt;입력 값에 중복되는 요소가 있는 경우, 관련된 에러 문구를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;constants&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ErrorString&lt;/code&gt;의 정의되어있는 메시지로 에러를 출력하도록 하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;사용자-입력에서-숫자가-아닌-요소-판단하기&quot;&gt;사용자 입력에서 숫자가 아닌 요소 판단하기&lt;/h3&gt;
-
-&lt;p&gt;사용자의 입력이 숫자인지 아닌지 판단하기 위해 정규 표현식을 사용해야 한다는 것을 알게 되었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;validateUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;1-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ErrorString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_USER_NOT_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g&lt;/code&gt;는 global match를 의미하므로, 문장 전체에서 정규 표현식에 매치하는 것을 찾는다. 숫자에 해당하는 요소는 ‘ ‘로 치환하여 숫자가 아닌 요소만 남도록 문자열을 조정하였다.&lt;/p&gt;
-
-&lt;p&gt;해당 문자열의 길이가 0보다 크면 숫자가 아닌 요소가 하나라도 있다는 의미이므로, 예외 처리하였다.&lt;/p&gt;
-
-&lt;p&gt;추가로, flags 즉, modifier는 다음과 같이 설정할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff7779cbf-56fa-4d42-a8da-5507070d5763%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-20_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.01.07.png?id=01bbc2ee-cf8f-4f9d-947b-1c34ba7f4afa&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-20 오후 7.01.07.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;볼-스트라이크-출력하기&quot;&gt;볼, 스트라이크 출력하기&lt;/h3&gt;
-
-&lt;p&gt;사용자가 입력한 값의 볼 개수와 스트라이크 개수를 인자로 받아 해당 값들에 대한 문구를 출력하는 로직을 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;각 문구들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;result&lt;/code&gt; 배열에 추가하고, 배열의 요소를 공백을 기준으로 문자열로 출력하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;join&lt;/code&gt; 함수를 사용하였다.&lt;/p&gt;
-
-&lt;p&gt;코드는 다음과 같이 작성하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;printResultString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;볼`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;볼`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;낫싱&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;배열에 각 카운트에 해당하는 문구들을 push하고, 각 구분자를 공백 ‘ ‘을 기준으로 문자열로 합쳐 출력하도록 하였다.&lt;/p&gt;
-
-&lt;h2 id=&quot;요구사항은-꼼꼼히&quot;&gt;요구사항은 꼼꼼히&lt;/h2&gt;
-
-&lt;h3 id=&quot;프로그램-종료-오류&quot;&gt;프로그램 종료 오류&lt;/h3&gt;
-
-&lt;p&gt;사용자로부터 게임 재시작 여부를 입력받을 때 ‘2’를 입력받으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;process.exit()&lt;/code&gt;을 통해 프로그램을 종료하고 ‘1’을 입력받으면 게임을 재시작하고 다시 입력을 받도록 작성하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readRestartNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gameReset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그러나 이렇게 작성한 후 테스트를 돌려보았을 때, 예상치 못한 에러가 발생하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fccd9d983-a579-4f57-a278-dd745734e70e%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.22.43.png?id=65e64ee9-56b2-46f1-ae85-28c17b058cb8&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-24 오후 5.22.43.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;에러 메시지를 보아도 이해가 되지 않았다.&lt;/p&gt;
-
-&lt;p&gt;코드 상으로는 문제가 없어 보였기 때문에, 혹시 프로그램 종료와 관련한 다른 조건들이 있는지 요구사항을 다시 한번 확인하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F081ac011-91bf-4802-b820-8792b246d56a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-22_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.55.02.png?id=0cdaa825-75e2-4e2f-a1cb-41c004fccd29&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-22 오후 4.55.02.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;다시 확인해보니 요구사항에 프로그램 종료와 관련한 요구사항이 명시되어있는 것을 확인할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;요구사항을 꼼꼼히 읽지 않은 나의 실수였다.&lt;/p&gt;
-
-&lt;p&gt;이를 확인한 후에 사용자로부터 ‘2’를 입력받으면 빈 Promise를 반환하여 함수를 종료하도록 코드를 수정하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readRestartNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gameReset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;게임-재시작-오류&quot;&gt;게임 재시작 오류&lt;/h3&gt;
-
-&lt;p&gt;처음 게임이 시작된 이후, 사용자로부터 3개의 숫자를 입력받고 힌트를 출력하는 부분은 완벽하게 작동하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 사용자가 게임을 재시작 후 입력을 받으면 하나를 입력하면 여러 개를 받는 오류가 발생하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F535de211-e9b1-430c-945c-e64208b25426%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-22_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.01.14.png?id=618b8456-e8ea-48d0-9a78-6386f31c5862&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-22 오후 5.01.14.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;해당 오류를 발견하고 나서 입력과 출력에는 문제가 없지만, 여러 기능이 동시에 수행되고 있다는 느낌을 받았다.&lt;/p&gt;
-
-&lt;p&gt;따라서 컨트롤러에 문제가 있다는 것을 파악하고 컨트롤러의 코드를 다시 살펴보았다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restartCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readRestartCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resetGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printEndString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;handleInputOrEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printHintString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;NUMBER_SIZE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printResultString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartCommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;resetGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;문제는 바로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inputRestartCommand&lt;/code&gt;에서 발생하였다.&lt;/p&gt;
-
-&lt;p&gt;사용자로부터 ‘1’을 입력받으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resetGame()&lt;/code&gt;을 호출하고, 사용자로부터 입력을 받는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inputUserNumber()&lt;/code&gt; 함수를 호출한다.&lt;/p&gt;
-
-&lt;p&gt;그러나 이미 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resetGame()&lt;/code&gt; 내부에서 사용자로부터 입력을 받는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inputUserNumber()&lt;/code&gt; 함수가 호출되고 있었기 때문에, 동시에 입력을 받는 오류가 발생했던 것이다.&lt;/p&gt;
-
-&lt;p&gt;따라서 두 함수 중 하나의 호출을 제거해야 했다.&lt;/p&gt;
-
-&lt;p&gt;그래서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resetGame()&lt;/code&gt;이 초기화의 역할만 수행하는 것이 바람직하다고 판단하여 이를 제거하기로 결정했다.&lt;/p&gt;
-
-&lt;p&gt;수정한 코드는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readRestartNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gameReset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;restartNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;handleInputOrEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printResultString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ballCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strikeCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;NUMBER_SIZE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printEndString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputRestartNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputUserNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;gameReset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이 두 문제를 해결하는 데에 반나절 정도의 시간을 쏟은 것 같다.&lt;/p&gt;
-
-&lt;p&gt;만약 요구사항을 꼼꼼히 읽었다면 이렇게 오래 걸릴 필요는 없었을 것이다.&lt;/p&gt;
-
-&lt;p&gt;다음 미션에서는 개발 시간을 효율적으로 활용하기 위해 요구사항을 꼼꼼히 읽고, 기능 목록 작성과 함께 프로그램에 대한 플로우 차트를 작성하는 것이 좋을 것이라고 생각하였다.&lt;/p&gt;
-
-&lt;p&gt;다음 미션에서는 반드시 이를 적용해보려고한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-공들인-부분&quot;&gt;3. 공들인 부분&lt;/h1&gt;
-
-&lt;h2 id=&quot;mvc-패턴-적용&quot;&gt;MVC 패턴 적용&lt;/h2&gt;
-
-&lt;p&gt;백엔드 개발 분야에서 MVC 패턴과 관련한 이야기를 자주 듣곤 했다.&lt;/p&gt;
-
-&lt;p&gt;로직의 재사용성과 유지보수를 용이하게 하는 아키텍처 패턴으로 알려져 있지만, 정확한 개념과 프론트엔드에서 어떻게 적용되며, 이 미션에 적용하는 것이 적절한지에 대해 궁금하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F364b84b9-751e-40c0-bdfb-8b5b3bc8fa39%2FUntitled.png?id=76a904d5-c3f0-41b5-9268-da88756c6641&amp;amp;table=block&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Model&lt;/code&gt;은 데이터와 비즈니스 로직을 모아놓은 곳이다.&lt;/p&gt;
-
-&lt;p&gt;이번 미션에서 컴퓨터가 랜덤으로 생성하는 값들을 할당하고, 이를 기반으로 사용자가 입력한 숫자와 비교하여 볼의 개수와 스트라이크 개수를 얻을 수 있도록 데이터와 비즈니스 로직을 따로 분리하면 관리하기 편리하다고 생각했다.&lt;/p&gt;
-
-&lt;h3 id=&quot;view&quot;&gt;View&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View&lt;/code&gt;는 UI에 해당하는 로직들을 모아놓은 곳이다. 따라서 정의된 상수(문구)들을 기반으로 입/출력 로직을 따로 분리하면 될 것 같다는 생각이 들었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;controller&quot;&gt;Controller&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controller&lt;/code&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Model&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View&lt;/code&gt;를 명령하여 프로그램의 흐름을 제어하는 로직들을 모아놓은 곳이다.&lt;/p&gt;
-
-&lt;p&gt;이처럼 숫자 야구 게임을 하나의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controller&lt;/code&gt;로 관리하고 App에서 한 번 인스턴스를 생성해서 시작 지점의 함수를 호출하면 훨씬 간결한 코드를 작성할 수 있을 것이라고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;이처럼 MVC패턴은 로직들을 역할에 맞게 분리하고 재사용성을 높일 수 있다는 점에서 큰 장점을 느꼈고, 이를 해당 미션에 적용하기 적합하다고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F920dc55f-7d52-4a51-a6b4-9ac6abe90b1d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.23.37.png?id=82b93e08-b8e7-4b97-9743-e247b54c8361&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-24 오후 4.23.37.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;constants&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;모든 상수들을 index.js에 정의하여 관리하였다.&lt;/p&gt;
-
-&lt;p&gt;다른 파일에서 import해서 사용할 수 있고, 상수화하지 않으면 하나의 파일에서 값이 변경되면 모든 파일들을 검색해야 하는 번거로움을 해소할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;model&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;컴퓨터가 랜덤으로 생성하는 값을 저장하고 볼, 스트라이크 개수의 값을 반환하는 비즈니스 로직들을 작성하여 관리하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;view&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;사용자의 입력과 예외 처리를 수행하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputView&lt;/code&gt;와 각 출력문과 숫자에 대한 볼, 스트라이크의 결과를 나타내는 출력문들은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OutputView&lt;/code&gt;에 관리하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;utils&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;핵심 기능을 수행하는 로직들을 모아두어 관리하였다. 여기서는 숫자를 랜덤으로 생성하는 로직을 따로 분리하여 관리하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;숫자 야구 게임을 컨트롤 하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NumberBaseballGameController&lt;/code&gt;을 생성하여 모든 과정을 수행하는 Controller를 만들어 관리하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;처음에는 디자인 패턴을 적용하는 것이 어색했다.&lt;/p&gt;
-
-&lt;p&gt;특히 로직을 올바른 역할에 따라 분리하고 있는지에 대한 확신이 없어 개발 속도가 조금 느렸다.&lt;/p&gt;
-
-&lt;p&gt;하지만 각 모듈 간의 의존성이 낮아져 코드가 더 깔끔해지고, 오류를 디버깅하거나 수정하는 과정에서 효율적이라는 것을 느꼈다.&lt;/p&gt;
-
-&lt;p&gt;다음 미션에서는 역할을 미리 정의하고 그에 따른 기능을 분리하여 개발하면 훨씬 빠르게 개발할 수 있을 것이라고 판단하였다.&lt;/p&gt;
-
-&lt;h2 id=&quot;prettier--eslint을-곁들인-airbnb-코드-스타일-적용&quot;&gt;prettier &amp;amp; eslint을 곁들인 Airbnb 코드 스타일 적용&lt;/h2&gt;
-
-&lt;p&gt;자바스크립트 컨벤션 중에서도 가장 많이 쓰이는 Airbnb 코드 스타일을 적용하는 것이 요구사항에 명시되어 있었다.&lt;/p&gt;
-
-&lt;p&gt;이전에 팀 프로젝트를 진행하면서 eslint, prettier 그리고 자동화를 쉽게 설정해주는 husky 라이브러리를 사용해본 경험이 있다.&lt;/p&gt;
-
-&lt;p&gt;package.json을 수정하면 안된다는 제약사항이 있었기 때문에 eslint-config-airbnb와 eslint, prettier을 설치하여 적용하고 package.json와 설정 파일들을 제외하고 커밋하는 방식을 생각해냈다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; eslint eslint-config-airbnb-base eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier prettier
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;설치를 완료한 후에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt; 파일을 생성하여 규칙을 설정하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extends&lt;/code&gt;에 airbnb를 할당하여 코드 스타일을 적용하였다.&lt;/p&gt;
-
-&lt;p&gt;추가적으로 prettier와 eslint 모두 기본적인 코드 스타일을 적용하므로, 하나의 rule을 무시해주어야 충돌이 발생하지 않는다.&lt;/p&gt;
-
-&lt;p&gt;이를 prettier에게 맡기고, eslint는 airbnb 컨벤션에 맞게 문법 검사를 실행하도록 설정하여 충돌을 방지하였다.&lt;/p&gt;
-
-&lt;p&gt;추가로, 현재 프로젝트의 type이 module인 만큼 es6를 true로 설정하고, private field의 #은 Ecma 2022 이후의 문법이므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parserOption&lt;/code&gt;을 따로 설정하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;eslintrc&quot;&gt;.eslintrc&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;es6&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eslint:recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;airbnb-base&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;parserOptions&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ecmaVersion&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2022&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;import/prefer-default-export&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;import/extensions&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;class-methods-use-this&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-alert&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-undef&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-new&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;prettier 설정은 구글링을 통해 가장 많이 사용하는 설정을 참고하여 설정하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;prettierrcjs&quot;&gt;.prettierrc.js&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;singleQuote&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;semi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;useTabs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;tabWidth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;trailingComma&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;printWidth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bracketSpacing&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;arrowParens&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;avoid&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;formatonsave-설정&quot;&gt;FormatOnSave 설정&lt;/h3&gt;
-
-&lt;p&gt;vscode에서 파일 저장 시 자동으로 코드 포맷팅이 적용되도록 설정하고 싶었다.&lt;/p&gt;
-
-&lt;p&gt;찾아본 결과 vscode 설정에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FormatOnSave&lt;/code&gt;라는 옵션이 있었고, 이를 체크하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.formatOnSave&lt;/code&gt;를 true로 설정하면 적용할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4833022b-a23b-4b0e-9b72-b7bb31bb0776%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-22_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.33.01.png?id=6bc294ee-fd4c-427d-a8d8-d13883da3409&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-22 오후 10.33.01.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이후 settings.json을 편집모드에 들어가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.formatOnSave&lt;/code&gt;가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt;인지를 확인한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fafff06c3-aa75-4f9c-b357-11c88e2283ae%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-22_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.34.32.png?id=e68718a7-042a-4ae2-98f9-c439f392caff&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-22 오후 10.34.32.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이후 파일을 저장하면 prettier에 설정된 규칙들이 다음과 같이 자동적으로 적용되는 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F89142f63-17d4-4ba8-914b-236968d7b8c3%2FcodeFormat.gif?id=a46afb96-59af-4296-a2f6-4d5375bd4ad9&amp;amp;table=block&quot; alt=&quot;codeFormat.gif&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4-회고&quot;&gt;4. 회고&lt;/h1&gt;
-
-&lt;p&gt;1주차 미션을 완료하며, 예상보다 많은 어려움을 겪었지만, 그만큼 새로운 것을 배우며 미션을 수행하는 데 큰 즐거움을 느꼈다.&lt;/p&gt;
-
-&lt;p&gt;처음 요구사항을 접하고 어떻게 접근해야 할지에 대해 많이 고민하였다.&lt;/p&gt;
-
-&lt;p&gt;하지만 문제를 하나씩 해결하고, 모르는 부분을 찾아가며 공부하면서 개인적으로 부족한 부분이 많다는 것을 깨달았다.&lt;/p&gt;
-
-&lt;p&gt;만약 이번 우테코 프리코스에 참여하지 않았다면, 내 자신이 얼마나 부족한지를 인지하지 못하고 있었을지도 모르겠다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;이번에 느낀 점들을 다음 미션에 잘 반영하여, 더 나은 코드를 작성하기 위해 앞으로의 미션에 많은 시간을 투자해야겠다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;5-다음-목표&quot;&gt;5. 다음 목표&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;효과적인 기능 목록 작성에 대한 나만의 방식 찾기&lt;/li&gt;
-  &lt;li&gt;프로그램 플로우 차트 작성하기&lt;/li&gt;
-  &lt;li&gt;MVC 패턴에 익숙해 지기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;6-구현-코드-보러가기&quot;&gt;6. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-baseball-6/pull/28&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
+&lt;h1 id=&quot;7-구현-코드-보러가기&quot;&gt;7. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-racingcar-6/pull/108&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>

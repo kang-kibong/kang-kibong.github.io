@@ -1,13 +1,26 @@
 ---
 layout: default
 ---
+
 <header>
   <h1>{{ site.title }}</h1>
+  <div class="profile">
+    <p>
+      <strong
+        >I’m a
+        <a href="https://github.com/kang-kibong" target="_blank">frontend engineer</a>. </strong
+      ><br /><br />
+      <a href="mailto:byeonghyeon.dev@gmail.com">byeonghyeon.dev@gmail.com</a>
+      <br />
+      <a href="tel:+82 10-5049-1663">+82 10-5049-1663</a>
+    </p>
+    <div class="profile-image"></div>
+  </div>
+
   {%-if site.theme_config.show_description-%}
-    <p>{{ site.description }}</p>
+  <p>{{ site.description }}</p>
+
   {%-endif-%}
 </header>
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
-
-{{ content }}
+{%-include menu_item.html collection=site.data.menu.entries-%} {{ content }}
