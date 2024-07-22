@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-05T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)","dateModified":"2024-05-05T00:00:00+09:00","datePublished":"2024-05-05T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-05 00:00:00 +0900">2024-05-05</time>
+  </p>
+  
+  <h1>[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="고정-이미지-배경">고정 이미지 배경</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.pick-your-favorite</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("../images/favorite_bg.jpg")</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="c">/* scroll시 배경화면이 멈춰있도록 하는 속성 =&gt; Parallax */</span>
+  <span class="nl">background-attachment</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">background-attachment</code>를 통해 배경이미지를 viewport를 기준으로 출력하도록 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">background-attachment: fixed</code>로 설정하면, 스크롤시 배경화면이 멈춰있도록 스타일링할 수 있다.(<em>Parallax</em>)</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="3d-애니메이션">3D 애니메이션</h1>
+
+<p>메달을 hover했을때 앞, 뒷면이 뒤집어지는 애니메이션을 구현하려고 한다.</p>
+
+<h2 id="메달의-앞-뒷면-구조-작성하기">메달의 앞, 뒷면 구조 작성하기</h2>
+
+<p>메달의 앞, 뒷면에 해당하는 요소의 구조를 잡기 위해 다음과 같이 작성하였다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"reserve-store"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"medal"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"front"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/reserve_store_medal_front.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"back"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/reserve_store_medal_back.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>매장 안내<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h2 id="메달의-3d-애니메이션-적용하기">메달의 3D 애니메이션 적용하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.reserve-store</span> <span class="nc">.medal</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">334px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">334px</span><span class="p">;</span>
+  <span class="err">**</span><span class="nl">perspective</span><span class="p">:</span> <span class="m">600px</span><span class="p">;</span><span class="err">**</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span> <span class="nc">.front</span><span class="o">,</span>
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span> <span class="nc">.back</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">334px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">334px</span><span class="p">;</span>
+  <span class="nl">backface-visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">1s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span> <span class="nc">.front</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span><span class="nd">:hover</span> <span class="nc">.front</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">180deg</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span> <span class="nc">.back</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">-180deg</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span><span class="nd">:hover</span> <span class="nc">.back</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.reserve-store</span> <span class="nc">.medal</span><span class="nd">:hover</span> <span class="nc">.back</span> <span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">248px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>앞면(<code class="language-plaintext highlighter-rouge">.front</code>)에 <code class="language-plaintext highlighter-rouge">rotateY</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정하여 초기 Y각도를 명시적으로 작성한다.</li>
+  <li>뒷면(<code class="language-plaintext highlighter-rouge">.back</code>)에 <code class="language-plaintext highlighter-rouge">rotateY</code>를 <code class="language-plaintext highlighter-rouge">-180deg</code>로 설정하여 초기 Y각도를 명시적으로 작성한다.</li>
+  <li>앞면(<code class="language-plaintext highlighter-rouge">.front</code>)과 뒷면(<code class="language-plaintext highlighter-rouge">.back</code>)이 <code class="language-plaintext highlighter-rouge">.medal</code>에 겹쳐 질 수 있도록 <code class="language-plaintext highlighter-rouge">position</code>을 <code class="language-plaintext highlighter-rouge">absolute</code>로 설정한다.</li>
+  <li>앞면(<code class="language-plaintext highlighter-rouge">.front</code>)과 뒷면(<code class="language-plaintext highlighter-rouge">.back</code>)을 <code class="language-plaintext highlighter-rouge">backface-visibility: hidden</code>으로 설정하여 하나가 뒤집어진 상태인 경우 숨기도록 설정한다.</li>
+  <li>앞면(<code class="language-plaintext highlighter-rouge">.front</code>)를 hover했을 경우 <code class="language-plaintext highlighter-rouge">rotateY</code>를 <code class="language-plaintext highlighter-rouge">180deg</code>로 설정하여 오른쪽으로 뒤집어지도록 설정한다.</li>
+  <li>뒷면(<code class="language-plaintext highlighter-rouge">.back</code>)을 hover했을 경우 <code class="language-plaintext highlighter-rouge">rotateY</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정하여 왼쪽으로 뒤집어지도록 설정한다.</li>
+  <li>.medal의 3D 애니메이션의 원근감을 주기 위해 <code class="language-plaintext highlighter-rouge">perspective</code>를 설정해준다.</li>
+</ul>
+
+<h2 id="결과">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb93d7ba3-8058-461f-ba4e-1738740ba78b%2FMay-03-2024_16-32-53.gif?id=6616f9fb-e184-417d-8054-7e81ee3d533b&amp;table=block" alt="May-03-2024 16-32-53.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="스크롤-위치-계산-애니메이션">스크롤 위치 계산 애니메이션</h1>
+
+<p>화면의 요소들이 스크롤할때 보여질 경우 위치를 다이나믹하게 움직여 나타낼 수 있도록 구현할 예정이다.</p>
+
+<h2 id="scrollmagic">ScrollMagic</h2>
+
+<p>원하는 section이 화면에 보여지는지에 대한 여부를 ScrollMagic 외부 라이브러리를 통해 쉽게 알 수 있다.</p>
+
+<p><a href="https://cdnjs.com/libraries/ScrollMagic">ScrollMagic - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers</a></p>
+
+<h3 id="cdn-추가하기">CDN 추가하기</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"</span> <span class="na">defer</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="감시할-섹션들-지정하기">감시할 섹션들 지정하기</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"season-product scroll-spy"</span><span class="nt">&gt;&lt;/section&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"reserve-coffee scroll-spy"</span><span class="nt">&gt;&lt;/section&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"pick-your-favorite scroll-spy"</span><span class="nt">&gt;&lt;/section&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"find-store scroll-spy"</span><span class="nt">&gt;&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h2 id="감시-요소-트리거-및-클래스-토글링">감시 요소 트리거 및 클래스 토글링</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">spyEls</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">"</span><span class="s2">section.scroll-spy</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">spyEls</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">spyEl</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">new</span> <span class="nx">ScrollMagic</span><span class="p">.</span><span class="nx">Scene</span><span class="p">({</span>
+    <span class="na">triggerElement</span><span class="p">:</span> <span class="nx">spyEl</span><span class="p">,</span>
+    <span class="na">triggerHook</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+  <span class="p">})</span>
+    <span class="p">.</span><span class="nx">setClassToggle</span><span class="p">(</span><span class="nx">spyEl</span><span class="p">,</span> <span class="dl">"</span><span class="s2">show</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="k">new</span> <span class="nx">ScrollMagic</span><span class="p">.</span><span class="nx">Controller</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">section</code>태그에 <code class="language-plaintext highlighter-rouge">.scroll-spy</code> 클래스를 가지는 감시하는 섹션들을 정의하고 <code class="language-plaintext highlighter-rouge">forEach()</code>를 통해 각 섹션들을 순회한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">ScrollMagic</code>객체에 <code class="language-plaintext highlighter-rouge">Scene()</code> 메서드를 통해 감시하는 섹션을 트리거하고 80% 영역에 도달하면 class가 토글링되도록 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">setClassToggle()</code> 메서드를 통해 토글링할 클래스 <code class="language-plaintext highlighter-rouge">.show</code>를 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">addTo()</code> 메서드를 통해 컨트롤러 내용을 추가한다.</li>
+</ul>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff1164dfe-9589-4c49-b141-84bffe99256c%2FMay-03-2024_17-21-24.gif?id=dcac0cb3-b3d8-4efd-a79e-05ff4a736ef6&amp;table=block" alt="May-03-2024 17-21-24.gif" /></p>
+
+<p>감시하는 섹션들의 영역에서 80%가 넘어가는 순간 <code class="language-plaintext highlighter-rouge">.show</code>가 토글되는 것을 확인할 수 있다.</p>
+
+<h2 id="show-및-위치-이동-클래스-정의하기"><code class="language-plaintext highlighter-rouge">.show</code> 및 위치 이동 클래스 정의하기</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.back-to-position</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">1s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.back-to-position.to-right</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-150px</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.back-to-position.to-left</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">150px</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.show</span> <span class="nc">.back-to-position</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.back-to-position</code> 클래스를 통해 초기에는 안보이도록 <code class="language-plaintext highlighter-rouge">opacity</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정하고 <code class="language-plaintext highlighter-rouge">transition</code>을 통해 위치 이동시 1초의 딜레이 애니메이션을 준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.to-right</code> 클래스를 가지면 맨 왼쪽으로 <code class="language-plaintext highlighter-rouge">-150px</code>로 초기에 배치되도록 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.to-left</code> 클래스를 가지면 맨 오른쪽으로 <code class="language-plaintext highlighter-rouge">150px</code>로 초기에 배치되도록 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.show</code> 클래스가 토글되면 요소들이 보여지도록 <code class="language-plaintext highlighter-rouge">opacity</code>를 <code class="language-plaintext highlighter-rouge">1</code>로 설정하고 초기 위치인 <code class="language-plaintext highlighter-rouge">translateX</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정한다.</li>
+</ul>
+
+<h2 id="결과-1">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb7046f01-dec5-4027-8abe-6cdfc617ef20%2FMay-03-2024_17-45-51.gif?id=001b8049-256b-4ee9-a3f4-2be82ea0f100&amp;table=block" alt="May-03-2024 17-45-51.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="페이지-상단으로-이동scrollto">페이지 상단으로 이동(ScrollTo)</h1>
+
+<p>페이지에 페이지의 최상단으로 이동하는 버튼을 생성한다.</p>
+
+<p>추가로 페이지의 최상단으로 이동되면 페이지에서 사라지고 스크롤될 경우 버튼이 보이도록 할 예정이다.</p>
+
+<p>이를 구현하기 위해 기존에 사용했던 gsap 라이브러리의 ScrollTo를 사용하여 구현해볼 예정이다.</p>
+
+<h2 id="gsap---scrollto-plugin-cdn-가져오기">GSAP - ScrollTo Plugin CDN 가져오기</h2>
+
+<p><a href="https://cdnjs.com/libraries/gsap">gsap - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers</a></p>
+
+<p>위 사이트에서 ScrollToPlugin에 해당하는 cdn을 복사해서 head에 script로 가져온다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F24e6e620-8181-44f3-930f-c16040159328%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-05-03_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.37.42.png?id=9fc17d9b-2fcb-4c35-8f93-b1e78265c04a&amp;table=block" alt="스크린샷 2024-05-03 오후 6.37.42.png" /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script
+  </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"</span>
+  <span class="na">integrity=</span><span class="s">"sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+최ㅇ9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ=="</span>
+  <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
+  <span class="na">referrerpolicy=</span><span class="s">"no-referrer"</span>
+<span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="to-top-버튼-만들기">to-top 버튼 만들기</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"to-top"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-symbols-outlined"</span><span class="nt">&gt;</span>arrow_upward<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>유일한 요소이므로 <code class="language-plaintext highlighter-rouge">id</code>를 <code class="language-plaintext highlighter-rouge">to-top</code>으로 부여한다.</li>
+  <li>Google Material Icons의 arrow_upward로 아이콘을 가져온다.
+초</li>
+</ul>
+
+<h2 id="to-top-버튼-숨기기--보이기">to-top 버튼 숨기기 / 보이기</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">toTopEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">#to-top</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">scroll</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">_</span><span class="p">.</span><span class="nx">throttle</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">badgeEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">badgeEl</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="na">display</span><span class="p">:</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">});</span>
+      <span class="c1">// 버튼 보이기</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">toTopEl</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="p">});</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">badgeEl</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">display</span><span class="p">:</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">});</span>
+      <span class="c1">// 버튼 숨기기</span>
+      <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">toTopEl</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">},</span> <span class="mi">300</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">#to-top</code> 요소를 정의한다.</li>
+  <li>이전의 배지와 동일하게 <code class="language-plaintext highlighter-rouge">500px</code> 이전으로 스크롤 되면 <code class="language-plaintext highlighter-rouge">gsap.to()</code> 메서드를 통해 <code class="language-plaintext highlighter-rouge">x</code>를 <code class="language-plaintext highlighter-rouge">100</code>으로 설정하여 오른쪽으로 숨기도록 한다.</li>
+  <li>500px 이상으로 스크롤 되면 x를 0으로 설정하여 버튼이 제자리로오도록 한다.</li>
+</ul>
+
+<h2 id="페이지-상단-이동-구현하기">페이지 상단 이동 구현하기</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">toTopEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">scrollTo</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">#to-top</code>버튼을 클릭하면 <code class="language-plaintext highlighter-rouge">gsap.top()</code> 메서드를 통해 <code class="language-plaintext highlighter-rouge">scrollTo</code> 속성을 <code class="language-plaintext highlighter-rouge">0</code>으로 설정하여 페이지의 최상단으로 0.7초의 지연시간 동안 이동시킨다.</li>
+</ul>
+
+<h2 id="결과-2">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fee034934-3f29-4fa2-8a1b-22e01c88470b%2FMay-03-2024_18-53-50.gif?id=f2cfeac6-547e-41f5-9f85-3e4285bd85aa&amp;table=block" alt="May-03-2024 18-53-50.gif" /></p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

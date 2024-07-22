@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T02:09:14+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T02:16:49+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -1350,7 +1350,287 @@
 
 &lt;p&gt;이번 글에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;craco&lt;/code&gt;를 활용하여 CRA + TypeScript 프로젝트에서 절대 경로를 설정하는 방법을 다루었습니다.&lt;/p&gt;
 
-&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)" /><published>2024-05-03T00:00:00+09:00</published><updated>2024-05-03T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(3)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - 스타벅스 예제 클론하기(4)" /><published>2024-05-05T00:00:00+09:00</published><updated>2024-05-05T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(4)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-4.html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;고정-이미지-배경&quot;&gt;고정 이미지 배경&lt;/h1&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.pick-your-favorite&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&quot;../images/favorite_bg.jpg&quot;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;/* scroll시 배경화면이 멈춰있도록 하는 속성 =&amp;gt; Parallax */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-attachment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cover&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-attachment&lt;/code&gt;를 통해 배경이미지를 viewport를 기준으로 출력하도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-attachment: fixed&lt;/code&gt;로 설정하면, 스크롤시 배경화면이 멈춰있도록 스타일링할 수 있다.(&lt;em&gt;Parallax&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;3d-애니메이션&quot;&gt;3D 애니메이션&lt;/h1&gt;
+
+&lt;p&gt;메달을 hover했을때 앞, 뒷면이 뒤집어지는 애니메이션을 구현하려고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;메달의-앞-뒷면-구조-작성하기&quot;&gt;메달의 앞, 뒷면 구조 작성하기&lt;/h2&gt;
+
+&lt;p&gt;메달의 앞, 뒷면에 해당하는 요소의 구조를 잡기 위해 다음과 같이 작성하였다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;reserve-store&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;medal&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;front&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/reserve_store_medal_front.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;back&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/reserve_store_medal_back.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;매장 안내&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;메달의-3d-애니메이션-적용하기&quot;&gt;메달의 3D 애니메이션 적용하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;334px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;334px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;perspective&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;600px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;**&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.back&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;334px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;334px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;backface-visibility&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.front&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.front&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.back&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.back&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.reserve-store&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.medal&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.back&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;248px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앞면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.front&lt;/code&gt;)에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotateY&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 설정하여 초기 Y각도를 명시적으로 작성한다.&lt;/li&gt;
+  &lt;li&gt;뒷면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.back&lt;/code&gt;)에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotateY&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-180deg&lt;/code&gt;로 설정하여 초기 Y각도를 명시적으로 작성한다.&lt;/li&gt;
+  &lt;li&gt;앞면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.front&lt;/code&gt;)과 뒷면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.back&lt;/code&gt;)이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.medal&lt;/code&gt;에 겹쳐 질 수 있도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;absolute&lt;/code&gt;로 설정한다.&lt;/li&gt;
+  &lt;li&gt;앞면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.front&lt;/code&gt;)과 뒷면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.back&lt;/code&gt;)을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;backface-visibility: hidden&lt;/code&gt;으로 설정하여 하나가 뒤집어진 상태인 경우 숨기도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;앞면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.front&lt;/code&gt;)를 hover했을 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotateY&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;180deg&lt;/code&gt;로 설정하여 오른쪽으로 뒤집어지도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;뒷면(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.back&lt;/code&gt;)을 hover했을 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotateY&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 설정하여 왼쪽으로 뒤집어지도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;.medal의 3D 애니메이션의 원근감을 주기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;perspective&lt;/code&gt;를 설정해준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;결과&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb93d7ba3-8058-461f-ba4e-1738740ba78b%2FMay-03-2024_16-32-53.gif?id=6616f9fb-e184-417d-8054-7e81ee3d533b&amp;amp;table=block&quot; alt=&quot;May-03-2024 16-32-53.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;스크롤-위치-계산-애니메이션&quot;&gt;스크롤 위치 계산 애니메이션&lt;/h1&gt;
+
+&lt;p&gt;화면의 요소들이 스크롤할때 보여질 경우 위치를 다이나믹하게 움직여 나타낼 수 있도록 구현할 예정이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;scrollmagic&quot;&gt;ScrollMagic&lt;/h2&gt;
+
+&lt;p&gt;원하는 section이 화면에 보여지는지에 대한 여부를 ScrollMagic 외부 라이브러리를 통해 쉽게 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdnjs.com/libraries/ScrollMagic&quot;&gt;ScrollMagic - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cdn-추가하기&quot;&gt;CDN 추가하기&lt;/h3&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;defer&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;감시할-섹션들-지정하기&quot;&gt;감시할 섹션들 지정하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;season-product scroll-spy&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;reserve-coffee scroll-spy&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pick-your-favorite scroll-spy&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;find-store scroll-spy&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;감시-요소-트리거-및-클래스-토글링&quot;&gt;감시 요소 트리거 및 클래스 토글링&lt;/h2&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spyEls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;section.scroll-spy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;spyEls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spyEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollMagic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Scene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;triggerElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spyEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;triggerHook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setClassToggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spyEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollMagic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;section&lt;/code&gt;태그에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scroll-spy&lt;/code&gt; 클래스를 가지는 감시하는 섹션들을 정의하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forEach()&lt;/code&gt;를 통해 각 섹션들을 순회한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ScrollMagic&lt;/code&gt;객체에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scene()&lt;/code&gt; 메서드를 통해 감시하는 섹션을 트리거하고 80% 영역에 도달하면 class가 토글링되도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setClassToggle()&lt;/code&gt; 메서드를 통해 토글링할 클래스 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.show&lt;/code&gt;를 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addTo()&lt;/code&gt; 메서드를 통해 컨트롤러 내용을 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff1164dfe-9589-4c49-b141-84bffe99256c%2FMay-03-2024_17-21-24.gif?id=dcac0cb3-b3d8-4efd-a79e-05ff4a736ef6&amp;amp;table=block&quot; alt=&quot;May-03-2024 17-21-24.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;감시하는 섹션들의 영역에서 80%가 넘어가는 순간 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.show&lt;/code&gt;가 토글되는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;show-및-위치-이동-클래스-정의하기&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.show&lt;/code&gt; 및 위치 이동 클래스 정의하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.back-to-position&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.back-to-position.to-right&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-150px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.back-to-position.to-left&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;150px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.show&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.back-to-position&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.back-to-position&lt;/code&gt; 클래스를 통해 초기에는 안보이도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opacity&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 설정하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transition&lt;/code&gt;을 통해 위치 이동시 1초의 딜레이 애니메이션을 준다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.to-right&lt;/code&gt; 클래스를 가지면 맨 왼쪽으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-150px&lt;/code&gt;로 초기에 배치되도록 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.to-left&lt;/code&gt; 클래스를 가지면 맨 오른쪽으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;150px&lt;/code&gt;로 초기에 배치되도록 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.show&lt;/code&gt; 클래스가 토글되면 요소들이 보여지도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opacity&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;로 설정하고 초기 위치인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;translateX&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;결과-1&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb7046f01-dec5-4027-8abe-6cdfc617ef20%2FMay-03-2024_17-45-51.gif?id=001b8049-256b-4ee9-a3f4-2be82ea0f100&amp;amp;table=block&quot; alt=&quot;May-03-2024 17-45-51.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;페이지-상단으로-이동scrollto&quot;&gt;페이지 상단으로 이동(ScrollTo)&lt;/h1&gt;
+
+&lt;p&gt;페이지에 페이지의 최상단으로 이동하는 버튼을 생성한다.&lt;/p&gt;
+
+&lt;p&gt;추가로 페이지의 최상단으로 이동되면 페이지에서 사라지고 스크롤될 경우 버튼이 보이도록 할 예정이다.&lt;/p&gt;
+
+&lt;p&gt;이를 구현하기 위해 기존에 사용했던 gsap 라이브러리의 ScrollTo를 사용하여 구현해볼 예정이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;gsap---scrollto-plugin-cdn-가져오기&quot;&gt;GSAP - ScrollTo Plugin CDN 가져오기&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdnjs.com/libraries/gsap&quot;&gt;gsap - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;위 사이트에서 ScrollToPlugin에 해당하는 cdn을 복사해서 head에 script로 가져온다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F24e6e620-8181-44f3-930f-c16040159328%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-05-03_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.37.42.png?id=9fc17d9b-2fcb-4c35-8f93-b1e78265c04a&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-05-03 오후 6.37.42.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script
+  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+최ㅇ9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;referrerpolicy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;no-referrer&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;to-top-버튼-만들기&quot;&gt;to-top 버튼 만들기&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;to-top&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-symbols-outlined&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;arrow_upward&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;유일한 요소이므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to-top&lt;/code&gt;으로 부여한다.&lt;/li&gt;
+  &lt;li&gt;Google Material Icons의 arrow_upward로 아이콘을 가져온다.
+초&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;to-top-버튼-숨기기--보이기&quot;&gt;to-top 버튼 숨기기 / 보이기&lt;/h2&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;toTopEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#to-top&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;throttle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// 버튼 보이기&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toTopEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;badgeEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// 버튼 숨기기&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toTopEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#to-top&lt;/code&gt; 요소를 정의한다.&lt;/li&gt;
+  &lt;li&gt;이전의 배지와 동일하게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500px&lt;/code&gt; 이전으로 스크롤 되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsap.to()&lt;/code&gt; 메서드를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100&lt;/code&gt;으로 설정하여 오른쪽으로 숨기도록 한다.&lt;/li&gt;
+  &lt;li&gt;500px 이상으로 스크롤 되면 x를 0으로 설정하여 버튼이 제자리로오도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;페이지-상단-이동-구현하기&quot;&gt;페이지 상단 이동 구현하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;toTopEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;gsap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;scrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#to-top&lt;/code&gt;버튼을 클릭하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsap.top()&lt;/code&gt; 메서드를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrollTo&lt;/code&gt; 속성을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 설정하여 페이지의 최상단으로 0.7초의 지연시간 동안 이동시킨다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;결과-2&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fee034934-3f29-4fa2-8a1b-22e01c88470b%2FMay-03-2024_18-53-50.gif?id=f2cfeac6-547e-41f5-9f85-3e4285bd85aa&amp;amp;table=block&quot; alt=&quot;May-03-2024 18-53-50.gif&quot; /&gt;&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)" /><published>2024-05-03T00:00:00+09:00</published><updated>2024-05-03T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(3)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -3323,228 +3603,4 @@ ex) 0.7s ⇒ 1.4s ⇒ 2.1s ⇒ 2.7s&lt;/li&gt;
 
 &lt;h2 id=&quot;5-구현한-코드-보러가기&quot;&gt;5. &lt;a href=&quot;https://github.com/llbllhllk/javascript-oncall-6-llbllhllk/pull/1&quot;&gt;구현한 코드 보러가기&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&quot;6-1차-합격과-최종-코딩테스트-후기-보러가기&quot;&gt;6. &lt;a href=&quot;https://llbllhllk.tistory.com/98?category=1183320&quot;&gt;1차 합격과 최종 코딩테스트 후기 보러가기&lt;/a&gt;&lt;/h2&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry><entry><title type="html">[우아한테크코스 6기] 1차 합격 및 최종 코딩 테스트 후기</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-1%EC%B0%A8-%ED%95%A9%EA%B2%A9-%EB%B0%8F-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%9B%84%EA%B8%B0.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 1차 합격 및 최종 코딩 테스트 후기" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%201%EC%B0%A8%20%ED%95%A9%EA%B2%A9%20%EB%B0%8F%20%EC%B5%9C%EC%A2%85%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-1%EC%B0%A8-%ED%95%A9%EA%B2%A9-%EB%B0%8F-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%9B%84%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1차에-합격하다&quot;&gt;1차에 합격하다&lt;/h1&gt;
-
-&lt;p&gt;12월 11일 오후 3시에 1차 합격자가 발표하는 날이었다. 그날 컴퓨터네트워크 시험이었는데 시험시작이 마침 오후 3시였다. 시험 시작과 동시에 핸드폰으로 메일 우테코 알림이왔고 과연 결과가 어떻게 나왔을지 떨리는 마음으로 시험에 집중도 못한채 마무리하고 나왔다.&lt;/p&gt;
-
-&lt;p&gt;메일을 보기가 너무 무서웠다. 계단에 앉아서 메일을 열기까지 한 10분정도 뜸들였던 것 같다. 떨리는 마음으로 확인해본결과 1차 합격이라는 메일이 오고야 말았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F2317cd0d-44f5-42ae-be92-504d1d126e2d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.21.07.png?id=5ddbc3cd-2d88-4451-987e-af9b31541847&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-12-17 오후 1.21.07.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;메일을 보고 너무나도 기뻤다. 그동안 프리코스 고생했던 순간들을 인정해준 것 같은 느낌이었다.&lt;/p&gt;
-
-&lt;p&gt;메일을 받고 가족에게 먼저 이 소식을 알렸다. 가족들도 진심으로 축하해 주었고 1차 합격한 것 만으로도 대단하고, 그동안 고생많았다는 말을 해주었다.&lt;/p&gt;
-
-&lt;p&gt;뜨거운 가슴을 부여잡고 마지막 최종 코딩테스트까지 열심히 준비해야겠다는 생각을 했다.&lt;/p&gt;
-
-&lt;p&gt;소식을 전한 후 바로 카페로 달려갔다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;최종-코딩테스트-준비&quot;&gt;최종 코딩테스트 준비&lt;/h1&gt;
-
-&lt;p&gt;5시간 안에 모든 요구사항을 만족해야하기 때문에 스피드가 생명이라고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;이전에 &lt;strong&gt;“안 돌아가는 프로그램보다 돌아가는 쓰레기를 만들어도 괜찮다”&lt;/strong&gt;라는 말을 강조하였기 때문에 리팩토링과 테스트코드 물론 중요하지만 기능 구현을 최대한 빠른 시간안에 완성하는 것을 목표로 하였다.&lt;/p&gt;
-
-&lt;p&gt;최종 코딩테스트 까지 4~5일 정도의 시간밖에 없었기 때문에 많은 문제를 풀기에는 어려움이 있었다. 때문에 작년 최종 문제인 &lt;strong&gt;메뉴&lt;/strong&gt; 문제와 이번 프리코스 때 진행했던 &lt;strong&gt;1~4주차 문제&lt;/strong&gt;들을 다시 풀고 타임어택하며 준비하였다.&lt;/p&gt;
-
-&lt;p&gt;그리고 최종 코딩 테스트 때 바로 적용할 파일 템플릿과 SPEEDY문서를 만들어서 시간을 단축시키기 위해 미리 준비했다.&lt;/p&gt;
-
-&lt;p&gt;템플릿과 SPEEDY 문서는 해당 &lt;a href=&quot;https://github.com/kang-kibong/woowacourse-final-test-prep/tree/master/speedy&quot;&gt;리포지토리&lt;/a&gt;를 통해 준비했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;대전에서-서울로&quot;&gt;대전에서 서울로&lt;/h1&gt;
-
-&lt;p&gt;본가는 천안이고 학교는 대전에 있다. 대전에서 자취를 했기 때문에 전 날에 천안에 도착한 후 시험당일날 서울로 출발하는게 좋다고 생각하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 예외가 생겨 버렸다. 시험전 날 대전에서 천안으로 가는 버스가 모두 매진이었던 것이다. 그렇다고 미리 가기에는 다른 날에 시험이 있었기 때문에 매우 곤란한 상황이었다.&lt;/p&gt;
-
-&lt;p&gt;어떻게 해야하지 고민하던 찰나에, 올해 멋쟁이사자처럼 동아리에서 서울이 본가인 찐친 후배가 생각났다.&lt;/p&gt;
-
-&lt;p&gt;결국 눈 딱감고 후배에게 사정을 얘기하고 시험 전날에 서울에 잠시 머물수 있는지 부탁을 하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F7e7fef09-469e-4e68-8795-e05e2a13b20a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.47.45.png?id=db78b21c-16be-40c6-9339-c8bced2301c1&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-12-17 오후 1.47.45.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4a36fe9b-7e10-43bf-9f38-8b8074972eac%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.48.12.png?id=c078c556-a473-4b93-aaa9-01611cf12043&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-12-17 오후 1.48.12.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F7ea8651b-44f7-4754-bc99-cad43d02f722%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-12-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.14.17.png?id=28dbd3aa-41a5-4d24-8961-f02414efc415&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-12-17 오후 1.14.17.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;대전에서 서울, 서울에서 시험장까지의 일정을 짜서 준 후배의 감동스러운 모먼트에 눈물이 찔끔 나버렸다…&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;대망의 시험전날, 후배와 유성 터미널에서 6시 30분에 만나는 것으로 생각하고 그 전까지 카페에서 공부를하고 있었다.&lt;/p&gt;
-
-&lt;p&gt;오후 6시에 버스를 타고 유성 시외 버스터미널에 10분전에 도착을하였고 후배를 기다리고있었다. 그전에 화장실을 갔다오고 자연스럽게 티머니 어플을 확인하는데 이게 왠걸, 유성 “고속” 버스터미널로 갔어야 했다. 유성 시외버스터미널과 고속버스터미널은 걸어서 15분정도 걸리는데 정말 큰일이었다.&lt;/p&gt;
-
-&lt;p&gt;그때 확인한 시간이 23분으로 기억하는데, 후배에게 이 사태를 말하고 천천히 오라는 말(?)에 바로 달려갈 지쿠터가 있는지 확인하였다.&lt;/p&gt;
-
-&lt;p&gt;정말 다행히도 바로 옆에 지쿠터가있는 것을 확인하고 “이 버스 못타면 시험 못본다.”라는 마음으로 초고속으로 달렸다.&lt;/p&gt;
-
-&lt;p&gt;고속버스터미널에 도착한 시간은 28분이었고 바로 앞에서 후배를 만날 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;“형 가까운데 천천히 오지!”이러길래 무슨 소리인가 했는데, 30분 버스가 아니라 40분 버스였다. 다음날 시험보는 사람이 맞는지 의문이들 정도로 멍청한 나의 모습에 박수를 보낸다!!!&lt;/p&gt;
-
-&lt;p&gt;가까스럽게 버스를 타고 서울까지 가는데 너무나도 떨렸다. 시험 보는 당일날도 아닌데 왜 떨릴까?하며 1시간 50분 정도를 이동하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc68268dd-2a40-49e1-b178-c10444e9bb6d%2FIMG_8629.heic?id=76d1b5d0-ab94-41cd-bb2d-e57dd65ae1f9&amp;amp;table=block&quot; alt=&quot;IMG_8629.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;서울-도착&quot;&gt;서울 도착&lt;/h1&gt;
-
-&lt;p&gt;서울 센트럴시티 터미널에 도착했다. 후배의 집으로 이동하기 위해 9호선 급행 지하철을 탔다. 30분 정도 이동하는데 머리가 지끈지끈할 정도로 사람이 많았다. 두통이 생길 수도 있다는 생각에 타이레놀을 챙기긴 했는데 챙기길 정말 잘한 것 같다.&lt;/p&gt;
-
-&lt;p&gt;나곡마루역에 도착한 후 후배의 집까지 걸어가기 위해 밖에 나오니 비가 내리고 있었다. 비를 맞으며 10분 정도 걸으니 후배의 집에 도착하였고 얼른 씻고 그동안 배웠던 내용을 다시한번 정리하였다. 그러고 새벽 1시쯤 돼서 잠이 들었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F291fbc00-5046-41cf-94e6-86aa638c0920%2FIMG_8632.heic?id=7895ff92-1236-4227-908e-9f0a4fd245f7&amp;amp;table=block&quot; alt=&quot;IMG_8632.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;아침에 일어나니 후배가 아침상을 차려줬다. 거기다가 시험장 가는 길과 시험 끝나고나서 터미널까지 차로 태워다주었다…&lt;/p&gt;
-
-&lt;p&gt;신세를 많이 진 것 같아 미안한 마음이 들었다..&lt;/p&gt;
-
-&lt;p&gt;따듯한 방과 든든한 아침밥을 먹은 덕분에 시험 당일날 컨디션은 최상이었다.(용-멘 너무 고마워…)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F987ac710-c560-4f9b-a875-289c5c385018%2FIMG_8634.heic?id=17c31b17-abac-4f65-96d7-ae0fec9a7918&amp;amp;table=block&quot; alt=&quot;IMG_8634.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe7de53e1-3ff0-42e8-bf5b-2a2b868fabb6%2FIMG_8636.heic?id=e77b333f-e1ce-4b7a-b779-2ab985479a53&amp;amp;table=block&quot; alt=&quot;IMG_8636.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;내리자마자 롯데타워가 있어서 사진한번 찍고, 루터회관에 들어가기 전에 가까운 카페를 찾아서 &lt;strong&gt;메뉴&lt;/strong&gt; 미션을 다시 풀어보면서 워밍업하였다.&lt;/p&gt;
-
-&lt;p&gt;워밍업 도중에 동아리로부터 알게된 친한 형이 마지막까지 열심히 하라는 전화가 왔다.&lt;/p&gt;
-
-&lt;p&gt;이번에 지원서 쓸때도 많은 도움을 준 형이다.&lt;/p&gt;
-
-&lt;p&gt;프리코스 과정부터 시험 당일 날까지 응원해준 형인데 마지막까지 응원의 연락을 준 형이 너무나도 고마웠다.&lt;/p&gt;
-
-&lt;p&gt;어느덧 워밍업을 다하고 나니 시험 시간 30분 전이여서 바로 앞 루터회관 앞으로 달려갔다.&lt;/p&gt;
-
-&lt;p&gt;도착은 대략 35분쯤에 입장했던 것 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fa2a20e1c-c01e-47af-8cc7-cedc8a4b6020%2FIMG_8638.heic?id=4e0766e0-aad2-4322-994c-beeb0a9c5ce5&amp;amp;table=block&quot; alt=&quot;IMG_8638.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F46661e1e-0404-4d06-a1a1-09330cff622b%2FIMG_8639.heic?id=0f5d54db-5d6b-4409-95f4-7ccc57381acb&amp;amp;table=block&quot; alt=&quot;IMG_8639.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;우테코-잠실캠퍼스-실물-영접&quot;&gt;우테코 잠실캠퍼스 실물 영접&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb8f5a259-ec31-47ac-a671-6d67446578c1%2FIMG_8640.heic?id=e018e77e-cfad-4da3-8428-e5a5c8aab5b7&amp;amp;table=block&quot; alt=&quot;IMG_8640.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F2a52a572-8619-48b6-8f1e-542fc5408a38%2FIMG_8641.heic?id=55abb0e1-5c8d-4a71-ae60-1ad13ff823ed&amp;amp;table=block&quot; alt=&quot;IMG_8641.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;드디어 영상으로만 봤던 우테코에 직접 들어갈 수 있었다. 간단한 신분 확인 절차를 받고 시험장 위치와 굿즈를 받을 수 있는 곳을 안내해주셨다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fa14a385c-45af-4688-8033-01c9c2f900c8%2FIMG_8642.heic?id=d157a6e6-d949-4732-b6f5-86affd880caa&amp;amp;table=block&quot; alt=&quot;IMG_8642.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F0e05967c-ce32-458c-989b-796bb21d0371%2FIMG_8643.heic?id=f9da880b-a91d-400d-ba9d-2a481d266c4a&amp;amp;table=block&quot; alt=&quot;IMG_8643.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;굿즈가 있는 곳으로 갔는데 유튜브로만 봤던 캡틴 포비님을 볼 수 있었다!&lt;/p&gt;
-
-&lt;p&gt;같이 사진 찍고 싶었는데 극 shift I인 나로서는 선뜻 말도 못하고 굿즈만 받고 시험장으로 이동하였다…(후회된다…)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F65e881a4-4a7f-49b4-a598-011b22e79f2c%2FIMG_8645.heic?id=fd51f4d7-7f58-4689-9b2c-cd1d38a26af2&amp;amp;table=block&quot; alt=&quot;IMG_8645.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4339d1a5-0492-4fd6-9ba7-841eb9a74c57%2FIMG_8646.heic?id=8ed5d94b-08d2-4b0c-9bc2-8c6fde62de95&amp;amp;table=block&quot; alt=&quot;IMG_8646.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;시험장 입구에는 다량의 다과들과 물이 준비되어있었다.&lt;/p&gt;
-
-&lt;p&gt;많이 먹으면 식곤증 때문에 졸릴 것 같다는 생각에 목만 축일 수 있는 물 하나만 챙겼다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5d5c78a0-0949-4e56-a70b-7e0a8b44680a%2FIMG_8644.heic?id=4d5dcc33-cc07-471b-9e00-39c25d1552dc&amp;amp;table=block&quot; alt=&quot;IMG_8644.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;시험장에 들어가니 꽤 많은 사람들이 앉아있었다.&lt;/p&gt;
-
-&lt;p&gt;메일에서도 공간이 협소하다하였는데 생각보다 많이 협소해서 놀랬다. 마땅히 앉을 자리가 없어서 맨 앞에서 두번째 줄에 중간 자리에 앉게되었다.&lt;/p&gt;
-
-&lt;p&gt;시험을 치루기 위한 세팅을 다 마치고 기다리고 있는데 포비님께서 앉아 있지만 말고 캠퍼스 내부도 한번 둘러보라고 해서 긴장도 풀겸 내부를 싹 한번 둘러보고 왔다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F018b3e2b-1a9b-477e-879a-c53be020b307%2FIMG_8647.heic?id=52d46590-1371-485b-9f8d-2cda72cf048f&amp;amp;table=block&quot; alt=&quot;IMG_8647.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb0096e72-8638-4a0f-9ece-f37242ac1ecb%2FIMG_8648.heic?id=c536a9fc-be2b-41c1-96b0-f9508ea00d57&amp;amp;table=block&quot; alt=&quot;IMG_8648.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;잠실 캠퍼스 내부는 전체적인 분위기가 되게 따듯하고 자유로운 느낌이 들었다. 여기서 코딩을 하면 정말 재미있게 공부할 수 있을 것 같다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F92d890bc-5443-4dcc-8c5a-3ab8fdeaa82f%2FIMG_8649.heic?id=49b73a94-960b-44b7-9db3-f186d29561a4&amp;amp;table=block&quot; alt=&quot;IMG_8649.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F6aaf85aa-0302-4cca-9140-b5c6121b6e08%2FIMG_8650.heic?id=50af2ec0-9022-4d95-9454-6dfb63435cb0&amp;amp;table=block&quot; alt=&quot;IMG_8650.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F7ce5f23b-0797-49ad-9187-3c7dbf87e331%2FIMG_8651.heic?id=7d44bfb8-b26c-4c96-a57c-3c55819b0d61&amp;amp;table=block&quot; alt=&quot;IMG_8651.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F06acc867-31f5-4198-a4ca-a6be55f4d6df%2FIMG_8652.heic?id=daa8faff-762a-40c9-b70e-23150720ab75&amp;amp;table=block&quot; alt=&quot;IMG_8652.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;캠퍼스 입구에서 왼쪽으로 쭉 들어가면 야외를 들여다 보며 공부할 수 있는 공간이 있었다.&lt;/p&gt;
-
-&lt;p&gt;그 옆에는 각 포지션별, 디자인 패턴, CS 등등 잘 구분되어진 관련 서적들이 꽉꽉 채워져있었다.&lt;/p&gt;
-
-&lt;p&gt;만약 나도 최종합격을 하게 된다면 저기서 밤늦게까지 밖 풍경을 바라보며 공부하고 싶다는 생각이 들었다!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F710962fb-f064-4c07-aa79-5c8c4b724ecd%2FIMG_8654.heic?id=2581043d-bd8c-454d-91e2-744e5312d6a3&amp;amp;table=block&quot; alt=&quot;IMG_8654.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3e5485b5-e5d5-4849-a441-17843019e64e%2FIMG_8655.heic?id=f5632a48-8da0-40f5-86d0-c43646af0d13&amp;amp;table=block&quot; alt=&quot;IMG_8655.HEIC&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;로비옆에는 유튜브에서 많이 보던 테코톡 현장이 보였다! 이제 나도 여기서 발표할 수 있지 않을까?라 생각하며 오늘 테스트에 모든걸 쏟아 부어야겠다는 마음을 가지고 다시 시험장으로 이동하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;최종-코딩-테스트-후기&quot;&gt;최종 코딩 테스트 후기&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F0564993a-ff90-4f27-b5d1-e207610ba106%2FIMG_8656.png?id=fc00c74e-ce51-4ab5-b7ba-57f6cd381c88&amp;amp;table=block&quot; alt=&quot;IMG_8656.PNG&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;최종 코딩 테스트의 미션은 &lt;strong&gt;개발자 비상근무&lt;/strong&gt; 미션이었다.&lt;/p&gt;
-
-&lt;p&gt;비상 근무를 배정할 월과 요일을 입력하고 평일 근무자와 휴일(법정 공휴일, 주말) 근무자를 모두 입력받으면 순번대로 근무자를 배치해주는 미션이었다.&lt;/p&gt;
-
-&lt;p&gt;먼저 문제를 이해하고 기능 목록을 작성하는데 까지 대략 30분 정도로 꽤 많은 시간이 걸렸다.&lt;/p&gt;
-
-&lt;p&gt;이후 준비해놓은 템플릿을 적용하면서 사용자 입력과 유효성 검사까지 순차적으로 진행했다.&lt;/p&gt;
-
-&lt;p&gt;이 과정을 지나고 나니 대략 1시간 30분 정도 지난 것 같았다.&lt;/p&gt;
-
-&lt;p&gt;하지만 이후가 문제였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;근무자 보호와 비상 근무 운영의 효율을 위해, 비상 근무자는 어떤 경우에도 연속 2일은 근무할 수 없다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;해당 요구사항에서만 대략 2시간 30분정도 걸린 것 같았다.&lt;/p&gt;
-
-&lt;p&gt;아무리 해도 ‘수아-루루-수아’가 나와야되는데 ‘수아-수아-글로’라는 결과가 나왔다.&lt;/p&gt;
-
-&lt;p&gt;특정 조건문에 따른 인덱스를 스왑했는데도 불구하고 원하는 결과가 나오지 않자 멘탈적으로 많이 힘들었다.&lt;/p&gt;
-
-&lt;p&gt;우선 테스트를 돌려본 결과 모든 테스트가 통과되어서 짧은 시간안에 제출한 후 못 챙긴 상수화와 도메인 로직을 분리하였다. 아쉽게도 테스트코드는 작성해보지도 못했다.&lt;/p&gt;
-
-&lt;p&gt;그렇게 시험이 마무리 되었고, 보고 난 후 너무나도 아쉬웠다. 해결법을 알고 적용해봤지만 나오지 않는 결과에 너무 당황한 나머지 모든 기량을 발휘하지 못했다는 점에서 많이 아쉬웠다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;모든-과정을-마치고&quot;&gt;모든 과정을 마치고&lt;/h1&gt;
-
-&lt;p&gt;드디어 대략 3개월 간의 몰입과정과 최종 코딩테스트까지 모두 마쳤다!&lt;/p&gt;
-
-&lt;p&gt;마지막은 비로소 아쉽지만 앞으로 합격자 발표까지 최종 코딩테스트때 내가 부족했던 부분이 무엇인지 파악하고 리팩토링하고 이제는 좀 여유롭게 공부하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;마지막 발표까지 좋은 결과가가 있길 바란다!&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
+&lt;h2 id=&quot;6-1차-합격과-최종-코딩테스트-후기-보러가기&quot;&gt;6. &lt;a href=&quot;https://llbllhllk.tistory.com/98?category=1183320&quot;&gt;1차 합격과 최종 코딩테스트 후기 보러가기&lt;/a&gt;&lt;/h2&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
