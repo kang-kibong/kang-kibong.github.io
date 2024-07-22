@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기" />
+<meta name="author" content="Riccardo Graziosi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="tsconfig.json 설정을 통한 절대 경로 설정하기" />
+<meta property="og:description" content="tsconfig.json 설정을 통한 절대 경로 설정하기" />
+<link rel="canonical" href="http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="no style, please!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-01T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html","@type":"BlogPosting","description":"tsconfig.json 설정을 통한 절대 경로 설정하기","author":{"@type":"Person","name":"Riccardo Graziosi"},"headline":"CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기","dateModified":"2024-07-01T00:00:00+09:00","datePublished":"2024-07-01T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/no-style-please/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/no-style-please/feed.xml" title="no style, please!" /><link rel="shortcut icon" type="image/x-icon" href="/no-style-please/logo.png" />
+  <link rel="stylesheet" href="/no-style-please/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/no-style-please/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-01 00:00:00 +0900">2024-07-01</time>
+  </p>
+  
+  <h1>CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+<h1 id="tsconfigjson-설정을-통한-절대-경로-설정하기">tsconfig.json 설정을 통한 절대 경로 설정하기</h1>
+
+<p>기존의 import 경로를 상대경로로 설정하면 코드의 길이가 불필요하게 길어지는 단점이 있습니다. 이를 해결하기 위해 절대 경로를 설정하여 불필요한 코드의 길이를 줄일 수 있습니다.</p>
+
+<p>먼저, <code class="language-plaintext highlighter-rouge">tsconfig.json</code> 파일의 <code class="language-plaintext highlighter-rouge">compilerOptions</code>에 <code class="language-plaintext highlighter-rouge">baseUrl</code>을 <code class="language-plaintext highlighter-rouge">"."</code>으로 설정하고 <code class="language-plaintext highlighter-rouge">paths</code>를 통해 경로를 설정해줍니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"src/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src/*"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이 설정은 <code class="language-plaintext highlighter-rouge">src</code>를 루트로 했을 때는 동작하지만, <code class="language-plaintext highlighter-rouge">src</code>를 제외한 다른 경로로 aliasing을 시도하면 작동하지 않는 문제를 겪을 수 있습니다. 이는 내부 webpack 설정 때문에 절대 경로를 인식하지 못하기 때문입니다.</p>
+
+<p>webpack 설정을 직접 수정하려면 <code class="language-plaintext highlighter-rouge">npm run eject</code> (yarn의 경우 <code class="language-plaintext highlighter-rouge">yarn eject</code>) 명령어를 실행해야 하는데, 이는 한 번 실행하면 되돌릴 수 없어 권장하지 않습니다. 대신, craco 라이브러리를 사용하면 해결할 수 있습니다.</p>
+
+<p><br />
+<br />
+<br /></p>
+<h1 id="craco를-통한-절대-경로-설정하기">craco를 통한 절대 경로 설정하기</h1>
+
+<p>먼저, <code class="language-plaintext highlighter-rouge">npm i -D @craco/craco</code> 명령어로 craco 라이브러리를 설치합니다.</p>
+
+<p>craco 설치가 완료되면 <code class="language-plaintext highlighter-rouge">craco.config.js</code> 파일을 생성하고, <code class="language-plaintext highlighter-rouge">src</code> 경로와 <code class="language-plaintext highlighter-rouge">components</code> 경로를 다음과 같이 aliasing할 수 있도록 작성합니다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">webpack</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">alias</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">@</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@components</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/components</span><span class="dl">"</span><span class="p">),</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>마지막으로 <code class="language-plaintext highlighter-rouge">package.json</code> 파일에서 <code class="language-plaintext highlighter-rouge">scripts</code> 부분의 <code class="language-plaintext highlighter-rouge">react-scripts</code>를 <code class="language-plaintext highlighter-rouge">craco</code>로 변경해줍니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco start"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco build"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"craco test"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+<h1 id="절대-경로-자동완성-이슈">절대 경로 자동완성 이슈</h1>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">components</code> 폴더에 있는 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트를 절대 경로로 입력하려고 할 때 자동완성이 되지 않고 상대경로로 자동완성되는 문제가 발생할 수 있습니다.</p>
+
+<p>이 문제를 해결하려면 <strong>jsconfig.json</strong> 또는 <strong>tsconfig.json</strong>의 <code class="language-plaintext highlighter-rouge">compilerOptions</code> 내부에 <code class="language-plaintext highlighter-rouge">baseUrl</code>과 <code class="language-plaintext highlighter-rouge">paths</code>를 추가해주면 됩니다. 필자는 해당 <code class="language-plaintext highlighter-rouge">paths</code>와 <code class="language-plaintext highlighter-rouge">baseUrl</code>을 다른 파일로 분리하고 싶어 <code class="language-plaintext highlighter-rouge">tsconfig.paths.json</code> 파일을 따로 만들어서 다음과 같이 paths를 분리해주었습니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/*"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"@components/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/components/*"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">extends</code>를 통해 해당 <code class="language-plaintext highlighter-rouge">tsconfig.paths.json</code> 파일을 추가해주었습니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"extends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./tsconfig.paths.json"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">components</code> 폴더에 임의의 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트를 생성하고 <code class="language-plaintext highlighter-rouge">App</code>에서 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트를 절대경로로 import 해본 결과, 정상적으로 절대경로로 자동완성해주는 것을 확인할 수 있었습니다.</p>
+
+<p><br /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/f47d5f1d-4190-4d5c-a657-80691aef8510/Jun-25-2024_16-14-26/w=1080,quality=90,fit=scale-down" alt="sdf" /></p>
+
+<p><br />
+<br />
+<br /></p>
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 글에서는 <code class="language-plaintext highlighter-rouge">tsconfig.json</code>과 <code class="language-plaintext highlighter-rouge">craco</code>를 활용하여 CRA + TypeScript 프로젝트에서 절대 경로를 설정하는 방법을 다루었습니다.</p>
+
+<p>더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
