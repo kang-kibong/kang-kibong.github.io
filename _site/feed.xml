@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T01:26:23+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T01:42:08+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -1350,7 +1350,320 @@
 
 &lt;p&gt;이번 글에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;craco&lt;/code&gt;를 활용하여 CRA + TypeScript 프로젝트에서 절대 경로를 설정하는 방법을 다루었습니다.&lt;/p&gt;
 
-&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기" /><published>2024-04-07T00:00:00+09:00</published><updated>2024-04-07T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%20%EC%B5%9C%EC%A2%85%20%ED%95%A9%EA%B2%A9%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;더 깔끔하고 유지보수하기 쉬운 코드를 작성하면서 절대 경로 설정을 통해 생산성도 높아지고 코드 관리도 수월해지길 기대할 수 있을 것 같습니다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="frontend" /><summary type="html">tsconfig.json 설정을 통한 절대 경로 설정하기</summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)" /><published>2024-04-15T00:00:00+09:00</published><updated>2024-04-15T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%201%EC%A3%BC%EC%B0%A8%20WIL%20-%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EC%98%88%EC%A0%9C%20%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0(1)</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-1.html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1-스타벅스-예제-시작하기&quot;&gt;1. 스타벅스 예제 시작하기&lt;/h1&gt;
+
+&lt;h2 id=&quot;faviconico&quot;&gt;favicon.ico&lt;/h2&gt;
+
+&lt;p&gt;프로젝트 루트경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;favicon.ico&lt;/code&gt;있으면 브라우저가 자동으로 인식하여 브라우저 탭의 아이콘으로 설정한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3f6b4b72-5c0a-4170-bd1a-42d561d473a4%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-14_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.02.26.png?id=a56f05d9-a1e8-45e7-bd03-6920f55c35d6&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-14 오후 4.02.26.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffbddd21f-2e77-446f-898d-a59dd80e2cee%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-14_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.03.56.png?id=dcac2070-ed9f-40b0-ad35-1b4dda6b4ad4&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-14 오후 4.03.56.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resetcss&quot;&gt;reset.css&lt;/h2&gt;
+
+&lt;p&gt;브라우저의 기본 스타일을 초기화 하기 위한 css코드이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reset.css&lt;/code&gt;을 구글링하면 다양한 브라우저 초기 스타일링을 제거하는 코드들을 찾아볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.jsdelivr.com/package/npm/reset-css&quot;&gt;reset-css CDN by jsDelivr - A CDN for npm and GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt; 태그 내부에 해당 cdn을 추가하여 기본적인 브라우저 초기 스타일링을 제거한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css&quot;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;open-graph&quot;&gt;Open Graph&lt;/h2&gt;
+
+&lt;p&gt;웹 페이지가 소셜 미디어(페이스북 등)에 공유가 될 때 우선적으로 활용되는 정보들을 지정할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;추가적인 정보들은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;meta&lt;/code&gt; 태그를 통해서 정보를 줄 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-graph-1&quot;&gt;Open Graph&lt;/h3&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:type&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;website&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:site_name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starbucks&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starbucks Coffee Korea&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:description&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다.&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/starbucks_seo.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:url&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://starbucks.co.kr&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;twitter-card&quot;&gt;Twitter Card&lt;/h3&gt;
+
+&lt;p&gt;웹 페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보를 지정한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:card&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;summary&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:site&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starbucks&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starbucks Coffee Korea&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:description&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다.&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/starbucks_seo.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:url&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://starbucks.co.kr&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;google-fonts&quot;&gt;Google Fonts&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://fonts.google.com/&quot;&gt;Browse Fonts - Google Fonts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;구글에서 제공하는 &lt;strong&gt;Google Fonts&lt;/strong&gt;는 폰트들 중에서 원하는 무료 폰트를 검색하고 임베드해서 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;주의할 점은 폰트의 용량이 생각보다 크기때문에 꼭 사용해야할 폰트와 굵기를 잘 명시해서 임베드해야한다.&lt;/p&gt;
+
+&lt;p&gt;또한 구글폰트 이외에 다른 폰트들은 저작권이 있을 수 있기 때문에 라이센스를 잘 확인해서 사용해야한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F55f41c02-df1a-4cf7-94f4-ed52e6af0d7e%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.34.55.png?id=e8f6a59a-d302-4cc8-a510-ed50d6c87f7f&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.34.55.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;먼저 원하는 폰트를 검색한다.&lt;/p&gt;
+
+&lt;p&gt;나눔고딕 사용을 위해 위와 같이 검색하였다.&lt;/p&gt;
+
+&lt;p&gt;이후 원하는 폰트의 굵기를 설정한 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get Font&lt;/code&gt;를 클릭한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdc1264e0-e244-4892-9459-c1918d5e1e1b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.35.25.png?id=9d412a97-5df7-45aa-ab0e-cb340a24d013&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.35.25.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get embed code&lt;/code&gt;를 클릭한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff4a50590-a2eb-4b34-8689-0504dd54c368%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.35.30.png?id=1dc79ed5-9ba2-4d18-b2f2-3bb0d93babaf&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.35.30.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;웹에서 사용할 것이기 때문에 위에 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;link&lt;/code&gt; 태그들을 복사하고 폰트 적용을 위해 css 파일에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-family&lt;/code&gt;를 설정해준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5714041a-cee2-4328-a502-bdea49447019%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.42.03.png?id=ecf7186f-7df6-4f66-8dbf-92ba0c75f2e1&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.42.03.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;본인은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt; 태그 안에 있는 모든 폰트들을 나눔고딕으로 설정할 수 있도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt;를 셀렉터로 하여 모든 폰트를 나눔 고딕으로 설정되도록 작성하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fcceaf67a-1ff1-45a7-bc11-154c4a7fe3b9%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.41.36.png?id=d70a2a96-0894-473f-8345-de8f913d4952&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.41.36.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;나눔고딕 폰트가 잘 적용된 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;google-material-icons&quot;&gt;Google Material icons&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://fonts.google.com/icons&quot;&gt;Material Symbols and Icons - Google Fonts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;자주 사용하는 아이콘은 디자이너의 요청할 필요 없이 기본적으로 &lt;strong&gt;Google material icons&lt;/strong&gt;에서 제공하고 있다.&lt;/p&gt;
+
+&lt;p&gt;단순하게 코드를 통해서 아이콘을 삽입할 수 있기 때문에 매우 간편하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdf663693-cdd7-41a2-b614-dbb770f0e2e7%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.50.31.png?id=e960ea79-993d-4a5a-86f9-40d10abc147b&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.50.31.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;스타벅스 클론 예제에서 업로드 아이콘을 사용할 것이기 때문에 “upload”를 검색하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F6a20c259-5a4c-4ff5-8e4c-139e47d0363b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.51.50.png?id=05be1831-82fd-428b-9b1f-2aaa5dc62719&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.51.50.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;upload 아이콘을 클릭하면 Google Fonts와 마찬가지로 임베드코드가 표시되며 아이콘 사용을 위한 위한 태그가 제공된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F91c0079d-2240-485c-a43b-60fe73154205%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.58.19.png?id=4ef550c1-5b54-4cce-956e-bcb472eeab28&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.58.19.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;임베드 코드를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt; 태그 내부에 작성하고 아이콘 사용을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt; 태그 내부에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;span&lt;/code&gt; 태그를 통해 클래스를 지정하고 upload을 텍스트로 작성하여 upload아이콘을 출력하였다.&lt;/p&gt;
+
+&lt;p&gt;만약 upload가 아닌 다른 아이콘을 사용할 경우, 텍스트 부분에 원하는 아이콘의 이름을 작성하면 해당 아이콘이 출력되는 것도 확인할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff1e1a088-6959-409f-84fe-c3c58483ef3b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.58.42.png?id=b85c6dd1-6051-47c5-980b-4948adc08fb1&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 2.58.42.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;upload와 search 아이콘이 잘 나오는 것을 확인할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;2-헤더와-드롭메뉴---로고&quot;&gt;2. 헤더와 드롭메뉴 - 로고&lt;/h1&gt;
+
+&lt;h2 id=&quot;header-태그의-사용--a-태그를-통한-페이지-이동&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;header&lt;/code&gt; 태그의 사용 &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; 태그를 통한 페이지 이동&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;span&lt;/code&gt;을 가지고 모든 구조를 설계하게되면 해당 구조가 어떤 역할을 하는지 알 수 없다.
+기능적으로 역할을 수행하지 않지만 header의 의미를 가지도록 하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;header&lt;/code&gt; 태그를 사용한다.&lt;/li&gt;
+  &lt;li&gt;보통 웹사이트에서 로고를 클릭하면 메인페이지로 이동한다.
+이를 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그 속성 src를 통해 절대경로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;을 입력하고 로고를 클릭하면 index.html 페이지로 이동할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;header&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;logo&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/starbucks_logo.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;STARTBUCKS&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;공통-부분-스타일링&quot;&gt;공통 부분 스타일링&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;완전한 검정색 대신 어두운 회색을 선호한다.(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#333&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;기본적인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-size&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-weigh&lt;/code&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16px&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;400&lt;/code&gt;이므로 작성을 안해도 상관없다.
+하지만 명시적으로 나타내기 위해 값을 작성하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;가로-수직을-기준으로-중앙-배치하기&quot;&gt;가로, 수직을 기준으로 중앙 배치하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin: 0 auto;&lt;/code&gt; 를 사용하면 요소를 가로 기준으로 중앙 배치를 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;logo를 수직 중앙 배치하기위해 logo의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;absolute&lt;/code&gt;로 지정하고 부모 요소를 지정해야하기 때문에 inner의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;relative&lt;/code&gt;로 설정한다.
+이후 logo를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 지점을 설정하고 이를 기준으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin: auto 0;&lt;/code&gt; 을 주여 자동으로 수직 여백을 주도록 설정한다. 추가적으로 요소의 너비 또한 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;height&lt;/code&gt;)를 명시해주어야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* COMMON */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;Nanum Gothic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;120px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.logo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;결과&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F9e87b3a5-30a0-424d-9095-62447d93212a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.31.00.png?id=a7668382-d17b-4f6d-bb49-f3334512dea8&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-11 오후 3.31.00.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;3-헤더와-드롭메뉴---서브-메뉴&quot;&gt;3. 헤더와 드롭메뉴 - 서브 메뉴&lt;/h1&gt;
+
+&lt;h2 id=&quot;페이지-이동-임시로-막기&quot;&gt;페이지 이동 임시로 막기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;링크는 준비가 안되어 있는데 특정 페이지를 연결할 예정이라면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt;속성에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;(해쉬)를 넣거나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;javascript:void(0)&lt;/code&gt;을 넣는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;header&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;logo&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./images/starbucks_logo.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;STARTBUCKS&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sub-menu&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/signin&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Sign In&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;My Starbucks&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Customer Service &lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt; Ideas&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Find a Store&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-symbols-outlined&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; search &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;스타일링-안전성-챙기기&quot;&gt;스타일링 안전성 챙기기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;상위 선택자를 명시하지 않으면 자주 사용하는 클래스로 선택 될 수 있기 때문에, 선택자를 작성할때는 &lt;strong&gt;부모의 클래스&lt;/strong&gt;나 &lt;strong&gt;특정 요소&lt;/strong&gt;를 명시적으로 작성하면 안전하게 스타일링 가능하다.
+추후에 css 전처리도구인 &lt;strong&gt;scss&lt;/strong&gt;를 학습하게 되면 중복되는 부분을 해결할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;각-서브메뉴-구분선-넣기&quot;&gt;각 서브메뉴 구분선 넣기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;각각의 서브메뉴마다 구분선을 주기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::before&lt;/code&gt; 가상요소 클래스를 통해 구분선을 설정할 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;absolute&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt;로 지정하면 자동으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;block&lt;/code&gt;요소로 바뀌므로, 따로 명시하지 않아도 된다.&lt;/li&gt;
+  &lt;li&gt;첫번째 서버메뉴의 구분선은 제외해야하므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:first-child&lt;/code&gt; 가상클래스로 첫번째 요소를 지정하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::before&lt;/code&gt; 가상 요소 클래스를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt;으로 설정하여 제거한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;서브메뉴-ux-고려하기&quot;&gt;서브메뉴 UX 고려하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;서브 메뉴 클릭의 정확성을 높이기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;padding&lt;/code&gt;을 넓혀준다.
+하지만 서브메뉴는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inline&lt;/code&gt; 요소이기 때문에 상하여백을 줄 수 가 없다.
+때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;block&lt;/code&gt;으로 지정하여 상하 여백을 줄 수 있도록 설정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그의 기본 스타일인 밑줄을 제거하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-decoration&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt;을 주면 제거할 수 있다.&lt;/li&gt;
+  &lt;li&gt;모든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그의 밑줄을 제거하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;태그를 선택자로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-decoration&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt;으로 설정한다.&lt;/li&gt;
+  &lt;li&gt;이전처럼 밑줄이 있다면, 다른 페이지로 이동할 수 있는 것으로 예측할 수 있지만, 제거되었으니 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:hover&lt;/code&gt; 가상 클래스를 통해 해당 서브메뉴를 포인터로 올렸을 때 폰트 색깔을 바꿔주는 효과를 준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* 각 서브메뉴 마다 구분선을 추가한다. */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;/* display: block; */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#e5e5e5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* 첫번째 서브메뉴의 구분선을 제거한다. */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:first-child::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;11px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#656565&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.sub-menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;결과-1&quot;&gt;결과&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4b6bb321-8d2f-4176-aebf-c7f9cfeaa28d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-13_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.23.14.png?id=37d4fa0e-00ab-485c-95f6-6fc11126983c&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-04-13 오후 8.23.14.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;4-소감&quot;&gt;4. 소감&lt;/h1&gt;
+
+&lt;p&gt;이전에 독학하면서 배웠던 내용들을 다시 되새기는 느낌이었다.&lt;/p&gt;
+
+&lt;p&gt;전체적으로 어려운 부분은 없었지만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: absolute&lt;/code&gt;를 이용한 수직 중앙 배치 부분에서 어려움을 겪었다.&lt;/p&gt;
+
+&lt;p&gt;요소의 너비를 명시하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt;로 지점을 설정하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin&lt;/code&gt; 속성을 통해 상하좌우에 대한 여백을 설정하면 수직, 수평을 기준으로 배치가 가능하다는 것을 알게 되었다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기" /><published>2024-04-07T00:00:00+09:00</published><updated>2024-04-07T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%20%EC%B5%9C%EC%A2%85%20%ED%95%A9%EA%B2%A9%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -3674,764 +3987,4 @@
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;6-구현-코드-보러가기&quot;&gt;6. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-lotto-6/pull/202&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry><entry><title type="html">[우아한테크코스 6기] 프리코스 2주차 - 자동차 경주 회고록</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8-%EC%9E%90%EB%8F%99%EC%B0%A8-%EA%B2%BD%EC%A3%BC-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" rel="alternate" type="text/html" title="[우아한테크코스 6기] 프리코스 2주차 - 자동차 경주 회고록" /><published>2023-11-02T00:00:00+09:00</published><updated>2023-11-02T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4%206%EA%B8%B0%5D%20%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4%202%EC%A3%BC%EC%B0%A8%20-%20%EC%9E%90%EB%8F%99%EC%B0%A8%20%EA%B2%BD%EC%A3%BC%20%ED%9A%8C%EA%B3%A0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8-%EC%9E%90%EB%8F%99%EC%B0%A8-%EA%B2%BD%EC%A3%BC-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html">&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1-주제&quot;&gt;1. 주제&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/eb7c07e7-141f-4400-8de0-578a0b955092/%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3/w=384,quality=90,fit=scale-down&quot; alt=&quot;다운로드.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2주차 미션은 자동차 경주 미션이었다.&lt;/p&gt;
-
-&lt;p&gt;1주차 미션에서 배운 내용과 코드리뷰를 토대로 이번 미션에 적용하려고하니 기대가 샘솟았다.&lt;/p&gt;
-
-&lt;p&gt;요구사항을 살펴본 바로는 Jest를 활용해 테스트 코드를 작성해야 할 것 같다.&lt;/p&gt;
-
-&lt;p&gt;이번에는 테스트 코드를 어떻게 작성해야 하는지에 대해 더욱 심층적으로 학습하고 적용해보려 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2-공들인-부분&quot;&gt;2. 공들인 부분&lt;/h1&gt;
-
-&lt;h2 id=&quot;기능-목록-작성하기&quot;&gt;기능 목록 작성하기&lt;/h2&gt;
-
-&lt;p&gt;저번 미션을 통해 기능 목록의 중요성을 인지하게 되면서 이번 미션에서도 구현을 시작하기 전에 기능 목록을 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;저번 미션에서처럼 입력, 출력, 핵심 기능을 기준으로 나누었고 추가로 입력에 대한 예외 상황도 고려하여 작성하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 기능 목록&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 입력 기능
-  [ ] 자동차 이름을 입력받는 기능
-  [ ] 시도할 횟수를 입력받는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 출력 기능
-  [ ] 사용자가 입력한 횟수만큼 자동차의 전진상태를 출력하는 기능
-  [ ] 최종 우승자를 출력하는 기능
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 핵심 기능
-  [ ] 각 자동차를 전진 혹은 정지시키는 기능
-  [ ] 최종 우승자를 가려내는 기능
-
-&lt;span class=&quot;gh&quot;&gt;# 예외 상황&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 자동차 이름 입력 예외 상황
-  [ ] 입력한 자동차 이름이 5자 이하가 아닐 경우
-  [ ] 맨 앞과 마지막이 쉼표로 끝 날 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 시도 횟수 입력 예외 상황
-  [ ] 숫자가 아닌 경우
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기능 목록 작성에는 정답이 없음을 알기에 구현 과정에서 필요에 따라 수정할 계획이다.&lt;/p&gt;
-
-&lt;p&gt;기능 목록을 수정해보며 내가 생각하는 최적의 기능 목록 작성법이 무엇인지 터득할거라고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;이러한 접근 방식 덕분에 기능 목록 작성에 대한 부담감이 확실히 줄어든 것 같다.&lt;/p&gt;
-
-&lt;h2 id=&quot;mvc-패턴-적용&quot;&gt;MVC 패턴 적용&lt;/h2&gt;
-
-&lt;p&gt;자연스럽게 MVC패턴을 고려하게 되었다. 폴더에 어떤식으로 함수를 분리할지가 머리속에 그려지는 것 같았다.&lt;/p&gt;
-
-&lt;p&gt;정답은 없지만 미리 계획을 세워두면 기능 구현 때 도움이 될 것 같다는 생각이 들어 다음과 같이 작성해보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F1a6d7bd6-56d7-4b82-b0fe-37cd7935333a%2FJPEG_%25E1%2584%258B%25E1%2585%25B5%25E1%2584%2586%25E1%2585%25B5%25E1%2584%258C%25E1%2585%25B5-49F6-BBD1-65-0.jpeg?id=73326e88-d5e5-44e6-99bb-642bc0840fd6&amp;amp;table=block&quot; alt=&quot;JPEG 이미지-49F6-BBD1-65-0.jpeg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc995be79-966b-4175-bc17-bb731ca8010a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_10.08.11.png?id=d455e2b3-f6f5-48cb-92a6-8f1dc82c8aa2&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-27 오후 10.08.11.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;MVC 패턴을 적용하여 비슷한 역할을 하는 함수들을 분리해보았다.&lt;/p&gt;
-
-&lt;p&gt;작성하면서 ‘이렇게 까지 해도 괜찮을까?’라는 생각이 들었지만 자연스럽게 떠오르는 아이디어를 풀어나가며 다양하게 적용해보는 것이 보다 효율적인 프로그램 구현 방법을 찾는 과정임을 생각하며 작성하게 되었다.&lt;/p&gt;
-
-&lt;h2 id=&quot;플로우-차트-그리기&quot;&gt;플로우 차트 그리기&lt;/h2&gt;
-
-&lt;p&gt;기능 목록과 폴더구조에 따른 함수 분리까지 구상하는 것도 중요하지만 저번 미션에서는 컨트롤러 구현 시 에러로 인해 상당한 시간을 투자했던 기억이 난다.&lt;/p&gt;
-
-&lt;p&gt;그 원인은 제대로 된 프로그램 흐름을 파악하지 못했기 때문이라고 판단했고 이를 해결하기 위해 플로우 차트를 그려보기로 결정했다.&lt;/p&gt;
-
-&lt;p&gt;플로우 차트를 그리는 방법은 다양하지만 표준 플로우 차트 기호를 준수하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;표준-플로우-차트-기호&quot;&gt;표준 플로우 차트 기호&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc90f3595-0b6a-4bc1-b3dd-2fc7651f8ca3%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.11.33.png?id=e7c91b01-6ec7-484f-aea2-efec8fdece48&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-01 오후 9.11.33.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;표준 기호들의 역할을 파악하고 이를 기반으로 그린 플로우 차트는 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F75ee8324-68b0-41d2-8c57-c2b55e1ee1b8%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.11.14.png?id=34041205-f01a-41c2-bb60-b32e49ea25b6&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-01 오후 9.11.14.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;플로우 차트를 직접 그려보니 협업 시 프로그램의 순서를 시각화하여 이해를 돕는데 큰 도움이 될 것 같다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;하지만 플로우 차트를 그리는 것은 생각보다 많은 시간이 필요했다.&lt;/p&gt;
-
-&lt;p&gt;이로 인한 부담감을 느꼈고, 특히 최종 코딩테스트에서는 5시간이라는 제한된 시간 안에 플로우 차트까지 그리는 것은 비효율적일 것 같다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;따라서 플로우 차트를 대신할 수 있는 다른 효율적인 방안을 찾아야겠다는 생각이 들었고, 그 결과 프로그램 순서를 리스트화하는 방법을 생각해냈다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 자동차 이름을 입력받는다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차의 이름을 입력하지 않았는지 확인한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차의 이름이 5자 이하인지 확인한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차의 이름들을 입력할 시 잘못된 쉼표 구분을 하고 있는지 확인한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차의 이름이 중복되었는지 확인한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 시도 횟수를 입력받는다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 시도 횟수를 입력하지 않았는지 확인한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 숫자가 아닌 값을 입력하지 않았는지 확인한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 사용자로부터 입력받은 자동차를 인스턴스를 생성한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 실행결과를 출력한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 실행결과 문구를 출력한다.
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차들의 인스터스를 통한 전진상태를 출력한다.
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 최종 우승자를 출력한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;입력과 출력에 대한 순서를 크게 설정하고 그 안에서 수행하는 유효성 검사나 핵심 기능들을 세부적으로 리스트화하여 순서도를 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;확실히 플로우 차트를 그리는 것보다 더 빠른 시간 안에 이해하고 정리할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;이를 바탕으로 컨트롤러를 작성하는데 큰 문제는 없었다.&lt;/p&gt;
-
-&lt;p&gt;하지만 앞으로의 미션을 수행하면서 효과적인 본인만의 기준을 찾는 것이 중요하다는 생각이들었다.&lt;/p&gt;
-
-&lt;h2 id=&quot;코드리뷰-반영하기&quot;&gt;코드리뷰 반영하기&lt;/h2&gt;
-
-&lt;h3 id=&quot;구조-분해-할당으로-export-import하기&quot;&gt;구조 분해 할당으로 export, import하기&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F17298f00-4e8d-4cb0-b6dc-d9a2985f95b3%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.22.09.png?id=04bf6ca9-1cc4-4d05-97f8-3e9e99f4fb64&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-27 오후 9.22.09.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;다음과 같은 리뷰를 받았다. 기존에는 MissionUtils 객체를 import해서 Console과 Random을 접근했었는데 이를 직접 가져올 수 있다는 것을 알게되었다.&lt;/p&gt;
-
-&lt;p&gt;자세한 이유를 알고 싶어서 node_modules 내에 있는 @woowacourse/mission-utils를 확인해보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F1712e52b-2acc-4cd1-b28e-a8f9fad30f2d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.24.48.png?id=9e71a96d-272a-4cda-921d-7a8cc715f2e4&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-27 오후 9.24.48.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;확인 결과 index.js에서 Random과 Console을 객체로 export하고 있었기 때문에 굳이 MissionUtils로 import하지 않아도 됐던 것이었다.&lt;/p&gt;
-
-&lt;p&gt;이를 통해 기존에 작성한 코드도 export default로 자체를 export하다 보니 property에 접근할 때마다 중복되는 코드가 발생하였다는 것을 깨달았다.&lt;/p&gt;
-
-&lt;p&gt;만약 더 많은 상수가 정의되고 접근할 것이 많아진다면 문제는 훨씬 심해질 것으로 예상했다.&lt;/p&gt;
-
-&lt;p&gt;그래서 이번 주차 미션에서는 모든 파일의 객체들을 구조 분해하고 export하여 중복되는 코드를 줄이기로 결정했다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어 constants 내부에 있는 ErrorString.js는 구조 분해 할당을 하여 다음과 같이 작성하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ErrorString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[Error] 자동차를 5개 이하로 입력해주세요.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[Error] 자동차 이름 입력시 구분을 잘 해주세요.(이름은 쉽표(,) 기준으로 구분합니다.)&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;ERROR_COUNT_NOT_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[Error] 숫자가 아닌 값을 입력하셨습니다.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_COUNT_NOT_NUMBER&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ErrorString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이를 import하고 사용할 때는 다음과 같이 작성하면 된다.&lt;/p&gt;
-
-&lt;p&gt;이렇게 하면 객체에 일일이 접근할 필요가 없어 코드가 훨씬 간결해진 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_COUNT_NOT_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;../constants/ErrorString.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;validateCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;단일-책임-원칙&quot;&gt;단일 책임 원칙?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F0278b1aa-5926-4d9a-bb0f-b64a28523937%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.32.00.png?id=7cc4fd21-7fb6-4daf-831d-f8495c6db642&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-27 오후 9.32.00.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;생각해보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generateResultMessage&lt;/code&gt;와 같은 메소드를 두어 책임을 분리했다면 메시지를 출력하는 역할만을 수행하는 기능을 만들 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;이번 미션에는 단일 책임 원칙에 주의하여 로직을 분리하는 데에 신경을 썼다. 함수의 depth가 깊어지거나 내용이 너무 길다고 판단될 때마다 다시 한번 고민해보았다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어 다음은 OutputView.js에 있는 메시지를 출력하는 기능에 대한 내용이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OutputView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;OUTPUT_RESULT_START&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;printWinnersString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findWinners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`최종 우승자 : &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전 미션에서는 결과를 출력하는 기능에 볼, 스트라이크, 낫싱의 메시지를 생성하는 기능을 포함했었는데 이번 미션에서는 이들을 각각의 함수로 분리하여 utils 폴더에서 관리하도록 했다.&lt;/p&gt;
-
-&lt;p&gt;printResultString 함수를 살펴보면 이름과 레이싱 상태의 메시지를 출력하는 기능을 driveAndStopCars로 분리했다.&lt;/p&gt;
-
-&lt;p&gt;그 아래에 있는 printWinnersString 함수도 findWinners라는 함수로 분리하여 최종 우승자 메시지를 출력하는 기능을 별도로 분리했다.&lt;/p&gt;
-
-&lt;p&gt;이처럼 하나의 함수에 하나의 책임만 부여하도록 신경써 작성하였더니, 코드가 훨씬 간결해진 것을 확인할 수 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;class와-object-고려하기&quot;&gt;class와 object 고려하기&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F0649b80a-1a65-45e0-8103-bbcbcca1dfd5%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-28_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.06.47.png?id=7579fd4a-b91e-4077-84a4-06c2a0e33302&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-28 오후 8.06.47.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1주차 미션에서는 InputView와 OutputView, 즉 view에 해당하는 부분을 객체 형태로 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 리뷰에서는 이를 클래스로 통일하는 것이 좋을 것 같다는 의견을 남겨주셨다.&lt;/p&gt;
-
-&lt;p&gt;사실 다른 파일들은 클래스 형태로 작성하였지만 view만 객체 형태로 작성하고 있었다.&lt;/p&gt;
-
-&lt;p&gt;view가 다중 인스턴스를 생성하지 않기 때문에 객체로 간단하게 구현하고 싶었던 것 같다.&lt;/p&gt;
-
-&lt;p&gt;그래서 클래스와 객체 중 선택할 때 고려해야 할 판단 기준이 무엇인지 의문이 들었다. 찾아본 결과 크게 4가지를 고려할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;첫번째는 재사용성이다. 클래스를 사용하면 다중 인스턴스를 생성할 수 있기 때문에 재사용성이 좋다. 그러나 이번 미션에서는 view가 다중 인스턴스를 필요로 하지 않기 때문에 클래스를 사용하기에는 적합하지 않다고 판단하였다.&lt;/p&gt;
-
-&lt;p&gt;두번째는 유지보수성이다. 클래스를 사용하면 상속 등을 통해 확장 가능성이 있다는 장점이 있다. 하지만 이번 미션에서는 View의 확장성이 필요 없었기 때문에 이 역시 클래스를 사용하기에는 적합하지 않다고 느꼈다.&lt;/p&gt;
-
-&lt;p&gt;세번째는 단순성이다. 객체로 작성하면 코드가 더 간단할 수 있다. 클래스를 정의하고 인스턴스화하는 것보다 객체를 만드는 것이 더 직관적일 수 있다고 판단하여 객체를 사용하는 것이 적합하다고 느꼈다.&lt;/p&gt;
-
-&lt;p&gt;네번째는 프로젝트 크기이다. 프로젝트 규모가 크다면 클래스로 작성하면 체계적으로 관리가 가능하지만 이번 미션의 규모는 그렇게 크지 않았기 때문에 객체를 사용하는 것이 간단하다고 생각하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;이 4가지 요소를 모두 고려해볼 때, 객체로 작성하는 것이 더 적합하다고 생각하였다.&lt;/p&gt;
-
-&lt;p&gt;이 리뷰를 통해 클래스로 통일하지는 않았지만 객체와 클래스 설계 시 판단 기준을 재정립하는 데에 도움이 될 수 있었다. InputView를 예로 들면 작성한 코드는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@woowacourse/mission-utils&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;INPUT_CARS_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;INPUT_COUNT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/InputString.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_EMPTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_CARS_DUPLICATED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_COUNT_EMPTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ERROR_COUNT_NOT_NUMBER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../constants/ErrorString.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;readCountInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;validateCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;validateCountInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;readCountInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;validateCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;validateCountInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InputView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-시행착오&quot;&gt;3. 시행착오&lt;/h1&gt;
-
-&lt;h2 id=&quot;jest를-이용한-테스트-코드-작성하기&quot;&gt;Jest를 이용한 테스트 코드 작성하기&lt;/h2&gt;
-
-&lt;p&gt;테스트 코드에 대해선 말로만 들어봤지 실제로 프론트엔드에서 사용해본 경험은 없었다.&lt;/p&gt;
-
-&lt;p&gt;이번 미션 요구사항에는 작성한 기능에 대한 테스트 코드를 작성하라는 항목이 있었기 때문에 Jest 프레임워크에 대한 기본적인 개념들을 확인해볼 필요가 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;jest란&quot;&gt;Jest란&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdc8952ce-e58a-416a-a34f-8c717e47a3ab%2Fjest.png?id=6dabf3b7-e34d-4381-9db2-78fbe5a39ae6&amp;amp;table=block&quot; alt=&quot;jest.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jest는 페이스북에서 개발한 자바스크립트 테스팅 라이브러리이다.&lt;/p&gt;
-
-&lt;p&gt;Jest는 Test Runner와 Test Matcher, 그리고 Test Mock 프레임워크를 제공하고 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;describe()&lt;/code&gt;&lt;/strong&gt;: 테스트 스위트를 정의하는 함수이다. 테스트 스위트는 특정 기능이나 모듈에 대한 관련된 테스트 케이스를 그룹화하는 역할을 한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test()&lt;/code&gt;&lt;/strong&gt;: 실제 테스트 케이스를 정의하는 함수이다. 각 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt;&lt;/strong&gt; 함수는 특정 조건 또는 상황에 대한 테스트를 말한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expect()&lt;/code&gt;&lt;/strong&gt;: 값을 검사하고 검증하는 함수이다. 일반적으로 테스트 케이스 내에서 어떤 값이나 동작을 검사할 때 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expect&lt;/code&gt;&lt;/strong&gt; 함수를 사용한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;matcher&lt;/strong&gt;: &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expect&lt;/code&gt;&lt;/strong&gt; 함수와 함께 사용되고 예상한 결과와 실제 결과를 비교하고 테스트를 평가하는 역할을 한다. Jest는 다양한 Matcher를 제공하는데 예상한 결과와 실제 결과를 비교하고 테스트가 성공했는지 여부를 결정한다. 일반적으로 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toEqual&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toBe&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;not.toBe&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toContain&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toThrow&lt;/code&gt;&lt;/strong&gt; 등이 있다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;코드-분석&quot;&gt;코드 분석&lt;/h3&gt;
-
-&lt;p&gt;Jest에 대한 이해를 높이기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__test__&lt;/code&gt;폴더 내에 있는 ApplicationTest.js 파일을 분석하기로 결정했다.&lt;/p&gt;
-
-&lt;h3 id=&quot;mocking-메소드에-대하여&quot;&gt;Mocking 메소드에 대하여&lt;/h3&gt;
-
-&lt;h3 id=&quot;jestfn&quot;&gt;jest.fn&lt;/h3&gt;
-
-&lt;p&gt;Jest는 jest.fn() 함수를 제공하여 가짜 함수(mock function)를 생성할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;가짜 함수를 생성하는 이유는 실제 입력을 기다리지 않고도 원하는 입력값을 이용하여 테스트 케이스를 시뮬레이션할 수 있기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;jest.fn의 종류는 다음과 같다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockReturnValue()&lt;/code&gt;&lt;/strong&gt;: mocking 함수가 호출될 때 항상 특정 값을 반환하도록 설정할 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockImplementation()&lt;/code&gt;&lt;/strong&gt;: mocking 함수가 호출될 때 특정 동작을 수행하도록 설정할 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockResolvedValue()&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockRejectedValue()&lt;/code&gt;&lt;/strong&gt;: Promise를 반환하는 mocking 함수에서 사용된다. &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockResolvedValue()&lt;/code&gt;&lt;/strong&gt; 함수를 사용하여 Promise가 성공할 때 반환할 값을 설정하고, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockRejectedValue()&lt;/code&gt;&lt;/strong&gt; 함수를 사용하여 Promise가 실패할 때 반환할 값을 설정할 수 있다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이를 바탕으로 mockQuestions와 mockRandoms 두 함수가 하는 역할을 살펴보았다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockQuestions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readLineAsync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readLineAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockImplementation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;mockQuestions 함수는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockImplementation&lt;/code&gt;을 통해 재정의하여 사용자의 다음 입력값을 순서대로 반환하는 가짜 함수를 만들었다는 것을 알 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockReturnValueOnce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;mockRandoms 함수는 numbers 배열을 순회하면서 누적된 결과를 생성하는 가짜 함수임을 알 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;jestspyon&quot;&gt;jest.spyOn&lt;/h3&gt;
-
-&lt;p&gt;jest.spyOn() 함수는 특정 객체의 함수가 얼마나 많이 호출되었는지 그리고 어떤 인자가 넘어갔는지에 대한 정보를 얻을 수 있는 기능을 제공한다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveBeenCalled()&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 최소 한 번 호출되었는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveBeenCalledTimes(n)&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 정확히 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;&lt;/strong&gt; 번 호출되었는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveBeenCalledWith(arg1, arg2, ...)&lt;/code&gt;:&lt;/strong&gt; 해당 메서드가 특정 인수와 함께 호출되었는지 확인한다. &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arg1&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arg2&lt;/code&gt;&lt;/strong&gt;, 등은 예상되는 인수이다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveBeenLastCalledWith(arg1, arg2, ...)&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 마지막 호출될 때 특정 인수와 함께 호출되었는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveBeenNthCalledWith(n, arg1, arg2, ...)&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 호출 중 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;&lt;/strong&gt; 번째 호출되었을 때 특정 인수와 함께 호출되었는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveReturned()&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 어떤 값을 반환했는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveReturnedTimes(n)&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 정확히 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;&lt;/strong&gt; 번 값을 반환했는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveLastReturned()&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 마지막 호출될 때 어떤 값을 반환했는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toHaveNthReturned(n, value)&lt;/code&gt;&lt;/strong&gt;: 해당 메서드가 호출 중 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;&lt;/strong&gt; 번째 호출되었을 때 특정 값을 반환했는지 확인한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이를 기반으로 getLogSpy 함수가 수행하는 역할을 살펴보았다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLogSpy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logSpy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MissionUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;logSpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockClear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logSpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;개념을 이해한 후에는 getLogSpy의 역할을 생각보다 쉽게 해석할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;먼저, MissionUtils.Console 객체의 print 메소드를 스파이로 설정하였다.&lt;/p&gt;
-
-&lt;p&gt;그 후에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mockClear()&lt;/code&gt;를 사용하여 스파이의 동작을 초기화하고 초기화된 스파이 객체를 반환하는 함수임을 알 수 있다.&lt;/p&gt;
-
-&lt;p&gt;이를 통해 getLogSpy 메소드를 호출하여 객체를 변수에 할당하고 Console.print 메소드에 대한 정보를 검증(expect)할 때 사용할 수 있도록 하는 함수인 것을 알 수 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;기능별-테스트-코드-작성&quot;&gt;기능별 테스트 코드 작성&lt;/h3&gt;
-
-&lt;p&gt;Jest에 대한 기본적인 개념과 작성법에 대해 어느 정도 이해하였다고 가정하고 본격적으로 어떤 기능들을 테스트할 것인지 결정해보았다.&lt;/p&gt;
-
-&lt;p&gt;먼저 테스트 스위트를 크게 나누어 보았다.&lt;/p&gt;
-
-&lt;p&gt;자동차 경주의 핵심 기능, 자동차 이름 입력의 예외 상황, 시도 횟수 입력의 예외 상황이 이 세 가지 주요 요소였다.&lt;/p&gt;
-
-&lt;p&gt;그리고 각 함수에 대한 테스트 케이스를 다음과 같이 설정하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gs&quot;&gt;**자동차 경주의 핵심 기능 테스트**&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;
--&lt;/span&gt; 자동차 경주 게임 - 자동차 입력에 따른 Car클래스 인스턴스 생성 기능 - 사용자가 입력한 횟수만큼 자동차의 전진상태를 출력하는 기능 - 최종 우승자를 가려내는 기능
-  &lt;span class=&quot;gs&quot;&gt;**입력에 따른 유효성 테스트**&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 자동차 이름 입력 예외 상황
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 아무 값도 입력하지 않았을 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 입력한 자동차의 이름이 5자 이하가 아닐 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 자동차 이름이 서로 같을 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 맨 앞과 마지막이 쉼표로 끝날 경우
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 시도 횟수 입력 예외 상황
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 아무 값도 입력하지 않았을 경우
-&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; 숫자가 아닌 경우
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4cb592ed-8ca8-4db2-a698-2e1f366acc50%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-11-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.55.08.png?id=bc8becfb-aa4e-4a67-92ae-4f78615199e5&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-11-01 오후 5.55.08.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위와 같이 구상한 후에는 InputValidTest.js와 CarRacingTest.js로 나누어 테스트 코드를 작성하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;디버깅&quot;&gt;디버깅&lt;/h3&gt;
-
-&lt;h3 id=&quot;자동차의-전진상태를-반환하는-함수driveandstopcars&quot;&gt;자동차의 전진상태를 반환하는 함수(driveAndStopCars)&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@woowacourse/mission-utils&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; : &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기존에는 dirveAndStopCars 함수에서 자동차의 전진 상태를 결정하고 이를 콘솔에 출력하는 방식으로 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 테스트 코드를 작성하면서 의문점이 생겼다.&lt;/p&gt;
-
-&lt;p&gt;바로 해당 함수를 테스트 코드로 작성하고자 했지만 Console.print() 함수를 사용하고 있어서 테스트하기 어려웠다.&lt;/p&gt;
-
-&lt;p&gt;이에 대해 다시 생각해보니 OutputView의 역할은 콘솔에 출력하는 것이지만 이 역할을 driveAndStopCars 함수에서 수행하고 있었다.&lt;/p&gt;
-
-&lt;p&gt;이는 해당 함수가 담당하지 않아야 할 책임을 부여하는 문제를 일으키면서 테스트 코드를 작성하는 데에도 어려움을 초래하였다.&lt;/p&gt;
-
-&lt;p&gt;따라서 이를 다음과 같이 수정하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// driveAndStop.js&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@woowacourse/mission-utils&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; : &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// OutputView.js&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;driveAndStopCars 함수는 자동차의 전진 상태에 대한 배열 값을 반환하도록 수정되었고 이를 호출하는 OutputView의 printResultString에서는 출력만 담당하도록 변경하였다.&lt;/p&gt;
-
-&lt;p&gt;이 변경으로 인해 driveAndStopCars 함수에 대한 반환 값으로 테스트 코드를 작성할 수 있게 되었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pickNumberInRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockReturnValueOnce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;사용자가 입력한 횟수만큼 자동차의 전진상태를 출력하는 기능&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;randoms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;mockRandoms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;randoms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;pobi, kang&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;receivedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;pobi : &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;kang : --&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCarInstances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;receivedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;driveAndStopCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;receivedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toStrictEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;expectedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;무작위 예측값을 고정하고 각각의 자동차 인스턴스마다 driveAndStopCars 함수를 호출하여 최종 결과값을 receivedValue에 할당하여 테스트하였다.&lt;/p&gt;
-
-&lt;h3 id=&quot;맨-앞과-마지막이-쉼표로-끝-날-경우&quot;&gt;맨 앞과 마지막이 쉼표로 끝 날 경우&lt;/h3&gt;
-
-&lt;p&gt;예외 상황을 처리하기 위해 사용자로부터 차량 이름을 입력받을 때 맨 앞이나 뒤에 쉼표가 있을 경우 에러 메시지를 출력하도록 처리하려 했다.&lt;/p&gt;
-
-&lt;p&gt;그러나 테스트와 index.js를 실행해봤을 때 중복 오류 메시지가 출력되는 것을 발견하였다.&lt;/p&gt;
-
-&lt;p&gt;이를 통해 입력 처리 부분에 문제가 있다는 것을 파악하고 코드를 다시 확인해보았다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;validateCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_EMPTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_DUPLICATED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdbfc959d-7100-479c-beb6-7e1266005e6b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-29_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.44.28.png?id=f423425a-a365-426e-a762-0dd02fea1576&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-29 오후 5.44.28.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5a4d5f7c-efe6-4950-b593-cfb01608dcdd%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-10-29_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.00.06.png?id=a991812f-2ae4-4e32-bb0b-c3a90e5a4b41&amp;amp;table=block&quot; alt=&quot;스크린샷 2023-10-29 오후 6.00.06.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;확인해본 결과 문제는 ‘공백이 포함되어 있는 경우’가 ‘중복이 발생하는 경우’보다 후순위에 있었던 것이었다.&lt;/p&gt;
-
-&lt;p&gt;왜냐하면 맨 앞과 뒤에 동시에 쉼표가 있을 경우 두 개의 공백을 인식하게 되고, 이를 중복으로 파악하게 되기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;따라서 ‘공백이 포함되어 있는 경우’를 ‘중복이 발생하는 경우’보다 우선 순위를 높여서 이 문제를 해결할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;변경된 코드는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;validateCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_EMPTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_LENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_SPLIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCarsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ERROR_CARS_DUPLICATED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4-리팩토링&quot;&gt;4. 리팩토링&lt;/h1&gt;
-
-&lt;h3 id=&quot;단일-책임-원칙-신경쓰기createcarinstances&quot;&gt;단일 책임 원칙 신경쓰기(createCarInstances)&lt;/h3&gt;
-
-&lt;p&gt;모든 요구사항을 충족시킨 후, 코드 리뷰에서 단일 책임 원칙에 대한 의견을 듣고 controller의 코드를 다시 살펴보았다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../model/Car.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCountInput&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../view/InputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printWinnersString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../view/OutputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;inputCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;printRacingResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printRacingWinners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;printRacingWinners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;사용자로부터 자동차 이름들과 시도 횟수를 입력받는 메소드에서는 각 기능들이 잘 분리되어 있다고 생각하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 경기 상태를 출력하는 메소드에서 사용자로부터 입력받은 자동차 이름들을 인스턴스화하고 있음을 확인하였다.&lt;/p&gt;
-
-&lt;p&gt;이 부분은 inputCars 메소드에서 처리하면 더 적절하다고 판단하였다.&lt;/p&gt;
-
-&lt;p&gt;이에 따라 다음과 같이 리팩토링을 진행하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../model/Car.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCountInput&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../view/InputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printWinnersString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;../view/OutputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;inputCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;printRacingResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printRacingWinners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;printRacingWinners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;해당 로직을 inputCars 메소드에서 처리하도록 변경하고, 불필요한 매개변수와 인수를 모두 제거하였다.&lt;/p&gt;
-
-&lt;p&gt;이렇게 변경한 결과, 기능에 맞게 잘 분리된 것을 확인할 수 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;시작-지점을-명확하게startcarracing&quot;&gt;시작 지점을 명확하게(startCarRacing)&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./controller/CarRacingController.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기존에는 App.js에서 controller를 인스턴스화하고 inputCars를 호출하는 방식을 사용하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 이런 방식이면 다른 사람이 코드를 볼 때 해당 메소드가 시작 지점인지 명확하게 파악하기 어려울 것 같다는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;그래서 controller에 시작 지점을 명시하는 메소드를 추가하였다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// CarRacingController.js&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;../model/Car.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCarsInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;readCountInput&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;../view/InputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResultStartString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printResulString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;printWinnersString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;../view/OutputView.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carInstances&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;startCarRacing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputCars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// App.js&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./controller/CarRacingController.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CarRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carRacingController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startCarRacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;startCarRacing이라는 메소드를 추가하여 리팩토링하였다.&lt;/p&gt;
-
-&lt;p&gt;이런 방식으로 코드를 작성하니시작 지점이 더욱 명확하게 드러나게 되는 것을 알 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;한번에-할당하기findwinners&quot;&gt;한번에 할당하기(findWinners)&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findWinners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsStatus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;carsStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;carsStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findWinners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;기존에는 변수를 따로 선언하고 할당하기 위한 로직을 작성하였다.&lt;/p&gt;
-
-&lt;p&gt;그러나 이를 한 번에 처리할 수 있는 방법을 고민하다가 다음과 같은 코드로 리팩토링하게 되었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findWinners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxStatusLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cars&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxStatusLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;winners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findWinners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;전진 상태의 최대 길이를 구하기 위해 자동차 인스턴스의 배열을 순회하며 전진 상태를 가져오고 스프레드 연산자를 통해 최대값을 구하여 maxStatusLength에 한 번에 할당하였다.&lt;/p&gt;
-
-&lt;p&gt;그 다음으로 최종 우승자를 결정하기 위해 자동차 인스턴스 배열에서 이전에 구한 최대 전진 상태와 동일한 인스턴스를 추려냈다.&lt;/p&gt;
-
-&lt;p&gt;이를 다시 순회하여 우승자의 이름 배열을 winners에 한 번에 할당할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;5-회고&quot;&gt;5. 회고&lt;/h1&gt;
-
-&lt;p&gt;저번 미션에서 다소 어려움을 겪었던 만큼, 이번 미션은 비교적 수월하게 진행한 것 같다.
-이번 미션에서는 특히 이전 미션에서 받았던 코드 리뷰와 시행착오를 겪으면서 배운 내용들을 반영하는데 집중하였다.&lt;/p&gt;
-
-&lt;p&gt;특히 구현 전에 기능 목록과 플로우 차트를 구상하는 데 시간을 많이 들였다. 미션의 기능 구현과 코드 스타일 적용까지 약 3시간 정도로 빠르게 마무리한 것 같다. 이는 초기 구상과 세팅이 체계적인 설계와 시간 단축에 큰 도움이 된다는 것을 체감하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;또한 Jest 프레임워크에 대해 알게 된 것도 큰 수확이었다. 객체 지향 설계를 공부하면서 GoogleTest를 통해 단위 테스트를 해본 경험이 있었지만, 프론트엔드에서도 과연 테스트가 필요할까? 라는 의문을 가지고 있었다. 그런데 이번에 Jest 프레임워크의 장점을 알게되면서 그런 의문을 해결할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;이번 미션까지 진행해보면서 점진적으로 성장하는 나 자신의 모습을 보며 뿌듯함을 느꼈다. 다음 미션에서도 어떤 부분이 나를 성장시킬 수 있을지 기대가 된다. 그동안 배운 것들을 바탕으로 더 많은 사람들의 코드를 보고 코드 리뷰도 받아보면서 부족한 부분을 계속해서 성장시켜 나갈 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;6-다음-목표&quot;&gt;6. 다음 목표&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;프로그램 순서의 이해에 대한 최적의 기준 찾기&lt;/li&gt;
-  &lt;li&gt;더 많은 사람들의 코드를 분석하고 서로 코드 리뷰 해보면서 개선점 찾기&lt;/li&gt;
-  &lt;li&gt;Jest와 함께 테스트 코드에 친숙해지기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;7-구현-코드-보러가기&quot;&gt;7. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-racingcar-6/pull/108&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
+&lt;h1 id=&quot;6-구현-코드-보러가기&quot;&gt;6. &lt;a href=&quot;https://github.com/woowacourse-precourse/javascript-lotto-6/pull/202&quot;&gt;구현 코드 보러가기&lt;/a&gt;&lt;/h1&gt;</content><author><name>byeonghyeon kang</name></author><category term="woowa" /><summary type="html"></summary></entry></feed>
