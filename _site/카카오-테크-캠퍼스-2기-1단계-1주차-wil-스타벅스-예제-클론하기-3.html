@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-03T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)","dateModified":"2024-05-03T00:00:00+09:00","datePublished":"2024-05-03T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-1%EC%A3%BC%EC%B0%A8-wil-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0-3.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-03 00:00:00 +0900">2024-05-03</time>
+  </p>
+  
+  <h1>[카카오 테크 캠퍼스 2기] 1단계 3주차 WIL - 스타벅스 예제 클론하기(3)</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="순차적-애니메이션---전역-버튼-스타일">순차적 애니메이션 - 전역 버튼 스타일</h1>
+
+<h2 id="sementic-tag의-사용">Sementic Tag의 사용</h2>
+
+<h3 id="sementic-tag란">Sementic Tag란?</h3>
+
+<p>sementic이란 <strong>의미론적</strong>, <strong>의미론적인</strong>을 뜻한다.</p>
+
+<p>즉, sementic tag란 의미를 부여하기 위한 역할의 태그라고 할 수 있다.</p>
+
+<p>이전에 header 영역을 작업할 때에도 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>태그가 아닌 <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code>태그를 사용한 것 처럼, 의미가 없는 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>대신 해당 영역이 하나의 문서(컨텐츠 그룹)라는 의미를 부여하기 위해 <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>이라는 태그를 사용하였다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;--</span> <span class="na">HEADER</span> <span class="na">--</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;hedaer&gt;</span>
+		...
+	<span class="nt">&lt;/header&gt;</span>
+
+	<span class="nt">&lt;--</span> <span class="na">VISUAL</span> <span class="na">--</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"visual"</span><span class="nt">&gt;</span>
+		...
+	<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>아래 MDN문서를 참고해보면 시멘틱 태그에는 <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code>와 <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> 말고도 다양한 의미를 부여할 수 있는 태그들이 존재한다는 것을 알 수 있다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb173f596-cf57-4db3-8b88-a429aae20420%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.48.00.png?id=7981782a-0c09-447c-99de-ab8a4177dbf4&amp;table=block" alt="스크린샷 2024-04-23 오후 6.48.00.png" /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb6f1eeef-a9b3-4850-b913-d50c7ee1bd96%2F%25E1%2584%2589%25E1%2585%25B5%25E1%2584%2586%25E1%2585%25A2%25E1%2586%25AB%25E1%2584%2590%25E1%2585%25B5%25E1%2586%25A8-%25E1%2584%2590%25E1%2585%25A2%25E1%2584%2580%25E1%2585%25B3_html.webp?id=196c8ea3-6ed0-4a9b-9f30-651f1e1c9769&amp;table=block" alt="시맨틱-태그_html.webp" /></p>
+
+<p><a href="https://developer.mozilla.org/ko/docs/Glossary/Semantics">Semantics - MDN Web Docs 용어 사전: 웹 용어 정의</a></p>
+
+<p><a href="https://seo.tbwakorea.com/blog/what-is-semantic-tag/">시맨틱 태그란? - 태그 요소의 종류와 이점</a></p>
+
+<h3 id="sementic-tag를-사용하는-이유">Sementic Tag를 사용하는 이유?</h3>
+
+<ol>
+  <li>
+    <p><strong>접근성 향상</strong>
+스크린 리더 사용자에게 큰 이점을 줄 수 있다.
+신체적, 인지적 장애가 있는 사람들을 포함하여 모든 사람에게 원활한 경험을 보장할 수 있다.
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe8f175cb-0139-4dd4-8d66-1b6b5b517a03%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.53.49.png?id=8cce1d54-ea1e-4541-9343-1b63f5930a30&amp;table=block" alt="스크린샷 2024-04-23 오후 6.53.49.png" /></p>
+
+    <p><a href="https://chromewebstore.google.com/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn">Screen Reader</a></p>
+  </li>
+  <li>
+    <p><strong>SEO(검색엔진최적화) 향상</strong>
+관련 키워드와 문구에 대해 웹페이지를 최적화하는 데 도움이 되고, 검색결과 상에서 웹 사이트 노출 순위를 높여 더 많은 트래픽을 유도할 수 있다.</p>
+  </li>
+</ol>
+
+<h2 id="버튼-공통-스타일로-정의하기">버튼 공통 스타일로 정의하기</h2>
+
+<h3 id="기본-상태-버튼-스타일-정의하기">기본 상태 버튼 스타일 정의하기</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* COMMON */</span>
+<span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">130px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="m">0.4s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>기본 상태의 버튼을 디자인하고 버튼을 hover했을때 배경색와 글자색을 변경하도록 정의한다.</p>
+
+<h3 id="상태에-따른-버튼-스타일-정의하기">상태에 따른 버튼 스타일 정의하기</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn.btn--reverse</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn.btn--reverse</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#3333</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>각 버튼 상태에 따른 디자인 정의를 일치 선택자를 통해 정의하고 hover했을 경우도 같이 디자인한다.</p>
+
+<h3 id="정의한-버튼의-클래스-적용하기">정의한 버튼의 클래스 적용하기</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascfipt:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--brown"</span><span class="nt">&gt;</span>자세히 보기<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>일치 선택자로 정의하였기 때문에 기존 <code class="language-plaintext highlighter-rouge">.btn</code>클래스를 기본 디자인으로 <code class="language-plaintext highlighter-rouge">.btn—brown</code>와 같은 상태 클래스를 덮어씌우는 형태로 한칸 공백을 주고 클래스를 적용한다.</p>
+
+<h2 id="결과">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff42bf4ff-8b6d-43ee-a1a7-ac9f27fc1112%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.31.10.png?id=5849b8ad-9c4c-4a68-bbfd-e5f28f6e30bc&amp;table=block" alt="스크린샷 2024-04-23 오후 7.31.10.png" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="순차적-애니메이션---순차적으로-요소-보이기">순차적 애니메이션 - 순차적으로 요소 보이기</h1>
+
+<p>visual 내부에있는 모든 요소들을 순차적으로 페이드인 하여 보여주려고 한다.</p>
+
+<p>우선 모든 요소들을 안보이게 <code class="language-plaintext highlighter-rouge">opcity</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 부여하고, 자바스크립트를 통해 순차적으로 보이게끔 <code class="language-plaintext highlighter-rouge">opacity</code>를 <code class="language-plaintext highlighter-rouge">1</code>로 설정하여 애니메이션을 부여할 예정이다.</p>
+
+<h2 id="fade-in-클래스-정의-및-요소들-그룹핑"><code class="language-plaintext highlighter-rouge">.fade-in</code> 클래스 정의 및 요소들 그룹핑</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.visual</span> <span class="nc">.fade-in</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.fade-in</code> 클래스를 정의하여 투명도를 0으로 만들도록 설정한다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- VISUAL --&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"visual"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"title fade-in"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span>
+        <span class="na">src=</span><span class="s">"./images/visual_title.png"</span>
+        <span class="na">alt=</span><span class="s">"STARBUCKS DELIGHTFUL START TO THE YEARS"</span>
+      <span class="nt">/&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascfipt:void(0)"</span> <span class="na">class=</span><span class="s">"btn btn--brown"</span><span class="nt">&gt;</span>자세히 보기<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fade-in"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span>
+        <span class="na">src=</span><span class="s">"./images/visual_cup1.png"</span>
+        <span class="na">alt=</span><span class="s">"new OATMEAL LATTE"</span>
+        <span class="na">class=</span><span class="s">"cup1 image"</span>
+      <span class="nt">/&gt;</span>
+      <span class="nt">&lt;img</span>
+        <span class="na">src=</span><span class="s">"./images/visual_cup1_text.png"</span>
+        <span class="na">alt=</span><span class="s">"오트밀 라떼"</span>
+        <span class="na">class=</span><span class="s">"cup1 text"</span>
+      <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fade-in"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span>
+        <span class="na">src=</span><span class="s">"./images/visual_cup2.png"</span>
+        <span class="na">alt=</span><span class="s">"new STARBUCKS CARMEL CRUMBLE MOCHA"</span>
+        <span class="na">class=</span><span class="s">"cup2 image"</span>
+      <span class="nt">/&gt;</span>
+      <span class="nt">&lt;img</span>
+        <span class="na">src=</span><span class="s">"./images/visual_cup2_text.png"</span>
+        <span class="na">alt=</span><span class="s">"스타벅스 카라멜 크럼블 모카"</span>
+        <span class="na">class=</span><span class="s">"cup2 text"</span>
+      <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fade-in"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/visual_spoon.png"</span> <span class="na">alt=</span><span class="s">"Spoon"</span> <span class="na">class=</span><span class="s">"spoon"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>타이틀 부분 하나와 이미지 부분 2개, 총 3개의 영역을 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>태그로 그룹핑하고 각 그룹에 <code class="language-plaintext highlighter-rouge">.fade-in</code> 클래스를 부여한다.</li>
+</ul>
+
+<h2 id="순차적으로-요소-보이기">순차적으로 요소 보이기</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fadeEls</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">"</span><span class="s2">.visual .fade-in</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">fadeEls</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">fadeEl</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">fadeEl</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">delay</span><span class="p">:</span> <span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.7</span><span class="p">,</span>
+    <span class="na">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.fade-in</code> 클래스를 가지고 있는 요소들을 <code class="language-plaintext highlighter-rouge">querySelectorAll()</code> 을 통해 <code class="language-plaintext highlighter-rouge">fadeEls</code>라는 변수에 각 요소들을 배열 형태로 할당해놓는다.</li>
+  <li><code class="language-plaintext highlighter-rouge">forEach()</code> 를 통해 보일 요소들을 하나씩 순회해서 gsap 라이브러리의 <code class="language-plaintext highlighter-rouge">to()</code> 메서드를 활용하여 애니메이션을 부여한다.</li>
+  <li>공통적으로 <code class="language-plaintext highlighter-rouge">opcity: 1</code>로 설정하고 각 요소마다 적용되는 지연시간을 달리하기 위해 <code class="language-plaintext highlighter-rouge">(index + 1)</code>을 기준으로 <code class="language-plaintext highlighter-rouge">0.7</code>씩 곱해서 각 요소마다 <code class="language-plaintext highlighter-rouge">0.7</code>씩 투명도를 적용하도록 자동화한다.
+ex) 0.7s ⇒ 1.4s ⇒ 2.1s ⇒ 2.7s</li>
+</ul>
+
+<h2 id="결과-1">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffd346fda-b2c7-4cbd-9f8b-c1b3aad78144%2FApr-23-2024_19-33-59.gif?id=4ff94266-f9cb-488a-9788-2974c5ab9d77&amp;table=block" alt="Apr-23-2024 19-33-59.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="요소-슬라이드">요소 슬라이드</h1>
+
+<h2 id="swiperjs란">Swiperjs란?</h2>
+
+<p><a href="https://swiperjs.com/">Swiper - The Most Modern Mobile Touch Slider</a></p>
+
+<p>Swiperjs라이브러리는 요소들을 좌우 혹은 수직으로 슬라이드할 수 있게끔 도와주는 라이브러리이다.</p>
+
+<p>해당 프로젝트는 swiper 6버전을 사용하며, 최신버전과의 차이는 다음과 같다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Slider main container --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-container"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Additional required wrapper --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-wrapper"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Slides --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Slider main container --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Additional required wrapper --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-wrapper"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Slides --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>6버전에서의 swiper 최상위 부모 클래스는 <code class="language-plaintext highlighter-rouge">.swiper-container</code>이고 최신 버전에서는 <code class="language-plaintext highlighter-rouge">.swiper</code>이다. 이 점을 고려해서 작성한다.</p>
+
+<h2 id="swiperjs-cdn-추가하기">Swiperjs CDN 추가하기</h2>
+
+<p><a href="https://swiperjs.com/get-started#use-swiper-from-cdn">Getting Started With Swiper</a></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ffaa87ae2-9d05-49ff-bc11-0f0d079a302f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.14.48.png?id=6e3192a1-0f62-436f-bf21-2d2a1ea213b4&amp;table=block" alt="스크린샷 2024-04-24 오후 5.14.48.png" /></p>
+
+<p>Swiperjs 라이브러리를 CDN을 통해 가져올 경우 위와 같이 가져올 수 있다.</p>
+
+<p>현 프로젝트에서는 6.8.4 버전을 사용할 것이기 때문에 <code class="language-plaintext highlighter-rouge">swiper@6.8.4</code>를 기입하여 특정 버전의 라이브러리를 가져오도록 한다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span>
+  <span class="na">rel=</span><span class="s">"stylesheet"</span>
+  <span class="na">href=</span><span class="s">"https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"</span>
+<span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="공지사항-수직-슬라이드-적용하기">공지사항 수직 슬라이드 적용하기</h2>
+
+<h3 id="수직-슬라이드-데모-참고">수직 슬라이드 데모 참고</h3>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F762c7713-d84a-4466-8dd2-ef7a0521376a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.10.52.png?id=044b41d7-2a43-449e-adb4-9cd7a99c38f8&amp;table=block" alt="스크린샷 2024-04-24 오후 5.10.52.png" /></p>
+
+<p>수직 슬라이드의 데모를 확인하기 위해 데모에서 <code class="language-plaintext highlighter-rouge">Vertical</code> 탭을 클릭하면 관련 데모를 확인할 수 있다.</p>
+
+<p>현 프로젝트는 바닐라 자바스크립트 환경이므로 데모 코드를 확인을 위해 <code class="language-plaintext highlighter-rouge">core</code>탭을 클릭하하면 코드를 확인해볼 수 있다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Faa73fa39-327b-473d-baeb-5b6cdeab5f79%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.11.43.png?id=fe289359-8006-4224-ad4e-4caddd0406d3&amp;table=block" alt="스크린샷 2024-04-24 오후 5.11.43.png" /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fc5cec543-ee86-48c7-aaf1-97bd185d52c2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-24_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.11.56.png?id=1b93857b-f330-4ed6-9de7-571ed510a2fb&amp;table=block" alt="스크린샷 2024-04-24 오후 5.11.56.png" /></p>
+
+<p>Swpierjs를 사용하기 위한 HTML구조와 javascript코드를 간단하게 확인할 수 있다.</p>
+
+<h3 id="슬라이드-html-구조-작성">슬라이드 HTML 구조 작성</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner__left"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>공지사항<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span>
+          <span class="nt">&gt;</span>크리스마스 <span class="err">&amp;</span> 연말연시 스타벅스 매장 영업시간 변경 안내<span class="nt">&lt;/a</span>
+        <span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span>
+          <span class="nt">&gt;</span>[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트<span class="nt">&lt;/a</span>
+        <span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0)"</span>
+          <span class="nt">&gt;</span>스타벅스커피 코리아 애플리케이션 버전 업데이트 추가 안내<span class="nt">&lt;/a</span>
+        <span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>[당첨자 발표] 뉴이어 전자영수증 이벤트<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:viod(0)"</span> <span class="na">class=</span><span class="s">"notice-line__more"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-symbols-outlined"</span><span class="nt">&gt;</span> add_circle <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>최상위 부모의 클래스로는 <code class="language-plaintext highlighter-rouge">.swiper-container</code>를 가지고 그 자식 요소로는 <code class="language-plaintext highlighter-rouge">.swiper-wrapper</code>를 가지도록 한다.</li>
+  <li>각 슬라이드 요소는 <code class="language-plaintext highlighter-rouge">.swiper-slide</code>로 클래스를 부여한다.</li>
+</ul>
+
+<h3 id="수직-슬라이드-동작-구현">수직 슬라이드 동작 구현</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="dl">"</span><span class="s2">.notice-line .swiper-container</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">direction</span><span class="p">:</span> <span class="dl">"</span><span class="s2">vertical</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">autoplay</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Swpierjs에서 제공하는 Swiper클래스의 인스턴스를 생성한다.</li>
+  <li>생성자에 swiper container요소의 선택자와 옵션(객체)을 전달한다.</li>
+  <li>수직 슬라이드를 위해 <code class="language-plaintext highlighter-rouge">direction: “vertical”</code>로 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay: true</code>를 통해 자동재생을 활성화한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">loop: true</code>를 통해 마지막 슬라이드에 도달하면 다시 첫번째 슬라이드로 넘어가도록 활성화한다.</li>
+</ul>
+
+<h2 id="결과-2">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F22a5b221-8334-4af6-8ae1-e2897e504eed%2FApr-24-2024_18-03-28.gif?id=7fef7f14-f601-4057-a9fe-f9223486439f&amp;table=block" alt="Apr-24-2024 18-03-28.gif" /></p>
+
+<h2 id="프로모션-이미지-좌우-슬라이드-적용하기">프로모션 이미지 좌우 슬라이드 적용하기</h2>
+
+<h3 id="슬라이드-요소-중앙-배치">슬라이드 요소 중앙 배치</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.notice</span> <span class="nc">.promotion</span> <span class="nc">.swiper-container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">819px</span> <span class="err">*</span> <span class="m">3</span> <span class="err">+</span> <span class="m">20px</span><span class="p">);</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">533px</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="c">/* margin-left: calc((819px * 3 + 20px) / -2); */</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-50%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.swiper-container</code> 너비를 <code class="language-plaintext highlighter-rouge">calc</code>를 통해 계산한다.
+<code class="language-plaintext highlighter-rouge">calc(하나의 슬라이드 너비 819px * 슬라이드 개수 + 여백 20px)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">swiper-container</code> 를 중앙으로 배치하기 위해 너비를 -2로 나눈 값을 왼쪽 여백으로 설정한다.</li>
+</ul>
+
+<h3 id="좌우-슬라이드-동작-구현">좌우 슬라이드 동작 구현</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="dl">"</span><span class="s2">.promotion .swiper-container</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">direction</span><span class="p">:</span> <span class="nx">horizontal</span>
+  <span class="na">slidesPerView</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="na">spaceBetween</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">centeredSlides</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">autoplay</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">delay</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">slidesPerView</code>를 통해 한번에 보여줄 슬라이드 개수를 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">spaceBetween</code>을 통해 슬라이드 간의 여백을 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">centeredSlides</code>를 통해 슬라이드를 중앙으로 배치한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay</code>에서 세부 옵션(객체)를 통해 <code class="language-plaintext highlighter-rouge">delay</code>를 부여하여 지연시간을 설정한다.</li>
+</ul>
+
+<h3 id="투명도-설정으로-슬라이드-집중시키기">투명도 설정으로 슬라이드 집중시키기</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.notice</span> <span class="nc">.promotion</span> <span class="nc">.swiper-slide</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.notice</span> <span class="nc">.promotion</span> <span class="nc">.swiper-slide-active</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.swiper-slide-active</code>클래스가 있으면 불투명하게 설정하고, 나머지 슬라이드는 투명하게 처리하여 현재 슬라이드에 집중시키도록 디자인한다.</li>
+</ul>
+
+<h2 id="결과-3">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F35780db1-f167-4fa2-b612-53e83038f552%2FApr-24-2024_20-41-03.gif?id=40d5f09a-d809-4c07-8017-f32a48f47892&amp;table=block" alt="Apr-24-2024 20-41-03.gif" /></p>
+
+<h2 id="페이지네이션--arrow-버튼-추가-하기">페이지네이션 &amp; arrow 버튼 추가 하기</h2>
+
+<h3 id="페이지네이션--arrow-버튼-html-구조">페이지네이션 &amp; arrow 버튼 HTML 구조</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-pagination"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-prev"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-next"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.swiper-pagination</code>은 페이지 번호를 의미하는 선택자이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.swiper-prev</code>와 <code class="language-plaintext highlighter-rouge">.swiper-next</code>는 각각 arrow 버튼의 이전과 다음을 의미하는 선택자이다.</li>
+</ul>
+
+<h3 id="페이지네이션--arrow-버튼-요소-지정">페이지네이션 &amp; arrow 버튼 요소 지정</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="dl">"</span><span class="s2">.promotion .swiper-container</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">slidesPerView</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="na">spaceBetween</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">centeredSlides</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="c1">// autoplay: {</span>
+  <span class="c1">//   delay: 5000,</span>
+  <span class="c1">// },</span>
+  <span class="na">pagination</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.promotion .swiper-pagination</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">clickable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">navigation</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">prevEl</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.promotion .swiper-prev</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">nextEl</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.promotion .swiper-next</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pagintaion</code> 속성에 <code class="language-plaintext highlighter-rouge">el</code> 페이지 번호 요소 선택자인 <code class="language-plaintext highlighter-rouge">.promotion .swiper-pagination</code>을 설정하고, 페이지 번호를 누르면 제어할 수 있도록 <code class="language-plaintext highlighter-rouge">clickable</code>속성을 <code class="language-plaintext highlighter-rouge">true</code>로 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">navitaion</code> 속성에 <code class="language-plaintext highlighter-rouge">prevEl</code>과 <code class="language-plaintext highlighter-rouge">nextEl</code>에 각 arrow 버튼 요소 선택자인 <code class="language-plaintext highlighter-rouge">.promotion .swiper-prev</code>와 <code class="language-plaintext highlighter-rouge">.promotion .swiper-next</code>를 설정한다.</li>
+</ul>
+
+<h2 id="결과-4">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5b072893-3f9c-4963-b9e8-11bb12256f51%2FApr-24-2024_21-58-33.gif?id=45c300e0-f2f8-4f83-9a8b-f86d01e524df&amp;table=block" alt="Apr-24-2024 21-58-33.gif" /></p>
+
+<h2 id="슬라이드-영역-토글-버튼-추가하기">슬라이드 영역 토글 버튼 추가하기</h2>
+
+<p>토글 버튼을 클릭하면 프로모션 영역이 숨겨지거나 보여지도록 하는 역할을 구현한다.</p>
+
+<h3 id="토글-버튼-요소-추가-및-토글-구현하기">토글 버튼 요소 추가 및 토글 구현하기</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">promotionEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.promotion</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">promotionToggleBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.toggle-promotion</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">isHidePromotion</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">promotionToggleBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">isHidePromotion</span> <span class="o">=</span> <span class="o">!</span><span class="nx">isHidePromotion</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isHidePromotion</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">promotionEl</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">hide</span><span class="dl">"</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">promotionEl</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">hide</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li>프로모션 영역에 해당하는 요소 .promotion 선택자와 토글 버튼에 해당하는 요소 .toggle-promotion를 추가한다.</li>
+  <li>토글의 상태를 의미하는 isHidePromotion에 초기 boolean 상태값 false를 할당해놓는다.</li>
+  <li>토글 버튼이 클릭되면 기존 <code class="language-plaintext highlighter-rouge">isHidePromotion</code> 상태값의 반대값을 할당하고 <code class="language-plaintext highlighter-rouge">false</code>이면 promotion 요소에 <code class="language-plaintext highlighter-rouge">.hide</code>클래스를 추가하고 <code class="language-plaintext highlighter-rouge">true</code>이면 <code class="language-plaintext highlighter-rouge">.hide</code> 클래스를 제거한다.</li>
+</ul>
+
+<h3 id="hide-클래스-정의"><code class="language-plaintext highlighter-rouge">.hide</code> 클래스 정의</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.notice</span> <span class="nc">.promotion</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">693px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f6f5ef</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">height</span> <span class="m">0.4s</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.notice</span> <span class="nc">.promotion.hide</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>요소에 <code class="language-plaintext highlighter-rouge">.hide</code>클래스가 추가되면 <code class="language-plaintext highlighter-rouge">height</code>를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">transition</code>을 통해 <code class="language-plaintext highlighter-rouge">height</code>값을 대상으로 0.4초 지연시키도록 애니메이션 처리한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">height</code>값이 줄어드면 내부 요소가 외부 영역에 침범하지 않아야하므로 <code class="language-plaintext highlighter-rouge">overflow: hidden</code>을 설정해준다.</li>
+</ul>
+
+<h2 id="결과-5">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fdfab8ac9-07e1-48a9-9616-a183962d9974%2FApr-24-2024_22-08-51.gif?id=01e10526-7b53-443a-a12c-5445f0f2c4c8&amp;table=block" alt="Apr-24-2024 22-08-51.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="유튜브-영상-배경">유튜브 영상 배경</h1>
+
+<p>유튜브 영상은 보통 16:9 비율 화면의 크기로 제공되고 있다.</p>
+
+<p>유튜브 영상을 배경으로 설정하려면 해당 비율에 대한 <code class="language-plaintext highlighter-rouge">width</code>값과 <code class="language-plaintext highlighter-rouge">height</code>값을 설정해야한다.</p>
+
+<p>이는 부모요소와 자식요소의 관계를 통해 설정이 가능한데 해당 내용에 대한 예시는 다음과 같다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">royalblue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container</span> <span class="nc">.item</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbc901a4a-d43c-431b-8a84-1eb243727fb0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_5.37.58.png?id=e0952525-a57a-40cf-97a4-110e698013bf&amp;table=block" alt="스크린샷 2024-04-25 오전 5.37.58.png" /></p>
+
+<p>부모요소의 container에서의 <code class="language-plaintext highlighter-rouge">width</code>값과 자식요소 item의 <code class="language-plaintext highlighter-rouge">padding-top</code>을 각 2:1 비율로 설정한다고 가정할 때, 자식요소는 부모요소의 <code class="language-plaintext highlighter-rouge">width</code>인 <code class="language-plaintext highlighter-rouge">500px</code>을 기준으로 <code class="language-plaintext highlighter-rouge">padding-top</code>에 설정한 50%값인 <code class="language-plaintext highlighter-rouge">250px</code>를 갖게된다.</p>
+
+<p>즉, 자식요소의 %크기는 부모요소의 크기를 기준으로 값이 설정되어진다는 것을 알 수 있고, 이를 활용하여 비율 설정이 가능하다.</p>
+
+<h2 id="유튜브-영상-배경-구조">유튜브 영상 배경 구조</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nt">section</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"youtube"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"youtube__area"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">id</span><span class="o">=</span><span class="s1">"player"</span><span class="o">&gt;&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"youtube__cover"</span><span class="o">&gt;&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nt">section</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.youtube__area</code>는 유튜브 영상이 보여지는 영역을 의미한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">#player</code>는 유튜브 영상에 해당하는 영역을 의미한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.youtube__cover</code>는 영상 위에 덮여지는 이미지 패턴 영역을 의미한다.</li>
+</ul>
+
+<h2 id="유튜브-영상-배경-스타일링">유튜브 영상 배경 스타일링</h2>
+
+<p>유튜브 영상이 보일 영역은 16:9 크기만큼 설정해놓고, 유튜브 영상을 중앙배치하여 영상의 중앙 부분만 보일수 있게 스타일링 한다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.youtube</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">700px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.youtube</span> <span class="nc">.youtube__area</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">1920px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-50%</span><span class="p">,</span> <span class="m">-50%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.youtube</span> <span class="nc">.youtube__area</span><span class="nd">::before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">56.25%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.youtube</span> <span class="nc">.youtube__cover</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("../images/video_cover_pattern.png")</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.3</span><span class="p">);</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.youtube</code>에 <code class="language-plaintext highlighter-rouge">overflow: hidden</code>을 하여, 중앙을 제외한 위, 아래 영역을 외부 영역으로 침범하지 않도록 설정한다.</li>
+</ul>
+
+<h2 id="youtube-player-api">YouTube Player API</h2>
+
+<p>IFrame Player API를 사용하면 YouTube 동영을 가져오고 제어할 수 있다.</p>
+
+<p><a href="https://developers.google.com/youtube/iframe_api_reference?hl=ko">iframe 삽입에 대한 YouTube Player API 참조 문서</a></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F63ca8853-3bed-4158-9025-b4855564dce7%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-28_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.33.43.png?id=543a607a-6316-4b94-8adf-005822ae77ff&amp;table=block" alt="스크린샷 2024-04-28 오후 7.33.43.png" /></p>
+
+<p>라이브러리에서 제공하는 예시코드를 살펴보면 <code class="language-plaintext highlighter-rouge">onYouTubeIframeAPIReady()</code> 메서드를 통해 <code class="language-plaintext highlighter-rouge">YT</code>객체에 있는 <code class="language-plaintext highlighter-rouge">Player()</code>메서드를 호출해서 제공하는 옵션들을 객체 형태로 전달하고 있는 것을 확인할 수 있다.</p>
+
+<p>또한 HTML에서 정의한 <code class="language-plaintext highlighter-rouge">player</code>를 <code class="language-plaintext highlighter-rouge">id</code>로 갖는 태그에 해당 영상을 삽입하는 기능을 수행한다는 것을 확인할 수 있다.</p>
+
+<p>이전에 해당 요소를 마크업해놓았기 때문에 위 코드를 참고하여 다음과 같이 적용해보았다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">script</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">tag</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://www.youtube.com/iframe_api</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">firstScriptTag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">"</span><span class="s2">script</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+<span class="nx">firstScriptTag</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">tag</span><span class="p">,</span> <span class="nx">firstScriptTag</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">onYouTubeIframeAPIReady</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">new</span> <span class="nx">YT</span><span class="p">.</span><span class="nx">Player</span><span class="p">(</span><span class="dl">"</span><span class="s2">player</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">videoId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aCkI0tjzUbQ</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">playerVars</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">autoplay</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">playlist</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aCkI0tjzUbQ</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="na">events</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">onReady</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">mute</span><span class="p">();</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 <code class="language-plaintext highlighter-rouge">script</code>태그를 지정하고 그 이전 위치에 라이브러리를 갖고오는 <code class="language-plaintext highlighter-rouge">script</code>태그를 삽입할 수 있도록 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">onYouTubeIframeAPIReady()</code> 함수 이름은 Youtube Player API에서 사용하는 이름이기 때문에 다른 함수명으로 작성하면 동작하지 않는다. 추가로 함수는 전역으로 등록해야한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">YT</code>객체에 있는 <code class="language-plaintext highlighter-rouge">Player()</code> 메서드를 호출하여 옵션들을 파라미터로 전달한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">videoId</code>는 최초로 재생할 유튜브 영상의 Id를 입력한다. 유튜브 영상의 Id는 특정 유튜브 영상의 url에 key가 v인 값에 해당한다.
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fce438e2a-4419-4c4a-8626-c5b9280419d1%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-28_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.08.46.png?id=c268a834-cf47-45db-aafb-606e13ffc144&amp;table=block" alt="스크린샷 2024-04-28 오후 7.08.46.png" /></li>
+  <li><code class="language-plaintext highlighter-rouge">playerVars</code>를 통해 <code class="language-plaintext highlighter-rouge">autoplay</code>(자동재생), <code class="language-plaintext highlighter-rouge">loop</code>(반복), <code class="language-plaintext highlighter-rouge">playlist</code>(반복을 위한 플레이리스트 ID)를 설정한다.
+더 많은 플레이어 매개변수를 확인하려면 다음 링크를 참조한다.
+<a href="https://developers.google.com/youtube/player_parameters?hl=ko">YouTube 내장 플레이어 및 플레이어 매개변수</a></li>
+  <li><code class="language-plaintext highlighter-rouge">events</code>에서 <code class="language-plaintext highlighter-rouge">onReady</code>메서드를 통해 영상이 준비되면 <code class="language-plaintext highlighter-rouge">mute()</code>메서드가 호출되어 영상을 음소거 처리하도록한다.</li>
+</ul>
+
+<h2 id="결과-6">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F99da2f2c-8a16-4ca1-bc1d-636dc8c60ec6%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-28_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.44.58.png?id=acf391f7-dcdb-4aac-a5d9-46d6b72b572b&amp;table=block" alt="스크린샷 2024-04-28 오후 7.44.58.png" /></p>
+
+<h2 id="아이콘-반복-애니메이션-적용하기feat-gsap">아이콘 반복 애니메이션 적용하기(feat. gsap)</h2>
+
+<p>유튜브 영상 배경화면 위에 아이콘 요소들을 통통튀는 효과의 애니메이션을 부여하려고 한다.</p>
+
+<p>먼저 3개의 아이콘에 해당하는 요소들을 마크업한다.</p>
+
+<h3 id="각-아이콘-마크업-및-배치-시키기">각 아이콘 마크업 및 배치 시키기</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/floating1.png"</span> <span class="na">alt=</span><span class="s">"Icon"</span> <span class="na">class=</span><span class="s">"floating floating1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/floating2.png"</span> <span class="na">alt=</span><span class="s">"Icon"</span> <span class="na">class=</span><span class="s">"floating floating2"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/floating3.png"</span> <span class="na">alt=</span><span class="s">"Icon"</span> <span class="na">class=</span><span class="s">"floating floating3"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>각 아이콘에 해당하는 이미지를 이미지 경로에 작성한다.</li>
+  <li>class는 공통 스타일링에 해당하는 <code class="language-plaintext highlighter-rouge">.floating</code>과 각 요소마다의 위치를 다르게 배치해야하므로, 넘버를 달리 하여 클래스를 부여한다.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.youtube</span> <span class="nc">.floating1</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.youtube</span> <span class="nc">.floating2</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">350px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">150</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.youtube</span> <span class="nc">.floating3</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">-200px</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>부모 요소인 <code class="language-plaintext highlighter-rouge">.inner</code>를 기준으로 각 아이콘의 <code class="language-plaintext highlighter-rouge">position</code>을 <code class="language-plaintext highlighter-rouge">absolute</code>로 설정하여 배치시킨다.</li>
+</ul>
+
+<h3 id="애니메이션-적용하기">애니메이션 적용하기</h3>
+
+<p>각 요소에 애니메이션을 간단하게 적용하기 위해 <code class="language-plaintext highlighter-rouge">gsap</code> 라이브러리를 활용하여 구현한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">floatingObject</span><span class="p">(</span><span class="nx">selector</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">y</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="na">repeat</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="na">yoyo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">floatingObject</span><span class="p">(</span><span class="dl">"</span><span class="s2">.floating</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>floatingObject 함수를 만들고 매개변수로 각 아이콘에 공동 클래스에 해당하는 .floating을 요소로 전달한다.</li>
+  <li>gsap의 to()메서드를 호출하고 동작 시간을 1s로 하여 각 요소에 애니메이션을 부여한다.</li>
+  <li>옵션으로는 각 아이콘을 <code class="language-plaintext highlighter-rouge">y</code> 로 20px 이하로 움직인다. 추가로 <code class="language-plaintext highlighter-rouge">repeat</code>값을 <code class="language-plaintext highlighter-rouge">-1</code>로 하여 애니메이션을 거꾸로 설정하고, <code class="language-plaintext highlighter-rouge">yoyo</code>를 <code class="language-plaintext highlighter-rouge">true</code>로 하여 해당 애니메이션을 반복적으로 수행되어지도록 설정한다.</li>
+</ul>
+
+<p><a href="https://gsap.com/docs/v3/Eases/">Easing &gt; GSAP &gt; Docs &amp; Learning</a></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb25fb1c5-4da5-4dfc-9aaf-b09b426f1675%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-04-28_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.59.51.png?id=8df54708-b8a3-4b95-9182-7fbaa2f8beb7&amp;table=block" alt="스크린샷 2024-04-28 오후 7.59.51.png" /></p>
+
+<p>애니메이션의 변화를 주기 위해 gsap에서 제공하는 easing 페이지를 참고하였다.</p>
+
+<p>해당 페이지를 참고하면 다양한 에니메이션을 그래프 형태로 preview를 확인할 수 있다.</p>
+
+<p>추가로 type을 따로 설정하여 in, out을 설정할 수 있다.</p>
+
+<p>원하는 core와 type을 선택하고 ease 속성에 대한 값을 복사한다. 본인은 power1를 in-out을 적용해보았다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">floatingObject</span><span class="p">(</span><span class="nx">selector</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">y</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="na">repeat</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="na">ease</span><span class="p">:</span> <span class="dl">"</span><span class="s2">power2.inOut</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">yoyo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">delay</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>ease의 값을 복사한 값인 power2.in으로 설정한다.</li>
+</ul>
+
+<p>추가적으로 애니메이션과 각 요소의 동작 지연시간을 랜덤으로 부여하기 위해 다음과 같이 랜덤한 값을 반환하는 함수를 정의하였다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">random</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">parseFloat</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">floatingObject</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">delay</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gsap</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">random</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="p">{</span>
+    <span class="na">y</span><span class="p">:</span> <span class="nx">size</span><span class="p">,</span>
+    <span class="na">repeat</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="na">yoyo</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">ease</span><span class="p">:</span> <span class="dl">"</span><span class="s2">power2.in</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">delay</span><span class="p">:</span> <span class="nx">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">delay</span><span class="p">),</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">floatingObject</span><span class="p">(</span><span class="dl">"</span><span class="s2">.floating1</span><span class="dl">"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+<span class="nx">floatingObject</span><span class="p">(</span><span class="dl">"</span><span class="s2">.floating2</span><span class="dl">"</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+<span class="nx">floatingObject</span><span class="p">(</span><span class="dl">"</span><span class="s2">.floating3</span><span class="dl">"</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>요소, 지연시간, <code class="language-plaintext highlighter-rouge">y</code>의 위치를 인자로 받을 수 있다록 매개변수를 <code class="language-plaintext highlighter-rouge">selector</code>, <code class="language-plaintext highlighter-rouge">delay</code>, <code class="language-plaintext highlighter-rouge">size</code>로 정의하였다.</li>
+  <li>애니메이션 동작시간에 <code class="language-plaintext highlighter-rouge">random()</code>함수를 호출하고 1.5에서 2.5사이의 값을 반환받을 수 있도록 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">y</code>의 위치를 인자로 받은 <code class="language-plaintext highlighter-rouge">size</code>로 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">delay</code>는 random함수를 호출하여 0에서 <code class="language-plaintext highlighter-rouge">delay</code> 사이의 값을 받을 수 있도록 한다.</li>
+</ul>
+
+<h2 id="결과-7">결과</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F4a4be890-0cf8-4893-abd8-511e0bd0e878%2FApr-28-2024_20-20-28.gif?id=20e28593-d7ec-46c5-b68e-883c2f807837&amp;table=block" alt="Apr-28-2024 20-20-28.gif" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="소감">소감</h1>
+
+<p>이번 주차는 Swiperjs, YouTube Player API 같은 오픈소스를 처음 접해보게 되었다.</p>
+
+<p>Swiperjs 라이브러리를 이용하면, 요소들을 간편하게 수평이나 수직으로 슬라이드로 구현할 수 있다는 것을 알게 되었다.</p>
+
+<p>또한 YouTube Player API를 활용하면 원하는 유튜브 영상의 ID만 있으면 쉽게 해당 영상을 가져올 수 있으며, 사용자에게 영상을 보여주기 전에 필요한 설정을 쉽게 할 수 있다는 것을 깨달았다.</p>
+
+<p>마지막으로 GSAP의 easing을 활용하면 다양한 애니메이션과 타입을 사용하여 요소에 보다 디테일한 애니메이션을 적용할 수 있다는 것을 알게 되었다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

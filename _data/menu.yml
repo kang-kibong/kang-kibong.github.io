@@ -16,11 +16,15 @@ entries:
 
   - title: woowa course 6th pre-course
     post_list:
+      limit: 3
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: woowa.html
       category: woowa
 
   - title: frontend
     post_list:
-      limit: 5
+      limit: 3
       show_more: true
       show_more_text: See more posts...
       show_more_url: frontend.html
