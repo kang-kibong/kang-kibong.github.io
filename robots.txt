@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://kang-kibong.github.io/sitemap.xml
