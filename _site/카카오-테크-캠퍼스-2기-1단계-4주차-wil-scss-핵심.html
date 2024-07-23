@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - SCSS</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - SCSS" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-4%EC%A3%BC%EC%B0%A8-wil-scss-%ED%95%B5%EC%8B%AC.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-4%EC%A3%BC%EC%B0%A8-wil-scss-%ED%95%B5%EC%8B%AC.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - SCSS" />
+<script type="application/ld+json">
+{"datePublished":"2024-05-06T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-4%EC%A3%BC%EC%B0%A8-wil-scss-%ED%95%B5%EC%8B%AC.html"},"url":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-4%EC%A3%BC%EC%B0%A8-wil-scss-%ED%95%B5%EC%8B%AC.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - SCSS","dateModified":"2024-05-06T00:00:00+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-06 00:00:00 +0900">2024-05-06</time>
+  </p>
+  
+  <h1>[카카오 테크 캠퍼스 2기] 1단계 4주차 WIL - SCSS</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F40c2cf60-51db-4e43-ba6b-14e260091c05%2Fimage.png?id=75e1bdea-b5c7-41ee-9520-fa02fc9e9ef7&amp;table=block" alt="image.png" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="scsssass를-사용하는-이유">SCSS(SASS)를 사용하는 이유?</h1>
+
+<p>표준 CSS로 작성하면서 반복되는 선택자로 인해 코드가 길어지는 문제가 발생하곤한다.</p>
+
+<p>SCSS와 같은 <strong>CSS Preprocessor</strong>를 사용하면 이러한 문제점을 개선할 수 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="css-preprocessor란">CSS Preprocessor란?</h1>
+
+<p>CSS Preprocessor는 <strong>전처리기</strong>라는 의미로, CSS가 동작하기 전에 사용하는 기능을 의미한다.</p>
+
+<p>전처리기는 CSS 문법과 굉장히 유사하지만 선택자의 중첩(Nesting), 조건문, 반복문, 다양한 단위(Unit)의 연산 등 표준 CSS 보다 훨씬 많은 기능을 사용해서 편리하게 작성할 수 있다.</p>
+
+<p>이렇게 작성한 전처리기 코드를 웹에서 동작 가능한 표준 CSS로 컴파일하는 과정을 거치게 된다.</p>
+
+<p>이 컴파일은 Vite, Parcel, Webpack과 같은 번들러를 통해 수행하게 된다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="주석">주석</h1>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/* */</code> : 컴파일 후 css파일에 주석이 남아 있음.</li>
+  <li><code class="language-plaintext highlighter-rouge">//</code> : 컴파일 후 css파일에 주석이 남지 않음.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="상위부모-선택자-참조">상위(부모) 선택자 참조</h1>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="k">&amp;</span><span class="nc">.active</span> <span class="p">{</span>
+    <span class="c1">// .btn.active</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.list</span> <span class="p">{</span>
+  <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nd">:last-child</span> <span class="p">{</span>
+      <span class="c1">// li:last-child</span>
+      <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&amp;</code>을 통해 상위 선택자를 참조한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;.active</code>에서의 <code class="language-plaintext highlighter-rouge">&amp;</code>는 <code class="language-plaintext highlighter-rouge">.btn</code>을 의미하고 해당 선택자는 <code class="language-plaintext highlighter-rouge">.btn.active</code>이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;:last-child</code>에서의 <code class="language-plaintext highlighter-rouge">&amp;</code>는 <code class="language-plaintext highlighter-rouge">li</code>를 의미하고 해당 선택자는 <code class="language-plaintext highlighter-rouge">li:last-child</code>이다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="중첩된-속성">중첩된 속성</h1>
+
+<p>네임스페이스가 동일한 속성인 경우 중첩기능을 통해 설정이 가능하다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="nl">size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="na">family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">bottom</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">right</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="변수">변수</h1>
+
+<ul>
+  <li>원하는 값을 변수로 지정함으로서 재활용이 가능하도록 할 수 있다.</li>
+  <li>변수에 값을 재할당할 수 있다.</li>
+  <li>변수에 유효범위(전역변수, 지역변수)가 존재한다.</li>
+</ul>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.conatiner</span> <span class="p">{</span>
+  <span class="nv">$size</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span> <span class="c1">// .container 내부의 유효범위를 가짐.</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="nv">$size</span><span class="p">;</span> <span class="c1">// 200px</span>
+  <span class="nc">.item</span> <span class="p">{</span>
+    <span class="nv">$size</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span> <span class="c1">// 재할당</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nv">$size</span><span class="p">;</span> <span class="c1">// 100px</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="nv">$size</span><span class="p">;</span> <span class="c1">// 100px</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="nv">$size</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.container</code> 내부의 <code class="language-plaintext highlighter-rouge">$size</code> 변수는 <code class="language-plaintext highlighter-rouge">.container</code>를 유효범위로 갖는 변수이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">top</code>의 값은 <code class="language-plaintext highlighter-rouge">.container</code>를 유효범위를 갖는 <code class="language-plaintext highlighter-rouge">$size</code> 값인 200px이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.item</code> 내부의 <code class="language-plaintext highlighter-rouge">$size</code>값을 100px로 재할당한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.item</code> 내부의 <code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>값은 재할당된 값 100px이다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="산술연산">산술연산</h1>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="c1">// $size: 30px;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">20px</span> <span class="o">+</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span> <span class="o">-</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+  <span class="c1">// 1. margin: (30px / 2);</span>
+  <span class="c1">// 2. margin: $size / 2;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span> <span class="o">%</span> <span class="m">7</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">serif</span><span class="p">;</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">10px</span> <span class="o">/</span> <span class="m">10px</span><span class="p">;</span> <span class="c1">// font-size / line-height</span>
+<span class="p">}</span>
+
+<span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">200px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">/</code>, <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">%</code> 같은 모든 산술 연산을 통해 값을 설정할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">/</code>은 <code class="language-plaintext highlighter-rouge">font</code>같은 단축 속성으로 인해 다른 방식으로 나눗셈을 진행해야한다.
+    <ul>
+      <li>
+        <ol>
+          <li>소괄호로 묶어 산술 연산임을 의미시킨다. <code class="language-plaintext highlighter-rouge">margin: (30px / 2);</code></li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>값을 변수로 설정하여 산술 연산을 한다. <code class="language-plaintext highlighter-rouge">margin: $size / 2;</code></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>산술하기 위한 단위는 하나로 같아야한다. 만약, 단위가 같지 않다면 <code class="language-plaintext highlighter-rouge">calc()</code> 메서드를 사용한다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="재활용mixin">재활용(<code class="language-plaintext highlighter-rouge">@mixin</code>)</h1>
+
+<p>재활용 될 수 있는 구조를 <code class="language-plaintext highlighter-rouge">@mixin</code>을 통해 정의하여 코드를 재활용할 수 있다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">center</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span> <span class="nf">box</span><span class="p">(</span><span class="nv">$size</span><span class="o">:</span> <span class="m">100px</span><span class="o">,</span> <span class="nv">$color</span><span class="o">:</span> <span class="no">tomato</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$size</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$size</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">box</span><span class="p">(</span><span class="m">200px</span><span class="o">,</span> <span class="no">red</span><span class="p">);</span>
+
+  <span class="nc">.item</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">box</span><span class="p">(</span><span class="nv">$color</span><span class="o">:</span> <span class="no">green</span><span class="p">);</span> <span class="c1">// 키워드 인수</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>정의된 <code class="language-plaintext highlighter-rouge">@mixin</code>은 <code class="language-plaintext highlighter-rouge">@import</code>를 통해 가져와 사용할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">@mixin</code>은 들어온 인수를 통해 원하는 값으로 설정이 가능하다.</li>
+  <li>특정 인수값이 들어오지 않을 경우의 default 값을 설정할 수 있다.</li>
+  <li>인수는 순서대로 적용되기 때문에 순서에 상관없이 인수를 전달하고 싶은 경우 키워드 인수를 사용한다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="반복문">반복문</h1>
+
+<p><code class="language-plaintext highlighter-rouge">@for</code>을 통해 반복문으로 스타일링 설정이 가능하다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span> <span class="p">{</span>
+  <span class="nc">.box</span><span class="nd">:nth-child</span><span class="o">(</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>index의 의미를 가지는 <code class="language-plaintext highlighter-rouge">$i</code> 변수로 1부터 10까지 반복문을 진행한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">nth-child()</code>는 값을 명시하지 않는 곳이므로 보간을 통해 <code class="language-plaintext highlighter-rouge">$i</code>를 지정한다.
+JavaScript에서의 보간은 <code class="language-plaintext highlighter-rouge">${}</code>이었다면 SCSS에서의 보간은 <code class="language-plaintext highlighter-rouge">#{}</code>을 통해 지정할 수 있다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="함수">함수</h1>
+
+<p><code class="language-plaintext highlighter-rouge">@function</code>를 통해 원하는 값을 인자를 활용하고 처리하여 반환할 수 있다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@function</span> <span class="nf">ratio</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$ratio</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nv">$size</span> <span class="o">*</span> <span class="nv">$ratio</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nv">$width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$width</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nf">ratio</span><span class="p">(</span><span class="nv">$width</span><span class="o">,</span> <span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">);</span> <span class="c1">// 50px</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@function</code>을 사용한 이후 함수의 이름과 매개변수를 입력한다.</li>
+  <li>매개변수를 통해 원하는 값으로 처리한 후 <code class="language-plaintext highlighter-rouge">@return</code>을 통해 값을 반환한다.</li>
+  <li>정의한 <code class="language-plaintext highlighter-rouge">ratio()</code>메서드를 호출하여 반환 값으로 설정한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">@mixin</code>은 CSS 스타일을 재활용하기 위한 목적이고 <code class="language-plaintext highlighter-rouge">@function</code>은 원하는 값으로 처리하기 위한 목적으로 사용한다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="색상-내장-함수">색상 내장 함수</h1>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mix($color1, $color2)</code> : color1과 color2를 섞어준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">lighten($color, 10%)</code> : color의 밝기를 %만큼 밝게 해준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">darken($color, 10%)</code> : color의 밝기를 %만큼 어둡게 해준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">saturate($color, 10%)</code> : color의 채도를 %만큼 높여준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">desaturate($color, 10%)</code> : color의 채도를 %만큼 낮춰준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">grayscale($color)</code> : color를 grayscaling해준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">rgba($color, 0.5)</code> : color의 투명도를 조절할 수 있다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="가져오기">가져오기</h1>
+
+<p><code class="language-plaintext highlighter-rouge">@import './sub.scss', './sub2.scss';</code></p>
+
+<h2 id="each"><code class="language-plaintext highlighter-rouge">@each</code></h2>
+
+<p><code class="language-plaintext highlighter-rouge">list</code>, <code class="language-plaintext highlighter-rouge">map</code> 형태의 데이터를 <code class="language-plaintext highlighter-rouge">@each</code>를 통해 순회해서 값을 설정할 수 있다</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$map</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">o</span><span class="o">:</span> <span class="no">orange</span><span class="o">,</span>
+  <span class="n">r</span><span class="o">:</span> <span class="no">royalblue</span><span class="o">,</span>
+  <span class="n">y</span><span class="o">:</span> <span class="no">yellow</span><span class="o">,</span>
+<span class="p">);</span>
+
+<span class="k">@each</span> <span class="nv">$k</span><span class="o">,</span> <span class="nv">$v</span> <span class="n">in</span> <span class="nv">$map</span> <span class="p">{</span>
+  <span class="nc">.box-</span><span class="si">#{</span><span class="nv">$k</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$v</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="content"><code class="language-plaintext highlighter-rouge">@content</code></h1>
+
+<p><code class="language-plaintext highlighter-rouge">@mixin</code>으로 정의된 내용에서 <code class="language-plaintext highlighter-rouge">@content</code>를 통해 내용을 추가할 수 있다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">left-top</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">@content</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+
+  <span class="k">@include</span> <span class="nd">left-top</span> <span class="p">{</span>
+    <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="소감">소감</h1>
+
+<p>이번 주차는 무심코 지나칠 수 있는 자바스크립트 개념을 되짚어보고, SCSS의 사용법을 자세히 익힐 수 있었다.</p>
+
+<p>자바스크립트에서 변수와 함수를 선언할 때 발생하는 호이스팅, 그리고 원시 데이터와 참조 데이터의 불변성으로 인한 복사에 대한 개념을 다시 한 번 상기할 수 있었다.</p>
+
+<p>또한 SCSS를 배우면서, 기존의 표준 CSS에서 반복되는 선택자와 설정들을 재활용하고, 내장 함수를 통해 표준 CSS보다 간결하고 편리하게 스타일을 작성할 수 있다는 것을 알게 되었다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
