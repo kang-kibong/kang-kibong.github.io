@@ -58,7 +58,11 @@ npx husky init
 
 참고로 ESLint와 Prettier를 통한 초기 프로젝트 세팅 관련한 내용은 이전에 포스팅한 내용을 통해 보다 자세하게 확인할 수 있다.
 
-https://llbllhllk.tistory.com/132
+<br />
+
+[ESLint & Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기](eslint-prettier-설치-및-룰-설정을-통한-프로젝트-초기-세팅하기.html)
+
+<br />
 
 다음과 같은 명령어를 통해 pre-commit에 명령어를 추가할 수 있다.
 

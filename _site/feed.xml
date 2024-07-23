@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T19:38:42+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-07-23T19:43:47+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -51,7 +51,11 @@
 
 &lt;p&gt;참고로 ESLint와 Prettier를 통한 초기 프로젝트 세팅 관련한 내용은 이전에 포스팅한 내용을 통해 보다 자세하게 확인할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;https://llbllhllk.tistory.com/132&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;eslint-prettier-설치-및-룰-설정을-통한-프로젝트-초기-세팅하기.html&quot;&gt;ESLint &amp;amp; Prettier 설치 및 룰 설정을 통한 프로젝트 초기 세팅하기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;다음과 같은 명령어를 통해 pre-commit에 명령어를 추가할 수 있다.&lt;/p&gt;
 
