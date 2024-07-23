@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-27T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화" />
+<script type="application/ld+json">
+{"datePublished":"2024-05-27T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html"},"url":"http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화","dateModified":"2024-05-27T00:00:00+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-27 00:00:00 +0900">2024-05-27</time>
+  </p>
+  
+  <h1>[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="1-modules">1. Modules</h1>
+
+<h2 id="import와-export-패턴">import와 export 패턴</h2>
+
+<h3 id="export">export</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="mi">123</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">abc</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>여러개의 데이터를 내보낼 때 <code class="language-plaintext highlighter-rouge">export</code> 키워드를 사용한다.</li>
+  <li>하나의 데이터를 내보낼 때 <code class="language-plaintext highlighter-rouge">export default</code> 키워드를 사용한다.</li>
+</ul>
+
+<h3 id="import">import</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">str</span> <span class="k">as</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">hello</span> <span class="k">as</span> <span class="nx">helloFunction</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./module.js</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">helloFunction</span><span class="p">);</span>
+
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">object</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./module.js</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object</span><span class="p">.</span><span class="nx">str</span><span class="p">,</span> <span class="nx">object</span><span class="p">.</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">object</span><span class="p">.</span><span class="nx">hello</span><span class="p">());</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">as</code>라는 키워드를 통해 기존 데이터의 이름을 변경해서 사용할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code> 애스터리스크를 사용하면 해당 파일에 있는 export한 모든 데이터를 객체 형태로 사용할 수 있다.</li>
+</ul>
+
+<h2 id="가져온-모듈-바로-내보내기">가져온 모듈 바로 내보내기</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// a.js</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">;</span>
+
+<span class="c1">// b.js</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="mi">456</span><span class="p">;</span>
+
+<span class="c1">// utils.js</span>
+<span class="k">export</span> <span class="p">{</span> <span class="nx">a</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./a.js</span><span class="dl">'</span>
+<span class="k">export</span> <span class="p">{</span> <span class="nx">b</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./a.js</span><span class="dl">'</span>
+
+<span class="c1">// main.js</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./utils.js
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">a.js</code>, <code class="language-plaintext highlighter-rouge">b.js</code> 파일에서 내보낸 <code class="language-plaintext highlighter-rouge">a()</code>함수와 <code class="language-plaintext highlighter-rouge">b()</code>함수를 <code class="language-plaintext highlighter-rouge">utils.js</code> 파일에서 <code class="language-plaintext highlighter-rouge">export</code> 키워드를 통해 바로 두 함수를 export한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">main.js</code>에서 <code class="language-plaintext highlighter-rouge">utils.js</code> 파일에서 내보낸 두 함수를 <code class="language-plaintext highlighter-rouge">import</code>하면 두 함수를 한꺼번에 import할 수 있다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-비동기">2. 비동기</h1>
+
+<p>비동기 함수에서 callback 함수를 실행할 때 호출의 순서를 보장하기 위해서는 다양한 패턴들이 존재한다.</p>
+
+<h2 id="콜백-패턴">콜백 패턴</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getMovies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">movieName</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://www.omdbapi.com/?apikey=7035c60c&amp;s=</span><span class="p">${</span><span class="nx">movieName</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+      <span class="nx">callback</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">// callback hell!</span>
+<span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">frozen</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">겨울 왕국!</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avengers</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">어벤져스!</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">아바타!</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>콜백지옥</strong>이 발생한다. Promise 클래스를 사용하면 개선가능하다.</li>
+</ul>
+
+<h2 id="promise-패턴">Promise 패턴</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getMovies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">movieName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://www.omdbapi.com/?apikey=7035c60c&amp;s=</span><span class="p">${</span><span class="nx">movieName</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+        <span class="nx">resolve</span><span class="p">();</span>
+      <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">frozen</span><span class="dl">"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">겨울왕국!</span><span class="dl">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avengers</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">어벤져스!</span><span class="dl">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">아바타!</span><span class="dl">"</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Promise 객체의 <code class="language-plaintext highlighter-rouge">resolve</code>를 통해 순서 보장을 위한 callback의 역할을 대신하고 있다.</li>
+  <li>Promise를 return하면 Promise객체의 <code class="language-plaintext highlighter-rouge">then()</code> 메서드를 사용할 수 있으며, <code class="language-plaintext highlighter-rouge">then()</code> 메서드에 콜백함수를 넘기면 resolve를 호출하여 실행되는 형태이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">then()</code> 메서드는 chaining 형태로 이어 붙여 사용할 수 있다. 과도하면 콜백지옥과 비슷한 <strong>Promise chaining</strong>으로 인해 가독성이 떨어질 수 있다는 단점이 있다.</li>
+</ul>
+
+<h2 id="async-await-패턴">async, await 패턴</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getMovies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">movieName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://www.omdbapi.com/?apikey=7035c60c&amp;s=</span><span class="p">${</span><span class="nx">movieName</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+        <span class="nx">resolve</span><span class="p">();</span>
+      <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">wrap</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">frozen</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">겨울왕국!</span><span class="dl">"</span><span class="p">);</span>
+  <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avengers</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">어벤져스!</span><span class="dl">"</span><span class="p">);</span>
+  <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">아바타!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">wrap</span><span class="p">();</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">async</code> 함수 내부에서만 <code class="language-plaintext highlighter-rouge">await</code> 키워드를 사용할 수 있다.</li>
+  <li>Promise 인스턴스를 반환하는 곳에서만 <code class="language-plaintext highlighter-rouge">await</code> 키워드를 사용하도록 한다.</li>
+  <li>Promise chaning이 발생하지 않는다는 점에서 가독성이 더 좋은 것을 확인할 수 있다.</li>
+</ul>
+
+<h2 id="에러-핸들링">에러 핸들링</h2>
+
+<h3 id="콜백패턴">콜백패턴</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">delayAdd</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">cb</span><span class="p">,</span> <span class="nx">errorCb</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">errorCb</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">index</span><span class="p">}</span><span class="s2">는 10보다 클 수 없습니다.`</span><span class="p">);</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+    <span class="nx">cb</span><span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">delayAdd</span><span class="p">(</span>
+  <span class="mi">4</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">),</span>
+  <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="promise-패턴-1">Promise 패턴</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">delayAdd</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">reject</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">index</span><span class="p">}</span><span class="s2">는 10보다 클 수 없습니다.`</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">delayAdd</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">finally</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">done!</span><span class="dl">"</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>then, catch, finally 메서드를 통해서 에러 핸들링이 가능하다.</li>
+</ul>
+
+<h3 id="async-await-패턴-1">async, await 패턴</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">wrap</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">delayAdd</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">finally</span> <span class="p">()</span> <span class="p">{</span>
+	  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">done!</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">wrap</span><span class="p">();</span>
+</code></pre></div></div>
+
+<ul>
+  <li>try, catch, finally 구문을 통해서 에러 핸들링이 가능하다.</li>
+</ul>
+
+<h2 id="반복문에서-비동기-처리">반복문에서 비동기 처리</h2>
+
+<p>반복문을 통해 순차적으로 비동기 처리를 하려면 forEach가 아닌 for을 사용해야한다.</p>
+
+<h3 id="foreach를-통한-비동기-처리">forEach를 통한 비동기 처리</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">titles</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="k">async</span> <span class="nx">title</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">movies</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">movies</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="o">===</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">title</span> <span class="k">of</span> <span class="nx">titles</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>위 forEach 코드를 아래처럼 for문 코드로 나타낼 수 있다.</p>
+
+<p>아래의 코드를 살펴보면 for문이 도는 외부 context와 콜백함수의 내부 context로 이루어져 있는 것을 확인할 수 있다.</p>
+
+<p>이처럼 코드가 진행되면 내부 context에서 async, await을 통한 비동기 처리를 해도, 바깥 for의 외부 context 때문에 비동기 처리가 순차적으로 진행된다는 보장은 떨어지게 된다.</p>
+
+<p>때문에 for의 context를 감싸는 async context와 내부의 await context로 이루어지도록 변경해야할 필요가 있다.</p>
+
+<h3 id="for을-통한-비동기-처리">for을 통한 비동기 처리</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">wrap</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">title</span> <span class="k">of</span> <span class="nx">titles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">movies</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getMovies</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">movies</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>기존의 async, awiat을 내부 context에서 비동기 처리를 진행했다면 wrap을 통해 async를 진행하고 내부 context는 await하여 순차적으로 비동기 처리를 진행하도록 작성할 수 있다.</p>
+
+<p>이렇게 되면 순서에 대한 보장이 가능하다.</p>
+
+<h2 id="fetch">fetch</h2>
+
+<p><code class="language-plaintext highlighter-rouge">fetch(주소, 옵션)</code> 네트워크를 통해 리소스의 요청 및 응답 처리를 할 수 있다.</p>
+
+<p>주소를 통해 받은 결과를 then() 메서드를 통해 확인할 수 있고 json() 메서드를 호출 하면 Promise 인스턴스를 반환하게 된다. 해당 인스턴스에 대한 결과를 then() 메서드로 확인하면 응답에 대한 결과가 json 형태의 객체로 반환되게 된다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">wrap</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://omdbapi.com/?apikey=7035c60c&amp;s=avengers</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+		<span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span>
+		<span class="na">headers</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span><span class="p">,</span>
+	<span class="p">});</span>
+	<span class="kd">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span> <span class="c1">// Promise 인스턴스를 반환한다.</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">wrap</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="option">option</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">method</code>: default는 GET method이다. 다른 method들은 옵션에 기재해주어야 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">headers</code> : 요청에 대한 정보에 해당한다.
+    <ul>
+      <li>Content-Type: 서버로 전송되는 데이터 타입 기재(application/json)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">body</code>: 요청에 대한 데이터에 해당한다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">JSON.stringify()</code>: 인수(객체)로 들어온 데이터들을 <strong>문자열</strong>로 타입으로 변환하는 과정이 필요하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="3-events">3. Events</h1>
+
+<h2 id="기본-동작-방지">기본 동작 방지</h2>
+
+<p><code class="language-plaintext highlighter-rouge">event.preventDefault()</code></p>
+
+<p>요소마다 브라우저가 가지고 있는 기본 동작을 방지할 수 있다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">anchorEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">click!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;a&gt;&lt;/a&gt;</code> 태그가 가지고 있는 기본 동작인 페이지 이동을 이벤트 객체의 preventDefault() 메서드를 호출함으로써 페이지 이동 동작을 막을 수 있다.</p>
+
+<h2 id="버블링과-캡처링">버블링과 캡처링</h2>
+
+<h3 id="버블링이벤트-전파">버블링(이벤트 전파)</h3>
+
+<p>특정 요소에 이벤트가 발생되었을 경우, 해당 요소로부터 상위요소로 이벤트가 점차 전파되는 현상을 말한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">anchorEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">window</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">childEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">child</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">anchorEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">anchor</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>anchor 요소를 클릭한다고 가정하면, 버블링 현상으로 인해 anchor ⇒ child ⇒ parent ⇒ body ⇒ window가 콘솔에 출력될 것이다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe060c442-075d-4d21-9d6e-56c53c0d4c1c%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-05-18_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.28.33.png?id=34aa0952-9c95-4f91-af07-3b6a25cd9894&amp;table=block" alt="스크린샷 2024-05-18 오후 5.28.33.png" /></p>
+
+<h3 id="버블링-방지">버블링 방지</h3>
+
+<p><code class="language-plaintext highlighter-rouge">event.stopPropagation()</code></p>
+
+<p>특정 요소에 이벤트를 줄 경우 이벤트 객체의 <code class="language-plaintext highlighter-rouge">stopPropagation()</code> 메서드를 호출하면, 호출한 해당 요소까지만 이벤트가 전파되고 그 상위 요소들은 이벤트가 전파되는 것을 막을 수 있어 의도치 않은 동작을 막을 수 있다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.parent</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.child</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">anchorEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">window</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">parent</span><span class="dl">'</span><span class="p">);</span>
+  <span class="o">**</span><span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span><span class="o">**</span>
+<span class="p">});</span>
+
+<span class="nx">childEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">child</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">anchorEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">anchor</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>위와 같이 parentEl 요소에 이벤트가 발생할시 <code class="language-plaintext highlighter-rouge">stopPropagation()</code> 메서드를 호출하고 anchor 요소를 클릭했을 경우 body와 window를 제외한 <code class="language-plaintext highlighter-rouge">anchor ⇒ child ⇒ parent</code>가 출력될 것이다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F93e93880-491f-4436-8157-0756b6eb5e02%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-05-18_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.33.08.png?id=52364cda-adb0-4acb-a57a-15d86bd52af5&amp;table=block" alt="스크린샷 2024-05-18 오후 5.33.08.png" /></p>
+
+<p>다른 예로, parentEl 요소를 클릭하면, parentEl에 버블링 정지 처리를 했기 때문에 parentEl만 출력될 것이고, body를 클릭하면 버블링 정지 처리를 하지 않았기 때문에 <code class="language-plaintext highlighter-rouge">body ⇒ window</code>가 콘솔에 출력될 것이다.</p>
+
+<h3 id="캡처링">캡처링</h3>
+
+<p>특정 요소에 이벤트가 발생되면 특정요소의 상위 요소들에 이벤트가 전파되는 버블링 현상이 발생한다. 여기서 특정 요소를 먼저 이벤트가 동작할 수 있게 설정할 수 있는데 이를 캡쳐링이라고 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">anchorEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">window</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">childEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">child</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">anchorEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">anchor</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>위와 같이 window와 body이벤트에 capture을 true로 부여하여 버블링 발생시 window와 body가 순차적으로 먼저 이벤트가 동작될 수 있도록 설정한다.</p>
+
+<p>이후 child 요소를 클릭한다고 가정하면 window ⇒ body ⇒ parent ⇒ child 가 콘솔에 출력될 것이다.</p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F527b80db-dc40-4450-99b1-5d6e46bf3e58%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-05-18_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_6.13.25.png?id=8395abcc-e491-436a-a040-b2e1a8ffef43&amp;table=block" alt="스크린샷 2024-05-18 오후 6.13.25.png" /></p>
+
+<h3 id="버블링-방지--캡쳐링">버블링 방지 &amp; 캡쳐링</h3>
+
+<p>버블링 정지와 캡쳐링을 둘다 설정하면 어떤 결과가 나오는지 살펴보자.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">anchorEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">window</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">childEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">child</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">anchorEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">anchor</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>window와 body에 캡처링을 하고 childEl에 stopPropagation을 주어 버블링을 방지하였다.</p>
+
+<p>childEl 요소에 이벤트를 주었다고 가정할 때 먼저 캡처링부터 살펴보자.</p>
+
+<p>window와 body를 캡처링하도록 설정하였기 때문에 이를 고려하면 다음과 같은 결과로 예상할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">window ⇒ body ⇒ child ⇒ parent</code></p>
+
+<p>이제는 버블링 방지를 살펴보자.</p>
+
+<p>현재 childEl에 stopPropagation메서드를 호출하고 있고 childEl으로부터의 상위 요소들은 버블링이 방지 된다는 것을 유추할 수 있다.</p>
+
+<p>이를 고려하면 다음과 같은 결과를 예상할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">child</code></p>
+
+<p>이벤트 처리는 버블링 방지보다 캡처링이 우선이기 때문에 window, body는 캡처링이 진행되어야 하고 이후 버블링 방지는 parentEl 요소만 해당되기 때문에 다음과 같은 결과가 나타난다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">window ⇒ body ⇒ child</code></p>
+
+<h3 id="요소-캡처링-시-이벤트-제거">요소 캡처링 시 이벤트 제거</h3>
+
+<p>특정 요소에 이벤트 처리시 캡처링을 진행하였다면 이벤트 제거시에도 같이 캡처링을 설정해야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">parent</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">handler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="p">{</span> <span class="na">capture</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="이벤트-위임event-delegation">이벤트 위임(event delegation)</h2>
+
+<p>이벤트가 발생하면 버블링이 발생한다. 이러한 점을 이용해서 여러 요소들을 모두 살펴서 이벤트를 실행시켜 메모리를 비효율적으로 사용하는 것이 아닌 여러 요소를 갖는 부모요소에게 이벤트를 위임하는 방법을 의미한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEls</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">childEls</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>위 코드와 같이 자식 요소들을 모두 하나씩 살펴가며 이벤트를 처리하는 것은 비효율적으로 메모리를 사용하게 된다.</p>
+
+<p>이러한 코드를 버블링 현상을 이용하여 부모에게만 이벤트를 위임하는 방식으로 변경할 수 있다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">parentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">.parent</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">childEls</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">parentEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">childEl</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="dl">"</span><span class="s2">.child</span><span class="dl">"</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">childEl</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">childEl</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>부모 요소에게 한번만 이벤트 처리를 하고 부모 요소를 클릭했을때 내부에 <code class="language-plaintext highlighter-rouge">.child</code> 클래스를 갖는 요소를 <code class="language-plaintext highlighter-rouge">closest()</code> 메서드를 통해 찾고 childEl에 할당한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">closest()</code> 메서드는 특정 요소를 찾지 못하면 null을 반환하므로 조건문을 통해 Falsy한 값이 아닌 경우 요소의 텍스트를 출력하도록 작성할 수 있다.</p>
+
+<p>이처럼 자식 요소돌의 이벤트 처리를 부모요소에 한번만 이벤트를 위임하면 메모리를 효율적으로 사용할 수 있게 된다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="4-cookie--storage">4. Cookie &amp; Storage</h1>
+
+<h2 id="cookie">Cookie</h2>
+
+<p>도메인 단위로 데이터를 저장할 수 있고, 영구적으로 저장 불가능하다.</p>
+
+<p>또한 표준안 기준으로 사이트당 최대 20개 및 4KB 제한되어있다.</p>
+
+<p>개발자도구에 application 탭에 있는 저장용량 카테고리에 있는 쿠키를 통해서 데이터 확인이 가능하다.</p>
+
+<ul>
+  <li><strong>domain</strong>: 유효 도메인 설정</li>
+  <li><strong>path</strong>: 유효 경로 설정</li>
+  <li><strong>expires</strong>: 만료 날짜 설정(UTC Date 기준으로 설정해야한다.)</li>
+  <li><strong>max-age</strong>: 만료 타이머(s) 설정</li>
+</ul>
+
+<p>expires나 max-age를 설정하지 않으면 expires가 세션으로 설정된다.</p>
+
+<p>해당 의미는 브라우저가 종료되면 데이터가 사라진다는 뜻이다.</p>
+
+<p>때문에 브라우저가 종료되더라도 데이터를 보존하고 싶으면 expires나 max-age를 명시해주어야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">`a=1; domain=localhost; expires</span><span class="p">${</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span>
+  <span class="mi">2024</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">16</span>
+<span class="p">).</span><span class="nx">toUTCString</span><span class="p">()}</span><span class="s2"> path=/abc; max-age=3`</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span> <span class="c1">// a=1;</span>
+
+<span class="kd">const</span> <span class="nx">getCookie</span> <span class="o">=</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">cookie</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span>
+    <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">; </span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">cookie</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">cookie</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">=</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="nx">name</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">cookie</span> <span class="p">?</span> <span class="nx">cookie</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">=</span><span class="dl">"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getcookie</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>쿠키는 만료 날짜나 시간을 설정해서 관리할 수 있어 중요한 정보를 저장하는데는 장점이 있지만, 용량 제한이 있다보니 일반적인 데이터를 브라우저에 저장하는 용도로를 적합하지 않다.</p>
+
+<p>또한 데이터가 하나의 String으로 가져오는 방식이기 때문에 데이터를 다루는데 있어 다소 복잡하다.</p>
+
+<h2 id="storage">Storage</h2>
+
+<p>도메인 단위로 저장할 수 있고 세션을 통한 영구 저장이 가능하다.</p>
+
+<p>또한 사이트당 5MB 제한으로 제한되어있다.</p>
+
+<p>개발자도구에 application 탭에 있는 저장용량 카테고리에 있는 로컬 스토리지 혹은 세션 스토리지를 통해 데이터 확인이 가능하다.</p>
+
+<h3 id="storage-종류">Storage 종류</h3>
+
+<ul>
+  <li>localStorage: 따로 제거하지 않으면 영구적으로 데이터 저장</li>
+  <li>sessionStorage: 브라우저 세션이 유지되는 동안에만 데이터 저장</li>
+</ul>
+
+<h3 id="데이터-관리-메서드">데이터 관리 메서드</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">getItem()</code>: 데이터 조회</li>
+  <li><code class="language-plaintext highlighter-rouge">setItem()</code>: 데이터 추가</li>
+  <li><code class="language-plaintext highlighter-rouge">removeItem()</code>: 데이터 제거</li>
+  <li><code class="language-plaintext highlighter-rouge">clear()</code>: 스토리지 초기화</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setIem</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello World</span><span class="dl">"</span><span class="p">));</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setIem</span><span class="p">(</span><span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}));</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setIem</span><span class="p">(</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="mi">123</span><span class="p">));</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">)));</span> <span class="c1">// 'Hello World!'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">)));</span> <span class="c1">// {x: 1, y: 2}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">)));</span> <span class="c1">// 123</span>
+</code></pre></div></div>
+
+<p>JSON 문자는 작은 따옴표를 허용하지않고 큰 따옴표만 허용이 된다.</p>
+
+<p>그러나 storage에서 데이터를 가져오면 작은 따옴표 형태로 나올 수 있기 때문에, JSON문자와 Javascript 문자를 일치 시키기 위해 문자 데이터도 <code class="language-plaintext highlighter-rouge">JSON.stringify()</code> 메서드를 통해서 JSON 문자 형태로 변환해주도록 해야한다.</p>
+
+<h2 id="cookie-vs-localstorage-vs-sessionstorage">Cookie vs localStorage vs sessionStorage</h2>
+
+<ul>
+  <li><strong>Cookie</strong>: <strong>브라우저 종료</strong> 혹은 <strong>만료 시간</strong>을 통한 데이터 제거를 원할 때 사용한다. ex) 오늘 하루 보지 않기</li>
+  <li><strong>localStorage</strong>: 쿠키보다 데이터 관리가 쉽고 <strong>만료되지 않는 데이터</strong>를 관리할 때 사용한다. ex) 일반적인 데이터</li>
+  <li><strong>sessionStorage</strong>: 브라우저 종료를 통한 데이터 제거를 원할 때 사용한다.</li>
+</ul>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
