@@ -148,6 +148,11 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  p > strong > a {
+    color: #FF6F0F;
+    // color: #eb3300
+  }
 }
 
 @media screen and (max-width: "600px") {
