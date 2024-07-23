@@ -36,6 +36,10 @@ entries:
       show_more_url: woowa.html
       category: woowa
 
+  - title: like lion 11th at CNU
+    post_list:
+      category: like-lion
+
   - title: frontend
     post_list:
       limit: 3
