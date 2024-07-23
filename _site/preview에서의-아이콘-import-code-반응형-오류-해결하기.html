@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>preview에서의 아이콘 import code 반응형 오류 해결하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="preview에서의 아이콘 import code 반응형 오류 해결하기" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/preview%EC%97%90%EC%84%9C%EC%9D%98-%EC%95%84%EC%9D%B4%EC%BD%98-import-code-%EB%B0%98%EC%9D%91%ED%98%95-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/preview%EC%97%90%EC%84%9C%EC%9D%98-%EC%95%84%EC%9D%B4%EC%BD%98-import-code-%EB%B0%98%EC%9D%91%ED%98%95-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-10T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="preview에서의 아이콘 import code 반응형 오류 해결하기" />
+<script type="application/ld+json">
+{"datePublished":"2024-01-10T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/preview%EC%97%90%EC%84%9C%EC%9D%98-%EC%95%84%EC%9D%B4%EC%BD%98-import-code-%EB%B0%98%EC%9D%91%ED%98%95-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0.html"},"url":"http://localhost:4000/byeonghyeon-kang/preview%EC%97%90%EC%84%9C%EC%9D%98-%EC%95%84%EC%9D%B4%EC%BD%98-import-code-%EB%B0%98%EC%9D%91%ED%98%95-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"preview에서의 아이콘 import code 반응형 오류 해결하기","dateModified":"2024-01-10T00:00:00+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-01-10 00:00:00 +0900">2024-01-10</time>
+  </p>
+  
+  <h1>preview에서의 아이콘 import code 반응형 오류 해결하기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="1주제">1.주제</h1>
+
+<p>화면 사이즈가 1025px이하로 줄어들면 import code에 있는 문자들이 바깥으로 넘어가는 <a href="https://github.com/react-icons/react-icons/issues/849">문제</a>가 있었다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-해결-과정">2. 해결 과정</h1>
+
+<h2 id="preview를-살펴보다">preview를 살펴보다</h2>
+
+<p>웹페이지 상에서의 오류이기 때문에 <code class="language-plaintext highlighter-rouge">packages</code>폴더안에 <code class="language-plaintext highlighter-rouge">preview-astro</code>폴더를 확인해보았다. 작업에 들어가기에 앞서 <code class="language-plaintext highlighter-rouge">packages</code>에 있는 <code class="language-plaintext highlighter-rouge">react-icons</code>들을 fetch하고 build하였다. 이후 로컬 서버를 띄우고 페이지에 내에서의 오류를 확인해보기로 하였다.</p>
+
+<p><br /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/54e8b0f6-9bd7-499f-8092-42edbca08b0e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.55.32/w=750,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 4.55.32.png" /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/f4d5ebec-9558-4cb2-8eb7-198ea177ef7d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.55.14/w=640,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 4.55.14.png" /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/54e72659-df50-4da9-bdb8-dd86da546388/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.56.37/w=640,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 4.56.37.png" /></p>
+
+<p><br /></p>
+
+<p>사용자가 copy하고 싶은 아이콘을 클릭하면 아래와 같은 모달창이 렌더링 된다. 확인해본 결과 화면 사이즈를 1025px이내로 줄일 경우 내부 code가 box의 영역을 침범하는 문제였다. 때문에 modal을 관리하는 component와 style코드를 확인해볼 필요가 있었다.</p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/605d3819-33ee-44ca-a66f-6b580467ba81/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.57.38/w=384,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 4.57.38.png" /></p>
+
+<h2 id="문제의-component와-style을-찾아서">문제의 component와 style을 찾아서</h2>
+
+<p><code class="language-plaintext highlighter-rouge">components</code>폴더에 <code class="language-plaintext highlighter-rouge">icondetailmodal.tsx</code>에서 관리한다는 것을 알게 되었고 문제가 있는 요소는 <code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code>태그 내부에 있는 <code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code>태그의 스타일 문제일 것으로 판단하였다. 해당 component의 스타일링을 담당하는 파일은 무엇인지 확인해보았다.</p>
+
+<p><br /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/76292c08-49bf-455b-8d3d-4962b27e6bab/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.02.59/w=640,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 5.02.59.png" /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/a9c9c4df-888f-427e-af6e-59ca74954746/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.03.17/w=750,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 5.03.17.png" /></p>
+
+<p><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">styles</code>폴더안에 components들의 스타일들을 담당하는 파일로 확인되었다. 수정해야될 부분의 클래스가 지정되어있는지를 확인하기위해 개발자 모드로 해당 영역의 클래스를 파악해보았다. 모달의 전체 영역에 해당하는 클래스를 확인해본 결과 <code class="language-plaintext highlighter-rouge">.icon-detail-modal-content</code> 클래스에서 스타일링을 건든다는 것을 확인하게 되었다. 해당 클래스 내부의 <code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code> 태그를 수정하면 될 것 같다는 생각이 들었다.</p>
+
+<p><br /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/f6a173b6-ff33-493e-84c6-ff1931d5d523/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.04.50/w=640,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 5.04.50.png" /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/7721d651-6569-47b4-9167-60b894dbdaff/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-11-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.07.28/w=750,quality=90,fit=scale-down" alt="스크린샷 2023-11-22 오후 5.07.28.png" /></p>
+
+<h2 id="문제의-원인은">문제의 원인은?</h2>
+
+<p><code class="language-plaintext highlighter-rouge">overflow</code>를 지정하지 않아서 생긴오류였다. pre태그 내부에 있는 요소들이 외부의 영역으로 침범하지 않도록 설정하기위해 <code class="language-plaintext highlighter-rouge">overflow</code>를 <code class="language-plaintext highlighter-rouge">auto</code>로 설정하였다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.icon-detail-modal-content</span> <span class="p">{</span>
+  <span class="err">.icon</span> <span class="err">{</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">pre</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#24292e</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#e1e4e8</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">ul</span><span class="nc">.copy</span> <span class="p">{</span>
+    <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="err">li</span> <span class="err">{</span>
+      <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0.5rem</span><span class="p">;</span>
+      <span class="err">button</span> <span class="err">{</span>
+        <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-gray-2</span><span class="p">);</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span> <span class="m">7px</span><span class="p">;</span>
+        <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+        <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+        <span class="err">.text</span> <span class="err">{</span>
+          <span class="nl">margin-left</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="err">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.icon-detail-modal-content</span> <span class="p">{</span>
+  <span class="err">.icon</span> <span class="err">{</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">pre</span> <span class="p">{</span>
+		<span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#24292e</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#e1e4e8</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">ul</span><span class="nc">.copy</span> <span class="p">{</span>
+    <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="err">li</span> <span class="err">{</span>
+      <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0.5rem</span><span class="p">;</span>
+      <span class="err">button</span> <span class="err">{</span>
+        <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-gray-2</span><span class="p">);</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span> <span class="m">7px</span><span class="p">;</span>
+        <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+        <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+        <span class="err">.text</span> <span class="err">{</span>
+          <span class="nl">margin-left</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="err">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>수정을 마치고 <a href="https://github.com/react-icons/react-icons/pull/858">PR</a>을 날렸다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-소감">2. 소감</h1>
+
+<p>이슈를 통해서 문제를 먼저 파악하고 해결하기 위해 코드를 직접 분석하는 과정이 생각보다 재미있게 느껴졌다.</p>
+
+<p>해당 코드는 무슨 역할을 하는지, 전체적으로 어떻게 관리되어지는지에 대한 흐름을 파악하는 과정이 매우 새롭게 느껴지기도 했다.</p>
+
+<p>그리고 처음 시도해본 오프소스 기여인데 머지 당해버렸다!</p>
+
+<p>막상 해보니 생각보다 별거 아니라는거에 감회가 새로웠고, 기여에 대한 막연한 어려움을 극복할 수 있는 기회가 된 것 같다.</p>
+
+<p>내 수준에 해결할 수 있는 또 다른 이슈들은 무엇이 있는지 한번 찾아보고 해결해보는 것에 도전해봐야겠다.</p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/a01c2a0c-8cd3-4b9e-9b78-bb5fa0e11fd7/img/w=1080,quality=90,fit=scale-down" alt="merged" /></p>
+
+<p><img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/873316cb-3725-4659-9e45-72a6794967f5/img/w=1080,quality=90,fit=scale-down" alt="merged" /></p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

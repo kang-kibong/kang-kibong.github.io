@@ -13,6 +13,20 @@ entries:
           show_more_text: See more posts...
           show_more_url: kakao1.html
           category: kakao1
+      - title: step2
+        post_list:
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: kakao2.html
+          category: kakao2
+      - title: step3
+        post_list:
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: kakao3.html
+          category: kakao3
 
   - title: woowa course 6th pre-course
     post_list:
@@ -29,6 +43,15 @@ entries:
       show_more_text: See more posts...
       show_more_url: frontend.html
       category: frontend
+
+  - title: contribute
+    post_list:
+      category: contribute
+    entries:
+      - title: react-icons
+        post_list:
+          show_more_url: react-icons.html
+          category: react-icons
 
   - title: all posts
     post_list:
