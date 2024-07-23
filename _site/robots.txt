@@ -1,1 +1,4 @@
-Sitemap: http://localhost:4000/byeonghyeon-kang/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: http://kang-kibong.github.io/sitemap.xml
