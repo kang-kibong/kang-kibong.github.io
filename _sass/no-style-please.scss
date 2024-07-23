@@ -149,9 +149,17 @@ img {
   justify-content: space-around;
   align-items: center;
 
-  p > strong > a {
-    color: #FF6F0F;
-    // color: #eb3300
+  p > strong {
+    color: #3182f6;
+  }
+
+  .contact {
+    padding: 16px 0;
+
+    a {
+      color: black;
+      margin-right: 18px;
+    }
   }
 }
 
