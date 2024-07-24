@@ -144,7 +144,7 @@ img {
 }
 
 .profile {
-  padding: 36px 0;
+  padding: 32px 0 48px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -154,8 +154,9 @@ img {
   }
 
   .contact {
-    padding: 16px 0;
-
+    padding-top: 16px;
+    font-size: 14px;
+    
     a {
       color: black;
       margin-right: 18px;
@@ -166,6 +167,11 @@ img {
 @media screen and (max-width: "600px") {
   .profile {
     flex-direction: column;
+  }
+
+  .contact {
+    text-align: center;
+    margin-bottom: 26px;
   }
 }
 
