@@ -48,6 +48,14 @@ entries:
       show_more_url: frontend.html
       category: frontend
 
+  - title: wooseon
+    post_list:
+      limit: 3
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: wooseon.html
+      category: wooseon
+
   - title: contribute
     post_list:
       category: contribute
