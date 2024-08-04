@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-08-04T12:23:48+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/byeonghyeon-kang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/byeonghyeon-kang/" rel="alternate" type="text/html" /><updated>2024-08-04T14:26:43+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/feed.xml</id><title type="html">Hi, I’m Byeonghyeon Kang 👋🧑‍💻</title><subtitle>byeonghyeon kang&apos;s dev blog
 </subtitle><author><name>byeonghyeon kang</name></author><entry><title type="html">Husky와 lint-staged로 Git Hooks 자동화하기</title><link href="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Husky와 lint-staged로 Git Hooks 자동화하기" /><published>2024-07-21T00:00:00+09:00</published><updated>2024-07-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/Husky%EC%99%80%20lint-staged%EB%A1%9C%20Git%20Hooks%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -3736,7 +3736,145 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;초기 상태 설정&lt;/strong&gt;: &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message&lt;/code&gt;&lt;/strong&gt;라는 초기 상태 값을 설정하여 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;messageStore&lt;/code&gt;&lt;/strong&gt; 인스턴스를 생성한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화" /><published>2024-05-27T00:00:00+09:00</published><updated>2024-05-27T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%205,%206%EC%A3%BC%EC%B0%A8%20WIL%20-%20JavaScript%20%EC%8B%AC%ED%99%94</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html">&lt;p&gt;&lt;br /&gt;
+&lt;/ul&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[우선] 초기 유입 결과 및 본격적인 멘토링 서비스의 시작</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%EC%B4%88%EA%B8%B0-%EC%9C%A0%EC%9E%85-%EA%B2%B0%EA%B3%BC-%EB%B0%8F-%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8-%EB%A9%98%ED%86%A0%EB%A7%81-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98-%EC%8B%9C%EC%9E%91.html" rel="alternate" type="text/html" title="[우선] 초기 유입 결과 및 본격적인 멘토링 서비스의 시작" /><published>2024-05-28T00:00:00+09:00</published><updated>2024-05-28T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%84%A0%5D%20%EC%B4%88%EA%B8%B0%20%EC%9C%A0%EC%9E%85%20%EA%B2%B0%EA%B3%BC%20%EB%B0%8F%20%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8%20%EB%A9%98%ED%86%A0%EB%A7%81%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98%20%EC%8B%9C%EC%9E%91</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%EC%B4%88%EA%B8%B0-%EC%9C%A0%EC%9E%85-%EA%B2%B0%EA%B3%BC-%EB%B0%8F-%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8-%EB%A9%98%ED%86%A0%EB%A7%81-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98-%EC%8B%9C%EC%9E%91.html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;에브리타임-유입&quot;&gt;에브리타임 유입&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5ff21ae8-fed9-48f3-ae97-0b2c51de429f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.01.05.png?id=b59d49b0-4c87-426f-b2b8-f04653d5ccd9&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-08-04 오후 1.01.05.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;각종 커뮤니티와 에브리타임을 통해 홍보한 결과, 총 5명의 사용자가 폼을 제출하였다.&lt;/p&gt;
+
+&lt;p&gt;사용자의 정보를 확인해보니 에브리타임에서 유입된 사용자들이었다.&lt;/p&gt;
+
+&lt;p&gt;해당 결과를 통해, 카페나 다른 취업 커뮤니티에서의 바이럴 마케팅보다 에브리타임에서의 홍보 효과가 탁월했다라는 것을 알 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;이제 고객 5명의 스펙을 기반으로 어떤 방식으로 멘토링을 진행하고, 어디서 멘토를 찾아야 할지 팀원들과 모색하기 시작하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;멘토-컨택-풀-조사&quot;&gt;멘토 컨택 풀 조사&lt;/h1&gt;
+
+&lt;p&gt;멘토링 진행에 앞서 멘토를 구할 만한 플랫폼을 조사해볼 필요가 있었다.&lt;/p&gt;
+
+&lt;p&gt;가장 많이 사용하고 있는 플랫폼인 “&lt;strong&gt;잇다”&lt;/strong&gt;, “&lt;strong&gt;숨고”&lt;/strong&gt;, “&lt;strong&gt;사람인 멘토링 매칭”&lt;/strong&gt;, “&lt;strong&gt;코멘토”&lt;/strong&gt;, “&lt;strong&gt;인프런(커뮤니티)”&lt;/strong&gt;을 중점적으로 조사하기 시작했다.&lt;/p&gt;
+
+&lt;p&gt;각 플랫폼마다 멘토를 컨택하는 방식이 다르기 때문에 이에 대한 조사가 필요했다.&lt;/p&gt;
+
+&lt;p&gt;운영정책에 맞지 않게 접근했을 경우 리스크가 발생할 수 있기 때문이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-잇다&quot;&gt;1. 잇다&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F63ea568e-94d2-485b-a5f4-a20b3137c4d7%2FUntitled.png?id=abf89f7d-de57-4572-b7b5-120c78189e49&amp;amp;table=block&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“잇다”&lt;/strong&gt;는 지식인과 같이 질의응답을 게시판 형태로 주고받는다.&lt;/p&gt;
+
+&lt;p&gt;멘토에게 접근하는 부분에서 질의응답과 관련되지 않는 내용이나 외부 프로그램 섭외를 요청했을 경우 제재를 받기 때문에 해당 플랫폼을 통해 멘토를 컨택하는 것은 어렵다고 판단했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-숨고&quot;&gt;2. 숨고&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F228c00b6-7552-4b43-8311-71c2e364e5b0%2F%25EC%2588%25A8%25EA%25B3%25A0%25ED%258E%2598%25EC%259D%25B4_%25EC%25A0%2588%25EC%25B0%25A8.png?id=884fbe19-e252-4427-9371-3c1c8aa8a656&amp;amp;table=block&quot; alt=&quot;숨고페이 절차.PNG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;숨고는 희망 컨설팅, 희망 기업, 희망 날짜 등을 체크하고 무료 견적을 받을 수 있는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;견적을 요청하면 멘토와 대화를 나누고 상호 협의한 서비스 금액을 입력하고 결제를 진행하게된다.&lt;/p&gt;
+
+&lt;p&gt;멘토와의 컨택만 진행하면 되기 때문에 따로 결제하지 않고 채팅을 할 수 있어 원활하게 멘토 컨택이 가능하다고 판단하였다.&lt;/p&gt;
+
+&lt;p&gt;때문에 숨고 플랫폼은 멘토 컨택에 있어 적극적으로 활용할 수 있을 것 같다고 판단하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-사람인-멘토링매치&quot;&gt;3. 사람인 멘토링매치&lt;/h2&gt;
+
+&lt;p&gt;사람인의 멘토링 진행 방식은 채팅 기능을 통해 이루어지지만, 사전에 결제가 필요하다.&lt;/p&gt;
+
+&lt;p&gt;20분에 14,900원의 비용이 책정되어 있어, 멘토 컨택에 비용 부담이 있을 수 밖에 없다.&lt;/p&gt;
+
+&lt;p&gt;현재로선 운영 자금이 많지 않기 때문에 사람인을 통해 멘토를 컨택하는 것은 지양하기로 결정하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-코멘토&quot;&gt;4. 코멘토&lt;/h2&gt;
+
+&lt;p&gt;코멘토는 운영 정책상 부적절한 홍보가 있을 시 제재가 있어 멘토 풀에 포함시키지 못했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-인프런&quot;&gt;5. 인프런&lt;/h2&gt;
+
+&lt;p&gt;인프런은 멘토링을 진행하기보다는 커뮤니티가 존재해 멘토 모집에 큰 제재는 없었다.&lt;/p&gt;
+
+&lt;p&gt;운영 방침에도 홍보 관련한 정책이 기재되지 않았다.&lt;/p&gt;
+
+&lt;p&gt;하지만 인프런은 개발 관련 플랫폼이기 때문에 개발에 관심 있는 멘토만 해당하기 때문에 다양한 직군의 멘토링을 원하는 멘티에게는 제한이 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;멘토링-진행-방식&quot;&gt;멘토링 진행 방식&lt;/h1&gt;
+
+&lt;p&gt;위와 같은 멘토 풀을 확보하고, 멘티에게 알맞은 멘토를 해당 멘토 풀에서 컨택하여 멘토와 멘티에게 이메일을 보내 멘토링을 진행하기로 했다.&lt;/p&gt;
+
+&lt;p&gt;멘토에게는 멘티의 스펙과 멘토링 주제를 보내고, 가격 책정에 대해 협의한 후 멘토링 진행 여부를 확인하기로 하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F440f8eb5-2e19-4a08-b9ae-ab0093657269%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.03_(1).png?id=d2a0c361-fe60-4b66-8259-31b8d8c576f7&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-08-04 오후 1.03 (1).png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;멘티에게는 멘토의 정보와 가격을 메일로 보내고, 멘토링 진행 여부를 파악하기로 하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fee0eb368-afd8-4582-93bc-926ab5c402f3%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.02.44.png?id=9a547b4f-df2c-4923-8164-1611b3a0bba0&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-08-04 오후 1.02.44.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 멘토와 멘티의 멘토링 진행 여부가 일치하면, 구글밋을 통해 비대면으로 멘토링을 진행하는 방식으로 결정하였다.&lt;/p&gt;
+
+&lt;p&gt;이후에 멘토링이 성공적으로 완료되면, 멘토와 멘티에게 서베이를 받고 서비스 만족도와 리뷰를 통해 니즈를 파악하여, 이를 페이지에 추가하기로 하였다. 이로 하여금 서비스에 대한 신뢰성을 높일 수 있기 때문에 사용자 유입을 증대시킬 수 있다고 판단하였기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;비즈니스-모델&quot;&gt;비즈니스 모델&lt;/h1&gt;
+
+&lt;p&gt;멘티의 멘토링 불참 시 보증금 제도를 통한 수익과, 멘토링 자동 매칭에 대한 멘티, 멘토에게 받는 수수료를 기반으로 비즈니스 모델을 책정했다.&lt;/p&gt;
+
+&lt;p&gt;멘티가 멘토링 일정에 불참할 경우 보증금 제도를 마련하여 미리 돈을 받고, 참여하지 않을 경우 보증금을 우리 측에서 받을 수 있도록 책정했다.&lt;/p&gt;
+
+&lt;p&gt;멘토링 자동 매칭 수수료는 멘티에게 9,900원, 멘토에게 10,000원으로 가격을 책정했다.&lt;/p&gt;
+
+&lt;p&gt;아직 멘토링 사이클을 돌려보지 못했기 때문에 가설에 해당하고 사이클을 돌려보고 추후에 변경할 예정이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;멘토-매칭&quot;&gt;멘토 매칭&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F77b45e7a-4afe-4782-bff8-74e454b109a1%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_12.57.54_(1).png?id=fa77db56-6f75-4f25-a64b-d956a1ad0d93&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-08-04 오후 12.57.54 (1).png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;위와 같이 멘토 풀과 멘토링 진행 방식, 비즈니스 모델에 대한 가설을 책정한 후 조사한 멘토 풀을 기반으로 멘토링을 신청한 5명의 고객의 스펙을 토대로 멘토를 취합하여 리스트화 하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;마치면서&quot;&gt;마치면서&lt;/h1&gt;
+
+&lt;p&gt;생각보다 빠르게 예상치 못한 고객 유입에 당황하기도 했지만, 서비스가 순조롭게 진행되는 것 같아 기대와 걱정이 동시에 든다.&lt;/p&gt;
+
+&lt;p&gt;앞으로 우리의 서비스가 어떻게 성장할지 모르겠지만, 팀원들과 함께 고객들로 하여금 더 좋은 서비스를 제공하고 성공적인 서비스로 만들기위해 더 추진력 있게 진행해보아야겠다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="wooseon" /><summary type="html"></summary></entry><entry><title type="html">[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html" rel="alternate" type="text/html" title="[카카오 테크 캠퍼스 2기] 1단계 5·6주차 WIL - JavaScript 심화" /><published>2024-05-27T00:00:00+09:00</published><updated>2024-05-27T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%85%8C%ED%81%AC%20%EC%BA%A0%ED%8D%BC%EC%8A%A4%202%EA%B8%B0%5D%201%EB%8B%A8%EA%B3%84%205,%206%EC%A3%BC%EC%B0%A8%20WIL%20-%20JavaScript%20%EC%8B%AC%ED%99%94</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EB%8B%A8%EA%B3%84-5-6%EC%A3%BC%EC%B0%A8-wil-javascript-%EC%8B%AC%ED%99%94.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -4364,141 +4502,4 @@
   &lt;li&gt;&lt;strong&gt;Cookie&lt;/strong&gt;: &lt;strong&gt;브라우저 종료&lt;/strong&gt; 혹은 &lt;strong&gt;만료 시간&lt;/strong&gt;을 통한 데이터 제거를 원할 때 사용한다. ex) 오늘 하루 보지 않기&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;localStorage&lt;/strong&gt;: 쿠키보다 데이터 관리가 쉽고 &lt;strong&gt;만료되지 않는 데이터&lt;/strong&gt;를 관리할 때 사용한다. ex) 일반적인 데이터&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;sessionStorage&lt;/strong&gt;: 브라우저 종료를 통한 데이터 제거를 원할 때 사용한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry><entry><title type="html">[우선] 초기 사이클을 위한 MVP 제작 및 홍보 과정기</title><link href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%EC%B4%88%EA%B8%B0-%EC%82%AC%EC%9D%B4%ED%81%B4%EC%9D%84-%EC%9C%84%ED%95%9C-mvp-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%ED%99%8D%EB%B3%B4-%EA%B3%BC%EC%A0%95%EA%B8%B0.html" rel="alternate" type="text/html" title="[우선] 초기 사이클을 위한 MVP 제작 및 홍보 과정기" /><published>2024-05-21T00:00:00+09:00</published><updated>2024-05-21T00:00:00+09:00</updated><id>http://localhost:4000/byeonghyeon-kang/%5B%EC%9A%B0%EC%84%A0%5D%20%EC%B4%88%EA%B8%B0%20%EC%82%AC%EC%9D%B4%ED%81%B4%EC%9D%84%20%EC%9C%84%ED%95%9C%20MVP%20%EC%A0%9C%EC%9E%91%20%EB%B0%8F%20%ED%99%8D%EB%B3%B4%20%EA%B3%BC%EC%A0%95%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%EC%B4%88%EA%B8%B0-%EC%82%AC%EC%9D%B4%ED%81%B4%EC%9D%84-%EC%9C%84%ED%95%9C-mvp-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%ED%99%8D%EB%B3%B4-%EA%B3%BC%EC%A0%95%EA%B8%B0.html">&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;웹-페이지-시안-제작&quot;&gt;웹 페이지 시안 제작&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb85cf7e0-196d-494c-b411-26d7f6af5b77%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.37.40.png?id=432e6263-95f2-42ca-b29b-be14c312fed1&amp;amp;table=block&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;먼저 웹 페이지 시안을 제작했다.&lt;/p&gt;
-
-&lt;p&gt;웹 페이지 시안은 실제 서비스처럼 보이도록 신경 써서 만들었다.&lt;/p&gt;
-
-&lt;p&gt;웹 페이지의 구성은 크게 &lt;strong&gt;캐치프레이즈&lt;/strong&gt;, &lt;strong&gt;서비스 플로우&lt;/strong&gt;, &lt;strong&gt;매칭 목업&lt;/strong&gt;, &lt;strong&gt;Q&amp;amp;A&lt;/strong&gt; 섹션으로 구성하였다.&lt;/p&gt;
-
-&lt;p&gt;각 섹션에는 사용자의 정보를 입력받을 수 있도록 폼으로 이동하는 버튼을 배치했다.&lt;/p&gt;
-
-&lt;p&gt;이는 앞으로의 서비스 방향을 계획하는 데 있어 사용자의 데이터가 중요하기 때문에 폼 작성을 유도할 수 있도록 설계했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;캐치프레이즈 섹션&lt;/strong&gt;은 사용자에게 초기 페이지에 도달할 때 가장 먼저 보이는 섹션이기 때문에 서비스에 대한 이목을 끌기 위해 신중히 문구를 구상했다.&lt;/p&gt;
-
-&lt;p&gt;또한, 실제 서비스인 것처럼 다양한 회사의 멘토들이 준비되어 있다는 것을 시각적으로 보여주기 위해 기업 사진들을 배치했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;서비스 플로우 섹션&lt;/strong&gt;은 사용자가 우리의 서비스를 이용할 때 어떤 절차로 이루어지는지 간단하게 구상해보았다. 특히 사용자의 스펙만 입력하면 자동으로 멘토를 매칭한다는 정보를 강조했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;매칭 목업 섹션&lt;/strong&gt;은 사용자가 서비스 플로우대로 진행하면 매칭되는 멘토를 바로 보여줄 수 있도록 결과물에 대한 정보를 제공했다. 스펙만 입력하면 자동으로 매칭된다는 서비스의 매력 포인트를 최대한 어필해보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Q&amp;amp;A 섹션&lt;/strong&gt;은 사용자가 서비스에 대해 궁금해할 수 있는 점들을 해소하기 위해 마련해보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;사용자-스펙-입력-폼-제작&quot;&gt;사용자 스펙 입력 폼 제작&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F9632f4f1-6dcb-450d-ac3e-f2e47b36f907%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.49.27.png?id=8abd661e-7074-4f16-9225-b768436700a0&amp;amp;table=block&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3ea20d12-7deb-4c60-b4c6-52100b3894be%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.49.31.png?id=d1070d47-41f5-41b3-aa4c-0d99c15df7ed&amp;amp;table=block&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F04de9d95-4134-455c-b0f9-93e34e50e645%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.49.35.png?id=5648af5d-97fc-44f4-81fa-22ee6ca01820&amp;amp;table=block&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;사용자들이 자신의 스펙을 입력할 수 있도록 폼을 제작했다.&lt;/p&gt;
-
-&lt;p&gt;초기에는 구글 폼을 사용할까 생각했지만, MVP 페이지와 최대한 디자인적으로 어울리면서도 사용자가 입력하는 데 있어 간편해야 한다고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;우리는 &lt;strong&gt;탈리(Tally)&lt;/strong&gt; 플랫폼을 이용하여 질문당 페이지 단위로 폼을 입력할 수 있도록 설계하였고, 사용자가 답변을 하나씩 입력할 수 있도록 해서 사용자의 편의성을 높이기 위해 해당 플랫폼으로 선정하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;또한, 구글 폼은 이미 많은 서비스에서 사용되고 있기 때문에 색다른 플랫폼을 이용하고 싶기도 했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;구글-애널리틱스-연동&quot;&gt;구글 애널리틱스 연동&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/7918696e-2b60-4c63-baf5-3e3d9910e917/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-04_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.54.34/w=2048,quality=90,fit=scale-down&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;사용자가 우리 페이지에 몇 명이 들어왔고, 얼마나 폼으로 이동했는지를 파악하기 위해 구글 애널리틱스를 연동했다.&lt;/p&gt;
-
-&lt;p&gt;초기 페이지의 조회수는 많지만 폼 이동이 적다면 랜딩페이지의 신뢰성이 떨어져 폼 유입이 되지 않았음을 파악할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;또한, 버튼 클릭 수를 분석하여 버튼을 클릭했지만 폼 작성이 이루어지지 않은 경우도 파악할 수도 있다.&lt;/p&gt;
-
-&lt;p&gt;이처럼 구글 애널리틱스를 통해 사용자 행동 데이터를 실시간으로 모니터링하고, 이후 MVP 제작에 필요한 데이터를 기반으로 지속적으로 개선할 수 있을 것 같아 연동하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;초기-mvp-결과물-및-배포-진행&quot;&gt;초기 MVP 결과물 및 배포 진행&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/64caba80-18aa-43ac-8c00-6c70bef81579/screencapture-wooseon-2024-05-25-17_27_28/w=2048,quality=90,fit=scale-down&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;디자인 시안과 사용자 입력폼, 그리고 구글 애널리틱스 연동까지 마치고, 초기 MVP 결과물을 만들어 배포까지 진행해 보았다.&lt;/p&gt;
-
-&lt;p&gt;배포는 Netlify를 통해 진행하였고, 가비아에서 도메인을 구입하고 SSL 인증을 받은 이후후 배포를 완료했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;홍보-가능한-커뮤니티-조사와-바이럴-마케팅-진행&quot;&gt;홍보 가능한 커뮤니티 조사와 바이럴 마케팅 진행&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/2b7c3dcd-14c5-4625-b3ba-7a34c8be50a7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-04_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.22.11/w=2048,quality=90,fit=scale-down&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;배포가 완료된 이후 홍보를 진행하였다.&lt;/p&gt;
-
-&lt;p&gt;먼저 취업 준비생들을 대상으로 홍보할 수 있는 커뮤니티를 조사했다.&lt;/p&gt;
-
-&lt;p&gt;네이버 카페와 커뮤니티 기능이 포함된 취업 플랫폼들을 주로 조사했으며, 각 카페와 플랫폼의 운영 정책을 확인하여 홍보가 가능한 곳을 선정했다.&lt;/p&gt;
-
-&lt;p&gt;운영 정책을 최대한 준수하면서 바이럴 마케팅을 진행하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/2ef3482e-2bd8-4cc1-bc44-81514c019731/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-04_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.58.20/w=2048,quality=90,fit=scale-down&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;다음으로 대학생들을 대상으로 홍보할 수 있는 커뮤니티인 에브리타임을 통해 홍보를 진행하였다.&lt;/p&gt;
-
-&lt;p&gt;하나의 대학이 아닌 여러 대학의 에브리타임 홍보게시판을 통해 홍보하기 위해 팀원들의 지인을 최대한 동원했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;마치면서&quot;&gt;마치면서&lt;/h1&gt;
-
-&lt;p&gt;드디어 디자인 시안 제작과 사용자 입력 폼, 그리고 MVP 제작까지 마치고 홍보까지 진행했하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;한 사이클을 돌려보고 얼마나 많은 사용자가 유입되고 우리의 서비스에 관심이 많은지 기대된다.&lt;/p&gt;
-
-&lt;p&gt;결과를 기다려보고 앞으로의 개선사항에 대해서 팀원들과 의논하여 더 좋은 서비스를 만들기 위해 열심히 달려봐야겠다.&lt;/p&gt;</content><author><name>byeonghyeon kang</name></author><category term="wooseon" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>byeonghyeon kang</name></author><category term="kakao1" /><summary type="html"></summary></entry></feed>
