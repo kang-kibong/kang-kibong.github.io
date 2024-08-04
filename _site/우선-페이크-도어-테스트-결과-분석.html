@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[우선] 페이크 도어 테스트 결과 분석</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[우선] 페이크 도어 테스트 결과 분석" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%ED%8E%98%EC%9D%B4%ED%81%AC-%EB%8F%84%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%ED%8E%98%EC%9D%B4%ED%81%AC-%EB%8F%84%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-08T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[우선] 페이크 도어 테스트 결과 분석" />
+<script type="application/ld+json">
+{"dateModified":"2024-05-08T00:00:00+09:00","datePublished":"2024-05-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%ED%8E%98%EC%9D%B4%ED%81%AC-%EB%8F%84%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D.html"},"url":"http://localhost:4000/byeonghyeon-kang/%EC%9A%B0%EC%84%A0-%ED%8E%98%EC%9D%B4%ED%81%AC-%EB%8F%84%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"[우선] 페이크 도어 테스트 결과 분석","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><link rel="shortcut icon" type="image/x-icon" href="/byeonghyeon-kang/logo.png" />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-05-08 00:00:00 +0900">2024-05-08</time>
+  </p>
+  
+  <h1>[우선] 페이크 도어 테스트 결과 분석</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="테스트-배경">테스트 배경</h1>
+
+<p>이번 페이크 도어 테스트는 사용자들이 어떤 유형의 멘토링 서비스에 더 관심을 가지는지 파악하기 위해 기획되었다.</p>
+
+<p>첫 번째 가설은 <strong>“비슷한 스펙을 가진 선배에게 멘토링을 받기 어렵다.”</strong>이고, 두 번째 가설은 <strong>“멘티가 어떤 멘토를 선택해야 할지 결정하기 어렵다.”</strong>로 선정하였다.</p>
+
+<p>이 두 가설의 퍼포먼스를 측정하여 시장의 반응을 확인하고, MVP 제작 준비를 위해 시작하게 되었다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="페이크도어-스펙">페이크도어 스펙</h1>
+
+<ul>
+  <li><strong>테스트 기간</strong>: 2024년 4월 24일 ~ 2024년 5월 8일 (15일간)</li>
+  <li><strong>타겟 연령 및 성별</strong>: 24~28세 남녀</li>
+  <li><strong>지역</strong>: 대한민국 전역</li>
+  <li><strong>키워드</strong>: 면접, 커리어</li>
+  <li><strong>예산</strong>: 하루 $5</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="페이크도어-테스트-결과">페이크도어 테스트 결과</h1>
+
+<h2 id="가설-1---비슷한-스펙을-가진-선배에게-멘토링을-받기-어렵다">가설 1 - “비슷한 스펙을 가진 선배에게 멘토링을 받기 어렵다.”</h2>
+
+<ul>
+  <li><strong>노출된 계정수</strong>: 12,702</li>
+  <li><strong>클릭수</strong>: 108</li>
+  <li><strong>북마크</strong>: 2</li>
+  <li><strong>CTR</strong>: 0.85%</li>
+</ul>
+
+<p><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F93a4e57b-7a09-4b81-8483-0fa1353ca6dd%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.07.40.jpeg?id=ab15d53a-d47c-4ba6-b0aa-a0a558d72e6b&amp;table=block" alt="스크린샷, 2024-08-04 오전 11.07.40.jpeg" /></td>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fef9e3dcf-c721-4728-b036-207e269b4a44%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.59.10.jpeg?id=4b59e074-54c5-44bf-9662-74225a661461&amp;table=block" alt="qwer" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="가설-2---멘티가-어떤-멘토를-선택해야-할지-결정하기-어렵다">가설 2 - “멘티가 어떤 멘토를 선택해야 할지 결정하기 어렵다.”</h2>
+
+<ul>
+  <li><strong>노출된 계정수</strong>: 10,964</li>
+  <li><strong>클릭수</strong>: 108</li>
+  <li><strong>북마크</strong>: 1</li>
+  <li><strong>CTR</strong>: 0.98%</li>
+</ul>
+
+<p><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F6aebf201-1d9d-4067-8ad9-5522a8ca58c0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.08.03.jpeg?id=08049817-331e-49dd-a78c-d1d164501da1&amp;table=block" alt="스크린샷, 2024-08-04 오전 11.08.03.jpeg" /></td>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F5c9e7168-c15a-4aaf-9623-973a7036d3de%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-04_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.57.26.jpeg?id=35742baf-ed52-4ee5-8557-a8c17748e032&amp;table=block" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="결과-해석">결과 해석</h1>
+
+<p>이번 페이크 도어 테스트를 통해 얻은 가장 큰 인사이트는 <strong>가설 2</strong>가 가설 1보다 더 많은 클릭을 유도했다는 점이다.</p>
+
+<p>가설 1의 CTR이 <strong>0.85%</strong>, 가설 2의 CTR이 <strong>0.98%</strong>로 나타났다.</p>
+
+<p>겉보기에는 큰 차이처럼 보이지 않을 수 있지만, 디지털 마케팅에서는 이러한 작은 차이도 전체 성과에 큰 영향을 미칠 수 있다고 판단했다.</p>
+
+<p>결론적으로, 사용자들이 비슷한 스펙의 선배와의 멘토링보다 자신의 스펙을 기반으로 한 자동 매칭 멘토링을 더 선호한다는 것을 파악하였다.</p>
+
+<p>따라서, CTR이 더 높은 가설 2를 기반으로 한 <strong>“본인의 스펙을 기반으로 한 멘티 자동 매칭”</strong> 서비스를 MVP로 제작하는 것이 합리적이라는 결론에 도달했다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="향후-계획">향후 계획</h1>
+
+<p>페이크 도어 테스트 결과를 바탕으로 팀원들과 향후 계획을 세워보았다.</p>
+
+<h2 id="1-웹-페이지-시안-제작">1. 웹 페이지 시안 제작</h2>
+
+<p>가설 2를 기반으로 한 웹 페이지 시안을 먼저 제작해야한다.</p>
+
+<p>사용자가 자신의 스펙을 입력하고, 이를 기반으로 적합한 멘토와 자동으로 매칭될 수 있도록 설계할 예정이다.</p>
+
+<p>이는 초기에 기획 파트에서 먼저 시안을 제작하고 추후에 필자가 프론트엔드 구현 측에서 제작에 용이성을 위해 피드백하고 수정해나갈 예정이다.</p>
+
+<h2 id="2-홍보-가능한-커뮤니티-조사와-바이럴-마케팅">2. 홍보 가능한 커뮤니티 조사와 바이럴 마케팅</h2>
+
+<p>멘토링 서비스에 관심이 많을 것으로 예상되는 취업 준비생들을 대상으로 홍보할 수 있는 커뮤니티를 조사할 예정이다.</p>
+
+<p>주로 네이버 취업 카페나 커뮤니티 기능이 포함된 취업 사이트를 기준으로 조사할 예정이다.</p>
+
+<p>이후 바이럴 마케팅을 통해 서비스를 자연스럽게 노출시키고, 사용자들이 서비스에 관심을 가지도록 유도할 계획이다.</p>
+
+<p>또한, 진로나 취업에 관심이 많은 대학생들을 대상으로 많이 이용하는 에브리타임 플랫폼의 홍보 게시판을 통해 홍보할 예정이다.</p>
+
+<p>여기서 하나의 대학이 아닌 여러 대학의 에브리타임에 홍보하기 위해 팀원들의 지인들을 최대한 동원할 계획이다.</p>
+
+<h2 id="3-초기-랜딩페이지-제작과-피드백">3. 초기 랜딩페이지 제작과 피드백</h2>
+
+<p>디자인 시안을 바탕으로 초기 랜딩페이지를 제작한 후, 지인들을 대상으로 블라인드 인터뷰를 진행할 예정이다.</p>
+
+<p>이를 통해 실제 사용자들이 UI/UX적으로 어떤 부분에서 불편함을 느끼는지, 개선할 점은 무엇인지를 파악하여 팀원들과 함께 의논하여 MVP를 수정해나갈 예정이다.</p>
+
+<h2 id="4-사용자-스펙-입력-폼-제작">4. 사용자 스펙 입력 폼 제작</h2>
+
+<p>사용자들이 자신의 스펙을 입력할 수 있는 폼을 제작할 예정이다.</p>
+
+<p>최대한 간편하고 실제 서비스인 것처럼 작성할 수 있도록 설계하여, 사용자가 스트레스를 받지 않고 정보를 입력할 수 있도록 할 것이다.</p>
+
+<p>때문에 질문당 페이지 단위로 폼을 입력할 수 있도록 하기 위해 <strong>탈리(Tally)</strong>라는 플랫폼을 이용할 예정이다.</p>
+
+<p>수집된 데이터는 멘토와 멘티를 매칭하는 데 활용하고, 멘티들의 멘토링 주제가 무엇인지를 파악할 수 있도록 할 것이다.</p>
+
+<h2 id="5-구글-애널리틱스-연동">5. 구글 애널리틱스 연동</h2>
+
+<p>초기 페이지 조회수와 사용자가 폼으로 이동하기까지의 버튼 클릭 수 등을 분석하기 위해 구글 애널리틱스를 연동할 계획이다.</p>
+
+<p>사용자 행동 데이터를 실시간으로 모니터링하고, 필요한 부분은 지속적으로 개선할 수 있기 때문이다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>페이크 도어 기법을 처음 도입하면서, 사용자의 관심사를 파악할 수 있다는 점에서 매우 유용하다는 것을 깨달았다.</p>
+
+<p>만약 이러한 테스트 과정을 거치지 않고 우리가 생각한 서비스를 먼저 개발하고 홍보하는 경우, 개발 비용만 높아지고 사용자가 이용하지 않는 서비스로 전락될 수 있는 리스크가 발생할 수 있다는 생각이 들었다.</p>
+
+<p>이번 테스트를 통해 MVP 제작 후 사용자 유입이 이루어지면, 사용자 니즈를 캐치하여 요구사항을 추가해나가는 방식으로 서비스를 제작해야 한다는 점에서 성공적인 서비스로 도달하기 위한 기법을 배웠다고 생각한다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
