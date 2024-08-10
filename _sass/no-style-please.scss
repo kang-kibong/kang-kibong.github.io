@@ -172,7 +172,7 @@ header h1 {
 }
 
 .profile {
-  padding: 48px 0 48px 0;
+  padding: 62px 0 62px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -206,6 +206,12 @@ header h1 {
 // List
 .list {
   color: rgb(255, 111, 15);
+}
+
+// Post
+.post-title {
+  // color: rgb(255, 111, 15);
+  text-decoration: underline;
 }
 
 @media screen and (max-width: "600px") {
