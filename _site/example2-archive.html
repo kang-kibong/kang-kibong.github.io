@@ -42,9 +42,20 @@
     href="/byeonghyeon-kang/logo.png"
   />
   <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + (scrollY * 0.03);
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 </head>
 <body a="auto">
     <main class="page-content" aria-label="Content">
+      <header class="background-header">
+        <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+      </header>
       <div class="w">
         <a href="/byeonghyeon-kang/">..</a><h1>All posts of category 'example2'</h1>
       </div>

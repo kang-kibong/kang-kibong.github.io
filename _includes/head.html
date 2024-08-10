@@ -33,4 +33,12 @@
     href="{{ site.favicon | relative_url }}"
   />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + (scrollY * 0.03);
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 </head>

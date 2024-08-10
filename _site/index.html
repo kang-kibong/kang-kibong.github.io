@@ -42,12 +42,22 @@
     href="/byeonghyeon-kang/logo.png"
   />
   <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + (scrollY * 0.03);
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 </head>
 <body a="auto">
     <main class="page-content" aria-label="Content">
+      <header class="background-header">
+        <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+      </header>
       <div class="w">
-        <header>
-  <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong> 👨🏻‍💻</h1>
+        <section>
   <div class="profile">
     <div>
       <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
@@ -69,7 +79,7 @@
     </div>
 
     <div class="profile-image"></div>
-  </div></header><ul><li class="list">
+  </div></section><ul><li class="list">
     <strong>👨🏻‍💻 kakao tech campus 2th ~</strong>
   </li><ul><li>
     <span>2024-05-14</span>
