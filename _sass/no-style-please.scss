@@ -116,7 +116,7 @@ code {
   background: #222;
   border-radius: 4px;
   padding: 2px 4px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 div.highlighter-rouge code {
@@ -237,5 +237,10 @@ header h1 {
   .contact {
     text-align: center;
     margin-bottom: 26px;
+  }
+
+  // Code
+  code {
+    font-size: 12px;
   }
 }
