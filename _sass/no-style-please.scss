@@ -26,7 +26,7 @@ body[a="dark"] {
 // see: https://stackoverflow.com/a/61265706
 html,
 body {
-  background: white;
+  background: rgb(17, 17, 17);
 }
 
 html {
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  color: black;
+  color: #fff;
   font-family: monospace;
   font-size: 16px;
   line-height: 1.8;
@@ -64,7 +64,7 @@ p {
 }
 
 a {
-  color: #666;
+  color: #b9b9b9;
   font-weight: 600;
 }
 
@@ -100,15 +100,14 @@ hr {
 }
 
 table {
-  width: 100%;
+  border: thin solid #b9b9b9;
+  border-radius: 8px;
+  padding: 20px 0;
 }
 
-table,
 th,
 td {
-  border: thin solid #333;
   border-collapse: collapse;
-  padding: 0.4rem;
 }
 
 code {
@@ -143,6 +142,13 @@ img {
   border-radius: 8px;
 }
 
+// Profile
+.title {
+  strong {
+    color: rgb(255, 111, 15);
+    text-decoration: underline;
+  }
+}
 .profile {
   padding: 32px 0 48px 0;
   display: flex;
@@ -151,6 +157,7 @@ img {
 
   p > strong {
     color: rgb(255, 111, 15);
+    text-decoration: underline;
   }
 
   .contact {
@@ -158,7 +165,7 @@ img {
     font-size: 14px;
 
     a {
-      color: black;
+      color: #fff;
       margin-right: 18px;
     }
   }
