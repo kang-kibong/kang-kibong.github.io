@@ -88,13 +88,6 @@ li {
   padding: 0 1.5rem 4rem 1.5rem;
 }
 
-header h1 {
-  text-align: center;
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 30px;
-}
-
 hr {
   text-align: center;
   border: 0;
@@ -160,8 +153,14 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: brightness(80%);
   transition: background-position 0.1s ease-out;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 30px;
 }
 
 // Profile
@@ -204,7 +203,22 @@ img {
   background-repeat: no-repeat;
 }
 
+// List
+.list {
+  color: rgb(255, 111, 15);
+}
+
 @media screen and (max-width: "600px") {
+  // Header
+  header h1 {
+    font-size: 18px;
+  }
+
+  .background-header {
+    height: 350px;
+  }
+
+  // Profile
   .profile {
     flex-direction: column;
   }
@@ -213,9 +227,4 @@ img {
     text-align: center;
     margin-bottom: 26px;
   }
-}
-
-// List
-.list {
-  color: rgb(255, 111, 15);
 }
