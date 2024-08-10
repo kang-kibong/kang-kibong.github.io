@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>API 통신부터 에러 핸들링까지(feat. Axios)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="API 통신부터 에러 핸들링까지(feat. Axios)" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-12T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="API 통신부터 에러 핸들링까지(feat. Axios)" />
+<script type="application/ld+json">
+{"dateModified":"2024-07-12T00:00:00+09:00","datePublished":"2024-07-12T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html"},"url":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"API 통신부터 에러 핸들링까지(feat. Axios)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><meta name="title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta name="description" content="byeonghyeon kang's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta property="og:description" content="byeonghyeon kang's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta property="twitter:description" content="byeonghyeon kang's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/byeonghyeon-kang/logo.png"
+  />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-12 00:00:00 +0900">2024-07-12</time>
+  </p>
+  
+  <h1>API 통신부터 에러 핸들링까지(feat. Axios)</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="axios란">Axios란?</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F79bb25ef-1d76-437c-8bfe-118073e86dba%2Faxios.jpg?id=20f07a9e-0bb5-4c86-be98-44047f27efdf&amp;table=block" width="400px" /></p>
+
+<p><br /></p>
+
+<p><strong>Axios</strong>는 Node.js와 브라우저 모두에서 사용할 수 있는 <strong>Promise 기반의 HTTP 클라이언트</strong>이다.</p>
+
+<p>동일한 코드베이스를 사용해 브라우저와 Node.js에서 API 요청을 실행할 수 있는 동형(isomorphic) 클라이언트로, 서버 사이드에서는 네이티브 Node.js의 <code class="language-plaintext highlighter-rouge">http</code> 모듈을 사용하고, 클라이언트에서는 <code class="language-plaintext highlighter-rouge">XMLHttpRequests</code>를 사용한다.</p>
+
+<h2 id="axios-설치">Axios 설치</h2>
+
+<p>사용하는 패키지 매니저에 따라 설치하면된다.</p>
+
+<p>아래의 설치 예시는 <code class="language-plaintext highlighter-rouge">npm</code> 패키지 매니저를 기반으로 설치한 명령어이다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>axios
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="api-통신을-위한-관리">API 통신을 위한 관리</h1>
+
+<h2 id="oas란">OAS란?</h2>
+
+<p><strong>OAS</strong>(OpenAPI Specification)는 RESTful API의 구조와 동작 방식을 명확히 문서화하여, 개발자들이 API를 쉽게 이해할 수 있도록 돕는 도구이다.</p>
+
+<p>OAS는 JSON이나 YAML 형식으로 작성되괴, API의 인증 방법, 엔드포인트, 요청 및 응답 데이터 등을 명세서에 포함한다.</p>
+
+<p>OAS 문서는 다음과 같이 <code class="language-plaintext highlighter-rouge">oas.yaml</code>로 작성할 수 있다.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">openapi</span><span class="pi">:</span> <span class="s">3.0.1</span>
+<span class="na">info</span><span class="pi">:</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">API'</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">API'</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="s">1.0.0</span>
+<span class="na">paths</span><span class="pi">:</span>
+  <span class="na">/api/v1/ranking/products</span><span class="pi">:</span>
+    <span class="na">get</span><span class="pi">:</span>
+      <span class="na">parameters</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">in</span><span class="pi">:</span> <span class="s">query</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">targetType</span>
+          <span class="na">schema</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">enum</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">ALL</span><span class="pi">,</span> <span class="nv">FEMALE</span><span class="pi">,</span> <span class="nv">MALE</span><span class="pi">,</span> <span class="nv">TEEN</span><span class="pi">]</span>
+            <span class="na">default</span><span class="pi">:</span> <span class="s">ALL</span>
+          <span class="na">required</span><span class="pi">:</span> <span class="no">false</span>
+          <span class="na">description</span><span class="pi">:</span> <span class="s">선물 랭킹 대상자 필터</span>
+        <span class="pi">-</span> <span class="na">in</span><span class="pi">:</span> <span class="s">query</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">rankType</span>
+          <span class="na">schema</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">enum</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">MANY_WISH</span><span class="pi">,</span> <span class="nv">MANY_RECEIVE</span><span class="pi">,</span> <span class="nv">MANY_WISH_RECEIVE</span><span class="pi">]</span>
+            <span class="na">default</span><span class="pi">:</span> <span class="s">MANY_WISH_RECEIVE</span>
+          <span class="na">required</span><span class="pi">:</span> <span class="no">false</span>
+          <span class="na">description</span><span class="pi">:</span> <span class="s">선물 랭킹 정렬 필터</span>
+      <span class="na">responses</span><span class="pi">:</span>
+        <span class="na">200</span><span class="pi">:</span>
+          <span class="na">description</span><span class="pi">:</span> <span class="s">선물 랭킹 목록을 가져온다.</span>
+          <span class="na">content</span><span class="pi">:</span>
+            <span class="na">application/json</span><span class="pi">:</span>
+              <span class="na">schema</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+                <span class="na">properties</span><span class="pi">:</span>
+                  <span class="na">products</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/components/schemas/ProductData'</span>
+                <span class="na">required</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">products</span>
+                  <span class="s">...</span>
+</code></pre></div></div>
+
+<h2 id="env-파일로-base_url-분리">.env 파일로 BASE_URL 분리</h2>
+
+<p>환경변수 파일(.env)을 사용해 API의 <code class="language-plaintext highlighter-rouge">BASE_URL</code>을 관리하면, 코드에서 직접 URL을 수정할 필요 없이 환경별로 다른 URL을 설정할 수 있다.</p>
+
+<p>참고로, CRA 프로젝트에서는 다음과 같이 <code class="language-plaintext highlighter-rouge">REACT_APP</code> 접두사를 붙여야 한다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">REACT_APP_BASE_URL</span><span class="o">=</span>https://kakao-tech-campus-mock-server.vercel.app
+</code></pre></div></div>
+
+<h2 id="api-타입-관리">API 타입 관리</h2>
+
+<p><code class="language-plaintext highlighter-rouge">oas.yaml</code> 파일을 통해 요청과 응답의 구조를 파악하고, API 콜 함수는 <code class="language-plaintext highlighter-rouge">apis</code> 디렉토리에서 관리하도록 하였다.</p>
+
+<p>요청과 응답의 타입들은 <code class="language-plaintext highlighter-rouge">types</code> 디렉토리에 미리 정의하여 코드의 유지보수성을 높일 수 있도록 하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">types</span>
+<span class="err">├──</span> <span class="nx">dataTypes</span><span class="p">.</span><span class="nx">ts</span>
+<span class="err">├──</span> <span class="nx">requestTypes</span><span class="p">.</span><span class="nx">ts</span>
+<span class="err">└──</span> <span class="nx">responseTypes</span><span class="p">.</span><span class="nx">ts</span>
+</code></pre></div></div>
+
+<h2 id="요청-및-응답-타입-정의">요청 및 응답 타입 정의</h2>
+
+<p>요청과 응답의 타입을 미리 정의하여 코드의 안정성과 일관성을 유지할 수 있도록 하였다.</p>
+
+<p>필자는 일단 <code class="language-plaintext highlighter-rouge">types</code> 디렉토리에 <code class="language-plaintext highlighter-rouge">requestTypes.ts</code>, <code class="language-plaintext highlighter-rouge">responseTypes.ts</code>로 분리하여 타입을 정의하였다.</p>
+
+<p>추후에 프로젝트가 커지고, 요청하는 API콜도 많아지면 <code class="language-plaintext highlighter-rouge">types</code> 파일들을 관련 타입들을 <code class="language-plaintext highlighter-rouge">apis</code> 디렉토리에 있는 API콜 디렉토리에 가깝게 배치하여 요지보수에 용이할 수 있도록 관리할 예정이다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// types/requestTypes.ts</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">RankingProductsRequest</span> <span class="p">{</span>
+  <span class="nl">targetType</span><span class="p">?:</span> <span class="dl">"</span><span class="s2">ALL</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">FEMALE</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">MALE</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">TEEN</span><span class="dl">"</span><span class="p">;</span>
+  <span class="nl">rankType</span><span class="p">?:</span> <span class="dl">"</span><span class="s2">MANY_WISH</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">MANY_RECEIVE</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">MANY_WISH_RECEIVE</span><span class="dl">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// types/responseTypes.ts</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ProductData</span><span class="p">,</span> <span class="nx">ThemeData</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./dataTypes</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">RankingProductsResponse</span> <span class="p">{</span>
+  <span class="nl">products</span><span class="p">:</span> <span class="nx">ProductData</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">ThemesResponse</span> <span class="p">{</span>
+  <span class="nl">themes</span><span class="p">:</span> <span class="nx">ThemeData</span><span class="p">[];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="api-콜-관리">API 콜 관리</h2>
+
+<p>정의된 타입들을 기반으로 <code class="language-plaintext highlighter-rouge">apis</code> 디렉토리에서 관련 API 호출을 관리하도록 하였다.</p>
+
+<p>요청 경로 같은 경우 <code class="language-plaintext highlighter-rouge">path.ts</code> 파일에 상수로 관리하여, 나중에 path가 변경되었을 경우 유지보수를 쉽게 할 수 있도록 하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">apis</span>
+<span class="err">├──</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">ts</span>
+<span class="err">└──</span> <span class="nx">themes</span>
+    <span class="err">├──</span> <span class="nx">index</span><span class="p">.</span><span class="nx">ts</span>
+    <span class="err">└──</span> <span class="nx">path</span><span class="p">.</span><span class="nx">ts</span>
+</code></pre></div></div>
+
+<h2 id="axios-인스턴스-작성">Axios 인스턴스 작성</h2>
+
+<p>API 호출 시 매번 <code class="language-plaintext highlighter-rouge">baseURL</code>을 작성하는 것은 비효율적이다.</p>
+
+<p>이를 해결하기 위해 Axios의 <code class="language-plaintext highlighter-rouge">create</code> 메소드를 사용해 미리 <code class="language-plaintext highlighter-rouge">baseURL</code>을 지정하고, 타임아웃 설정을 추가하여 응답이 10초 이상 지연될 경우 요청을 취소할 수 있도록 하였다.</p>
+
+<p>이후, 해당 <code class="language-plaintext highlighter-rouge">axiosInsntance</code>를 API 콜 함수에서 사용하기만 하면 된다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">axios</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">axiosInstance</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+  <span class="na">baseURL</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BASE_URL</span><span class="p">,</span>
+  <span class="na">timeout</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">axiosInstance</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="http-status에-따른-에러메시지-처리">Http Status에 따른 에러메시지 처리</h2>
+
+<p>Axios의 인터셉터를 사용해 응답을 처리하기 전 HTTP 상태 코드에 따라 에러 메시지를 처리할 수 있다.</p>
+
+<p>에러 메시지도 상수로 관리하여 나중에 에러메시지가 변경될 수 있기 때문에 유지보수를 용이하게 하기 위해 다음과 같이 관리하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">ERROR</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DATA_FETCH</span><span class="p">:</span> <span class="dl">"</span><span class="s2">데이터를 불러오는 중에 문제가 발생했습니다.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">NO_PRODUCTS</span><span class="p">:</span> <span class="dl">"</span><span class="s2">보여줄 상품이 없어요!</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">NOT_FOUND</span><span class="p">:</span> <span class="dl">"</span><span class="s2">요청하신 페이지를 찾을 수 없습니다.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">SERVER_ERROR</span><span class="p">:</span> <span class="dl">"</span><span class="s2">서버에 문제가 발생했습니다. 잠시 후 다시 시도해주세요.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">UNAUTHORIZED</span><span class="p">:</span> <span class="dl">"</span><span class="s2">인증되지 않은 사용자입니다. 로그인 후 다시 시도해주세요.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">FORBIDDEN</span><span class="p">:</span> <span class="dl">"</span><span class="s2">접근 권한이 없습니다.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">BAD_REQUEST</span><span class="p">:</span> <span class="dl">"</span><span class="s2">잘못된 요청입니다. 입력한 정보를 확인해주세요.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">TIMEOUT</span><span class="p">:</span> <span class="dl">"</span><span class="s2">요청 시간이 초과되었습니다. 잠시 후 다시 시도해주세요.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">CONFLICT</span><span class="p">:</span> <span class="dl">"</span><span class="s2">데이터 충돌이 발생했습니다. 잠시 후 다시 시도해주세요.</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// apis/instance.ts</span>
+
+<span class="k">import</span> <span class="nx">axios</span><span class="p">,</span> <span class="p">{</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ERROR</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@utils/constants/message</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">axiosInstance</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+  <span class="na">baseURL</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BASE_URL</span><span class="p">,</span>
+  <span class="na">timeout</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">statusMessages</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">key</span><span class="p">:</span> <span class="kr">number</span><span class="p">]:</span> <span class="kr">string</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="mi">400</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">DATA_FETCH</span><span class="p">,</span>
+  <span class="mi">401</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">UNAUTHORIZED</span><span class="p">,</span>
+  <span class="mi">403</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">FORBIDDEN</span><span class="p">,</span>
+  <span class="mi">404</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">NOT_FOUND</span><span class="p">,</span>
+  <span class="mi">408</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">TIMEOUT</span><span class="p">,</span>
+  <span class="mi">409</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">CONFLICT</span><span class="p">,</span>
+  <span class="mi">500</span><span class="p">:</span> <span class="nx">ERROR</span><span class="p">.</span><span class="nx">SERVER_ERROR</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">,</span>
+  <span class="p">(</span><span class="nx">e</span><span class="p">:</span> <span class="nx">AxiosError</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">statusMessages</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">];</span>
+      <span class="nx">e</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="nx">message</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">axiosInstance</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="api-경로-상수-관리">API 경로 상수 관리</h2>
+
+<p>API의 경로(path)는 변경될 수 있는 사항이므로 상수로 관리하는 것이 유지보수에 좋다.</p>
+
+<p>요청과 관련한 경로를 미리 상수로 정의하여 코드의 가독성과 유지보수성을 높인다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">API_BASE</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/api/v1</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">THEME_PATHS</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">THEMES</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/themes`</span><span class="p">,</span>
+  <span class="na">THEME_PRODUCT</span><span class="p">:</span> <span class="p">(</span><span class="na">themeKey</span><span class="p">:</span> <span class="kr">string</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/themes/</span><span class="p">${</span><span class="nx">themeKey</span><span class="p">}</span><span class="s2">/products`</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="api-호출-함수-작성">API 호출 함수 작성</h2>
+
+<p>정의한 경로와 인스턴스를 사용해 API 호출 함수를 작성한다.</p>
+
+<p>API 호출 함수 내부에서 <code class="language-plaintext highlighter-rouge">try-catch</code> 문을 사용하지 않은 이유는, 각 컴포넌트에서 일관된 방식으로 오류를 처리하기 위함이다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// apis/themes/index.ts</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ThemesResponse</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@/types/responseTypes</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">axiosInstance</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">../instance</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">THEME_PATHS</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./path</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">getThemes</span> <span class="o">=</span> <span class="k">async</span> <span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ThemesResponse</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kd">get</span><span class="p">&lt;</span><span class="nc">ThemesResponse</span><span class="p">&gt;</span>(THEME_PATHS.THEMES);
+  return res.data;
+};
+
+export const getThemesProducts = async (
+  params: ThemeProductsRequest
+): Promise<span class="p">&lt;</span><span class="nc">ThemeProductsResponse</span><span class="p">&gt;</span> =&gt; <span class="si">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">themeKey</span><span class="p">,</span> <span class="nx">pageToken</span><span class="p">,</span> <span class="nx">maxResults</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">params</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">queryParams</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">pageToken</span><span class="p">,</span> <span class="nx">maxResults</span> <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kd">get</span><span class="p">&lt;</span><span class="nc">ThemeProductsResponse</span><span class="p">&gt;</span>(
+    THEME_PATHS.THEME_PRODUCT(themeKey),
+    <span class="si">{</span>
+      <span class="nx">params</span><span class="p">:</span> <span class="nx">queryParams</span><span class="p">,</span>
+    <span class="si">}</span>
+  );
+  return res.data;
+};
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="에러-핸들링하기">에러 핸들링하기</h1>
+
+<p>Error Boundary와 Suspense를 통해 선언적으로 비동기 에러 핸들링을 할 수 있지만, 이 예제에서는 나이브하게 <code class="language-plaintext highlighter-rouge">useFetch</code> 훅을 구현하여 비동기 통신에 대한 데이터 상태 관리와 에러 핸들링을 직접 다뤄볼 예정이다.</p>
+
+<h2 id="usefetch-구현"><code class="language-plaintext highlighter-rouge">useFetch</code> 구현</h2>
+
+<p>API 호출 중 요청 상태와 에러 발생 시 각 컴포넌트에서 이를 다르게 처리하기 위해 <code class="language-plaintext highlighter-rouge">useFetch</code>라는 커스텀 훅을 작성했다.</p>
+
+<p>이를 통해 비동기 요청 상태와 에러 상태를 관리할 수 있도록 하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useCallback</span><span class="p">,</span> <span class="nx">useMemo</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">AxiosError</span><span class="p">,</span> <span class="nx">AxiosRequestConfig</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">FetchState</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="na">isLoading</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">isError</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">data</span><span class="p">:</span> <span class="nx">T</span> <span class="o">|</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="nl">error</span><span class="p">:</span> <span class="nx">AxiosError</span> <span class="o">|</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">useFetch</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">P</span> <span class="o">=</span> <span class="kc">undefined</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="nx">apiCall</span><span class="p">:</span> <span class="p">(</span><span class="nx">params</span><span class="p">?:</span> <span class="nx">P</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">,</span>
+  <span class="nx">apiParams</span><span class="p">?:</span> <span class="nx">P</span><span class="p">,</span>
+  <span class="nx">options</span><span class="p">?:</span> <span class="nx">AxiosRequestConfig</span>
+<span class="p">):</span> <span class="nx">FetchState</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">fetchState</span><span class="p">,</span> <span class="nx">setFetchState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="o">&lt;</span><span class="nx">FetchState</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;&gt;</span><span class="p">({</span>
+    <span class="na">isLoading</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">isError</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">error</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="p">});</span>
+
+  <span class="kd">const</span> <span class="nx">memoizedApiCall</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(</span><span class="nx">apiCall</span><span class="p">,</span> <span class="p">[</span><span class="nx">apiCall</span><span class="p">]);</span>
+  <span class="kd">const</span> <span class="nx">memoizedParams</span> <span class="o">=</span> <span class="nx">useMemo</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">apiParams</span><span class="p">),</span> <span class="p">[</span><span class="nx">apiParams</span><span class="p">]);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">fetchData</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setFetchState</span><span class="p">({</span>
+        <span class="na">isLoading</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">isError</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">data</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="p">});</span>
+      <span class="k">try</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">memoizedApiCall</span><span class="p">(</span><span class="nx">apiParams</span><span class="p">);</span>
+        <span class="nx">setFetchState</span><span class="p">({</span> <span class="na">isLoading</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="na">isError</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="na">error</span><span class="p">:</span> <span class="kc">null</span> <span class="p">});</span>
+      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">axiosError</span> <span class="o">=</span> <span class="nx">error</span> <span class="k">as</span> <span class="nx">AxiosError</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error fetching data: </span><span class="dl">"</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+        <span class="nx">setFetchState</span><span class="p">({</span>
+          <span class="na">isLoading</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="na">isError</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="na">data</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="na">error</span><span class="p">:</span> <span class="nx">axiosError</span><span class="p">,</span>
+        <span class="p">});</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="nx">fetchData</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">memoizedApiCall</span><span class="p">,</span> <span class="nx">memoizedParams</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="nx">fetchState</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이렇게 작성된 <code class="language-plaintext highlighter-rouge">useFetch</code> 훅을 사용하여 상태를 관리하고, 컴포넌트에서 API 데이터를 손쉽게 사용할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="k">import</span> <span class="nx">useFetch</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@hooks/useFetch</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">GRID_GAP</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">GRID_COLUMNS</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">ThemeCategory</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">isError</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useFetch</span><span class="o">&lt;</span><span class="nx">ThemesResponse</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">getThemes</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">ThemeCategoryContainer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">CenteredContainer</span> <span class="na">maxWidth</span><span class="p">=</span><span class="s">"md"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Grid</span> <span class="na">gap</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_GAP</span><span class="si">}</span> <span class="na">columns</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_COLUMNS</span><span class="si">}</span><span class="p">&gt;</span>
+          ...
+        <span class="p">&lt;/</span><span class="nc">Grid</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">CenteredContainer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">ThemeCategoryContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="statushandler-컴포넌트를-통한-spinner-및-에러-메시지-렌더링"><code class="language-plaintext highlighter-rouge">StatusHandler</code> 컴포넌트를 통한 Spinner 및 에러 메시지 렌더링</h2>
+
+<p><code class="language-plaintext highlighter-rouge">useFetch</code>로 받은 상태에 따라 컴포넌트를 렌더링해주는 <code class="language-plaintext highlighter-rouge">StatusHandler</code> 라는 컴포넌트로 관리하였다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">isLoading</code> 상태가 <code class="language-plaintext highlighter-rouge">true</code>이면 <code class="language-plaintext highlighter-rouge">Spinner</code> 컴포넌트를 렌더링하고, 에러가 발생하면 <code class="language-plaintext highlighter-rouge">ErrorMessage</code> 컴포넌트에 에러 메시지를 전달하여 출력하도록 하였다.</p>
+
+<p>추가로 데이터가 없을 경우, <code class="language-plaintext highlighter-rouge">isEmpty</code> 상태를 통해 에러 메시지를 출력하도록 구현하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ERROR</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@utils/constants/message</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ErrorMessage</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./ErrorMessage</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Spinner</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Spinner</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">StatusHanlderProps</span> <span class="p">{</span>
+  <span class="nl">isLoading</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">isError</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">isEmpty</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">error</span><span class="p">?:</span> <span class="nx">AxiosError</span> <span class="o">|</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">StatusHandler</span><span class="p">({</span>
+  <span class="nx">isLoading</span><span class="p">,</span>
+  <span class="nx">isError</span><span class="p">,</span>
+  <span class="nx">isEmpty</span><span class="p">,</span>
+  <span class="nx">error</span><span class="p">,</span>
+  <span class="nx">children</span><span class="p">,</span>
+<span class="p">}:</span> <span class="nx">StatusHanlderProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isLoading</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Spinner</span> <span class="p">/&gt;;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isError</span> <span class="o">&amp;&amp;</span> <span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;</span><span class="nc">ErrorMessage</span> <span class="na">message</span><span class="p">=</span><span class="si">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="si">}</span> <span class="p">/&gt;;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isEmpty</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;</span><span class="nc">ErrorMessage</span> <span class="na">message</span><span class="p">=</span><span class="si">{</span><span class="nx">ERROR</span><span class="p">.</span><span class="nx">NO_PRODUCTS</span><span class="si">}</span> <span class="p">/&gt;;</span>
+
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>해당 <code class="language-plaintext highlighter-rouge">StatusHandler</code> 컴포넌트를 API 비동기 호출을 사용하는 컴포넌트 내부에 데이터 렌더링 시 로딩, 에러, 데이터 상태에 따라 적절한 UI를 제공할 수 있도록 구현할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">ThemeCategory</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">isError</span><span class="p">,</span> <span class="nx">isLoading</span> <span class="p">}</span> <span class="o">=</span>
+    <span class="nx">useFetch</span><span class="o">&lt;</span><span class="nx">ThemesResponse</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">getThemes</span><span class="p">);</span>
+
+  <span class="kd">const</span> <span class="nx">isEmpty</span> <span class="o">=</span> <span class="o">!</span><span class="nx">data</span> <span class="o">||</span> <span class="nx">data</span><span class="p">?.</span><span class="nx">themes</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">ThemeCategoryContainer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">CenteredContainer</span> <span class="na">maxWidth</span><span class="p">=</span><span class="s">"md"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">StatusHandler</span>
+          <span class="na">isLoading</span><span class="p">=</span><span class="si">{</span><span class="nx">isLoading</span><span class="si">}</span>
+          <span class="na">isError</span><span class="p">=</span><span class="si">{</span><span class="nx">isError</span><span class="si">}</span>
+          <span class="na">isEmpty</span><span class="p">=</span><span class="si">{</span><span class="nx">isEmpty</span><span class="si">}</span>
+          <span class="na">error</span><span class="p">=</span><span class="si">{</span><span class="nx">error</span><span class="si">}</span>
+        <span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Grid</span> <span class="na">gap</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_GAP</span><span class="si">}</span> <span class="na">columns</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_COLUMNS</span><span class="si">}</span><span class="p">&gt;</span>
+            ...
+          <span class="p">&lt;/</span><span class="nc">Grid</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nc">StatusHandler</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">CenteredContainer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">ThemeCategoryContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 포스팅에서는 <strong>Axios</strong>를 활용해 API 통신을 효율적으로 관리하고, 발생할 수 있는 다양한 에러를 어떻게 처리할 수 있는지 알아보았다.</p>
+
+<p>Axios의 기본 사용법을 익히고, 에러 핸들링을 중앙화하며 API 경로를 체계적으로 관리하는 방법을 다루어보았다.</p>
+
+<p>또한, <code class="language-plaintext highlighter-rouge">useFetch</code> 훅을 구현해 비동기 API 호출에 따른 데이터 상태를 효과적으로 관리할 수 있도록 하였고, <code class="language-plaintext highlighter-rouge">StatusHandler</code> 컴포넌트를 통해 <code class="language-plaintext highlighter-rouge">useFetch</code> 훅으로 받은 상태에 따라 로딩, 에러, 데이터 상태에 맞는 렌더링을 처리할 수 있는 방법도 소개해드렸다.</p>
+
+<p>나중에는 <strong>React Query</strong>와 <strong>ErrorBoundary</strong>, <strong>Suspense</strong>를 통해 더욱 간편하게 비동기 데이터를 관리하고, 효율적인 렌더링을 구현할 수 있다.</p>
+
+<p>이번 포스팅에서는 Axios를 활용한 나이브한 접근 방식을 통해 기본 개념을 이해하는 데 중점을 두어보았다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
