@@ -510,7 +510,7 @@ Storybook을 클릭하고 프로젝트를 위해 생성된 고유한 `project-to
 
 ![스크린샷 2024-07-01 오후 3.29.34.png](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fa4b9d559-41c9-4575-a6b2-add7a0d0d3ff%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.29.34.png?id=8b394510-3780-40cc-bca3-e252828fe3ff&table=block)
 
-![스크린샷 2024-07-01 오후 3.30.08.png](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3c9f52ea-c4ca-4a57-81aa-6529fff6ea28%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.30.08.png?id=00f6dad2-5072-40a6-a828-455a91e6f1e8&table=block)
+![스크린샷 2024-07-01 오후 3.30.08.png](https://app.super.so/_next/image?url=https%3A%2F%2Fassets.super.so%2F103836b2-5162-4915-b9b3-3e82eeac52e9%2Fimages%2F010a9304-0a2f-4b0a-a515-41eddee7dc46%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-01_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.30.08.png&w=1080&q=90)
 
 ### 명령어를 통한 배포
 
@@ -551,6 +551,7 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
+      - run: yarn
       #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
