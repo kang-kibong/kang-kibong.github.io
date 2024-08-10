@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)" />
+<meta name="author" content="byeonghyeon kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="byeonghyeon kang’s dev blog" />
+<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/createbrowserrouter%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-react-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-v6-4.html" />
+<meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/createbrowserrouter%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-react-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-v6-4.html" />
+<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-05T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)" />
+<script type="application/ld+json">
+{"dateModified":"2024-07-05T00:00:00+09:00","datePublished":"2024-07-05T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/createbrowserrouter%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-react-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-v6-4.html"},"url":"http://localhost:4000/byeonghyeon-kang/createbrowserrouter%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-react-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-v6-4.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><meta name="title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta name="description" content="byeonghyeon kang's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta property="og:description" content="byeonghyeon kang's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+  <meta property="twitter:description" content="byeonghyeon kang's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/byeonghyeon-kang/logo.png"
+  />
+  <link rel="stylesheet" href="/byeonghyeon-kang/assets/css/main.css" />
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/byeonghyeon-kang/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-07-05 00:00:00 +0900">2024-07-05</time>
+  </p>
+  
+  <h1>createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="react-router-dom이란">react-router-dom이란?</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fb8b4a51c-b87f-4030-af06-587240feeacd%2Fimage.png?id=5d5176d9-df35-4b38-b39d-5444d4398e05&amp;table=block" alt="image.png" /></p>
+
+<p><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">React Router Dom</code>은 React 애플리케이션에서 클라이언트 사이드 라우팅을 구현하는 데 사용되는 라이브러리이다.</p>
+
+<p>페이지 간에 네비게이션을 할 수 있으며, URL에 따라 서로 다른 컴포넌트를 렌더링할 수 있게 해준다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">React Router Dom</code>은 SPA(Single Page Application)에서 특히 유용하고, 다양한 경로와 그에 따른 컴포넌트 렌더링을 간단하게 설정할 수 있게 해준다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="react-router-dom-설치">react-router-dom 설치</h1>
+
+<p>React Router Dom을 사용하려면 먼저 프로젝트에 해당 패키지를 설치해야한다.</p>
+
+<p>아래는 <code class="language-plaintext highlighter-rouge">npm</code> 패키지 매니저를 사용한 설치 예시이다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>react-router-dom
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="create-browser-router방식-v64-이후"><a href="https://reactrouter.com/en/main/routers/create-browser-router"><strong>create-browser-router</strong></a> 방식 (v6.4 이후)</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe2aeb1a1-1cfb-42e0-8338-54b843e610d2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-08-10_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.29.02.png?id=f02531fc-8d1e-4d8c-8f3d-947a9e46f2f0&amp;table=block" alt="스크린샷 2024-08-10 오후 4.29.02.png" /></p>
+
+<p>React Router v6.4부터 도입된 <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>를 사용하면, 라우팅 설정을 보다 선언적이고 명확하게 정의할 수 있다.</p>
+
+<p>공식 문서에 따르면, <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>는 라우팅 설정을 정의한 후, <code class="language-plaintext highlighter-rouge">RouterProvider</code> 컴포넌트에 <code class="language-plaintext highlighter-rouge">router</code>로 전달하여 사용된다는 것을 알 수 있다.</p>
+
+<p>아래의 코드는 <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>를 사용한 간단한 예시이다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createBrowserRouter</span><span class="p">,</span> <span class="nx">RouterProvider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">createBrowserRouter</span><span class="p">([</span>
+    <span class="p">{</span>
+        <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">MainPage</span> <span class="p">/&gt;,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/byeonghyeon</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">Byoenghyeon</span> <span class="p">/&gt;,</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+<span class="p">]);</span>
+
+<span class="p">&lt;</span><span class="nc">RouterProvider</span> <span class="na">router</span><span class="p">=</span><span class="si">{</span><span class="nx">router</span><span class="si">}</span> <span class="p">/&gt;;</span>
+
+</code></pre></div></div>
+
+<p>위 코드는 <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>는 각 경로(path)에 대해 대응하는 컴포넌트를 설정한다.</p>
+
+<p>예를 들어, 사용자가 <code class="language-plaintext highlighter-rouge">/byeonghyeon</code> 경로로 이동하면 <code class="language-plaintext highlighter-rouge">Byeonghyeon</code> 컴포넌트가 렌더링된다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">RouterProvider</code> 해당 라우터를 애플리케이션에 제공하는 역할을 한다.</p>
+
+<p><br /></p>
+
+<h2 id="폴더구조">폴더구조</h2>
+
+<p>라우팅을 효율적으로 관리하기 위해 프로젝트의 폴더 구조를 아래와 같이 구성해볼 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">routes</span>
+<span class="err">├──</span> <span class="nx">components</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="nx">PrivateRoute</span>
+<span class="err">│</span>       <span class="err">└──</span> <span class="nx">index</span><span class="p">.</span><span class="nx">tsx</span>
+<span class="err">├──</span> <span class="nx">path</span><span class="p">.</span><span class="nx">ts</span>
+<span class="err">└──</span> <span class="nx">router</span><span class="p">.</span><span class="nx">tsx</span>
+</code></pre></div></div>
+
+<p>해당 폴더 구조는 라우터와 관련된 모든 설정을 <code class="language-plaintext highlighter-rouge">routes</code> 디렉토리 아래에 모아 관리하도록하였다.</p>
+
+<p>경로에 대한 상수는 <code class="language-plaintext highlighter-rouge">path.ts</code>에서 관리하고, <code class="language-plaintext highlighter-rouge">components</code> 디렉토리에는 특정 조건에 부합해야 접근할 수 있는 컴포넌트들을 배치하도록 하였다.</p>
+
+<p>예를 들어, <code class="language-plaintext highlighter-rouge">PrivateRoute</code> 컴포넌트는 인증이 필요한 경로를 보호하는 컴포넌트로, 해당 디렉토리에서 관리할 수 있을 것 같다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">PrivateRoute</code> 컴포넌트의 역할에 관해서는 이후에 자세히 나올예정이다.</p>
+
+<p><br /></p>
+
+<h2 id="route_path-정의-pathts"><code class="language-plaintext highlighter-rouge">ROUTE_PATH</code> 정의 (<code class="language-plaintext highlighter-rouge">path.ts</code>)</h2>
+
+<p>라우트 경로는 추후에 경로가 변경될 수 있기 때문에, 하드코딩 하기보다 상수로 정의하여 관리하는 것이 좋다고 판단하였다.</p>
+
+<p>필자는 <code class="language-plaintext highlighter-rouge">ROUTE_PATH</code>라는 객체에 각 라우트에 대한 경로를 상수로 정의하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">ROUTE_PATH</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">HOME</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">THEME</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/theme/:themeKey</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">LOGIN</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">MY_ACCOUNT</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/my-account</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="app-컴포넌트에-outlet-설정"><code class="language-plaintext highlighter-rouge">App</code> 컴포넌트에 Outlet 설정</h2>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">AuthProvider</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@context/auth/AuthProvider</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FilterProvider</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@context/filter/FilterProvider</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">GlobalStyles</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@assets/styles</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Outlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">FilterProvider</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">AuthProvider</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">GlobalStyles</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Outlet</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">AuthProvider</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">FilterProvider</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">react-router-dom</code>의 <code class="language-plaintext highlighter-rouge">Outlet</code> 컴포넌트를 사용하여 자식 라우트들을 렌더링할 수 있도록 지정한다.</p>
+
+<p>여기서 <code class="language-plaintext highlighter-rouge">Outlet</code> 컴포넌트는 현재 경로에 따라 자식 컴포넌트를 렌더링하는 역할을 한다.</p>
+
+<p>예를 들어, 사용자가 <code class="language-plaintext highlighter-rouge">/home</code> 경로로 이동하면, <code class="language-plaintext highlighter-rouge">App</code> 컴포넌트 내의 <code class="language-plaintext highlighter-rouge">Outlet</code>은 <code class="language-plaintext highlighter-rouge">Home</code> 컴포넌트를 렌더링하게 된다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">App</code> 컴포넌트는 애플리케이션의 공통 레이아웃을 관리하는 역할을 하기 때문에, 해당 <code class="language-plaintext highlighter-rouge">App</code> 컴포넌트에서 <code class="language-plaintext highlighter-rouge">Outlet</code> 컴포넌트를 사용해서 자식 라우트들이 렌더링될 위치를 지정하였다.</p>
+
+<p><br /></p>
+
+<h2 id="privateroute-컴포넌트-작성">PrivateRoute 컴포넌트 작성</h2>
+
+<p><code class="language-plaintext highlighter-rouge">PrivateRoute</code> 컴포넌트는 인증이 필요한 경로를 보호하는 데 사용된다. 예를들어, 인증되지 않은 사용자는 로그인 페이지로 리디렉션되도록 설정할 수 있다.</p>
+
+<p>아래 코드에서는 <code class="language-plaintext highlighter-rouge">useAuth</code> 훅을 사용해 사용자의 인증 상태를 확인하고, 인증되지 않은 경우 로그인 페이지로 리다이렉션 될 수 있도록 구현하였다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useAuth</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@context/auth/useAuth</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ROUTE_PATH</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@routes/path</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Navigate</span><span class="p">,</span> <span class="nx">Outlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">PrivateRoute</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">isAuthenticated</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useAuth</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="nx">isAuthenticated</span> <span class="p">?</span> <span class="p">&lt;</span><span class="nc">Outlet</span> <span class="p">/&gt;</span> <span class="p">:</span> <span class="p">&lt;</span><span class="nc">Navigate</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">LOGIN</span><span class="si">}</span> <span class="p">/&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="router-작성">router 작성</h2>
+
+<p>마지막으로, 전체 애플리케이션의 라우팅을 관리하는 <code class="language-plaintext highlighter-rouge">router.tsx</code> 파일을 작성해보았다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">createBrowserRouter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">App</span><span class="p">,</span> <span class="nx">Home</span><span class="p">,</span> <span class="nx">Theme</span><span class="p">,</span> <span class="nx">Login</span><span class="p">,</span> <span class="nx">MyAccount</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@pages/index</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PrivateRoute</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./components/PrivateRoute</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ROUTE_PATH</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./path</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">createBrowserRouter</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">HOME</span><span class="p">,</span>
+    <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span>
+    <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">path</span><span class="p">:</span> <span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">HOME</span><span class="p">,</span>
+        <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">Home</span> <span class="p">/&gt;,</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">PrivateRoute</span> <span class="p">/&gt;,</span>
+        <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="na">path</span><span class="p">:</span> <span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">THEME</span><span class="p">,</span>
+            <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">Theme</span> <span class="p">/&gt;,</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="na">path</span><span class="p">:</span> <span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">MY_ACCOUNT</span><span class="p">,</span>
+            <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">MyAccount</span> <span class="p">/&gt;,</span>
+          <span class="p">},</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">path</span><span class="p">:</span> <span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">LOGIN</span><span class="p">,</span>
+        <span class="na">element</span><span class="p">:</span> <span class="p">&lt;</span><span class="nc">Login</span> <span class="p">/&gt;,</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">]);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">App</code> 컴포넌트를 루트로 설정하고, 그 아래에 여러 자식 라우트를 정의하였다.</p>
+
+<p>이후, 인증이 필요한 경로에는 <code class="language-plaintext highlighter-rouge">PrivateRoute</code> 컴포넌트의 자식 컴포넌트로 지정하여 렌더링 될 수 있도록 하여 특정 경로에 리다이렉션 되는 것을 보호할 수 있도록 한다.</p>
+
+<p><br /></p>
+
+<h2 id="routerprovider로-라우터-전달">RouterProvider로 라우터 전달</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from <span class="s1">'react'</span><span class="p">;</span>
+import ReactDOM from <span class="s1">'react-dom/client'</span><span class="p">;</span>
+import <span class="o">{</span> RouterProvider <span class="o">}</span> from <span class="s1">'react-router-dom'</span><span class="p">;</span>
+import <span class="o">{</span> router <span class="o">}</span> from <span class="s1">'./routes/router'</span><span class="p">;</span>
+
+const root <span class="o">=</span> ReactDOM.createRoot<span class="o">(</span>document.getElementById<span class="o">(</span><span class="s1">'root'</span><span class="o">)</span> as HTMLElement<span class="o">)</span><span class="p">;</span>
+
+root.render<span class="o">(</span>
+  &lt;React.StrictMode&gt;
+    &lt;RouterProvider <span class="nv">router</span><span class="o">={</span>router<span class="o">}</span> /&gt;
+  &lt;/React.StrictMode&gt;,
+<span class="o">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>라우터 설정을 모두 완료한 후, React 애플리케이션에 라우터를 적용하기 위해 <code class="language-plaintext highlighter-rouge">RouterProvider</code>를 사용한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">RouterProvider</code> 컴포넌트는 설정된 라우터를 전체 애플리케이션에 전달하여 라우팅 기능을 활성화하는 역할을 한다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 포스팅에서는 <code class="language-plaintext highlighter-rouge">React Router Dom</code>을 사용해 클라이언트 사이드 라우팅을 설정하는 방법을 살펴보았다.</p>
+
+<p>특히 <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>를 활용한 최신 방식과 폴더 구조, <code class="language-plaintext highlighter-rouge">PrivateRoute</code>를 이용한 인증 처리 방법, 그리고 라우터를 전달하는 방법에 대해 알아보았다.</p>
+
+<p>기존 <code class="language-plaintext highlighter-rouge">BrowserRouter</code> 방식은 <code class="language-plaintext highlighter-rouge">Routes</code>와 <code class="language-plaintext highlighter-rouge">Route</code> 컴포넌트를 사용해 라우팅을 정의해서 중첩된 라우트 구조로 쉽게 설정할 수 있는 반면, <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>를 사용하면 복잡한 라우팅을 선언적으로 정의하여 효율적으로 관리할 수 있다는 장점이 있다.</p>
+
+<p>하지만 <code class="language-plaintext highlighter-rouge">createBrowserRouter</code>를 사용하기 위해서는 새로운 접근 방식에 대한 학습이 필요하기 때문에 러닝 커브가 존재하고, 프로젝트 내에서 <code class="language-plaintext highlighter-rouge">react-router-dom</code> v6.4 이상을 사용하지 않는다면 무의미할 수 있다는 점에서 버전 의존성이 단점으로 작용할 수 있을 것 같다.</p>
+
+<p>독자들은 각 프로젝트의 요구 사항에 맞는 라우팅 방식을 선택해서 보다 효율적으로 라우팅을 관리해보길 바란다.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

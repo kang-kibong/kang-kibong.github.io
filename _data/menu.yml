@@ -42,7 +42,7 @@ entries:
 
   - title: frontend
     post_list:
-      limit: 3
+      limit: 5
       show_more: true
       show_more_text: See more posts...
       show_more_url: frontend.html
