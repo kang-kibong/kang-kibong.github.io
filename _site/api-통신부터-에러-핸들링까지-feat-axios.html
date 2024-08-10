@@ -7,35 +7,35 @@
   <title>API 통신부터 에러 핸들링까지(feat. Axios)</title><!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="API 통신부터 에러 핸들링까지(feat. Axios)" />
-<meta name="author" content="byeonghyeon kang" />
+<meta name="author" content="Kang Byeonghyeon" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="byeonghyeon kang’s dev blog" />
-<meta property="og:description" content="byeonghyeon kang’s dev blog" />
+<meta name="description" content="Kang Byeonghyeon’s dev blog" />
+<meta property="og:description" content="Kang Byeonghyeon’s dev blog" />
 <link rel="canonical" href="http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html" />
 <meta property="og:url" content="http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html" />
-<meta property="og:site_name" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
+<meta property="og:site_name" content="Kang Byeong-hyeon 👨🏻‍💻" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-12T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="API 통신부터 에러 핸들링까지(feat. Axios)" />
 <script type="application/ld+json">
-{"dateModified":"2024-07-12T00:00:00+09:00","datePublished":"2024-07-12T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html"},"url":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html","author":{"@type":"Person","name":"byeonghyeon kang"},"@type":"BlogPosting","description":"byeonghyeon kang’s dev blog","headline":"API 통신부터 에러 핸들링까지(feat. Axios)","@context":"https://schema.org"}</script>
+{"dateModified":"2024-07-12T00:00:00+09:00","datePublished":"2024-07-12T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html"},"url":"http://localhost:4000/byeonghyeon-kang/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html","author":{"@type":"Person","name":"Kang Byeonghyeon"},"@type":"BlogPosting","description":"Kang Byeonghyeon’s dev blog","headline":"API 통신부터 에러 핸들링까지(feat. Axios)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" /><meta name="title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
-  <meta name="description" content="byeonghyeon kang's dev blog" />
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/byeonghyeon-kang/feed.xml" title="Kang Byeong-hyeon 👨🏻‍💻" /><meta name="title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta name="description" content="Kang Byeong-hyeon's dev blog" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kang-kibong.github.io/" />
-  <meta property="og:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
-  <meta property="og:description" content="byeonghyeon kang's dev blog" />
+  <meta property="og:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="og:description" content="Kang Byeong-hyeon's dev blog" />
   <meta property="og:image" content="logo.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://kang-kibong.github.io/" />
-  <meta property="twitter:title" content="Hi, I’m Byeonghyeon Kang 👋🧑‍💻" />
-  <meta property="twitter:description" content="byeonghyeon kang's dev blog" />
+  <meta property="twitter:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="twitter:description" content="Kang Byeong-hyeon's dev blog" />
   <meta property="twitter:image" content="logo.png" />
 
   <link
