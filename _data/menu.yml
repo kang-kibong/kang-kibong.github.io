@@ -8,21 +8,21 @@ entries:
     entries:
       - title: step1
         post_list:
-          limit: 3
+          limit: 5
           show_more: true
           show_more_text: See more posts...
           show_more_url: kakao1.html
           category: kakao1
       - title: step2
         post_list:
-          limit: 3
+          limit: 5
           show_more: true
           show_more_text: See more posts...
           show_more_url: kakao2.html
           category: kakao2
       - title: step3
         post_list:
-          limit: 3
+          limit: 5
           show_more: true
           show_more_text: See more posts...
           show_more_url: kakao3.html
@@ -30,7 +30,7 @@ entries:
 
   - title: woowa course 6th pre-course
     post_list:
-      limit: 3
+      limit: 5
       show_more: true
       show_more_text: See more posts...
       show_more_url: woowa.html
@@ -42,7 +42,7 @@ entries:
 
   - title: frontend
     post_list:
-      limit: 5
+      limit: 10
       show_more: true
       show_more_text: See more posts...
       show_more_url: frontend.html
@@ -50,7 +50,7 @@ entries:
 
   - title: wooseon
     post_list:
-      limit: 3
+      limit: 5
       show_more: true
       show_more_text: See more posts...
       show_more_url: wooseon.html
