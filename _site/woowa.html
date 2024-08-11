@@ -50,6 +50,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -61,13 +73,11 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><h1>Woowa Tech Course 6th pre-course</h1><ul><li>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<div class="w"><a href="/">..</a><h1>Woowa Tech Course 6th pre-course</h1><ul><li>
     <span>2023-12-21</span>
     <a href="/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%EC%B5%9C%EC%A2%85-%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%A8%EC%BD%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" class="post-item"
       >[우아한테크코스 6기] 최종 코딩 테스트 - 온콜 리팩토링 회고록</a
@@ -97,8 +107,8 @@
     <a href="/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4-6%EA%B8%B0-%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8-%EC%88%AB%EC%9E%90-%EC%95%BC%EA%B5%AC-%ED%9A%8C%EA%B3%A0%EB%A1%9D.html" class="post-item"
       >[우아한테크코스 6기] 프리코스 1주차 - 숫자 야구 회고록</a
     >
-  </li></ul>
-      </div>
+  </li></ul></div>
+
     </main>
   </body>
 </html>

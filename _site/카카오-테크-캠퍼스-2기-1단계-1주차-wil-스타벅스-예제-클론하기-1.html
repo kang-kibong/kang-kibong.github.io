@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2024-04-15 00:00:00 +0900">2024-04-15</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-04-15 00:00:00 +0900"
+      >2024-04-15</time
+    >
   </p>
-  
+
   <h1 class="post-title">[카카오 테크 캠퍼스 2기] 1단계 1주차 WIL - 스타벅스 예제 클론하기(1)</h1>
 
   <p><br />
@@ -392,7 +403,7 @@
 <p>요소의 너비를 명시하고 <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">bottom</code>, <code class="language-plaintext highlighter-rouge">right</code>, <code class="language-plaintext highlighter-rouge">left</code>로 지점을 설정하여 <code class="language-plaintext highlighter-rouge">margin</code> 속성을 통해 상하좌우에 대한 여백을 설정하면 수직, 수평을 기준으로 배치가 가능하다는 것을 알게 되었다.</p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

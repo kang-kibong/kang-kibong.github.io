@@ -50,6 +50,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -61,13 +73,11 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><h1>frontend</h1><ul><li>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<div class="w"><a href="/">..</a><h1>frontend</h1><ul><li>
     <span>2024-07-21</span>
     <a href="/husky%EC%99%80-lint-staged%EB%A1%9C-git-hooks-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0.html" class="post-item"
       >Husky와 lint-staged로 Git Hooks 자동화하기</a
@@ -102,8 +112,8 @@
     <a href="/cra-typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" class="post-item"
       >CRA + TypeScript 프로젝트 환경에서의 절대 경로 설정하기</a
     >
-  </li></ul>
-      </div>
+  </li></ul></div>
+
     </main>
   </body>
 </html>

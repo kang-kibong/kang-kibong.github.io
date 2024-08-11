@@ -50,6 +50,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -61,13 +73,11 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><h1>Kakao Tech Campus 2th</h1><ul><li>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<div class="w"><a href="/">..</a><h1>Kakao Tech Campus 2th</h1><ul><li>
     <span>2024-05-14</span>
     <a href="/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%EC%9B%B0%EC%BB%B4%ED%82%A4%ED%8A%B8-%EA%B5%BF%EC%A6%88-%EA%B0%9C%EB%B4%89%EA%B8%B0.html" class="post-item"
       >[카카오 테크 캠퍼스 2기] 웰컴키트 굿즈 개봉기</a
@@ -77,8 +87,8 @@
     <a href="/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%B5%9C%EC%A2%85-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0.html" class="post-item"
       >[카카오 테크 캠퍼스 2기] 프론트엔드 최종 합격 후기</a
     >
-  </li></ul>
-      </div>
+  </li></ul></div>
+
     </main>
   </body>
 </html>

@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2024-06-24 00:00:00 +0900">2024-06-24</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-06-24 00:00:00 +0900"
+      >2024-06-24</time
+    >
   </p>
-  
+
   <h1 class="post-title">[카카오 테크 캠퍼스 2기] 1단계 8주차 WIL - API를 활용한 영화 검색 사이트</h1>
 
   <p><br />
@@ -921,7 +932,7 @@
 <p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F28521880-b5d9-44f9-a116-8fac0b15f644%2FMay-26-2024_18-27-22.gif?id=dd5852e0-c3aa-475f-9547-82a4c5207b6c&amp;table=block" alt="May-26-2024 18-27-22.gif" /></p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

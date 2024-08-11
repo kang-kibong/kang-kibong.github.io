@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2024-05-21 00:00:00 +0900">2024-05-21</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-05-21 00:00:00 +0900"
+      >2024-05-21</time
+    >
   </p>
-  
+
   <h1 class="post-title">[우선] 초기 유입을 위한 MVP 제작 및 홍보 과정기</h1>
 
   <p><br />
@@ -216,7 +227,7 @@
 <p>결과를 기다려보고 앞으로의 개선사항에 대해서 팀원들과 의논하여 더 좋은 서비스를 만들기 위해 열심히 달려봐야겠다.</p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

@@ -3,15 +3,7 @@
   {%- include head.html -%}
   <body a="{{ site.theme_config.appearance | default: "auto" }}">
     <main class="page-content" aria-label="Content">
-      <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        {{ content }}
-      </div>
+      {{ content }}
     </main>
 
     {%-if site.goat_counter and jekyll.environment == "production"-%}

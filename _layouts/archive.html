@@ -2,8 +2,15 @@
 layout: default
 ---
 
-{%-include back_link.html-%}
+<a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<div class="w">
+  {%-include back_link.html-%}
 
-<h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 
-{%-include post_list.html category=page.which_category-%}
+  {%-include post_list.html category=page.which_category-%}
+</div>

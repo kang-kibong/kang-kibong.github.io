@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2023-04-11 00:00:00 +0900">2023-04-11</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2023-04-11 00:00:00 +0900"
+      >2023-04-11</time
+    >
   </p>
-  
+
   <h1 class="post-title">멋쟁이사자처럼 11기 충남대학교 프론트엔드 합격 후기</h1>
 
   <p><br />
@@ -251,7 +262,7 @@
 <p>그토록 참여하고 싶었던 연합동아리인 만큼 적극적으로 참여해서 원하는 목표를 이루었으면 한다!</p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

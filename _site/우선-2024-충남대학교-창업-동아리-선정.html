@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2024-04-19 00:00:00 +0900">2024-04-19</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-04-19 00:00:00 +0900"
+      >2024-04-19</time
+    >
   </p>
-  
+
   <h1 class="post-title">[우선] 2024 충남대학교 창업 동아리 선정</h1>
 
   <p><br />
@@ -115,7 +126,7 @@
 <p>창업 동아리에서 지원하는 멘토링에 인사이트를 얻고 이를 통해 얻은 지식과 경험을 바탕으로 창업을 성공적으로 이끌어 나가기 위해 노력할 것 같다.</p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

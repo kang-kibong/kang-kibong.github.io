@@ -52,6 +52,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -63,17 +75,16 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <a href="/">..</a><article>
-  <p class="post-meta">
-    <time datetime="2024-07-05 00:00:00 +0900">2024-07-05</time>
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-07-05 00:00:00 +0900"
+      >2024-07-05</time
+    >
   </p>
-  
+
   <h1 class="post-title">createBrowserRouter를 활용한 효율적인 React 라우팅 설정하기 (v6.4+)</h1>
 
   <p><br />
@@ -318,7 +329,7 @@ root.render<span class="o">(</span>
 <p>독자들은 각 프로젝트의 요구 사항에 맞는 라우팅 방식을 선택해서 보다 효율적으로 라우팅을 관리해보길 바란다.</p>
 
 </article>
-      </div>
+
     </main>
   </body>
 </html>

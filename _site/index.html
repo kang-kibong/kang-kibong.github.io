@@ -50,6 +50,18 @@
       header.style.backgroundPosition = `center ${positionY}%`;
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      profile1.style.backgroundPosition = `center ${positionY}%`;
+      profile2.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
 
   <!-- Google Adsense -->
   <script
@@ -60,36 +72,36 @@
 </head>
 <body a="auto">
     <main class="page-content" aria-label="Content">
-      <a href="/" class="background-link">
-        <header class="background-header">
-          <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
-        </header>
-      </a>
-      
-      <div class="w">
-        <section>
-  <div class="profile">
-    <div>
-      <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
-      <p><strong>기록</strong>하고 <strong>공유</strong>하는 걸 좋아해요.</p>
-      <p>
-        <strong>건강한 협업</strong>에 대해 모색하고<br />
-        함께 <strong>성장</strong>하는 걸 중요시해요.
-      </p>
-      <div class="contact">
-        <span>
-          🐱
-          <a href="https://github.com/kang-kibong" target="_blank">Github</a>
-        </span>
-        <span>
-          📧
-          <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
-        </span>
-      </div>
-    </div>
+      <header class="header">
+  <h1 class="header-title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  <div class="background"></div>
+  <div class="profile-container">
+    <div class="profile1"></div>
+    <div class="profile2"></div>
+    <div></div>
+  </div>
+  <div class="introduce">
+    <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
+    <p><strong>기록</strong>하고 <strong>공유</strong>하는 걸 좋아해요.</p>
+    <p>
+      <strong>건강한 협업</strong>에 대해 모색하고 <br />
+      함께 <strong>성장</strong>하는 걸 중요시해요.
+    </p>
+  </div>
+</header>
 
-    <div class="profile-image"></div>
-  </div></section><ul><li class="list">
+<div class="contact">
+  <span>
+    🐱
+    <a href="https://github.com/kang-kibong" target="_blank">Github</a>
+  </span>
+  <span>
+    📧
+    <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
+  </span>
+</div>
+
+<section class="w"><ul><li class="list">
     <strong>👨🏻‍💻 kakao tech campus 2th ~</strong>
   </li><ul><li>
     <span>2024-05-14</span>
@@ -292,8 +304,8 @@
   </li></ul></ul>
 
 
+</section>
 
-      </div>
     </main>
   </body>
 </html>

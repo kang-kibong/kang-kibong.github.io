@@ -2,13 +2,19 @@
 layout: default
 ---
 
-{%-include back_link.html-%}
-
-<article>
+<a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w">
+  {%-include back_link.html-%}
   <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+    <time datetime="{{ page.date }}"
+      >{{ page.date | date: site.theme_config.date_format }}</time
+    >
   </p>
-  
+
   <h1 class="post-title">{{ page.title }}</h1>
 
   {{ content }}

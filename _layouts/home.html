@@ -2,34 +2,35 @@
 layout: default
 ---
 
-<section>
-  <div class="profile">
-    <div>
-      <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
-      <p><strong>기록</strong>하고 <strong>공유</strong>하는 걸 좋아해요.</p>
-      <p>
-        <strong>건강한 협업</strong>에 대해 모색하고<br />
-        함께 <strong>성장</strong>하는 걸 중요시해요.
-      </p>
-      <div class="contact">
-        <span>
-          🐱
-          <a href="https://github.com/kang-kibong" target="_blank">Github</a>
-        </span>
-        <span>
-          📧
-          <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
-        </span>
-      </div>
-    </div>
-
-    <div class="profile-image"></div>
+<header class="header">
+  <h1 class="header-title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  <div class="background"></div>
+  <div class="profile-container">
+    <div class="profile1"></div>
+    <div class="profile2"></div>
+    <div></div>
   </div>
+  <div class="introduce">
+    <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
+    <p><strong>기록</strong>하고 <strong>공유</strong>하는 걸 좋아해요.</p>
+    <p>
+      <strong>건강한 협업</strong>에 대해 모색하고 <br />
+      함께 <strong>성장</strong>하는 걸 중요시해요.
+    </p>
+  </div>
+</header>
 
-  {%-if site.theme_config.show_description-%}
-  <p>{{ site.description }}</p>
+<div class="contact">
+  <span>
+    🐱
+    <a href="https://github.com/kang-kibong" target="_blank">Github</a>
+  </span>
+  <span>
+    📧
+    <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
+  </span>
+</div>
 
-  {%-endif-%}
+<section class="w">
+  {%-include menu_item.html collection=site.data.menu.entries-%} {{ content }}
 </section>
-
-{%-include menu_item.html collection=site.data.menu.entries-%} {{ content }}
