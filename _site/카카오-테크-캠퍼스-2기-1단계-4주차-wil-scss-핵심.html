@@ -60,8 +60,9 @@
       const scrollY = window.scrollY;
       const positionY = 50 + scrollY * 0.03;
       background.style.backgroundPosition = `center ${positionY}%`;
-      profile1.style.backgroundPosition = `center ${positionY}%`;
-      profile2.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
     });
   </script>
 

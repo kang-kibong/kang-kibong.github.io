@@ -58,8 +58,9 @@
       const scrollY = window.scrollY;
       const positionY = 50 + scrollY * 0.03;
       background.style.backgroundPosition = `center ${positionY}%`;
-      profile1.style.backgroundPosition = `center ${positionY}%`;
-      profile2.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
     });
   </script>
 
@@ -73,13 +74,10 @@
 <body a="auto">
     <main class="page-content" aria-label="Content">
       <header class="header">
-  <h1 class="header-title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  <h1 class="header-title">
+    <span>Hi, I’m <strong>Kang Byeong-hyeon</strong>.</span>
+  </h1>
   <div class="background"></div>
-  <div class="profile-container">
-    <div class="profile1"></div>
-    <div class="profile2"></div>
-    <div></div>
-  </div>
   <div class="introduce">
     <p><strong>웹 프론트엔드</strong> 개발을 좋아해요.</p>
     <p><strong>기록</strong>하고 <strong>공유</strong>하는 걸 좋아해요.</p>
@@ -90,18 +88,17 @@
   </div>
 </header>
 
-<div class="contact">
-  <span>
-    🐱
-    <a href="https://github.com/kang-kibong" target="_blank">Github</a>
-  </span>
-  <span>
-    📧
-    <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
-  </span>
-</div>
-
-<section class="w"><ul><li class="list">
+<section class="w">
+  <div class="contact">
+    <span>
+      🐱
+      <a href="https://github.com/kang-kibong" target="_blank">Github</a>
+    </span>
+    <span>
+      📧
+      <a href="mailto:byeonghyeon.dev@gmail.com">Email</a>
+    </span>
+  </div><ul><li class="list">
     <strong>👨🏻‍💻 kakao tech campus 2th ~</strong>
   </li><ul><li>
     <span>2024-05-14</span>
@@ -305,6 +302,11 @@
 
 
 </section>
+
+<div class="profile-container">
+  <div class="profile1"></div>
+  <div class="profile2"></div>
+</div>
 
     </main>
   </body>
