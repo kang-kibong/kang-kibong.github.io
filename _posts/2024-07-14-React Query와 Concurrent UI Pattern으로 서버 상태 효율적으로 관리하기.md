@@ -317,7 +317,7 @@ export default function WishButton() {
 
 이전에 Axios를 사용해 비동기 데이터를 처리할 때, `useFetch` 같은 커스텀 훅을 만들어 비동기 상태를 관리해본 경험이 있다.
 
-(해당 내용은 이전에 [\*\*API 통신부터 에러 핸들링까지(feat. Axios)](https://kang-kibong.github.io/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html)\*\* 포스팅에서 자세하게 살펴볼 수 있다.)
+(해당 내용은 이전에 [**API 통신부터 에러 핸들링까지(feat. Axios)**](https://kang-kibong.github.io/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html) 포스팅에서 자세하게 살펴볼 수 있다.)
 
 하지만, 이러한 방식은 명령형 프로그래밍 스타일로, 비동기 상태에 따른 다양한 분기 처리를 직접 구현해야 하는 단점이 있다.
 
@@ -422,7 +422,7 @@ import { useGetProductsDetail } from '@apis/products/hooks/useGetProductsDetail'
 import { Spinner, ErrorMessage } from '@components/common'
 
 interface GiftProps {
-	productId: string
+productId: string
 }
 
 const ERROR_MESSAGE = 'Failed to load product details.'

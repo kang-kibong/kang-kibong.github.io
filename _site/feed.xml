@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-15T15:10:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kang Byeong-hyeon 👨🏻‍💻</title><subtitle>Kang Byeonghyeon&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-15T15:16:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kang Byeong-hyeon 👨🏻‍💻</title><subtitle>Kang Byeonghyeon&apos;s dev blog
 </subtitle><author><name>Kang Byeonghyeon</name></author><entry><title type="html">[우선] 우선을 중단하며</title><link href="http://localhost:4000/%EC%9A%B0%EC%84%A0-%EC%9A%B0%EC%84%A0%EC%9D%84-%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0.html" rel="alternate" type="text/html" title="[우선] 우선을 중단하며" /><published>2024-07-28T00:00:00+09:00</published><updated>2024-07-28T00:00:00+09:00</updated><id>http://localhost:4000/%5B%EC%9A%B0%EC%84%A0%5D%20%EC%9A%B0%EC%84%A0%EC%9D%84%20%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9A%B0%EC%84%A0-%EC%9A%B0%EC%84%A0%EC%9D%84-%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -655,7 +655,7 @@ bun add @tanstack/react-query
 
 &lt;p&gt;이전에 Axios를 사용해 비동기 데이터를 처리할 때, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useFetch&lt;/code&gt; 같은 커스텀 훅을 만들어 비동기 상태를 관리해본 경험이 있다.&lt;/p&gt;
 
-&lt;p&gt;(해당 내용은 이전에 &lt;a href=&quot;https://kang-kibong.github.io/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html&quot;&gt;**API 통신부터 에러 핸들링까지(feat. Axios)&lt;/a&gt;** 포스팅에서 자세하게 살펴볼 수 있다.)&lt;/p&gt;
+&lt;p&gt;(해당 내용은 이전에 &lt;a href=&quot;https://kang-kibong.github.io/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html&quot;&gt;&lt;strong&gt;API 통신부터 에러 핸들링까지(feat. Axios)&lt;/strong&gt;&lt;/a&gt; 포스팅에서 자세하게 살펴볼 수 있다.)&lt;/p&gt;
 
 &lt;p&gt;하지만, 이러한 방식은 명령형 프로그래밍 스타일로, 비동기 상태에 따른 다양한 분기 처리를 직접 구현해야 하는 단점이 있다.&lt;/p&gt;
 
@@ -756,7 +756,7 @@ bun add @tanstack/react-query
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Spinner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ErrorMessage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@components/common&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GiftProps&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nl&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ERROR_MESSAGE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Failed to load product details.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
