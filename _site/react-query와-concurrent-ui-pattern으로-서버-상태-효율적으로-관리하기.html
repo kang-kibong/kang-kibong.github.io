@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>React Query와 Concurrent UI Pattern으로 서버 상태 효율적으로 관리하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="React Query와 Concurrent UI Pattern으로 서버 상태 효율적으로 관리하기" />
+<meta name="author" content="Kang Byeonghyeon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kang Byeonghyeon’s dev blog" />
+<meta property="og:description" content="Kang Byeonghyeon’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/react-query%EC%99%80-concurrent-ui-pattern%EC%9C%BC%EB%A1%9C-%EC%84%9C%EB%B2%84-%EC%83%81%ED%83%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/react-query%EC%99%80-concurrent-ui-pattern%EC%9C%BC%EB%A1%9C-%EC%84%9C%EB%B2%84-%EC%83%81%ED%83%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="Kang Byeong-hyeon 👨🏻‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-14T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="React Query와 Concurrent UI Pattern으로 서버 상태 효율적으로 관리하기" />
+<script type="application/ld+json">
+{"dateModified":"2024-07-14T00:00:00+09:00","datePublished":"2024-07-14T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/react-query%EC%99%80-concurrent-ui-pattern%EC%9C%BC%EB%A1%9C-%EC%84%9C%EB%B2%84-%EC%83%81%ED%83%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.html"},"url":"http://localhost:4000/react-query%EC%99%80-concurrent-ui-pattern%EC%9C%BC%EB%A1%9C-%EC%84%9C%EB%B2%84-%EC%83%81%ED%83%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.html","author":{"@type":"Person","name":"Kang Byeonghyeon"},"@type":"BlogPosting","description":"Kang Byeonghyeon’s dev blog","headline":"React Query와 Concurrent UI Pattern으로 서버 상태 효율적으로 관리하기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kang Byeong-hyeon 👨🏻‍💻" /><meta name="title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta name="description" content="Kang Byeong-hyeon's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="og:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="twitter:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/logo.png"
+  />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8692933662942054"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-07-14 00:00:00 +0900"
+      >2024-07-14</time
+    >
+  </p>
+
+  <h1 class="post-title">React Query와 Concurrent UI Pattern으로 서버 상태 효율적으로 관리하기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<h1 id="react-query란"><strong>React Query란?</strong></h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F1171dd7d-6267-4210-b9f4-08941ea21f85%2Fimage.png?id=938788ad-2cf8-433e-919a-67acc17a38ba&amp;table=block" alt="image.png" /></p>
+
+<p><br /></p>
+
+<p><strong>React Query</strong>는 서버 상태를 관리하는 라이브러리로, 데이터 페칭, 캐싱, 동기화 및 서버 상태의 업데이트를 손쉽게 처리할 수 있도록 돕는다.</p>
+
+<p>React 애플리케이션에서 서버와의 통신을 더욱 효과적으로 관리하고, 사용자 경험을 향상시키는 데 중점을 둔 도구이다.</p>
+
+<p>이번 포스팅에서는 React Query가 제공하는 주요 기능들과 이를 사용하는 방법에 대해 다룰 예정이다. 또한, Concurrent UI Pattern을 통한 데이터 페칭에 대해서도 함께 살펴보자.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="설치">설치</h1>
+
+<p>React Query를 사용하기 위해서는 먼저 라이브러리를 설치해야 한다.</p>
+
+<p>사용하는 패키지 매니저에 따라서, 다음 명령어를 통해 설치할 수 있다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i @tanstack/react-query
+
+pnpm add @tanstack/react-query
+
+yarn add @tanstack/react-query
+
+bun add @tanstack/react-query
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="queryclient-queryclientprovider-설정하기">QueryClient, QueryClientProvider 설정하기</h1>
+
+<p>React Query를 통해 애플리케이션 전반에서 쿼리를 관리하고, 데이터를 자동으로 캐싱하고 동기화하려면 먼저, <strong>QueryClient</strong>와 <strong>QueryClientProvider</strong>를 설정해야 한다.</p>
+
+<p>아래는 <code class="language-plaintext highlighter-rouge">index.tsx</code> 또는 <code class="language-plaintext highlighter-rouge">App.tsx</code> 파일에 필요한 설정 코드이다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">QueryClient</span><span class="p">,</span> <span class="nx">QueryClientProvider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@tanstack/react-query</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./App</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">QueryClient</span><span class="p">();</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">QueryClientProvider</span> <span class="na">client</span><span class="p">=</span><span class="si">{</span><span class="nx">queryClient</span><span class="si">}</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">QueryClientProvider</span><span class="p">&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="usequery-usemutation-톺아보기">useQuery, useMutation 톺아보기</h1>
+
+<h2 id="usequery"><a href="https://tanstack.com/query/latest/docs/framework/react/reference/useQuery#usequery">useQuery</a></h2>
+
+<p><code class="language-plaintext highlighter-rouge">useQuery</code>는 데이터를 <strong>GET</strong> 요청으로 가져올 때 사용하는 훅이다.</p>
+
+<p>해당 훅을 사용하면 데이터를 비동기적으로 페칭하고, 로딩 상태와 에러 상태를 관리하며, 캐싱된 데이터를 활용할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">isError</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="o">&lt;</span>
+  <span class="nx">RankingProductsResponse</span><span class="p">,</span>
+  <span class="nx">AxiosError</span>
+<span class="o">&gt;</span><span class="p">({</span>
+  <span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">rankingProducts</span><span class="dl">"</span><span class="p">,</span> <span class="nx">selectedTarget</span><span class="p">,</span> <span class="nx">selectedWish</span><span class="p">],</span>
+  <span class="na">queryFn</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span>
+    <span class="nx">getRankingProducts</span><span class="p">({</span> <span class="na">targetType</span><span class="p">:</span> <span class="nx">selectedTarget</span><span class="p">,</span> <span class="na">rankType</span><span class="p">:</span> <span class="nx">selectedWish</span> <span class="p">}),</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">queryKey</code></strong>: 쿼리를 고유하게 식별하는 키이다. 이 키를 통해 React Query는 쿼리의 캐시를 관리하고, 동일한 키를 사용하는 쿼리에서 데이터를 재사용할 수 있다.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">queryFn</code></strong>: 데이터를 페칭하는 비동기 함수이다. 서버로부터 데이터를 가져오고, React Query는 이 데이터를 캐싱하고 관리한다.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="usemutation"><a href="https://tanstack.com/query/latest/docs/framework/react/reference/useMutation#usemutation">useMutation</a></h2>
+
+<p><code class="language-plaintext highlighter-rouge">useMutation</code>은 데이터를 <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong> 등의 요청으로 변경할 때 사용하는 훅이다.</p>
+
+<p>주로 서버의 데이터를 업데이트하거나, 새로운 데이터를 추가하거나, 기존 데이터를 삭제하는 작업에 사용된다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">mutate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useMutation</span><span class="o">&lt;</span><span class="nx">AddWishResponse</span><span class="p">,</span> <span class="nx">AxiosError</span><span class="p">,</span> <span class="nx">AddwishRequest</span><span class="o">&gt;</span><span class="p">({</span>
+  <span class="na">mutationFn</span><span class="p">:</span> <span class="p">(</span><span class="na">request</span><span class="p">:</span> <span class="nx">AddWishRequest</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">addWish</span><span class="p">(</span><span class="nx">request</span><span class="p">),</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">mutationFn</code></strong>: 서버에 변경 요청을 보내는 비동기 함수이다. 이 함수는 서버 상태를 업데이트하며, React Query는 이 변화를 자동으로 관리한다.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="react-query-사용해보기">React Query 사용해보기</h1>
+
+<p>React Query를 실제 프로젝트에서 어떻게 사용할 수 있는지 살펴보자.</p>
+
+<p>먼저 <code class="language-plaintext highlighter-rouge">useQuery</code>를 사용해 서버로부터 데이터를 가져오는 방법과 <code class="language-plaintext highlighter-rouge">useMutation</code>을 사용해 서버에 데이터를 추가하는 방법을 예시로 들어 설명해보겠다.</p>
+
+<p>예시로는, 사용자에게 관심목록 데이터를 가져오고, 관심 목록 아이템을 추가하는 예시로 React Query의 사용법을 보다 쉽게 이해해보도록 하자.</p>
+
+<p><br /></p>
+
+<h2 id="usequery-사용-예시-관심목록-데이터-가져오기">useQuery 사용 예시: 관심목록 데이터 가져오기</h2>
+
+<p>아래 예제에서는 <code class="language-plaintext highlighter-rouge">useQuery</code>를 사용하여 서버로부터 관심목록 데이터를 페칭해보려고 한다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">AxiosResponse</span><span class="p">,</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">axiosInstance</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@apis/instance</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useQuery</span><span class="p">,</span> <span class="nx">UseQueryResult</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@tanstack/react-query</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// apis/path.ts</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">API_BASE</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/api</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">WISH_PATHS</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">GET_WISH</span><span class="p">:</span> <span class="p">(</span><span class="na">params</span><span class="p">:</span> <span class="nx">GetWishesRequest</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes?page=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">}</span><span class="s2">&amp;size=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">size</span><span class="p">}</span><span class="s2">&amp;sort=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">sort</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+  <span class="na">ADD_WISH</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes`</span><span class="p">,</span>
+  <span class="na">DELETE_WISH</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes`</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// types/requestTypes.ts</span>
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">GetWishesRequest</span> <span class="p">{</span>
+  <span class="nl">page</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">size</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">sort</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// types/responseTypes.ts</span>
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">GetWishesResponse</span> <span class="p">{</span>
+  <span class="nl">totalPages</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">totalElements</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">size</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="nx">Wish</span><span class="p">[];</span>
+  <span class="nl">number</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">sort</span><span class="p">:</span> <span class="nx">Sort</span><span class="p">;</span>
+  <span class="nl">first</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">last</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">numberOfElements</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">pageable</span><span class="p">:</span> <span class="nx">Pageable</span><span class="p">;</span>
+  <span class="nl">empty</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">getWishes</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span>
+  <span class="nx">params</span><span class="p">:</span> <span class="nx">GetWishesRequest</span>
+<span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">GetWishesResponse</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="na">res</span><span class="p">:</span> <span class="nx">AxiosResponse</span><span class="o">&lt;</span><span class="nx">GetWishesResponse</span><span class="o">&gt;</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+    <span class="nx">WISH_PATHS</span><span class="p">.</span><span class="nx">GET_WISH</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
+  <span class="p">);</span>
+  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">getWishes</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">useGetWishes</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">params</span><span class="p">:</span> <span class="nx">GetWishesRequest</span>
+<span class="p">):</span> <span class="nx">UseQueryResult</span><span class="o">&lt;</span><span class="nx">GetWishesResponse</span><span class="p">,</span> <span class="nx">AxiosError</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">useQuery</span><span class="o">&lt;</span><span class="nx">GetWishesResponse</span><span class="p">,</span> <span class="nx">AxiosError</span><span class="o">&gt;</span><span class="p">({</span>
+    <span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">wishes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">params</span><span class="p">],</span>
+    <span class="na">queryFn</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getWishes</span><span class="p">(</span><span class="nx">params</span><span class="p">),</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>위 코드에서는 Axios를 사용해 관심목록 데이터를 가져오는 <code class="language-plaintext highlighter-rouge">getWishes</code> 함수를 정의하고, <code class="language-plaintext highlighter-rouge">useQuery</code>를 사용하여 이를 React Query와 결합한 <code class="language-plaintext highlighter-rouge">useGetWishes</code> 훅을 작성하였다.</p>
+
+<p>해당 훅은 쿼리 키(<code class="language-plaintext highlighter-rouge">['wishes', params]</code>)를 기반으로 데이터를 캐싱하도록 하고, 필요할 때마다 서버에서 데이터를 다시 가져오도록 할 수 있다.</p>
+
+<p>이렇게 구현한 <code class="language-plaintext highlighter-rouge">useGetWishes</code> 훅을 실제 관심 목록 데이터를 렌더링하는 역할을 하는 <code class="language-plaintext highlighter-rouge">WishList</code> 컴포넌트에서 사용해보자.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useGetWishes</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@apis/wish/hooks/useGetWishes</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">WishList</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">refetch</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useGetWishes</span><span class="p">({</span> <span class="na">page</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">size</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">sort</span><span class="p">:</span> <span class="dl">'</span><span class="s1">asc</span><span class="dl">'</span> <span class="p">});</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">CenteredContainer</span> <span class="na">maxWidth</span><span class="p">=</span><span class="s">"md"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">WishListTitle</span><span class="p">&gt;</span>관심목록<span class="p">&lt;/</span><span class="nc">WishListTitle</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">WishListContainer</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">data</span><span class="p">?.</span><span class="nx">content</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">wishItem</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="p">&lt;</span><span class="nc">WishListItem</span>
+            <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">wishItem</span><span class="p">.</span><span class="nx">wishId</span><span class="si">}</span>
+            <span class="na">wishId</span><span class="p">=</span><span class="si">{</span><span class="nx">wishItem</span><span class="p">.</span><span class="nx">wishId</span><span class="si">}</span>
+            <span class="na">productImageUrl</span><span class="p">=</span><span class="si">{</span><span class="nx">wishItem</span><span class="p">.</span><span class="nx">productImageUrl</span><span class="si">}</span>
+            <span class="na">productName</span><span class="p">=</span><span class="si">{</span><span class="nx">wishItem</span><span class="p">.</span><span class="nx">productName</span><span class="si">}</span>
+            <span class="na">productPrice</span><span class="p">=</span><span class="si">{</span><span class="nx">wishItem</span><span class="p">.</span><span class="nx">productPrice</span><span class="si">}</span>
+            <span class="na">onDelete</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">refetch</span><span class="p">()</span><span class="si">}</span>
+          <span class="p">/&gt;</span>
+        <span class="p">))</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nc">WishListContainer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">CenteredContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이전에 정의한 <code class="language-plaintext highlighter-rouge">useGetWishes</code> 쿼리 훅으로 서버로부터 관심목록 데이터를 페칭하여 <code class="language-plaintext highlighter-rouge">data</code>를 받아내고, <code class="language-plaintext highlighter-rouge">data</code>가 존재할 경우, 해당 데이터를 렌더링하도록 구현하였다.</p>
+
+<p>추가로, <code class="language-plaintext highlighter-rouge">WishListItem</code> 컴포넌트는 특정 관심 목록 아이템을 삭제할 수 있는 기능이 포함되어 있는데, 사용자가 해당 아이템을 삭제했을 경우, <code class="language-plaintext highlighter-rouge">refetch</code> 하여 데이터를 새롭게 갱신할 수 있도록 구현해보았다.</p>
+
+<p><br /></p>
+
+<h2 id="usemutation-사용-예시-관심목록에-아이템-추가하기">useMutation 사용 예시: 관심목록에 아이템 추가하기</h2>
+
+<p>이번에는 <code class="language-plaintext highlighter-rouge">useMutation</code>을 사용해 서버에 데이터를 추가해보려고 한다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">AxiosResponse</span><span class="p">,</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">axiosInstance</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@apis/instance</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useMutation</span><span class="p">,</span> <span class="nx">UseMutationResult</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@tanstack/react-query</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// apis/path.ts</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">API_BASE</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/api</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">WISH_PATHS</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">GET_WISH</span><span class="p">:</span> <span class="p">(</span><span class="na">params</span><span class="p">:</span> <span class="nx">GetWishesRequest</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes?page=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">}</span><span class="s2">&amp;size=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">size</span><span class="p">}</span><span class="s2">&amp;sort=</span><span class="p">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">sort</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+  <span class="na">ADD_WISH</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes`</span><span class="p">,</span>
+  <span class="na">DELETE_WISH</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">API_BASE</span><span class="p">}</span><span class="s2">/wishes`</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// types/requestTypes.ts</span>
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">AddWishRequest</span> <span class="p">{</span>
+  <span class="nl">productId</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// types/responseTypes.ts</span>
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">AddWishResponse</span> <span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">productId</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">addWish</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">request</span><span class="p">:</span> <span class="nx">AddWishRequest</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">AddWishResponse</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="na">res</span><span class="p">:</span> <span class="nx">AxiosResponse</span><span class="o">&lt;</span><span class="nx">AddWishResponse</span><span class="o">&gt;</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+    <span class="nx">WISH_PATHS</span><span class="p">.</span><span class="nx">ADD_WISH</span><span class="p">,</span>
+    <span class="nx">request</span>
+  <span class="p">);</span>
+  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">useAddWishMutation</span> <span class="o">=</span> <span class="p">():</span> <span class="nx">UseMutationResult</span><span class="o">&lt;</span>
+  <span class="nx">AddWishResponse</span><span class="p">,</span>
+  <span class="nx">AxiosError</span><span class="p">,</span>
+  <span class="nx">AddWishRequest</span>
+<span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">useMutation</span><span class="o">&lt;</span><span class="nx">AddWishResponse</span><span class="p">,</span> <span class="nx">AxiosError</span><span class="p">,</span> <span class="nx">AddWishRequest</span><span class="o">&gt;</span><span class="p">({</span>
+    <span class="na">mutationFn</span><span class="p">:</span> <span class="p">(</span><span class="na">request</span><span class="p">:</span> <span class="nx">AddWishRequest</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">addWish</span><span class="p">(</span><span class="nx">request</span><span class="p">),</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>마찬가지로 Axios를 통해 관심목록 아이템을 추가하는 <code class="language-plaintext highlighter-rouge">addWish</code> 함수를 정의하고, <code class="language-plaintext highlighter-rouge">useMutation</code>을 사용하여 이를 React Query와 결합한 <code class="language-plaintext highlighter-rouge">useAddWishMutation</code> 훅을 작성하였다.</p>
+
+<p>이후, 해당 <code class="language-plaintext highlighter-rouge">useAddWishMutation</code> 훅을 통해 관심목록에 아이템을 추가하는 <code class="language-plaintext highlighter-rouge">WishButton</code> 컴포넌트에서 사용해보도록 하자.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useAddWishMutation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@apis/wish/hooks/useAddWish</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">SUCCESS_ADD_WISH_ALERT</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">관심등록 완료</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">FAIL_ADD_WISH_ALERT</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">관심등록 실패</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">WishButton</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">productId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useParams</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">productId</span><span class="p">:</span> <span class="kr">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">mutate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useAddWishMutation</span><span class="p">();</span>
+
+  <span class="kd">const</span> <span class="nx">handleClick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">mutate</span><span class="p">(</span>
+      <span class="p">{</span> <span class="na">productId</span><span class="p">:</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">productId</span><span class="p">)</span> <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">onSuccess</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">SUCCESS_ADD_WISH_ALERT</span><span class="p">),</span>
+        <span class="na">onError</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">FAIL_ADD_WISH_ALERT</span><span class="p">),</span>
+      <span class="p">},</span>
+    <span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">theme</span><span class="p">=</span><span class="s">"primary"</span> <span class="na">size</span><span class="p">=</span><span class="s">"small"</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="nx">handleClick</span><span class="si">}</span><span class="p">&gt;</span>
+      관심목록 추가하기
+    <span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">WishButton</code> 컴포넌트는 사용자가 <strong>‘관심목록 추가하기’</strong> 버튼을 클릭하면 <code class="language-plaintext highlighter-rouge">handleClick</code>함수를 호출하여 <code class="language-plaintext highlighter-rouge">mutate</code> 함수를 호출하도록 구현하였다.</p>
+
+<p>요청이 성공하면 <code class="language-plaintext highlighter-rouge">onSuccess</code>를 통해 성공 알림을 표시하고, 실패하면 <code class="language-plaintext highlighter-rouge">onError</code>를 통해 에러 메시지를 보여주도록 하였다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="concurrent-ui-pattern을-통해-선언적으로-데이터-패칭하기">Concurrent UI Pattern을 통해 <strong>선언적으로 데이터 패칭하기</strong></h1>
+
+<p>이전에 Axios를 사용해 비동기 데이터를 처리할 때, <code class="language-plaintext highlighter-rouge">useFetch</code> 같은 커스텀 훅을 만들어 비동기 상태를 관리해본 경험이 있다.</p>
+
+<p>(해당 내용은 이전에 <a href="https://kang-kibong.github.io/api-%ED%86%B5%EC%8B%A0%EB%B6%80%ED%84%B0-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81%EA%B9%8C%EC%A7%80-feat-axios.html">**API 통신부터 에러 핸들링까지(feat. Axios)</a>** 포스팅에서 자세하게 살펴볼 수 있다.)</p>
+
+<p>하지만, 이러한 방식은 명령형 프로그래밍 스타일로, 비동기 상태에 따른 다양한 분기 처리를 직접 구현해야 하는 단점이 있다.</p>
+
+<p>반면, React Query는 이러한 복잡한 분기 처리를 줄이고, 선언적 방식으로 비동기 로직을 처리할 수 있게 해준다.</p>
+
+<p>이를 <strong>선언적 데이터 페칭</strong>이라 하며, <strong>Concurrent UI Pattern</strong>의 일환으로 불린다.</p>
+
+<p>해당 패턴은 비동기 작업의 복잡성을 줄여주고, 코드의 가독성과 유지보수성을 크게 향상시킬 수 있다.</p>
+
+<p>우리는 이 패턴을 살펴보기 전에, <strong>tanstack-query v5</strong>에서 새롭게 추가된 <code class="language-plaintext highlighter-rouge">useSuspenseQuery</code> 훅에 대해 먼저 알아보자.</p>
+
+<p><br /></p>
+
+<h2 id="usesuspensequery"><a href="https://tanstack.com/query/latest/docs/framework/react/reference/useSuspenseQuery#usesuspensequery"><strong>useSuspenseQuery</strong></a></h2>
+
+<p>React Query의 <code class="language-plaintext highlighter-rouge">useSuspenseQuery</code> 훅은 비동기 데이터를 쉽게 처리할 수 있게 해주는 도구이다. 해당 훅은 <code class="language-plaintext highlighter-rouge">Suspense</code>와 함께 사용되기 때문에 데이터 로딩 상태를 더욱 직관적으로 관리할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useSuspenseQuery</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@tanstack/react-query</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">useGetProductsDetail</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">productId</span> <span class="p">}:</span> <span class="nx">ProductDetailRequest</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="nx">useSuspenseQuery</span><span class="o">&lt;</span><span class="nx">ProductDetailResponse</span><span class="p">,</span> <span class="nx">AxiosError</span><span class="o">&gt;</span><span class="p">({</span>
+    <span class="na">queryKey</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">productDetail</span><span class="dl">"</span><span class="p">,</span> <span class="nx">productId</span><span class="p">],</span>
+    <span class="na">queryFn</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getProductsDetail</span><span class="p">({</span> <span class="nx">productId</span> <span class="p">}),</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이제 <code class="language-plaintext highlighter-rouge">Suspense</code>와 <code class="language-plaintext highlighter-rouge">ErrorBoundary</code>를 결합하여 비동기 작업과 에러 처리를 어떻게 선언적으로 처리할 수 있는지 살펴보자. 그 전에 <code class="language-plaintext highlighter-rouge">react-error-boundary</code>를 설치하여 에러 처리를 위한 준비를 해야 한다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>react-error-boundary
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="asyncboundary-컴포넌트-구현해보기">AsyncBoundary 컴포넌트 구현해보기</h2>
+
+<p>우리는 <code class="language-plaintext highlighter-rouge">AsyncBoundary</code> 컴포넌트를 구현하여 <code class="language-plaintext highlighter-rouge">Suspense</code>와 <code class="language-plaintext highlighter-rouge">ErrorBoundary</code>를 결합하여 비동기 데이터 로딩과 에러 처리를 더욱 간단하게 관리할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="kd">type</span> <span class="p">{</span> <span class="nx">ComponentProps</span><span class="p">,</span> <span class="nx">Ref</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">forwardRef</span><span class="p">,</span>
+  <span class="nx">Suspense</span><span class="p">,</span>
+  <span class="nx">useImperativeHandle</span><span class="p">,</span>
+  <span class="nx">useRef</span><span class="p">,</span>
+<span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="kd">type</span> <span class="p">{</span> <span class="nx">ErrorBoundaryProps</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-error-boundary</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ErrorBoundary</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-error-boundary</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">Props</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">children</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span><span class="p">;</span>
+  <span class="nl">rejectedFallback</span><span class="p">?:</span> <span class="nx">ErrorBoundaryProps</span><span class="p">[</span><span class="dl">"</span><span class="s2">fallback</span><span class="dl">"</span><span class="p">];</span>
+  <span class="nl">pendingFallback</span><span class="p">?:</span> <span class="nx">ComponentProps</span><span class="o">&lt;</span><span class="k">typeof</span> <span class="nx">Suspense</span><span class="o">&gt;</span><span class="p">[</span><span class="dl">"</span><span class="s2">fallback</span><span class="dl">"</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="kr">interface</span> <span class="nx">ResetRef</span> <span class="p">{</span>
+  <span class="nx">reset</span><span class="p">?():</span> <span class="k">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">AsyncBoundary</span> <span class="o">=</span> <span class="nx">forwardRef</span><span class="p">(</span>
+  <span class="p">(</span>
+    <span class="p">{</span> <span class="nx">pendingFallback</span><span class="p">,</span> <span class="nx">rejectedFallback</span><span class="p">,</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">Props</span><span class="p">,</span>
+    <span class="nx">resetRef</span><span class="p">:</span> <span class="nx">Ref</span><span class="o">&lt;</span><span class="nx">ResetRef</span><span class="o">&gt;</span>
+  <span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nx">useRef</span><span class="o">&lt;</span><span class="nx">ErrorBoundary</span> <span class="o">|</span> <span class="kc">null</span><span class="o">&gt;</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+    <span class="nx">useImperativeHandle</span><span class="p">(</span><span class="nx">resetRef</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">({</span>
+      <span class="na">reset</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">ref</span><span class="p">.</span><span class="nx">current</span><span class="p">?.</span><span class="nx">resetErrorBoundary</span><span class="p">(),</span>
+    <span class="p">}));</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="p">&lt;</span><span class="nc">ErrorBoundary</span> <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">ref</span><span class="si">}</span> <span class="na">fallback</span><span class="p">=</span><span class="si">{</span><span class="nx">rejectedFallback</span> <span class="o">??</span> <span class="o">&lt;&gt;</span><span class="p">&lt;/&gt;</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Suspense</span> <span class="na">fallback</span><span class="p">=</span><span class="si">{</span><span class="nx">pendingFallback</span> <span class="o">??</span> <span class="o">&lt;&gt;</span><span class="p">&lt;/&gt;</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">Suspense</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">ErrorBoundary</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">AsyncBoundary</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>먼저 <strong>에러 핸들링</strong>을 살펴보자. <code class="language-plaintext highlighter-rouge">react-error-boundary</code>를 사용하면 비동기 작업에서 발생하는 에러를 간단히 관리할 수 있다. 이를 위해 <code class="language-plaintext highlighter-rouge">ErrorBoundary</code> 컴포넌트를 사용하며, <code class="language-plaintext highlighter-rouge">rejectedFallback</code> 속성으로 에러 발생 시 표시할 컴포넌트를 지정한다.</p>
+
+<p>다음으로, <strong>로딩 상태 관리</strong>를 위해 React 16.6에서 도입된 <code class="language-plaintext highlighter-rouge">Suspense</code>를 사용한다. <code class="language-plaintext highlighter-rouge">Suspense</code>는 비동기 작업이 진행 중일 때 보여줄 컴포넌트를 지정할 수 있게 해준다. <code class="language-plaintext highlighter-rouge">pendingFallback</code> 속성에 로딩 중에 표시할 컴포넌트를 전달하면, 비동기 작업이 완료될 때까지 해당 컴포넌트가 렌더링된다.</p>
+
+<p>마지막으로, <strong>상태 초기화</strong>를 위해 <code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 사용한다. <code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 통해 외부 컴포넌트에서 내부의 특정 메서드나 상태를 제어할 수 있게 된다. <code class="language-plaintext highlighter-rouge">reset</code> 함수를 호출하여 <code class="language-plaintext highlighter-rouge">ErrorBoundary</code>를 초기하여 에러 상태에서 다시 시도할 수 있는 기능을 제공할 수 있도록 구현한다.</p>
+
+<p><br /></p>
+
+<h2 id="asyncboundary-컴포넌트-사용해보기">AsyncBoundary 컴포넌트 사용해보기</h2>
+
+<p>이제 <code class="language-plaintext highlighter-rouge">AsyncBoundary</code>로 비동기 작업을 처리하면서 로딩 상태와 에러를 관리하는 방법을 살펴보자.</p>
+
+<p>예를 들어, 상품 상세 정보를 가져오는 <code class="language-plaintext highlighter-rouge">Gift</code> 컴포넌트에서 해당 컴포넌트를 활용해보자.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useGetProductsDetail</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@apis/products/hooks/useGetProductsDetail</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Spinner</span><span class="p">,</span> <span class="nx">ErrorMessage</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@components/common</span><span class="dl">'</span>
+
+<span class="kr">interface</span> <span class="nx">GiftProps</span> <span class="p">{</span>
+	<span class="nl">productId</span><span class="p">:</span> <span class="kr">string</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">ERROR_MESSAGE</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Failed to load product details.</span><span class="dl">'</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Gift</span><span class="p">({</span> <span class="nx">productId</span> <span class="p">}:</span> <span class="nx">GiftProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useGetProductsDetail</span><span class="p">({</span> <span class="nx">productId</span> <span class="p">});</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">GiftContainer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">AsyncBoundary</span>
+        <span class="na">pendingFallback</span><span class="p">=</span><span class="si">{</span><span class="p">&lt;</span><span class="nc">Spinner</span> <span class="p">/&gt;</span><span class="si">}</span>
+        <span class="na">rejectedFallback</span><span class="p">=</span><span class="si">{</span><span class="p">&lt;</span><span class="nc">ErrorMessage</span> <span class="na">message</span><span class="p">=</span><span class="si">{</span><span class="nx">ERROR_MESSAGE</span><span class="si">}</span> <span class="p">/&gt;</span>
+      <span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Image</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">data</span><span class="p">?.</span><span class="nx">imageUrl</span><span class="si">}</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">GiftName</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">data</span><span class="p">?.</span><span class="nx">category</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">GiftName</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">GiftInfo</span><span class="p">&gt;</span>
+            <span class="si">{</span><span class="nx">data</span><span class="p">?.</span><span class="nx">name</span><span class="si">}</span>
+          <span class="p">&lt;/</span><span class="nc">GiftInfo</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">AsyncBoundary</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">GiftContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Gift</code> 컴포넌트에서 <code class="language-plaintext highlighter-rouge">useGetProductsDetail</code> 훅을 통해 데이터를 페칭하고, 이미지 경로와 상품 카테고리 이름, 상품 이름을 렌더링하고 있다.</p>
+
+<p>이 부분을 <code class="language-plaintext highlighter-rouge">AsyncBoundary</code>로 래핑하여, 로딩 중일 때는 <code class="language-plaintext highlighter-rouge">Spinner</code>를, 에러가 발생했을 때는 <code class="language-plaintext highlighter-rouge">ErrorMessage</code>를 출력하도록 한다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 포스팅에서는 <strong>React Query</strong>를 사용해 서버 상태를 관리하는 방법을 전반적으로 살펴보았다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">useQuery</code>와 <code class="language-plaintext highlighter-rouge">useMutation</code>을 통해 데이터를 효율적으로 페칭하고, 서버 상태를 손쉽게 업데이트할 수 있는 방법을 배웠다.</p>
+
+<p>또한, <strong>Concurrent UI Pattern</strong>을 통해 비동기 로직을 선언적으로 처리하여, 코드의 가독성과 유지보수성을 높이는 방법도 알아보았다.</p>
+
+<p>React Query는 서버 상태 관리에 있어 매우 강력한 도구이다.</p>
+
+<p>이를 잘 활용하면 애플리케이션의 성능과 사용자 경험을 크게 향상시킬 수 있다.</p>
+
+<p><br /></p>
+
+<p>독자분들도 해당 포스팅을 통해 관리하고 있는 프로젝트에 React Query를 활용하여 서버 상태 관리 도입을 적극적으로 고려해보길 바란다.</p>
+
+</article>
+
+    </main>
+  </body>
+</html>
