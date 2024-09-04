@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 1차 코드리뷰 반영 및 리팩토링 진행기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 1차 코드리뷰 반영 및 리팩토링 진행기" />
+<meta name="author" content="Kang Byeonghyeon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kang Byeonghyeon’s dev blog" />
+<meta property="og:description" content="Kang Byeonghyeon’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html" />
+<meta property="og:site_name" content="Kang Byeong-hyeon 👨🏻‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-15T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 1차 코드리뷰 반영 및 리팩토링 진행기" />
+<script type="application/ld+json">
+{"dateModified":"2024-07-15T00:00:00+09:00","datePublished":"2024-07-15T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html"},"url":"http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-1%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html","author":{"@type":"Person","name":"Kang Byeonghyeon"},"@type":"BlogPosting","description":"Kang Byeonghyeon’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 1차 코드리뷰 반영 및 리팩토링 진행기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kang Byeong-hyeon 👨🏻‍💻" /><meta name="title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta name="description" content="Kang Byeong-hyeon's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="og:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="twitter:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/logo.png"
+  />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8692933662942054"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-07-15 00:00:00 +0900"
+      >2024-07-15</time
+    >
+  </p>
+
+  <h1 class="post-title">[카카오 테크 캠퍼스 2기] 1차 코드리뷰 반영 및 리팩토링 진행기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<p>미션을 진행하면서 받은 코드리뷰를 바탕으로 개인적으로 리팩토링 해보는 시간을 가질 수 있었다.</p>
+
+<p>이번 코드 리뷰를 반영해보면서 <strong>폴더 구조 개선</strong>과 <strong>코드 리팩토링</strong>, 그리고 <strong>스타일 관리 방법</strong>에 대해 고민하고 개선한 내용들을 기록해 보았다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="1-폴더구조-개선">1. 폴더구조 개선</h1>
+
+<p>초기에는 각 페이지의 컴포넌트들을 <code class="language-plaintext highlighter-rouge">components</code> 폴더 하위에 페이지별로 디렉토리를 나눠서 관리했었다.</p>
+
+<p>그러나, 페이지가 많으면 많아질수록 디렉토리 구조가 복잡해지고 파일을 찾는 데 많은 시간이 걸릴 수 있다는 것을 느꼈다.</p>
+
+<p>때문에, 미션 코드에서 제안한 <code class="language-plaintext highlighter-rouge">features</code> 디렉토리에 대한 의미를 살펴보고 적용해보면서, <strong>기능 단위로 컴포넌트들을 그룹화</strong>하고 각 페이지별 디렉토리 구조를 간소화하여 각 기능에 해당하는 파일을 찾는데 소요되는 시간을 줄일 수 있었다.</p>
+
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F0650caf2-d94d-4f2c-976f-92f1d0808f74%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.38.09.png?id=a2c0a855-c968-4f3a-9f52-73e0e1e3c81a&amp;table=block" width="400" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-layout-컴포넌트-설계">2. Layout 컴포넌트 설계</h1>
+
+<p>기존에는 <strong>Header</strong>와 <strong>Footer</strong> 컴포넌트를 각 페이지마다 개별적으로 렌더링했기 때문에, 동일한 코드를 반복 작성하는 비효율이 발생하였다.</p>
+
+<p>이를 개선하기 위해 <strong>Header</strong>와 <strong>Footer</strong> 같은 공통 레이아웃 컴포넌트를 <code class="language-plaintext highlighter-rouge">Layout</code>이라는 컴포넌트로 추상화하여 설계하게 되었다.</p>
+
+<p>이렇게 함으로써 <strong>보일러플레이트 코드</strong>를 줄이고, 모든 페이지에서 공통 레이아웃을 손쉽게 재사용할 수 있게 되었다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Header</span><span class="p">,</span> <span class="nx">Footer</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@components/common</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">PageWrapperProps</span> <span class="p">{</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Layout</span><span class="p">({</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">PageWrapperProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Header</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Footer</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="3-colocation-원칙-준수">3. Colocation 원칙 준수</h1>
+
+<h2 id="privateroute">PrivateRoute</h2>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useAuth</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@context/auth/useAuth</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ROUTE_PATH</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@routes/path</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Navigate</span><span class="p">,</span> <span class="nx">Outlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">PrivateRoute</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">isAuthenticated</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useAuth</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="nx">isAuthenticated</span> <span class="p">?</span> <span class="p">&lt;</span><span class="nc">Outlet</span> <span class="p">/&gt;</span> <span class="p">:</span> <span class="p">&lt;</span><span class="nc">Navigate</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="nx">ROUTE_PATH</span><span class="p">.</span><span class="nx">LOGIN</span><span class="si">}</span> <span class="p">/&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>PrivateRoute</strong>는 라우팅과 관련된 컴포넌트로, 라우팅 기능과 밀접한 관계가 있다.</p>
+
+<p>기존에 이 컴포넌트를 <code class="language-plaintext highlighter-rouge">components/common</code>에서 관리하고 있었지만, <strong>Colocation</strong> 원칙을 준수하여 <strong>routes</strong> 폴더로 이동시켰다.</p>
+
+<p><strong>Colocation</strong>이란 관련된 코드와 파일을 <strong>서로 가까이 배치</strong>하여 관리하는 원칙을 의미한다.</p>
+
+<p>연관된 기능을 한 곳에서 쉽게 찾을 수 있어 코드 가독성과 유지보수성이 크게 향상되는 장점이 있다..</p>
+
+<p><code class="language-plaintext highlighter-rouge">PrivateRoute</code> 컴포넌트는 <strong>라우팅과</strong> 관련된 컴포넌트이므로, <strong>routes</strong> 폴더에 배치함으로써 라우팅 관련 기능이 집중적으로 관리될 수 있도록 구조를 개선해보았다.</p>
+
+<p>이로 인해 코드 구조가 더욱 명확해지고, 관련 코드를 찾는 데 걸리는 시간을 대폭 줄일 수 있다.</p>
+
+<p><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F3abee3aa-ed8c-4427-8396-fccb97605527%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.41.00.png?id=2b730db8-0c35-40f2-b316-55e2a70acb9a&amp;table=block" alt="스크린샷 2024-07-09 오후 2.41.00.png" /></td>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F38f6b389-f9e5-4242-943f-3e7b0404d69a%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.42.40.png?id=63d4d97b-0fa2-4a7e-95fc-bb811d062a9f&amp;table=block" alt="스크린샷 2024-07-09 오후 2.42.40.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="useloginform">useLoginForm</h2>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F8ec3d83a-95f7-40c5-bcb4-5558f3a406ed%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.26.11.png?id=36ea1ecb-e371-488f-bb3f-c2c04413d8b0&amp;table=block" alt="스크린샷 2024-07-09 오후 3.26.11.png" /></p>
+
+<p><br /></p>
+
+<p><strong>useLoginForm</strong>과 <strong>LoginForm</strong>은 밀접하게 결합된 로직이므로, root 경로에 있는 <code class="language-plaintext highlighter-rouge">hooks</code> 에서 관리하는 것이 아닌 <strong>LoginForm과</strong> 함께 관리하도록 구조를 개선해보았다.</p>
+
+<p>해당 방식이 <strong>컴포넌트의 책임</strong>과 <strong>로직의 관계</strong>를 관련 폴더에 관리함으로서 명확히 구분할 수 있다고 판단되어 Colocation을 준수하여 개선해보았다.</p>
+
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe9fac77d-b6b3-4515-b702-71b8e681c6aa%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.35.54.png?id=153432d1-4ac8-42e4-990c-d51bb3114a66&amp;table=block" width="400" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="4-폴더-및-파일-네이밍">4. 폴더 및 파일 네이밍</h1>
+
+<h2 id="path">path</h2>
+
+<p>기존에 <code class="language-plaintext highlighter-rouge">routes/constants.ts</code>로 네이밍했던 파일을 <code class="language-plaintext highlighter-rouge">path.ts</code>로 변경하여, 해당 파일이 <strong>라우팅 경로</strong>(path)만을 관리하는 파일임을 명확히하였다.</p>
+
+<p>추후에 관리해야 할 페이지가 많아지면, 관리해야할 경로(path)또한 많아지게 된다.</p>
+
+<p>따라서, 모든 상수를 정의하는 <code class="language-plaintext highlighter-rouge">constants</code>라는 네이밍은 <strong>포괄적인 의미</strong>를 가진다고 생각하였고, <strong>라우팅 경로</strong>만을 관리하는 역할과는 부합하지 않다고 판단하였다.</p>
+
+<p>이러한 이유로 파일명을 <code class="language-plaintext highlighter-rouge">path.ts</code>로 변경함으로써 해당 파일이 <strong>경로(path) 상수만을 관리</strong>하는 역할을 명확하게 하였고, <strong>가독성과 관리 효율성</strong>을 높임과 동시에 파일의 <strong>역할과 목적</strong>을 더 쉽게 이해할 수 있도록 개선할 수 있었다.</p>
+
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F9035a147-2295-4492-b1e1-0c138fd97c0b%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.45.14.png?id=941f3e54-41b9-4e6a-9fba-b9cd75123df1&amp;table=block" width="500" /></p>
+
+<p><br /></p>
+
+<h2 id="mocks">mocks</h2>
+
+<p>기존의 <code class="language-plaintext highlighter-rouge">data</code> 디렉토리는 <strong>실제 데이터</strong>와 <strong>가짜 데이터</strong>를 모두 관리하는 의미로 보일 수 있다고 판단하였다.</p>
+
+<p>때문에 이를 <strong>mocks</strong> 라는 디렉토리로 네이밍하여 <strong>가짜 데이터</strong>와 <strong>테스트용 응답</strong>만을 관리하는 폴더임을 명확하게 알 수 있도록 개선해보았다.</p>
+
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F8c1bb43e-464f-413e-9ba4-7bc73e0af7e8%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.01.56.png?id=d21811ac-7cef-4327-b146-41778b7b388d&amp;table=block" width="500" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="6-타입-제약-조건-활용한-maxwidth-관리-방식">6. 타입 제약 조건 활용한 maxWidth 관리 방식</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F65e46791-93c0-40be-96e0-4e4639ff6b0f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.43.00.png?id=5655bcfc-f268-49fb-9e10-66423ee44f15&amp;table=block" alt="스크린샷 2024-07-09 오후 3.43.00.png" /></p>
+
+<p>이전 코드에서는 maxWidth에 대한 값들을 <code class="language-plaintext highlighter-rouge">assets/variants</code>라는 파일에서 관리하고 있었다.</p>
+
+<p><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F07b05441-80a1-40ee-905f-1f48f33198d9%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.43.31.png?id=16af2b38-fe81-4e65-9abe-fce08c84d9b3&amp;table=block" alt="스크린샷 2024-07-09 오후 3.43.31.png" /></td>
+      <td><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fe0be7e07-9819-452e-a057-9c79c6ea5d76%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.43.46.png?id=8a7d5a06-46c4-4891-a66c-30b409738f3e&amp;table=block" alt="스크린샷 2024-07-09 오후 3.43.46.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p>기존에 Inner 컴포넌트에서 maxWidth라는 값을 number로 받고 있었는데, 해당 maxWidth값들을 varaints에서 관리하고 있다면, maxWidth값에 <strong>제약 조건</strong>을 걸어 유연하게 활용할 수 있도록 개선해볼 수 있었다.</p>
+
+<p>따라서 다음과 같이 <code class="language-plaintext highlighter-rouge">MaxWidth</code> 라는 타입 제약조건을 걸어서 <code class="language-plaintext highlighter-rouge">‘initial’</code>, <code class="language-plaintext highlighter-rouge">‘xs’</code> , <code class="language-plaintext highlighter-rouge">‘sm’</code> , <code class="language-plaintext highlighter-rouge">‘md’</code> , <code class="language-plaintext highlighter-rouge">‘lg’</code>로 구분해서 값을 받도록 개선하였다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styled</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@emotion/styled</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">InnerProps</span> <span class="p">{</span>
+  <span class="nl">maxWidth</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Inner</span><span class="p">({</span> <span class="nx">maxWidth</span><span class="p">,</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">InnerProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Container</span> <span class="na">maxWidth</span><span class="p">=</span><span class="si">{</span><span class="nx">maxWidth</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">Container</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">maxWidth</span><span class="p">:</span> <span class="kr">number</span> <span class="p">}</span><span class="o">&gt;</span><span class="s2">`
+  max-width: </span><span class="p">${({</span> <span class="nx">maxWidth</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="nx">maxWidth</span><span class="p">}</span><span class="s2">px;
+  margin: 0 auto;
+`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>또한 <code class="language-plaintext highlighter-rouge">Inner</code>라는 컴포넌트 명칭이 정확한 책임이 무엇인지 파악하기 어렵기 때문에 <code class="language-plaintext highlighter-rouge">CenteredContainer</code>으로 변경하여 요소들을 중앙으로 배치하는 Container라는 역할을 명확하게 알 수 있게 하기위해 다시 네이밍하였다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styled</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@emotion/styled</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">BREAK_POINTS</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@assets/styles/variants</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">MaxWidth</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">xs</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">sm</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">md</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">lg</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">CenteredContainerProps</span> <span class="p">{</span>
+  <span class="nl">maxWidth</span><span class="p">:</span> <span class="nx">MaxWidth</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">CenteredContainer</span><span class="p">({</span>
+  <span class="nx">maxWidth</span><span class="p">,</span>
+  <span class="nx">children</span><span class="p">,</span>
+<span class="p">}:</span> <span class="nx">CenteredContainerProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Container</span> <span class="na">maxWidth</span><span class="p">=</span><span class="si">{</span><span class="nx">maxWidth</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">Container</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">maxWidth</span><span class="p">:</span> <span class="nx">MaxWidth</span> <span class="p">}</span><span class="o">&gt;</span><span class="s2">`
+  max-width: </span><span class="p">${({</span> <span class="nx">maxWidth</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="nx">BREAK_POINTS</span><span class="p">[</span><span class="nx">maxWidth</span><span class="p">]}</span><span class="s2">px;
+  margin: 0 auto;
+`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="7-spread-operator를-대신-명시적-props-전달">7. spread operator를 대신 명시적 Props 전달</h1>
+
+<p>필자는 spread operator를 사용하면 더 간결하게 코드를 작성할 수 있다고 생각하여 작성하고 있었다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">GoodsItemList</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">GoodsItemListContainer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">CenteredContainer</span> <span class="na">maxWidth</span><span class="p">=</span><span class="s">"md"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Grid</span> <span class="na">gap</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_GAP</span><span class="si">}</span> <span class="na">columns</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_COLUMNS</span><span class="si">}</span><span class="p">&gt;</span>
+          <span class="si">{</span><span class="nx">goodsItemList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+            <span class="p">({</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">imageSrc</span><span class="p">,</span> <span class="nx">subtitle</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">amount</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">wish</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
+              <span class="p">&lt;</span><span class="nc">GoodsItem</span>
+                <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">id</span><span class="si">}</span>
+                <span class="si">{</span><span class="p">...{</span> <span class="nx">imageSrc</span><span class="p">,</span> <span class="nx">subtitle</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">amount</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">wish</span> <span class="p">}</span><span class="si">}</span>
+              <span class="p">/&gt;</span>
+            <span class="p">)</span>
+          <span class="p">)</span><span class="si">}</span>
+        <span class="p">&lt;/</span><span class="nc">Grid</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">CenteredContainer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">GoodsItemListContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>하지만 spread operator를 사용하면 <strong>존재하지 않는 props를 TypeScript가 인지하지 못하는 문제</strong>가 발생할 수 있다.</p>
+
+<p>때문에 spread operator를 사용하는 대신, <strong>key-value 형태</strong>로 props를 명시적으로 전달하도록 변경해야한다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">GoodsItemList</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">GoodsItemListContainer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">CenteredContainer</span> <span class="na">maxWidth</span><span class="p">=</span><span class="s">"md"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Grid</span> <span class="na">gap</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_GAP</span><span class="si">}</span> <span class="na">columns</span><span class="p">=</span><span class="si">{</span><span class="nx">GRID_COLUMNS</span><span class="si">}</span><span class="p">&gt;</span>
+          <span class="si">{</span><span class="nx">goodsItemList</span><span class="p">.</span><span class="nx">map</span><span class="p">(({</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">imageSrc</span><span class="p">,</span> <span class="nx">subtitle</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">amount</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nc">GoodsItem</span> <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">id</span><span class="si">}</span> <span class="err">**</span><span class="na">imageSrc</span><span class="p">=</span><span class="si">{</span><span class="nx">imageSrc</span><span class="si">}</span> <span class="na">subtitle</span><span class="p">=</span><span class="si">{</span><span class="nx">subtitle</span><span class="si">}</span> <span class="na">title</span><span class="p">=</span><span class="si">{</span><span class="nx">title</span><span class="si">}</span> <span class="na">amount</span><span class="p">=</span><span class="si">{</span><span class="nx">amount</span><span class="si">}</span><span class="err">**</span> <span class="p">/&gt;</span>
+          <span class="p">))</span><span class="si">}</span>
+        <span class="p">&lt;/</span><span class="nc">Grid</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">CenteredContainer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">GoodsItemListContainer</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="8-sr-only-클래스-관리-방식">8. sr-only 클래스 관리 방식</h1>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Fbfc63632-699a-40e1-97b5-319ed9d574d9%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.39.15.png?id=e7bccaf0-1bd5-4832-9af2-81e8f3b9c987&amp;table=block" alt="스크린샷 2024-07-09 오후 4.39.15.png" /></p>
+
+<p><br /></p>
+
+<p>어떻게 보면 sr-only클래스는 reset 스타일링과는 다른 성격을 가진다.</p>
+
+<p>모든 컴포넌트 스타일링에서 공통으로 사용할 수 있는 클래스이기 때문에 필자는 <code class="language-plaintext highlighter-rouge">commonStyles.ts</code> 파일로 분리하기로 관리할 수 있도록 결정하였다.</p>
+
+<p>이후 resetStyles와 commonStyles는 전역에서 사용되는 스타일이기 때문에 <code class="language-plaintext highlighter-rouge">global</code> 디렉토리로 관리하였다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@emotion/react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">commonStyles</span> <span class="o">=</span> <span class="nx">css</span><span class="s2">`
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+`</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">commonStyles</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이후 resetStyles와 commonStyles를 모두 Global Provider에 styles에 전달해주어야 하기 때문에</p>
+
+<p>styles디렉토리에 <code class="language-plaintext highlighter-rouge">index.tsx</code>로 컴포넌트 파일을 만들어 모든 style의 파일들을 하나로 모으고 Global Provider도 이안에서 관리하도록 분리해보았다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Global</span><span class="p">,</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@emotion/react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">commonStyles</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@assets/styles/global/commonStyles</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">resetStyles</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@assets/styles/global/resetStyles</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">globalStyles</span> <span class="o">=</span> <span class="nx">css</span><span class="s2">`
+  </span><span class="p">${</span><span class="nx">resetStyles</span><span class="p">}</span><span class="s2">
+  </span><span class="p">${</span><span class="nx">commonStyles</span><span class="p">}</span><span class="s2">
+`</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">GlobalStyles</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Global</span> <span class="na">styles</span><span class="p">=</span><span class="si">{</span><span class="nx">globalStyles</span><span class="si">}</span> <span class="p">/&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이후 GlobalStyles 컴포넌트만 프로젝트 루트에 사용하기만 하면 된다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Outlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">GlobalStyles</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@assets/styles/GlobalStyles</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;&gt;</span>
+      <span class="p">&lt;</span><span class="nc">GlobalStyles</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Outlet</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;&gt;</span>
+  );
+}
+
+export default App;
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2Ff57275d3-c1f4-4eac-8857-a04cab34968d%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.34.53.png?id=9aad2e94-8053-4b02-b758-b1046db01eba&amp;table=block" width="400" /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 코드리뷰를 통해 <strong>폴더 구조</strong>, <strong>컴포넌트 역할 명확화</strong>, 그리고 <strong>스타일 관리 방식</strong>을 개선할 수 있었다.</p>
+
+<p>특히, 코드의 <strong>유지보수성과 재사용성</strong>을 높이기 위한 고민을 많이 하게 되었으며, 이 과정에서 <strong>Colocation</strong>과 같은 원칙을 적용해 구조를 단순화하고 명확하게 할 수 있다는 것 또한 알게 되었다.</p>
+
+<p>리팩토링은 단순히 코드의 가독성을 높이는 것 이상의 효과를 가져다 주는 것 같다.</p>
+
+<p>앞으로도 지속적으로 개선점을 찾고, 더 나은 코드와 구조를 만드는 데 노력하면서 그동안 숙지하지 못했던 내용들을 학습해 나갈 예정이다.</p>
+
+</article>
+
+    </main>
+  </body>
+</html>
