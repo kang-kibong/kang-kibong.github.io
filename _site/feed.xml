@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-04T21:55:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kang Byeong-hyeon 👨🏻‍💻</title><subtitle>Kang Byeonghyeon&apos;s dev blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-04T23:55:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kang Byeong-hyeon 👨🏻‍💻</title><subtitle>Kang Byeonghyeon&apos;s dev blog
 </subtitle><author><name>Kang Byeonghyeon</name></author><entry><title type="html">[우선] 우선을 중단하며</title><link href="http://localhost:4000/%EC%9A%B0%EC%84%A0-%EC%9A%B0%EC%84%A0%EC%9D%84-%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0.html" rel="alternate" type="text/html" title="[우선] 우선을 중단하며" /><published>2024-07-28T00:00:00+09:00</published><updated>2024-07-28T00:00:00+09:00</updated><id>http://localhost:4000/%5B%EC%9A%B0%EC%84%A0%5D%20%EC%9A%B0%EC%84%A0%EC%9D%84%20%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0</id><content type="html" xml:base="http://localhost:4000/%EC%9A%B0%EC%84%A0-%EC%9A%B0%EC%84%A0%EC%9D%84-%EC%A4%91%EB%8B%A8%ED%95%98%EB%A9%B0.html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -422,6 +422,8 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;PrivateRoute&lt;/strong&gt;는 라우팅과 관련된 컴포넌트로, 라우팅 기능과 밀접한 관계가 있다.&lt;/p&gt;
 
 &lt;p&gt;기존에 이 컴포넌트를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;components/common&lt;/code&gt;에서 관리하고 있었지만, &lt;strong&gt;Colocation&lt;/strong&gt; 원칙을 준수하여 &lt;strong&gt;routes&lt;/strong&gt; 폴더로 이동시켰다.&lt;/p&gt;
@@ -501,8 +503,6 @@
 
 &lt;p&gt;&lt;img src=&quot;https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F65e46791-93c0-40be-96e0-4e4639ff6b0f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.43.00.png?id=5655bcfc-f268-49fb-9e10-66423ee44f15&amp;amp;table=block&quot; alt=&quot;스크린샷 2024-07-09 오후 3.43.00.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이전 코드에서는 maxWidth에 대한 값들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets/variants&lt;/code&gt;라는 파일에서 관리하고 있었다.&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;table&gt;
@@ -514,11 +514,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;기존에 Inner 컴포넌트에서 maxWidth라는 값을 number로 받고 있었는데, 해당 maxWidth값들을 varaints에서 관리하고 있다면, maxWidth값에 &lt;strong&gt;제약 조건&lt;/strong&gt;을 걸어 유연하게 활용할 수 있도록 개선해볼 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;따라서 다음과 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MaxWidth&lt;/code&gt; 라는 타입 제약조건을 걸어서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘initial’&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘xs’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘sm’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘md’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘lg’&lt;/code&gt;로 구분해서 값을 받도록 개선하였다.&lt;/p&gt;
+&lt;p&gt;이전에는 maxWidth에 대한 값들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets/variants&lt;/code&gt;라는 파일에서 관리하고 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -539,6 +535,37 @@
   margin: 0 auto;
 `&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;기존에 Inner 컴포넌트에서 maxWidth라는 값을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;number&lt;/code&gt;로 받고 있었는데, 해당 maxWidth값들을 varaints에서 관리하고 있다면, maxWidth값에 &lt;strong&gt;제약 조건&lt;/strong&gt;을 걸어 유연하게 활용할 수 있도록 개선해볼 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-tsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactNode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@emotion/styled&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BREAK_POINTS&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@assets/styles/variants&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MaxWidth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;sm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;md&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;lg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InnerProps&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MaxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InnerProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Container&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MaxWidth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
+  max-width: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;maxWidth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;BREAK_POINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;maxWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;px;
+  margin: 0 auto;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;따라서 위와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MaxWidth&lt;/code&gt; 라는 타입 제약조건을 걸어서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘initial’&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘xs’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘sm’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘md’&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘lg’&lt;/code&gt;로 구분해서 값을 받도록 개선하였다.&lt;/p&gt;
 
 &lt;p&gt;또한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Inner&lt;/code&gt;라는 컴포넌트 명칭이 정확한 책임이 무엇인지 파악하기 어렵기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CenteredContainer&lt;/code&gt;으로 변경하여 요소들을 중앙으로 배치하는 Container라는 역할을 명확하게 알 수 있게 하기위해 다시 네이밍하였다.&lt;/p&gt;
 
@@ -572,7 +599,7 @@
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;7-spread-operator-대신-명시적-props-전달&quot;&gt;7. spread operator 대신 명시적 Props 전달&lt;/h1&gt;
+&lt;h1 id=&quot;7-spread-operator-대신-명시적으로-props-전달&quot;&gt;7. spread operator 대신 명시적으로 Props 전달&lt;/h1&gt;
 
 &lt;p&gt;필자는 spread operator를 사용하면 더 간결하게 코드를 작성할 수 있다고 생각하여 작성하고 있었다.&lt;/p&gt;
 
@@ -595,6 +622,8 @@
   &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;하지만 spread operator를 사용하면 &lt;strong&gt;존재하지 않는 props를 TypeScript가 인지하지 못하는 문제&lt;/strong&gt;가 발생할 수 있다.&lt;/p&gt;
 
@@ -654,6 +683,8 @@
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;commonStyles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;이후 resetStyles와 commonStyles를 모두 Global Provider에 styles에 전달해주어야 하기 때문에&lt;/p&gt;
 
 &lt;p&gt;styles디렉토리에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.tsx&lt;/code&gt;로 컴포넌트 파일을 만들어 모든 style의 파일들을 하나로 모으고 Global Provider도 이안에서 관리하도록 분리해보았다.&lt;/p&gt;
@@ -674,6 +705,8 @@
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Global&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;styles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;globalStyles&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;이후 GlobalStyles 컴포넌트만 프로젝트 루트에 사용하기만 하면 된다.&lt;/p&gt;
 

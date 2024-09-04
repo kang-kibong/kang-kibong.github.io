@@ -164,6 +164,8 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p><br /></p>
+
 <p><strong>PrivateRoute</strong>는 라우팅과 관련된 컴포넌트로, 라우팅 기능과 밀접한 관계가 있다.</p>
 
 <p>기존에 이 컴포넌트를 <code class="language-plaintext highlighter-rouge">components/common</code>에서 관리하고 있었지만, <strong>Colocation</strong> 원칙을 준수하여 <strong>routes</strong> 폴더로 이동시켰다.</p>
@@ -243,8 +245,6 @@
 
 <p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F65e46791-93c0-40be-96e0-4e4639ff6b0f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-09_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.43.00.png?id=5655bcfc-f268-49fb-9e10-66423ee44f15&amp;table=block" alt="스크린샷 2024-07-09 오후 3.43.00.png" /></p>
 
-<p>이전 코드에서는 maxWidth에 대한 값들을 <code class="language-plaintext highlighter-rouge">assets/variants</code>라는 파일에서 관리하고 있었다.</p>
-
 <p><br /></p>
 
 <table>
@@ -256,11 +256,7 @@
   </tbody>
 </table>
 
-<p><br /></p>
-
-<p>기존에 Inner 컴포넌트에서 maxWidth라는 값을 number로 받고 있었는데, 해당 maxWidth값들을 varaints에서 관리하고 있다면, maxWidth값에 <strong>제약 조건</strong>을 걸어 유연하게 활용할 수 있도록 개선해볼 수 있었다.</p>
-
-<p>따라서 다음과 같이 <code class="language-plaintext highlighter-rouge">MaxWidth</code> 라는 타입 제약조건을 걸어서 <code class="language-plaintext highlighter-rouge">‘initial’</code>, <code class="language-plaintext highlighter-rouge">‘xs’</code> , <code class="language-plaintext highlighter-rouge">‘sm’</code> , <code class="language-plaintext highlighter-rouge">‘md’</code> , <code class="language-plaintext highlighter-rouge">‘lg’</code>로 구분해서 값을 받도록 개선하였다.</p>
+<p>이전에는 maxWidth에 대한 값들을 <code class="language-plaintext highlighter-rouge">assets/variants</code>라는 파일에서 관리하고 있었다.</p>
 
 <p><br /></p>
 
@@ -281,6 +277,37 @@
   margin: 0 auto;
 `</span><span class="p">;</span>
 </code></pre></div></div>
+
+<p><br /></p>
+
+<p>기존에 Inner 컴포넌트에서 maxWidth라는 값을 <code class="language-plaintext highlighter-rouge">number</code>로 받고 있었는데, 해당 maxWidth값들을 varaints에서 관리하고 있다면, maxWidth값에 <strong>제약 조건</strong>을 걸어 유연하게 활용할 수 있도록 개선해볼 수 있었다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styled</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@emotion/styled</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">BREAK_POINTS</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@assets/styles/variants</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">MaxWidth</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">xs</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">sm</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">md</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">lg</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">InnerProps</span> <span class="p">{</span>
+  <span class="nl">maxWidth</span><span class="p">:</span> <span class="nx">MaxWidth</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Inner</span><span class="p">({</span> <span class="nx">maxWidth</span><span class="p">,</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">InnerProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Container</span> <span class="na">maxWidth</span><span class="p">=</span><span class="si">{</span><span class="nx">maxWidth</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">Container</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">maxWidth</span><span class="p">:</span> <span class="nx">MaxWidth</span> <span class="p">}</span><span class="o">&gt;</span><span class="s2">`
+  max-width: </span><span class="p">${({</span> <span class="nx">maxWidth</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="nx">BREAK_POINT</span><span class="p">[</span><span class="nx">maxWidth</span><span class="p">]}</span><span class="s2">px;
+  margin: 0 auto;
+`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>따라서 위와 같이 <code class="language-plaintext highlighter-rouge">MaxWidth</code> 라는 타입 제약조건을 걸어서 <code class="language-plaintext highlighter-rouge">‘initial’</code>, <code class="language-plaintext highlighter-rouge">‘xs’</code> , <code class="language-plaintext highlighter-rouge">‘sm’</code> , <code class="language-plaintext highlighter-rouge">‘md’</code> , <code class="language-plaintext highlighter-rouge">‘lg’</code>로 구분해서 값을 받도록 개선하였다.</p>
 
 <p>또한 <code class="language-plaintext highlighter-rouge">Inner</code>라는 컴포넌트 명칭이 정확한 책임이 무엇인지 파악하기 어렵기 때문에 <code class="language-plaintext highlighter-rouge">CenteredContainer</code>으로 변경하여 요소들을 중앙으로 배치하는 Container라는 역할을 명확하게 알 수 있게 하기위해 다시 네이밍하였다.</p>
 
@@ -314,7 +341,7 @@
 <br />
 <br /></p>
 
-<h1 id="7-spread-operator-대신-명시적-props-전달">7. spread operator 대신 명시적 Props 전달</h1>
+<h1 id="7-spread-operator-대신-명시적으로-props-전달">7. spread operator 대신 명시적으로 Props 전달</h1>
 
 <p>필자는 spread operator를 사용하면 더 간결하게 코드를 작성할 수 있다고 생각하여 작성하고 있었다.</p>
 
@@ -337,6 +364,8 @@
   <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<p><br /></p>
 
 <p>하지만 spread operator를 사용하면 <strong>존재하지 않는 props를 TypeScript가 인지하지 못하는 문제</strong>가 발생할 수 있다.</p>
 
@@ -396,6 +425,8 @@
 <span class="k">export</span> <span class="k">default</span> <span class="nx">commonStyles</span><span class="p">;</span>
 </code></pre></div></div>
 
+<p><br /></p>
+
 <p>이후 resetStyles와 commonStyles를 모두 Global Provider에 styles에 전달해주어야 하기 때문에</p>
 
 <p>styles디렉토리에 <code class="language-plaintext highlighter-rouge">index.tsx</code>로 컴포넌트 파일을 만들어 모든 style의 파일들을 하나로 모으고 Global Provider도 이안에서 관리하도록 분리해보았다.</p>
@@ -416,6 +447,8 @@
   <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Global</span> <span class="na">styles</span><span class="p">=</span><span class="si">{</span><span class="nx">globalStyles</span><span class="si">}</span> <span class="p">/&gt;;</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<p><br /></p>
 
 <p>이후 GlobalStyles 컴포넌트만 프로젝트 루트에 사용하기만 하면 된다.</p>
 
