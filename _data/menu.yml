@@ -2,6 +2,14 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
+  - title: frontend
+    post_list:
+      limit: 10
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: frontend.html
+      category: frontend
+
   - title: 👨🏻‍💻 kakao tech campus 2th ~
     post_list:
       category: kakao
@@ -39,14 +47,6 @@ entries:
   - title: like lion 11th at CNU
     post_list:
       category: like-lion
-
-  - title: frontend
-    post_list:
-      limit: 10
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: frontend.html
-      category: frontend
 
   - title: wooseon
     post_list:
