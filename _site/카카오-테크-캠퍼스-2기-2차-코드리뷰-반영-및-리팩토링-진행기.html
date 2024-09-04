@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>[카카오 테크 캠퍼스 2기] 2차 코드리뷰 반영 및 리팩토링 진행기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="[카카오 테크 캠퍼스 2기] 2차 코드리뷰 반영 및 리팩토링 진행기" />
+<meta name="author" content="Kang Byeonghyeon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kang Byeonghyeon’s dev blog" />
+<meta property="og:description" content="Kang Byeonghyeon’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-2%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-2%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html" />
+<meta property="og:site_name" content="Kang Byeong-hyeon 👨🏻‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-22T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[카카오 테크 캠퍼스 2기] 2차 코드리뷰 반영 및 리팩토링 진행기" />
+<script type="application/ld+json">
+{"dateModified":"2024-07-22T00:00:00+09:00","datePublished":"2024-07-22T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-2%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html"},"url":"http://localhost:4000/%EC%B9%B4%EC%B9%B4%EC%98%A4-%ED%85%8C%ED%81%AC-%EC%BA%A0%ED%8D%BC%EC%8A%A4-2%EA%B8%B0-2%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0-%EB%B0%98%EC%98%81-%EB%B0%8F-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-%EC%A7%84%ED%96%89%EA%B8%B0.html","author":{"@type":"Person","name":"Kang Byeonghyeon"},"@type":"BlogPosting","description":"Kang Byeonghyeon’s dev blog","headline":"[카카오 테크 캠퍼스 2기] 2차 코드리뷰 반영 및 리팩토링 진행기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kang Byeong-hyeon 👨🏻‍💻" /><meta name="title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta name="description" content="Kang Byeong-hyeon's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="og:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="twitter:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/logo.png"
+  />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8692933662942054"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-07-22 00:00:00 +0900"
+      >2024-07-22</time
+    >
+  </p>
+
+  <h1 class="post-title">[카카오 테크 캠퍼스 2기] 2차 코드리뷰 반영 및 리팩토링 진행기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<p>이전 코드리뷰에 이어서 <strong>불필요한 코드 정리</strong>, <strong>성능 최적화</strong>, 그리고 <strong>타입 충돌 해결</strong> 등의 내용에 집중해 리팩토링을 진행해보았다.</p>
+
+<p>이번 포스팅에서는, 자주 사용했던 <strong>rest operator</strong>와 <strong>barrel file pattern</strong>, 그리고 <strong>절대 경로</strong> 문제를 해결하는 과정을 다루고, 이를 바탕으로 리팩토링한 주요 항목들을 정리해보았다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="1-env-파일이-깃허브에-올라갔을-때-해결-방법">1. .env 파일이 깃허브에 올라갔을 때 해결 방법</h1>
+
+<p>프로젝트의 <strong>.env</strong> 파일이 깃허브에 실수로 올라간 경우, 해당 파일을 원격 저장소에서 삭제하면서도 로컬에서는 유지하는 방법을 사용해야한다.</p>
+
+<p>이는 다음 명령어를 통해 해결할 수 있었다.</p>
+
+<p><br /></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">rm</span> <span class="nt">--cached</span> .env
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이후 다시 커밋하고 푸시하면 <strong>.env</strong> 파일이 원격 저장소에서 삭제되지만, 로컬 개발 환경에서는 계속 사용할 수 있었다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-불필요한-rest-operator-제거">2. 불필요한 rest operator 제거</h1>
+
+<p><strong>rest operator</strong>를 습관적으로 사용하던 문제가 있었다.</p>
+
+<p>특히, 컴포넌트를 구현할 때 필수적으로 사용해야 한다고 오해한 부분이 있었지만, <strong>제한된 props</strong>만을 받는 컴포넌트에서는 불필요한 경우가 많다.</p>
+
+<p>예를 들어, 아래의 <code class="language-plaintext highlighter-rouge">Button</code> 컴포넌트 같은 경우, rest operator를 사용하여 Button의 다양한 속성들을 props로 받을 수 있게 설계할 수 있다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">ButtonTheme</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">kakao</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">primary</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">darkGray</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">type</span> <span class="nx">ButtonSize</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">small</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">large</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">responsive</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">ButtonProps</span> <span class="kd">extends</span> <span class="nx">ButtonHTMLAttributes</span><span class="o">&lt;</span><span class="nx">HTMLButtonElement</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="nx">theme</span><span class="p">?:</span> <span class="nx">ButtonTheme</span><span class="p">;</span>
+  <span class="nl">size</span><span class="p">?:</span> <span class="nx">ButtonSize</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Button</span><span class="p">({</span>
+  <span class="nx">theme</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">kakao</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">size</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">large</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">children</span><span class="p">,</span>
+  <span class="p">...</span><span class="nx">rest</span>
+<span class="p">}:</span> <span class="nx">ButtonProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">StyledButton</span> <span class="na">theme</span><span class="p">=</span><span class="si">{</span><span class="nx">theme</span><span class="si">}</span> <span class="na">size</span><span class="p">=</span><span class="si">{</span><span class="nx">size</span><span class="si">}</span> <span class="si">{</span><span class="p">...</span><span class="nx">rest</span><span class="si">}</span><span class="p">&gt;</span>
+      <span class="si">{</span><span class="nx">children</span><span class="si">}</span>
+    <span class="p">&lt;/</span><span class="nc">StyledButton</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>하지만 특정 props만을 받는 <strong>GoodsItem</strong> 컴포넌트를 예시로 들면, rest operator를 사용하여 추가적인 props를 받을 필요가 없다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">GoodsItemProps</span> <span class="p">{</span>
+  <span class="nl">imageSrc</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">subtitle</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">amount</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">rankingIndex</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">GoodsItem</span><span class="p">({</span>
+  <span class="nx">imageSrc</span><span class="p">,</span>
+  <span class="nx">subtitle</span><span class="p">,</span>
+  <span class="nx">title</span><span class="p">,</span>
+  <span class="nx">amount</span><span class="p">,</span>
+  <span class="nx">rankingIndex</span><span class="p">,</span>
+  <span class="p">...</span><span class="nx">rest</span>
+<span class="p">}:</span> <span class="nx">GoodsItemProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">imageSize</span> <span class="o">=</span> <span class="nx">rankingIndex</span> <span class="p">?</span> <span class="nx">IMAGE_SIZE_RANKING</span> <span class="p">:</span> <span class="nx">IMAGE_SIZE_GOODS_ITEM</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">renderRanking</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span>
+    <span class="nx">rankingIndex</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nc">Ranking</span> <span class="na">rankingIndex</span><span class="p">=</span><span class="si">{</span><span class="nx">rankingIndex</span><span class="si">}</span> <span class="p">/&gt;;</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">StyledGoodsItem</span> <span class="na">rankingIndex</span><span class="p">=</span><span class="si">{</span><span class="nx">rankingIndex</span><span class="si">}</span> <span class="si">{</span><span class="p">...</span><span class="nx">rest</span><span class="si">}</span><span class="p">&gt;</span>
+      ...
+    <span class="p">&lt;/</span><span class="nc">StyledGoodsItem</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>때문에 아래와 같이 제한된 props를 받는 컴포넌트에서 불필요하게 rest operator를 사용하는 것은 피하고, 필요한 props만을 명시적으로 전달하는 방식으로 개선할 수 있었다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">GoodsItemProps</span> <span class="p">{</span>
+  <span class="nl">imageSrc</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">subtitle</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">amount</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">rankingIndex</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">GoodsItem</span><span class="p">({</span>
+  <span class="nx">imageSrc</span><span class="p">,</span>
+  <span class="nx">subtitle</span><span class="p">,</span>
+  <span class="nx">title</span><span class="p">,</span>
+  <span class="nx">amount</span><span class="p">,</span>
+  <span class="nx">rankingIndex</span><span class="p">,</span>
+<span class="p">}:</span> <span class="nx">GoodsItemProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">imageSize</span> <span class="o">=</span> <span class="nx">rankingIndex</span> <span class="p">?</span> <span class="nx">IMAGE_SIZE_RANKING</span> <span class="p">:</span> <span class="nx">IMAGE_SIZE_GOODS_ITEM</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">renderRanking</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span>
+    <span class="nx">rankingIndex</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nc">Ranking</span> <span class="na">rankingIndex</span><span class="p">=</span><span class="si">{</span><span class="nx">rankingIndex</span><span class="si">}</span> <span class="p">/&gt;;</span>
+
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nc">StyledGoodsItem</span> <span class="na">rankingIndex</span><span class="p">=</span><span class="si">{</span><span class="nx">rankingIndex</span><span class="si">}</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nc">StyledGoodsItem</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="3-불필요한-barrel-file-pattern-지양">3. 불필요한 Barrel File Pattern 지양</h1>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Button</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Button</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Footer</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">../features/Layout/Footer</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">InputField</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Form/InputField</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Image</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Image</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">GoodsItem</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./GoodsItem</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Ranking</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./GoodsItem/Ranking</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Header</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">../features/Layout/Header</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Container</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Layout/Container</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">Grid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Layout/Grid</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">CenteredContainer</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Layout/CenteredContainer</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="k">as</span> <span class="nx">StatusHandler</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./StatusHandler</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>초기에 <strong>barrel file pattern</strong>을 사용하여 <code class="language-plaintext highlighter-rouge">index.ts</code> 파일에서 여러 컴포넌트를 한 번에 export하는 방식을 사용했었다.</p>
+
+<p>믈론, import 구문을 간결하게 만들 수 있는 장점은 있지만, 프로젝트 규모가 커지게 되면 모든 모듈들을 한번에 로드하는 데 시간이 오래 걸릴 수 있고, 성능에 부정적인 영향을 미칠 수 있다.</p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>모든 모듈 로드 문제</strong>: 배럴 파일은 폴더 내의 모든 모듈을 한 번에 로드하기 때문에, 필요하지 않은 모듈까지 로드되어 성능 저하가 발생할 수 있다.</li>
+  <li><strong>불필요한 사용</strong>: 소규모 컴포넌트나 단일 용도의 컴포넌트에까지 배럴 파일을 사용하면 오히려 가독성을 떨어뜨리고, 성능에 부정적인 영향을 미칠 수 있다.</li>
+</ul>
+
+<p><br /></p>
+
+<p>때문에, <strong><code class="language-plaintext highlighter-rouge">components/common</code> 경로</strong>와 같이 여러 공통 컴포넌트들을 관리하는 디렉토리에서는 배럴 파일의 사용을 유지하였고, 소수의 컴포넌트만 있는 디렉토리에서는 <strong>불필요한 배럴 파일을 제거</strong>하여 불필요한 모듈 로드와 성능 저하를 예방하도록 개선하게 되었다.</p>
+
+<p><br /></p>
+
+<p>배럴 파일 사용 시의 성능 문제에 대한 자세한 정보는 해당 <a href="https://github.com/yeonjuan/dev-blog/blob/master/JavaScript/speeding-up-the-javascript-ecosystem-the-barrel-file-debacle.md">문서</a>를 참고하였다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="4-useinfinitescroll-훅-개선">4. useInfiniteScroll 훅 개선</h1>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useInView</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-intersection-observer</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">useInfiniteScrollProps</span> <span class="p">{</span>
+  <span class="nl">fetchNextPage</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+  <span class="nl">hasNextPage</span><span class="p">?:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">isFetchingNextPage</span><span class="p">?:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">useInfiniteScroll</span><span class="p">({</span>
+  <span class="nx">fetchNextPage</span><span class="p">,</span>
+  <span class="nx">hasNextPage</span><span class="p">,</span>
+  <span class="nx">isFetchingNextPage</span><span class="p">,</span>
+<span class="p">}:</span> <span class="nx">useInfiniteScrollProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">ref</span><span class="p">,</span> <span class="nx">inView</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useInView</span><span class="p">();</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inView</span> <span class="o">&amp;&amp;</span> <span class="nx">hasNextPage</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isFetchingNextPage</span><span class="p">)</span> <span class="nx">fetchNextPage</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">inView</span><span class="p">,</span> <span class="nx">hasNextPage</span><span class="p">,</span> <span class="nx">isFetchingNextPage</span><span class="p">,</span> <span class="nx">fetchNextPage</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="nx">ref</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>기존 <strong>useInfiniteScroll</strong> 훅은 react-query와 결합되어 있다.</p>
+
+<p>하지만 해당 훅의 핵심 역할은 <strong>스크롤이 끝에 도달하면 fetchNextPage를 호출</strong>하는 것이므로, 데이터 의존성을 낮추고 훅의 역할을 더 명확히 하기 위해서는 <strong>조건문</strong>을 받아 처리하는 방식으로 리팩토링하는 것이 낫은 방식이라고 판단하였다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useInView</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-intersection-observer</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">useInfiniteScrollProps</span> <span class="p">{</span>
+  <span class="nl">condition</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">fetchNextPage</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">useInfiniteScroll</span><span class="p">({</span>
+  <span class="nx">condition</span><span class="p">,</span>
+  <span class="nx">fetchNextPage</span><span class="p">,</span>
+<span class="p">}:</span> <span class="nx">useInfiniteScrollProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">ref</span><span class="p">,</span> <span class="nx">inView</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useInView</span><span class="p">();</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inView</span> <span class="o">&amp;&amp;</span> <span class="nx">condition</span><span class="p">)</span> <span class="nx">fetchNextPage</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">inView</span><span class="p">,</span> <span class="nx">condition</span><span class="p">,</span> <span class="nx">fetchNextPage</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="nx">ref</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이렇게 되면 해당 훅은 조건문을 받아서 fetchNextPage를 호출하는 역할만 수행하게 되므로 react-query와의 결합은 줄이고 유연성은 높일 수 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="5-types-절대경로-충돌-해결">5. @types 절대경로 충돌 해결</h1>
+
+<p>기존에 <code class="language-plaintext highlighter-rouge">@types</code>로 aliasing하니 module을 찾을 수 없다는 에러가 발생하였다.</p>
+
+<p>원인은 <code class="language-plaintext highlighter-rouge">node_modules</code>에 있는 <code class="language-plaintext highlighter-rouge">@types</code>와 충돌되었기 때문이었다.</p>
+
+<p>해결 방법은 두 가지가 있다.</p>
+
+<p><br /></p>
+
+<p>첫번째는 <code class="language-plaintext highlighter-rouge">"@types/custom/*": ["src/types/custom/*"]</code>처럼 <code class="language-plaintext highlighter-rouge">@types</code> 하위에 별도 중첩 네임스페이스를 사용해서 피하는 방식과 다른 이름을 쓰는 방식이있다.</p>
+
+<p>하지만, npm 패키지에서 설치한 타입인지 내부 프로젝트에서 직접 관리하는 코드인지 쉽게 알기 힘들기에, 두번째 방법으로 그냥 다른 이름으로 aliasing하는 것이 더 좋은 방법이 될 수 있다고 판단하였다.</p>
+
+<p>따라서 프로젝트 내부에서 사용되는 타입이라는 의미로 <code class="language-plaintext highlighter-rouge">@internalTypes</code>로 aliasing 하기로 결정하였다.</p>
+
+<p><br /></p>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">tsconfig</code>, <code class="language-plaintext highlighter-rouge">craco.config</code>, <code class="language-plaintext highlighter-rouge">eslintrc</code> 파일의 절대경로 alias를 다시 작성하여 해결하였다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// tsconfig.path.json</span>
+
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">baseUrl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">.</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">paths</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">@/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@components/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/components/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@assets/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/assets/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@hooks/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/hooks/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@pages/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/pages/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@routes/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/routes/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@utils/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/utils/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@context/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/context/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@internalTypes/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/types/*</span><span class="dl">"</span><span class="p">],</span>
+      <span class="dl">"</span><span class="s2">@apis/*</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">./src/apis/*</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// craco.config.js</span>
+
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kr">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">webpack</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">alias</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">@</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@components</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/components</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@assets</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/assets</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@hooks</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/hooks</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@pages</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/pages</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@routes</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/routes</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@utils</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/utils</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@context</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/context</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@internalTypes</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/types</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@apis</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/apis</span><span class="dl">"</span><span class="p">),</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// .eslintrc</span>
+
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">settings</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">import/resolver</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">alias</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@components</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/components</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@assets</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/assets</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@hooks</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/hooks</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@pages</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/pages</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@routes</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/routes</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@utils</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/utils</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@context</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/context</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@internalTypes</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/types</span><span class="dl">"</span><span class="p">],</span>
+          <span class="p">[</span><span class="dl">"</span><span class="s2">@apis</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">./src/apis</span><span class="dl">"</span><span class="p">]</span>
+        <span class="p">],</span>
+        <span class="dl">"</span><span class="s2">extensions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.jsx</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.ts</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.tsx</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 리팩토링 과정에서, <strong>rest operator</strong>를 습관적으로 남발했던 점을 되돌아볼 수 있었다.</p>
+
+<p>특히, <strong>제한된 props만을 받는 컴포넌트</strong>에서는 rest operator가 오히려 <strong>불필요한 코드</strong>가 될 수 있다는 것을 깨달았다.</p>
+
+<p><br /></p>
+
+<p>다음으로, <strong>barrel file pattern</strong>을 사용해 import 구문을 간결하게 만드는 데 집중했으나, 프로젝트가 커질수록 <strong>불필요한 모듈 로드</strong>로 인해 <strong>성능 저하</strong>가 발생할 수 있다는 문제를 알게 되었다.</p>
+
+<p>모든 컴포넌트를 배럴 파일로 묶는 것이 항상 최선의 방법은 아니었고, <strong>컴포넌트 수가 많은 디렉토리에서는 배럴 파일을 유지하되</strong>, 그렇지 않은 경우에는 배럴 파일을 제거하여 <strong>불필요한 의존성 로드</strong>를 줄이는 것이 성능 최적화에 도움이 된다는 것을 알 수 있었다.</p>
+
+<p><br /></p>
+
+<p>마지막으로, <strong>절대 경로 설정</strong>이 편리하지만, <code class="language-plaintext highlighter-rouge">@types</code>와 같은 네임스페이스와 <strong>충돌이 발생할 수 있다는 문제</strong>도 알게 되었다.</p>
+
+<p>프로젝트 내부에서 사용하는 타입과 외부 라이브러리의 타입이 충돌할 수 있기 때문에, 이를 해결하기 위한 <strong>aliasing 전략</strong>이 중요하다는 것을 알게 되었다.</p>
+
+</article>
+
+    </main>
+  </body>
+</html>
