@@ -228,19 +228,14 @@ header h1 {
       color: rgb(255, 111, 15);
     }
   }
-}
 
-.contact {
-  border: 1px solid #fff;
-  text-align: center;
-  font-size: 18px;
-  color: #000;
-  margin-bottom: 40px;
-  padding: 22px 0;
-  border-radius: 0.375rem;
+  .contact {
+    font-size: 18px;
+    padding: 40px 0;
 
-  & span:first-of-type {
-    margin-right: 36px;
+    & span:first-of-type {
+      margin-right: 36px;
+    }
   }
 }
 
@@ -287,13 +282,13 @@ header h1 {
     .header-title {
       font-size: 20px;
     }
-  }
 
-  .contact {
-    font-size: 14px;
+    .contact {
+      font-size: 14px;
 
-    & span:first-of-type {
-      margin-right: 14px;
+      & span:first-of-type {
+        margin-right: 18px;
+      }
     }
   }
 
