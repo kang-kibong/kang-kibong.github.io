@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Compound 패턴으로 컴포넌트 변경사항 유연하게 대처하기</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Compound 패턴으로 컴포넌트 변경사항 유연하게 대처하기" />
+<meta name="author" content="Kang Byeonghyeon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kang Byeonghyeon’s dev blog" />
+<meta property="og:description" content="Kang Byeonghyeon’s dev blog" />
+<link rel="canonical" href="http://localhost:4000/compound-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD-%EC%9C%A0%EC%97%B0%ED%95%98%EA%B2%8C-%EB%8C%80%EC%B2%98%ED%95%98%EA%B8%B0.html" />
+<meta property="og:url" content="http://localhost:4000/compound-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD-%EC%9C%A0%EC%97%B0%ED%95%98%EA%B2%8C-%EB%8C%80%EC%B2%98%ED%95%98%EA%B8%B0.html" />
+<meta property="og:site_name" content="Kang Byeong-hyeon 👨🏻‍💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-12T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Compound 패턴으로 컴포넌트 변경사항 유연하게 대처하기" />
+<script type="application/ld+json">
+{"dateModified":"2024-08-12T00:00:00+09:00","datePublished":"2024-08-12T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/compound-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD-%EC%9C%A0%EC%97%B0%ED%95%98%EA%B2%8C-%EB%8C%80%EC%B2%98%ED%95%98%EA%B8%B0.html"},"url":"http://localhost:4000/compound-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD-%EC%9C%A0%EC%97%B0%ED%95%98%EA%B2%8C-%EB%8C%80%EC%B2%98%ED%95%98%EA%B8%B0.html","author":{"@type":"Person","name":"Kang Byeonghyeon"},"@type":"BlogPosting","description":"Kang Byeonghyeon’s dev blog","headline":"Compound 패턴으로 컴포넌트 변경사항 유연하게 대처하기","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kang Byeong-hyeon 👨🏻‍💻" /><meta name="title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta name="description" content="Kang Byeong-hyeon's dev blog" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kang-kibong.github.io/" />
+  <meta property="og:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="og:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kang-kibong.github.io/" />
+  <meta property="twitter:title" content="Kang Byeong-hyeon 👨🏻‍💻" />
+  <meta property="twitter:description" content="Kang Byeong-hyeon's dev blog" />
+  <meta property="twitter:image" content="logo.png" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/logo.png"
+  />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".background-header");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      header.style.backgroundPosition = `center ${positionY}%`;
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const background = document.querySelector(".background");
+      const profile1 = document.querySelector(".profile1");
+      const profile2 = document.querySelector(".profile2");
+      const scrollY = window.scrollY;
+      const positionY = 50 + scrollY * 0.03;
+      background.style.backgroundPosition = `center ${positionY}%`;
+      const subPositionY = 0 + scrollY * 0.03;
+      profile1.style.backgroundPosition = `center ${subPositionY}%`;
+      profile2.style.backgroundPosition = `center ${subPositionY}%`;
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8692933662942054"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body a="auto">
+    <main class="page-content" aria-label="Content">
+      <a href="/" class="background-link">
+  <header class="background-header">
+    <h1 class="title">Hi, I’m <strong>Kang Byeong-hyeon</strong>.</h1>
+  </header>
+</a>
+<article class="w"><a href="/">..</a><p class="post-meta">
+    <time datetime="2024-08-12 00:00:00 +0900"
+      >2024-08-12</time
+    >
+  </p>
+
+  <h1 class="post-title">Compound 패턴으로 컴포넌트 변경사항 유연하게 대처하기</h1>
+
+  <p><br />
+<br />
+<br /></p>
+
+<p><img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F13897cab-0dd6-431f-b847-04477372a586%2F81a04c70-d4c3-4ff4-95a2-594f9296fa7a%2Fimage.png?id=89b54ddf-81d3-48ed-822a-db6cc91edb05&amp;table=block" alt="image.png" /></p>
+
+<p><br /></p>
+
+<p>기능을 구현하다 보면 반복되는 요소를 컴포넌트로 만들 때, 해당 컴포넌트 내부의 일부 요소들이 변동될 가능성이 생긴다.</p>
+
+<p>특히 특정 데이터가 내부의 각 요소(텍스트, 버튼, 이미지 등)를 동적으로 변화해야 하는 경우, 어떻게 하면 유연성을 높이고 변경 사항에 쉽게 대응할 수 있을지 고민할 수 있다.</p>
+
+<p>이번에는 Compound 패턴을 통해 컴포넌트의 유연성을 높이고 복잡한 요구 사항에 쉽게 대응할 수 있는 방법을 설명하고자 한다.</p>
+
+<p>쉬운 이해를 위해 <strong>PostCard</strong> 컴포넌트를 구현하는 예시로, context와 하위 컴포넌트를 통해 어떻게 하면 데이터를 효율적으로 관리하고, 컴포넌트를 유연하게 구성하는지 살펴보도록 하자.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="props로-분기-처리">props로 분기 처리</h1>
+
+<p>초기에는 컴포넌트에 여러 <code class="language-plaintext highlighter-rouge">props</code>를 전달하고, 그에 따라 내부에서 조건부로 분기처리하여 렌더링할 요소를 결정하려 했다.</p>
+
+<p>다음은 <code class="language-plaintext highlighter-rouge">PostCard</code> 컴포넌트에서 각 게시물마다 제목, 내용, 사용자 정보가 다를 때, 이 데이터를 <code class="language-plaintext highlighter-rouge">props</code>로 받아 내부에서 조건에 따라 UI를 변화시키도록 한 예시이다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">PostType</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">user</span><span class="p">?:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="kr">interface</span> <span class="nx">Props</span> <span class="p">{</span>
+  <span class="nl">post</span><span class="p">:</span> <span class="nx">PostType</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">PostCard</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">post</span> <span class="p">}:</span> <span class="nx">Props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">content</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">}</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">theme</span><span class="p">=</span><span class="s">"primary"</span><span class="p">&gt;</span>Read More<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">theme</span><span class="p">=</span><span class="s">"default"</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PostCard</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이 방식은 작은 프로젝트에서는 효율적일 수 있지만, 프로젝트가 커질수록 요구 사항이 바뀌거나 새로운 UI 요소가 추가될 때마다 컴포넌트 내부에 조건문이 많아지고 계속해서 수정해야 하는 불편함이 생기곤 한다.</p>
+
+<p>이로 인해 추후에는 코드의 가독성과 유지보수성이 떨어뜨릴 수 있는 문제가 발생할 수 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="compound-패턴의-필요성">Compound 패턴의 필요성</h1>
+
+<p>Compound 패턴이란 하나의 작업을 위해 여러 컴포넌트를 만들어 역할을 분담하여 구성하는 패턴을 의미한다.</p>
+
+<p>즉, 부모 컴포넌트는 UI의 기본 구조와 데이터를 제공하는 컨테이너로서의 역할을 하고, 자식 컴포넌트는 특정 부분의 동작만 담당하도록 역할을 구성하는 것을 말한다.</p>
+
+<p>이러한 방식으로 작성하게 되면, 부모와 자식 간의 관계가 더욱 명확해지고, 자식 컴포넌트의 역할을 유연하게 커스터마이징할 수 있는 장점이 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="compound-패턴을-적용한-postcard-컴포넌트">Compound 패턴을 적용한 PostCard 컴포넌트</h1>
+
+<p><strong>PostCard</strong> 컴포넌트를 Compound 패턴으로 리팩터링하여, 내부의 변동 요소를 쉽게 관리할 수 있도록 해보자.</p>
+
+<p>이를 위해, <strong>Context API</strong>를 사용하면, 데이터를 부모 컴포넌트로 부터 전역적으로 관리하고, 자식 컴포넌트가 부모로부터 필요한 데이터를 쉽게 전달받을 수 있도록 구성할 수 있다.</p>
+
+<p><br /></p>
+
+<h2 id="1-postcardcontext-구현">1. PostCardContext 구현</h2>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// PostCardContext.tsx</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">createContext</span><span class="p">,</span> <span class="nx">ReactNode</span><span class="p">,</span> <span class="nx">useContext</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">PostType</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./PostCard</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">PostCardContextProps</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">post</span><span class="p">:</span> <span class="nx">PostType</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">PostCardContext</span> <span class="o">=</span> <span class="nx">createContext</span><span class="o">&lt;</span><span class="nx">PostCardContextProps</span> <span class="o">|</span> <span class="kc">undefined</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="kc">undefined</span>
+<span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">usePostCardContext</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">PostCardContext</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">context</span><span class="p">)</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span>
+      <span class="dl">"</span><span class="s2">usePostCardContext must be used within a PostCardContext.Provider</span><span class="dl">"</span>
+    <span class="p">);</span>
+  <span class="k">return</span> <span class="nx">context</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kr">interface</span> <span class="nx">ProviderProps</span> <span class="p">{</span>
+  <span class="nl">post</span><span class="p">:</span> <span class="nx">PostType</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">PostCardContextProvider</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">post</span><span class="p">,</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">ProviderProps</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">PostCardContext</span><span class="p">.</span><span class="nc">Provider</span> <span class="na">value</span><span class="p">=&gt;</span>
+      <span class="si">{</span><span class="nx">children</span><span class="si">}</span>
+    <span class="p">&lt;/</span><span class="nc">PostCardContext</span><span class="p">.</span><span class="nc">Provider</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>부모 컴포넌트에서 게시물 데이터를 받아 자식 컴포넌트에 전달할 수 있도록 <code class="language-plaintext highlighter-rouge">PostCardContext</code> 를 생성한다.</p>
+
+<p>이후, 자식 컴포넌트가 해당 게시물 데이터를 받아올 수 있도록 <strong>usePostCardContext</strong> 커스텀 훅을 구현한다.</p>
+
+<p>마지막으로 <code class="language-plaintext highlighter-rouge">Provider</code>를 통해 하위 컴포넌트에 게시물 데이터를 공유할 수 있도록 <strong>PostCardContextProvider</strong> 컴포넌트를 구현한다.</p>
+
+<p><br /></p>
+
+<h2 id="2-하위-컴포넌트-구현">2. 하위 컴포넌트 구현</h2>
+
+<p>이제 Compound 패턴의 핵심인 독립적인 하위 컴포넌트를 구현해야한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Title</code>, <code class="language-plaintext highlighter-rouge">User</code>, <code class="language-plaintext highlighter-rouge">Actions</code> 하위 컴포넌트를 각각 구성하고, <code class="language-plaintext highlighter-rouge">usePostCardContext</code>를 통해 <code class="language-plaintext highlighter-rouge">PostCardContext</code>로부터 필요한 게시물 데이터를 받아 렌더링을 수행하도록 한다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// components/index.tsx</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">usePostCardContext</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">../PostCardContext</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Button</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@sparklon/react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Title</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">post</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">usePostCardContext</span><span class="p">();</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">post</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">usePostCardContext</span><span class="p">();</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Actions</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">theme</span><span class="p">=</span><span class="s">"primary"</span><span class="p">&gt;</span>Read More<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">theme</span><span class="p">=</span><span class="s">"default"</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>위와 같이 작성하게 되면 부모 컴포넌트에서 전달된 데이터를 필요에 따라 쉽게 사용할 수 있으며, 추후에 변경 사항이 있을때 각 하위 컴포넌트만 수정하면 되기 때문에 유지보수성이 높아진다.</p>
+
+<p><br /></p>
+
+<h2 id="3-postcard-컴포넌트">3. PostCard 컴포넌트</h2>
+
+<p>마지막으로 게시물 데이터를 <code class="language-plaintext highlighter-rouge">PostCardContextProvider</code>로 전달하고, 하위 컴포넌트가 해당 데이터를 활용할 수 있도록 돕는 <code class="language-plaintext highlighter-rouge">PostCard</code> 컴포넌트를 구현해보자.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">ReactNode</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">PostCardContextProvider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./PostCardContext</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Title</span><span class="p">,</span> <span class="nx">User</span><span class="p">,</span> <span class="nx">Actions</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./components</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">type</span> <span class="nx">PostType</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">user</span><span class="p">?:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="kr">interface</span> <span class="nx">Props</span> <span class="p">{</span>
+  <span class="nl">post</span><span class="p">:</span> <span class="nx">PostType</span><span class="p">;</span>
+  <span class="nl">children</span><span class="p">:</span> <span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">PostCard</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">post</span><span class="p">,</span> <span class="nx">children</span> <span class="p">}:</span> <span class="nx">Props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">PostCardContextProvider</span> <span class="na">post</span><span class="p">=</span><span class="si">{</span><span class="nx">post</span><span class="si">}</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">children</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">PostCardContextProvider</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PostCard</span><span class="p">;</span>
+
+<span class="nx">PostCard</span><span class="p">.</span><span class="nx">Title</span> <span class="o">=</span> <span class="nx">Title</span><span class="p">;</span>
+<span class="nx">PostCard</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="nx">User</span><span class="p">;</span>
+<span class="nx">PostCard</span><span class="p">.</span><span class="nx">Actions</span> <span class="o">=</span> <span class="nx">Actions</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>게시물 데이터를 <code class="language-plaintext highlighter-rouge">PostCardContextProvider</code>를 통해 하위 컴포넌트로 전달하고, children을 통해 하위 컴포넌트들을 렌더링할 수 있도록 래퍼 컴포넌트 형태로 구성한다.</p>
+
+<p>이후, Compound 패턴에 맞게 각 하위 컴포넌트들을 <code class="language-plaintext highlighter-rouge">PostCard</code> 컴포넌트에 설정한다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="사용-예시">사용 예시</h1>
+
+<p>이제 <code class="language-plaintext highlighter-rouge">PostCard</code> 컴포넌트를 활용하여 각 게시물의 정보를 유연하게 렌더링할 수 있다.</p>
+
+<p>부모 컴포넌트에서 특정 데이터를 <code class="language-plaintext highlighter-rouge">props</code>로 전달하면, context를 통해 해당 데이터가 하위 컴포넌트로 자동으로 전달된다.</p>
+
+<p>하위 컴포넌트는 context로부터 필요한 데이터를 가져와 독립적으로 동작하게 되고, <code class="language-plaintext highlighter-rouge">props</code>로 별도의 데이터를 전달할 필요가 없게 된다.</p>
+
+<p>이로써, 각각의 컴포넌트의 배치와 역할을 유연하게 조정할 수 있으며, 추후에 발생하는 변경 사항에 쉽게 대처할 수 있는 구조를 갖출 수 있게 되었다.</p>
+
+<p><br /></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">PostCard</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./PostCard</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">"</span><span class="s2">How to Use Compound Pattern</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">This is an example of how to implement compound components.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">PostCard</span> <span class="na">post</span><span class="p">=</span><span class="si">{</span><span class="nx">post</span><span class="si">}</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">PostCard</span><span class="p">.</span><span class="nc">User</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">PostCard</span><span class="p">.</span><span class="nc">Title</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">PostCard</span><span class="p">.</span><span class="nc">Buttons</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">PostCard</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="마치면서">마치면서</h1>
+
+<p>이번 글에서는 <code class="language-plaintext highlighter-rouge">PostCard</code> 컴포넌트를 예시로 <strong>Compound 패턴</strong>에 대해 자세히 알아보았다.</p>
+
+<p>Compound 패턴을 사용하면 컴포넌트 내부 요소들이 <strong>동적</strong>으로 변화할 때 부모와 자식 컴포넌트 간의 <strong>데이터 흐름</strong>을 명확하게 관리할 수 있고, 각 하위 컴포넌트를 <strong>독립적으로</strong> <strong>관리</strong>할 수 있다는 장점을 알게 되었다.</p>
+
+<p>이를 통해, 추후 발생될 수 있는 변동 사항에 대해 유연하게 대처할 수 있다는 것 또한 확인할 수 있었다.</p>
+
+<p>따라서, 독자들도 유사한 상황에 처해 있거나, 컴포넌트의 유연성과 재사용성을 높일 필요성이 있다면, <strong>Compound 패턴</strong> 도입에 대해 고려해보면 좋을 것 같다.</p>
+
+</article>
+
+    </main>
+  </body>
+</html>
